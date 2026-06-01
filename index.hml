@@ -1038,6 +1038,360 @@ footer{margin-top:56px;border-top:1px solid var(--border);padding-top:22px;displ
   </div>
 </div>
 
+
+<!-- ══ CLARIFICATIONS — WHAT IS CONFIRMED ════════════════════ -->
+<div class="section">
+  <div class="sec-label">Clarifications — What Is Confirmed vs. In Discussion</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div>
+      <div style="font-size:10.5px;font-weight:600;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Confirmed &amp; Locked</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Platform Name</div><div style="font-size:12px;color:var(--muted)">BISS — always primary. "Because I Said So" — canonical expansion (not "Because I Say So"). YIST ("Yeah I Said That") exists as a backup alt name — secondary only, never leads in materials.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Legal Structure</div><div style="font-size:12px;color:var(--muted)">Wyoming C-Corporation. No legal counsel has been engaged as of this document. Do not reference any law firms.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">No Star Ratings — Ever</div><div style="font-size:12px;color:var(--muted)">AI-inferred sentiment scores only. This is non-negotiable and architectural — not a product preference.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Profanity Treatment</div><div style="font-size:12px;color:var(--muted)">Full vowel-masking (e.g. "s**t") — cleaned, never deleted. The platform is a public diary; real people in real emotional states don't write like press releases.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Name Redaction Policy</div><div style="font-size:12px;color:var(--muted)">Automatic redaction of all non-public-figure names. Public figures defined as: C-suite executives, elected officials, and celebrities.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Alpha Incident Communications</div><div style="font-size:12px;color:var(--muted)">During alpha, all external communications on platform incidents route through the CEO.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Partnership Pipeline Status</div><div style="font-size:12px;color:var(--muted)">The 10 named partners (Airbnb, Southwest, etc.) are strategic relationship targets — not confirmed signed partners. Materials must reflect this accurately.</div></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10.5px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Still In Discussion / Open Items</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">User Identity / Pseudonymity Model</div><div style="font-size:12px;color:var(--muted)">Whether user identity remains pseudonymous to businesses, or whether verified identification (full or partial) is surfaced to B2B customers to increase intelligence value. The FlipSide architecture supports all models. Final decision balances participation incentives against data value.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">AI Interface Name</div><div style="font-size:12px;color:var(--muted)">The narrative PDF uses "BISS Chat" and "BISS AI" interchangeably. The locked name for the AI conversational interface is still open — not yet confirmed.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Seed Amount</div><div style="font-size:12px;color:var(--muted)">Seed funding amount not yet confirmed. Budget allocation percentages in materials are working hypotheses only.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Co-Founder Agreement</div><div style="font-size:12px;color:var(--muted)">Simge's Amadeus employment contract review is a condition precedent to signing. Agreement structure is drafted (45/45/10 cap table, 4-year/1-year cliff vesting) but not yet executed.</div></div>
+        <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:10px 14px"><div style="font-size:12.5px;font-weight:600;color:var(--white);margin-bottom:3px">Advisor / Early Hire Pipeline</div><div style="font-size:12px;color:var(--muted)">Team section in investor materials could be strengthened with advisors or early hires. Not yet formalized.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FLIPSIDE — DUAL IDENTITY SYSTEM
+════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="sec-label">FlipSide — The Dual Identity System</div>
+  <div class="sec-head">One verified human. Two authentic voices.</div>
+  <div class="sec-body">The platform knows they are the same. The world only sees what you choose. Tell Your Truth. Both of them.</div>
+
+  <!-- What it is — hero callout -->
+  <div style="background:var(--card);border:1px solid var(--border);border-left:4px solid var(--teal);padding:24px 28px;margin-bottom:28px">
+    <div style="font-family:'Syne',sans-serif;font-size:19px;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.3">FlipSide is BISS's dual identity system. Every user has two permanent identities: a real verified name and a pseudonymous persona. They toggle between them at the moment of publishing — per journal entry, not account-wide. Default is always the pseudonym. Real name is always an active choice.</div>
+    <div style="font-size:14px;color:var(--muted);line-height:1.7">This resolves the fundamental tension that has defined every review platform: the trade-off between honest, unguarded truth-telling (which requires anonymity) and named, accountable advocacy (which businesses pay premium prices for). FlipSide doesn't pick a side — it gives users both, and gives businesses both data products from the same verified human pool.</div>
+  </div>
+
+  <!-- Two-col: How it works + The toggle -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px">
+    <div>
+      <div style="font-size:10.5px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">How the Pseudonym Is Generated</div>
+      <div style="background:var(--card);border:1px solid var(--border);padding:20px">
+        <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px">Created once at onboarding. <strong style="color:var(--off)">Permanent — never changeable.</strong> Built through four sequential choices:</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <span style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:var(--dark);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span>
+            <div><div style="font-size:13px;font-weight:600;color:var(--white)">Genre</div><div style="font-size:12px;color:var(--muted)">Any genre — sport, hobby, activity, interest. Not limited to platform verticals. Baseball, Sewing, Cycling, Cooking, Jazz.</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <span style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:var(--dark);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span>
+            <div><div style="font-size:13px;font-weight:600;color:var(--white)">Sub-genre</div><div style="font-size:12px;color:var(--muted)">Specific thing within that genre. Fastball, Wagon, Road, Sushi, Trumpet.</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <span style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:var(--dark);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span>
+            <div><div style="font-size:13px;font-weight:600;color:var(--white)">Color or Style</div><div style="font-size:12px;color:var(--muted)">Pink, Crimson, Gold, Electric, Misty, Cobalt, Neon, Midnight.</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <span style="width:24px;height:24px;border-radius:50%;background:var(--teal);color:var(--dark);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</span>
+            <div><div style="font-size:13px;font-weight:600;color:var(--white)">Two-Digit Number</div><div style="font-size:12px;color:var(--muted)">Chosen or randomly generated. 69 is not available as an option.</div></div>
+          </div>
+        </div>
+        <div style="background:var(--navy);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-top:16px">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Example handles</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="background:var(--card2);border:1px solid var(--border);padding:4px 10px;font-size:12.5px;color:var(--teal2);font-weight:600">PinkWagon77</span>
+            <span style="background:var(--card2);border:1px solid var(--border);padding:4px 10px;font-size:12.5px;color:var(--gold2);font-weight:600">CrimsonBaseball14</span>
+            <span style="background:var(--card2);border:1px solid var(--border);padding:4px 10px;font-size:12.5px;color:var(--purple);font-weight:600">GoldSewing33</span>
+          </div>
+          <div style="font-size:11px;color:var(--dim);margin-top:8px">Personal but anonymous. Memorable. Impossible to reverse-engineer. Yours forever.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:10.5px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">The Toggle — Per Entry, Not Per Account</div>
+      <!-- Mock toggle UI -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:20px;margin-bottom:12px">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:14px">When publishing a journal entry, the user sees:</div>
+        <!-- Identity selector mockup -->
+        <div style="background:#0a1220;border:1px solid #1a2a3a;border-radius:10px;padding:14px">
+          <div style="font-size:11px;color:#3a5070;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Publish this entry as:</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="background:var(--teal-dk);border:1.5px solid var(--teal);border-radius:8px;padding:10px 12px;cursor:pointer">
+              <div style="font-size:10px;color:var(--teal2);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">FlipSide (default)</div>
+              <div style="font-size:13px;font-weight:600;color:var(--white)">PinkWagon77</div>
+              <div style="font-size:11px;color:var(--teal2);margin-top:2px">● Anonymous · Protected</div>
+            </div>
+            <div style="background:#0d1a2e;border:1px solid #1a2a3a;border-radius:8px;padding:10px 12px;cursor:pointer">
+              <div style="font-size:10px;color:#3a5070;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">Real Identity</div>
+              <div style="font-size:13px;font-weight:600;color:#647a96">Marc S.</div>
+              <div style="font-size:11px;color:#3a5070;margin-top:2px">○ Named · Verified</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:#3a5070;margin-top:10px;padding-top:10px;border-top:1px solid #1a2a3a">You can change this until the entry is published. After publishing, it's permanent.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:14px 16px">
+        <div style="font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Why default is always pseudonym</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.65">Exposure is always a deliberate choice. The user is never accidentally named. This architecture is what makes honest sharing possible at scale — people say things under a handle they would never say under their name.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two reputation tracks -->
+  <div style="font-size:10.5px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Two Independent Reputation Tracks — One Unified Backend</div>
+  <div style="display:grid;grid-template-columns:1fr 40px 1fr;gap:0;align-items:stretch;margin-bottom:28px">
+    <div style="background:var(--card);border:1px solid var(--border);border-top:3px solid var(--teal);padding:20px">
+      <div style="font-size:10px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">FlipSide Identity · PinkWagon77</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>XP &amp; Level</span><span style="color:var(--teal2)">Level 7 · 1,240 XP</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Story Coins</span><span style="color:var(--gold2)">156 coins</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Authority Gems</span><span style="color:var(--purple)">12 gems</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Leaderboard</span><span style="color:var(--teal2)">#14 Airlines</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Stories published</span><span>34 entries</span></div>
+      </div>
+      <div style="background:var(--navy);border-radius:6px;padding:8px 10px;font-size:11.5px;color:var(--muted)"><strong style="color:var(--teal)">B2B signal tier:</strong> Verified Human · Raw, unfiltered truth · Highest emotional authenticity weight</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;background:var(--navy);font-size:11px;font-weight:700;color:var(--dim);writing-mode:vertical-rl;letter-spacing:2px">SAME HUMAN</div>
+    <div style="background:var(--card);border:1px solid var(--border);border-top:3px solid var(--gold);padding:20px">
+      <div style="font-size:10px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Real Identity · Marc S.</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>XP &amp; Level</span><span style="color:var(--gold2)">Level 3 · 420 XP</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Story Coins</span><span style="color:var(--gold2)">48 coins</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Authority Gems</span><span style="color:var(--purple)">3 gems</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Named advocacy</span><span style="color:var(--gold2)">Verified</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--off)"><span>Stories published</span><span>8 entries</span></div>
+      </div>
+      <div style="background:var(--navy);border-radius:6px;padding:8px 10px;font-size:11.5px;color:var(--muted)"><strong style="color:var(--gold)">B2B signal tier:</strong> Verified Identity · Named advocacy · Highest business intelligence weight</div>
+    </div>
+  </div>
+
+  <!-- B2B value -->
+  <div style="font-size:10.5px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">The B2B Intelligence Value — Two Data Products From One Verified User Pool</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+    <div style="background:#021510;border:1px solid var(--teal-dk);border-radius:8px;padding:18px 20px">
+      <div style="font-size:12px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Verified Human Signal</div>
+      <div style="font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px">Raw, Unfiltered Truth</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:12px">Stories posted under the pseudonym. Authentic emotional truth from a real, verified person — without the social editing that happens when people know they're speaking under their own name. This is what surveys can never capture.</div>
+      <div style="font-size:12px;color:var(--teal2)">Business customers see: Verified Human · No personal identity</div>
+    </div>
+    <div style="background:#100a00;border:1px solid #7A5A10;border-radius:8px;padding:18px 20px">
+      <div style="font-size:12px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Verified Identity Signal</div>
+      <div style="font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px">Named Advocacy</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:12px">Stories posted under the real name. Named advocacy from a verified person. Dramatically higher B2B intelligence value — businesses know a real, accountable person stands behind this story. Think verified purchaser reviews, but with emotional depth.</div>
+      <div style="font-size:12px;color:var(--gold2)">Business customers see: Verified Identity · Highest intelligence weight</div>
+    </div>
+  </div>
+
+  <!-- Moderation + Safety -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+    <div style="background:var(--card);border:1px solid var(--border);padding:18px 20px">
+      <div style="font-size:10.5px;font-weight:600;color:var(--coral);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Moderation — Unified Backend</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.65">Strikes, bans, and authenticity scoring apply to the <strong style="color:var(--off)">human</strong>, not the handle. A ban is a ban on the person across both identities. Anonymity is never a shield for abuse. Rapid toggling between identities, coordinated posting patterns, or attempts to game reputation systems trigger monitoring.</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:18px 20px">
+      <div style="font-size:10.5px;font-weight:600;color:var(--purple);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Why This Deepens Every Moat</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.65">FlipSide <strong style="color:var(--off)">doubles user investment</strong> in the platform — two reputations to build and protect. It <strong style="color:var(--off)">doubles the data product</strong> — two signal tiers from one verified pool. And it is a <strong style="color:var(--off)">foundational architectural decision</strong> that cannot be bolted on later — any competitor would need a complete rebuild and a trust crisis with existing users.</div>
+    </div>
+  </div>
+
+  <!-- Strategic callout -->
+  <div style="background:var(--navy);border:1px solid var(--border);border-top:3px solid var(--teal);padding:20px 24px">
+    <div style="font-size:10px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">The Strategic Summary</div>
+    <div style="font-size:14px;color:var(--off);line-height:1.7">FlipSide turns the cold truth/advocacy tradeoff into a non-problem. It gives BISS two distinct data products from one verified user base. It deepens loyalty by doubling every user's investment in the platform. And it is a structural architectural advantage that cannot be replicated by any platform that did not build it from the start. It is a category-defining feature — in the same sentence as AI-inferred ratings and therapeutic storytelling — when describing what makes BISS fundamentally different from every other platform in existence.</div>
+    <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px;color:var(--dim)"><strong style="color:var(--muted)">Open item:</strong> Whether and how verified identity (real name) is surfaced to business customers — full disclosure, partial (e.g. "verified Delta customer" badge without full name), or opt-in — is still in discussion. The architecture supports all three models. Final decision balances user participation incentives against B2B data value.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SEED INVESTOR Q&A
+════════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="sec-label">Seed Investor Q&amp;A — The 10 Questions That Matter</div>
+  <div class="sec-head">The questions that will trip up an early BISS pitch aren't the technology questions or the market size questions. They're the ones that probe the tension between authenticity and cold-start, between revenue projections and team size, and whether this is a platform or a feature.</div>
+  <div class="sec-body">Answers below are designed for actual investor conversations — not slide decks. Each includes the real answer, how to frame it, and what to watch out for.</div>
+
+  <div style="display:flex;flex-direction:column;gap:0">
+
+    <!-- Q1 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">01</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">What problem are you actually solving, and for whom?</div>
+          <div style="font-size:12px;color:var(--muted)">The investor is checking whether you have crisp problem clarity — or just a product looking for a problem.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Two acute, validated pains. For consumers: there is no space designed for authentic, private emotional truth about experiences. Reviews are public, performative, and optimized for virality — not honesty. For businesses: the tools that give real customer intelligence cost $30,000+ per year and still only capture what customers say publicly — not what they actually think. 28 million US SMBs have zero access to the kind of deep customer intelligence that enterprise brands take for granted. BISS solves both simultaneously — the consumer gets a therapeutic space to process experiences, and that authentic content becomes proprietary intelligence for businesses at 95% lower cost than existing tools.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>Lead with the gap — not the product. "There is no private, authentic space for customer truth. And there is no affordable intelligence tool for the 28 million SMBs who can't pay Meltwater prices." Then BISS is the solution to both problems at once.</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">02</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">Why won't Google, Yelp, or Reddit just build this?</div>
+          <div style="font-size:12px;color:var(--muted)">This is the existential threat question. Every investor will ask it.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Each of them has a structural reason they can't. Google's entire consumer identity infrastructure is identity-linked — it cannot offer anonymous authenticated sharing without dismantling Google Account. Its advertising model is an irreconcilable conflict of interest with user trust. Yelp's star ratings are gamed by design — they cannot eliminate gaming without eliminating their entire content model and existing user base. Reddit's pseudonymous model is close in spirit, but Reddit is a public conversation platform — it cannot generate structured private intelligence from its content. None of them can pivot to therapeutic AI conversation without rebuilding from scratch and creating a trust crisis with their existing users. And none of them have any motivation to: their business models actively conflict with what BISS is building.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>Be specific on Google — that's usually the sharpest version of this question. "Google has identity-linked infrastructure and an advertising model. Both structurally prevent what we're building. That's not a temporary advantage — it's a permanent architectural incompatibility."</div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">03</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">How do you actually ensure the content is authentic?</div>
+          <div style="font-size:12px;color:var(--muted)">This will come up in every meeting, often twice. The intelligence product is only valuable if the data is trustworthy.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">We don't hope people are honest. We built behavioral biometrics, account verification, and a real-time authenticity scoring system that quarantines low-quality content before it ever reaches a business dashboard. Every account requires phone and email verification — one phone number equals one account. Behavioral biometrics analyze typing rhythm, scroll behavior, and interaction timing — these patterns are unique to individuals and extremely hard to fake at scale. Our AI writing pattern analysis detects AI-generated or template-based content in real time. Stories receive an Authenticity Score from 1–100, and business intelligence reports only include high-scoring content. The system is designed to catch coordinated inauthentic behavior at the network level — not just the post level.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">The 2-sentence version</strong>"We don't hope people are honest. We built behavioral biometrics, account verification, and a real-time authenticity scoring system that quarantines low-quality content before it ever reaches a business dashboard." Then stop.</div>
+        <div style="background:#200000;border-left:3px solid var(--coral);padding:10px 14px;font-size:12.5px;color:#c87070"><strong style="color:var(--coral);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">Watch out for</strong>Don't get into an arms race argument ("but what about sophisticated bots?"). The answer is: no UGC platform has perfect authenticity, but our multi-layer system produces demonstrably higher-quality data than any alternative at this price point.</div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">04</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">How do you solve the cold start problem?</div>
+          <div style="font-size:12px;color:var(--muted)">Classic two-sided marketplace challenge. Investors have seen dozens of platforms die here.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">A specific four-phase sequencing strategy that prevents the empty room problem. Phase 1: before public launch, recruit 3–5 travel bloggers and lifestyle creators to seed high-quality initial content — so the first B2B prospect sees real stories, not a blank page. Phase 2: create authentic brand test accounts for target verticals to demonstrate the platform to business customers. Phase 3: business prompt seeding — brands post targeted questions that create instant feedback loops and drive user engagement. Phase 4: organic growth through creator networks and word-of-mouth from the therapeutic value users experience. We're not trying to solve both sides simultaneously. We seed one side first, deliberately.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">Key insight</strong>"We don't need massive user scale to demonstrate B2B value — we need quality and authenticity, and we can control that in alpha."</div>
+        <div style="background:#200000;border-left:3px solid var(--coral);padding:10px 14px;font-size:12.5px;color:#c87070"><strong style="color:var(--coral);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">Watch out for</strong>Don't let this become hand-wavy "we'll do influencer marketing." The four-phase sequencing is the answer — be specific about each phase.</div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">05</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">What does traction look like, and when will you have proof of product-market fit?</div>
+          <div style="font-size:12px;color:var(--muted)">At seed, they know you may not have revenue. What they want is signal.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">We're in pre-alpha. What we have is structural: NVIDIA Inception Program acceptance and Oxford Saïd Business School affiliation, plus a full platform framework developed through extensive business planning and accelerator-grade vetting. Our alpha milestone is 3–5 local business partners in Southern California and 20–50 invite-only consumer users over a 90-day free pilot. We're not asking business customers to pay until we've demonstrated ROI. The proof-of-concept metric: one alpha business partner that says "this told us something our surveys never could." That's the unlock.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>Own the pre-alpha status confidently. "We're not at traction yet — we're at conviction, and here's why the architecture is right." Then anchor to the alpha milestones as the specific proof point you're building toward.</div>
+        <div style="background:#200000;border-left:3px solid var(--coral);padding:10px 14px;font-size:12.5px;color:#c87070"><strong style="color:var(--coral);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">Watch out for</strong>Don't overclaim the partnership pipeline. Those are strategic relationship targets, not signed deals. Misrepresenting this destroys credibility the moment diligence begins.</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">06</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">Why are you and your co-founder the right team for this?</div>
+          <div style="font-size:12px;color:var(--muted)">The most important question at seed. Ideas are cheap. Investors are betting on the people.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Marc brings the market insight, narrative vision, and CEO operating function — the "why this matters and how it gets sold" half of the equation. Simge brings the technical architecture capability — Oxford Executive Diploma, background at Amadeus (one of the world's largest travel technology companies), the specific domain expertise in travel technology and AI systems that makes the vertical choice non-accidental. The combination of consumer-facing product intuition and deep travel-tech infrastructure experience is specifically right for a platform launching in travel and hospitality. The gap we're filling is one that Simge has personally observed from inside the industry.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted)"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>Make sure Simge speaks to the Amadeus background in her own words — two founders who both pitch the same story is worth far less than one who tells the vision and one CTO who explains how they'll actually build it.</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">07</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">Why is this a platform, not a feature?</div>
+          <div style="font-size:12px;color:var(--muted)">The platform/feature distinction is a classic investor filter. A feature gets acqui-hired or copied. A platform gets funded.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">BISS generates original private content that cannot exist anywhere else — it is not a layer on top of someone else's data. The therapeutic AI conversation is a product philosophy that requires specialized development, behavioral biometrics, and a trust architecture that cannot be added to an existing platform. The dual-sided marketplace mechanic means the product becomes more valuable with every user on both sides. The contest and engagement platform adds a third business model that is structurally impossible for a feature to support. And the network effects that compound across journal entries, brand pages, community trust, and business intelligence cannot be replicated by any single-purpose tool. A feature serves one function. BISS serves three markets simultaneously from one content generation engine.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted)"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">The clean answer</strong>"A feature serves one function. BISS generates original content that simultaneously powers three markets — business intelligence, trusted word-of-mouth, and creative crowd-sourcing — none of which exist independently without the others. That's a platform."</div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">08</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">What's your go-to-market strategy — how do you actually get users?</div>
+          <div style="font-size:12px;color:var(--muted)">Investors want a specific, defensible answer — not "content marketing and word-of-mouth."</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Three distinct acquisition mechanisms, each self-reinforcing. First: B2B-led consumer acquisition — when a hotel or airline subscribes, they have an incentive to drive their customers to BISS to generate intelligence. The business customer becomes an acquisition channel. Second: the celebrity / public figure flywheel — when Taylor Swift seeds a question to her fans on BISS, she brings her entire audience. They arrive to respond, create accounts, and stay for the platform. Every public figure who uses the contest feature is simultaneously a customer and an acquisition channel. Third: geographic concentration — by staying hyperlocal in Southern California for the alpha, every story makes the platform more useful to the next user in that market. Density before scale.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted)"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">The contest platform is undersold here</strong>The celebrity flywheel is your best answer to "how do you grow without a marketing budget." Make sure it features prominently in every go-to-market discussion — it's the mechanism that no competitor has and that no amount of paid acquisition can replicate.</div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div style="border:1px solid var(--border);margin-bottom:12px">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">09</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">What does the business model look like, and are these projections realistic?</div>
+          <div style="font-size:12px;color:var(--muted)">Investors will pressure-test your numbers. Know exactly what assumptions drive them.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Primary revenue is B2B subscription — 90–95% of the model. Three tiers from $50 to $800/month, targeting the 28 million US SMBs who currently have zero access to affordable customer intelligence. Gross margin of 78–83% (software with AI infrastructure costs). The projections are deliberately conservative: $3.5K ARR at month 18 is literally 2 business customers. $29K at month 30 is 8. $79K at month 42 is 15. We are not projecting hockey-stick growth. We are projecting proof of unit economics — demonstrating LTV/CAC ratios of 3–6× before asking for Series A. The Series A trigger is $150–250K ARR with validated unit economics, not a user count milestone.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted)"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>"These projections are conservative by design. We're not projecting virality — we're projecting the minimum validation required to prove the unit economics before we scale. Month 18 is 2 paying customers. We think that's achievable and we think it's enough to prove the model."</div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div style="border:1px solid var(--border);margin-bottom:0">
+      <div style="background:var(--card2);padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--teal);opacity:.5;flex-shrink:0;line-height:1">10</span>
+        <div>
+          <div style="font-size:15px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:4px">What's the biggest risk, and what would kill this?</div>
+          <div style="font-size:12px;color:var(--muted)">Investors respect founders who can name their risks clearly. Founders who can't are either naive or evasive — neither is fundable.</div>
+        </div>
+      </div>
+      <div style="background:var(--card);padding:16px 20px">
+        <div style="font-size:13.5px;color:var(--off);line-height:1.7;margin-bottom:12px">Three real risks, in order. First: user acquisition speed — the therapeutic value only compounds with scale, and scale takes time. If we can't reach minimum density in our alpha market fast enough, the B2B product doesn't have enough signal. Mitigation: the four-phase seeding strategy and the celebrity flywheel. Second: authenticity at scale — as the platform grows, so does the incentive for coordinated inauthentic behavior. Mitigation: the multi-layer detection system, but this is an ongoing arms race. Third: the team scaling challenge — two founders can build the vision and prove the concept, but scaling past alpha requires key hires in engineering and business development. Mitigation: the seed round is specifically designed to fund those first hires.</div>
+        <div style="background:#021510;border-left:3px solid var(--teal);padding:10px 14px;font-size:12.5px;color:var(--muted)"><strong style="color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px">How to position it</strong>Name the risks before they do. "Our three biggest risks are X, Y, and Z. Here's how we're mitigating each." This builds trust. Founders who have clearly stress-tested their own thesis are more credible, not less.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Positioning summary -->
+  <div style="background:var(--navy);border:1px solid var(--border);border-top:3px solid var(--teal);padding:22px 26px;margin-top:24px">
+    <div style="font-size:10px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">The Single Most Important Positioning Principle</div>
+    <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.3">BISS invented a category. Position from there — never from within an existing one.</div>
+    <div style="font-size:13.5px;color:var(--muted);line-height:1.7">Never say "we're like Yelp but better" or "we're a social listening tool for SMBs." Those framings put BISS in a box it doesn't fit and invite comparisons that miss the point. The correct frame is always: "We created a new product category called Conversational Customer Intelligence. The category didn't exist before BISS. Here's what it is and why it matters." Then walk them through it. Investors who fund category-creation bets are looking for founders who understand that they're not competing in a market — they're creating one. That's a completely different kind of pitch.</div>
+  </div>
+</div>
+
+
 <!-- ══ FOOTER ════════════════════════════════════════════════ -->
 <footer>
   <div>
