@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BISS — Tell Your Truth · Because I Said So</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BISS — Investor Pitch · Tell Your Truth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -338,151 +336,361 @@ body.locked{overflow:hidden;height:100vh}
 .g-wordmark .mark::before{content:attr(data-t);position:absolute;left:-2.5px;top:1.5px;color:var(--cyan);z-index:-1;opacity:.9}
 @media(prefers-reduced-motion:reduce){.lips,.lips .lower{animation:none}}
 
-.ctastrip{background:var(--pink);padding:22px 0}
-.ctainner{max-width:1180px;margin:0 auto;padding:0 26px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
-.btn-cta{display:inline-flex;align-items:center;font-family:var(--f-mono);font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:15px 30px;border-radius:11px;transition:transform .15s,box-shadow .15s;cursor:pointer}
-.btn-cta.primary{background:#160A1C;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.28)}
-.btn-cta.primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,0,0,.36)}
-.btn-cta.ghost{background:transparent;color:#160A1C;border:2px solid #160A1C}
-.btn-cta.ghost:hover{background:#160A1C;color:#fff}
-@media(max-width:520px){.btn-cta{width:100%;justify-content:center}}
-.hero-toggle{display:flex;flex-direction:column;align-items:center;gap:13px;padding:42px 0 46px}
-.ht-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua)}
-.toggle.big{transform:scale(1.14);animation:tgpulse 2.4s ease-in-out infinite}
-.toggle.big .tg{padding:12px 30px;font-size:13.5px}
-@keyframes tgpulse{0%,100%{box-shadow:0 0 0 0 rgba(233,255,58,0)}50%{box-shadow:0 0 26px 4px rgba(233,255,58,.3)}}
-@media(prefers-reduced-motion:reduce){.toggle.big{animation:none}}
-</style>
-</head>
-<body class="locked">
-<div id="gate"><div class="g-floor"></div><div class="g-glow a"></div><div class="g-glow b"></div><span class="g-brk tl"></span><span class="g-brk tr"></span><span class="g-brk bl"></span><span class="g-brk br"></span><div class="g-inner"><div class="g-wordmark"><span class="mark" data-t="biss">biss</span></div><div class="g-lips"><svg class="lips" viewBox="246 96 228 140" xmlns="http://www.w3.org/2000/svg" aria-label="talking lips"><defs><linearGradient id="upG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF65C3"/><stop offset="1" stop-color="#FF2FA8"/></linearGradient><linearGradient id="loG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF3DB5"/><stop offset="1" stop-color="#C40E6E"/></linearGradient></defs><path class="mouth" d="M262,150 C300,150 340,152 360,151 C400,152 440,150 458,150 C452,182 418,198 360,202 C302,198 270,182 262,150 Z" fill="#5e0a29"/><path class="teeth" d="M266,149 C300,146 340,148 360,147 C400,148 440,146 454,149 L452,159 C420,156 384,158 360,158 C332,158 300,156 268,159 Z" fill="#fff"/><path class="upper" d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="url(#upG)"/><ellipse cx="330" cy="126" rx="26" ry="9" fill="#fff" opacity=".35"/><g class="lower"><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="url(#loG)"/><ellipse cx="360" cy="184" rx="34" ry="10" fill="#fff" opacity=".22"/></g></svg></div><div class="g-biso">Because I Said So</div><div class="g-eyebrow">Private Preview · By Invitation Only</div><div class="g-tyt">Tell Your Truth</div><p class="g-sub">This one isn&#39;t public yet. Enter the password to step inside.</p><form id="gform" class="g-form" onsubmit="return biUnlock(event)"><div class="g-field"><span class="g-brk2 tl"></span><span class="g-brk2 tr"></span><span class="g-brk2 bl"></span><span class="g-brk2 br"></span><input id="gpw" type="password" placeholder="enter password" autocomplete="off" autofocus></div><button type="submit" class="g-btn">Enter →</button></form><p id="gerr" class="g-err">Not quite. Try again — or email Marc for the password.</p><p class="g-msg">Don&#39;t have the password?<br><a href="mailto:marcsternberg13@gmail.com?subject=BISS%20preview%20access">Email Marc Sternberg — marcsternberg13@gmail.com</a></p><div class="g-biso-foot">Because I Said So</div></div></div>
 
-<header class="topbar"><div class="wrap">
-  <a class="brand" href="#top"><span class="mark" data-t="biss">biss</span><svg class="kiss" viewBox="240 90 240 125" xmlns="http://www.w3.org/2000/svg"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF3DB5"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#D60B7C"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#fff" opacity=".4"/></svg><span class="tagchip">Because I Said So</span></a>
-  <div class="toggle"><button class="tg on" data-view="customer" onclick="setView('customer')">Customer</button><button class="tg" data-view="business" onclick="setView('business')">Business</button></div>
-  <a class="btn lime" id="headcta" href="#waitlist">Join the Waitlist →</a>
-  <button class="hamb" onclick="var l=document.querySelector('.links');if(l)l.style.display=(getComputedStyle(l).display==='none'?'flex':'none')"><span></span><span></span><span></span></button>
-</div></header>
-<div id="site-customer">
-
-<!-- HERO -->
-<section class="hero band" id="top">
-  <div class="glow" style="width:520px;height:420px;background:var(--pink);top:-120px;right:0;opacity:.22"></div>
-  <div class="glow" style="width:420px;height:420px;background:var(--violet);bottom:-160px;left:-120px;opacity:.28"></div>
-  <div class="floor"></div>
-  <div class="wrap rv">
-    <div class="tyt">Tell Your Truth</div>
-    <div class="bisohero">· Because I Said So ·</div>
+/* ===================== DECK · FIXED 16:9 LANDSCAPE ===================== */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background:#050308}
+.deck{scroll-snap-type:y mandatory}
+.stage{height:100vh;display:flex;align-items:center;justify-content:center;
+  scroll-snap-align:start;overflow:hidden;padding:12px}
+.slide{position:relative;width:1280px;height:720px;flex:none;overflow:hidden;border-radius:8px;
+  transform:scale(var(--s,1));transform-origin:center center;
+  box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.slide .wrap{max-width:none;width:100%;height:100%;margin:0;padding:40px 58px;
+  display:flex;flex-direction:column;justify-content:center}
+.slide.top .wrap{justify-content:flex-start}
+.slide.dark{background:var(--ink2)}
+.slide.lime{background:var(--lime)}
+.slide.pink{background:var(--pink)}
+.slide.vapor{background:var(--vapor)}
+.slide.lime .eyebrow,.slide.lime .eyebrow .biso{color:#160A1C}
+.slide.dark::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(60% 55% at 82% 18%,rgba(123,47,242,.22),transparent 60%),
+             radial-gradient(50% 50% at 6% 94%,rgba(25,228,208,.13),transparent 60%)}
+.slide.vapor::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(70% 60% at 86% 12%,rgba(255,61,181,.24),transparent 62%),
+             radial-gradient(55% 55% at 8% 96%,rgba(25,228,208,.15),transparent 60%)}
+/* viewfinder */
+.vf{position:absolute;inset:24px;pointer-events:none;z-index:3}
+.vf span{position:absolute;width:20px;height:20px;border:2px solid var(--aqua);opacity:.55}
+.vf span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.vf span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.vf span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.vf span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.slide.lime .vf span{border-color:#160A1C;opacity:.4}
+.slide.pink .vf span,.slide.vapor .vf span{border-color:rgba(255,255,255,.5)}
+/* headline system (fixed px for scaled canvas) */
+.eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:9px}
+.dh{font-family:var(--f-body);font-weight:900;font-size:36px;line-height:1.05;
+  letter-spacing:-.022em;text-wrap:balance;margin:2px 0 9px;color:var(--text)}
+.dh.sm{font-size:27px}
+.dsub{font-size:15px;font-weight:600;color:var(--aqua);line-height:1.32;
+  max-width:66ch;text-wrap:balance;margin-bottom:12px}
+.slide.dark .dsub{color:var(--lav)}
+.slide.lime .dh,.slide.lime .dsub{color:#160A1C}
+.slide.vapor .dh{color:#fff}.slide.vapor .dsub{color:var(--lime)}
+.slide.pink .dh{color:#fff}.slide.pink .dsub{color:#160A1C}
+/* columns */
+.cols{display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center;flex:1;min-height:0}
+.cols.wide{grid-template-columns:1.12fr .88fr}
+.cols.rev>.copy{order:2}.cols.rev>.art{order:1}
+.cols>.copy{min-width:0}
+/* point lists */
+.pts{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+.pt{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start;font-size:12.8px;line-height:1.33}
+.pt .m{width:8px;height:8px;margin-top:6px;background:var(--pink);flex:none;box-shadow:2px 2px 0 var(--cyan)}
+.pt .x{font-family:var(--f-mono);font-weight:700;font-size:11px;color:var(--aqua);margin-top:2px;min-width:20px}
+.pt div>b{color:var(--text);font-weight:800}
+.pt div>span{color:var(--muted)}
+.slide.lime .pt div>span{color:rgba(22,10,28,.72)}
+.slide.lime .pt div>b{color:#160A1C}
+.slide.lime .pt .m{background:#160A1C;box-shadow:2px 2px 0 var(--pink)}
+/* callout quote */
+.qt{font-family:var(--f-body);font-weight:800;font-size:15.5px;line-height:1.26;
+  border-left:3px solid var(--lime);padding:2px 0 2px 15px;margin-top:10px;text-wrap:balance;color:#fff}
+.slide.lime .qt{border-color:#160A1C;color:#160A1C}
+.slide.vapor .qt{color:#fff;border-color:var(--lime)}
+/* stat chips */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.chip{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;padding:7px 12px;
+  border:1.4px solid var(--line);border-radius:999px;color:var(--text);background:rgba(255,255,255,.03)}
+.chip b{color:var(--lime)}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:2px}
+.tbl th{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--aqua);text-align:left;padding:8px 12px;border-bottom:1.5px solid var(--line);white-space:nowrap}
+.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:middle}
+.tbl td b{color:var(--text)}
+.tbl tr.hi td{background:rgba(255,61,181,.10)}
+.tbl .big{font-family:var(--f-body);font-weight:900;font-size:14px;color:var(--lime)}
+.tbl .tier{font-family:var(--f-body);font-weight:900;color:var(--text);font-size:13.5px}
+/* mini cards */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:4px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:4px}
+.card2{border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:rgba(255,255,255,.025)}
+.card2 .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--aqua);margin-bottom:6px}
+.card2 h4{font-family:var(--f-body);font-weight:900;font-size:15.5px;margin:0 0 5px;color:var(--text)}
+.card2 p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.45}
+.card2 .big{font-family:var(--f-body);font-weight:900;font-size:24px;color:var(--lime);line-height:1}
+/* big stat cards (VP business) */
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 4px}
+.stat{border:1px solid var(--line);border-top:3px solid var(--pink);border-radius:12px;padding:16px 16px;background:rgba(255,255,255,.025)}
+.stat .n{font-family:var(--f-disp);font-size:38px;color:var(--lime);line-height:.95}
+.stat .l{color:var(--muted);font-size:12px;line-height:1.35;margin-top:8px}
+/* process steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:6px}
+.slide .step{background:transparent;border:0;border-radius:0;border-top:2px solid var(--pink);padding:10px 0 0}
+.step .n{font-family:var(--f-disp);font-size:24px;color:var(--pink);line-height:1}
+.step b{display:block;color:var(--text);font-weight:800;margin:5px 0 3px;font-size:13.5px}
+.step span{color:var(--muted);font-size:12px;line-height:1.4}
+.slide.lime .step{border-color:#160A1C}.slide.lime .step .n{color:#160A1C}
+.slide.lime .step b{color:#160A1C}.slide.lime .step span{color:rgba(22,10,28,.7)}
+/* screens */
+.pscreen{display:flex;justify-content:center;align-items:center;height:100%;zoom:.82}
+.pscreen .gswrap{width:300px;max-width:100%}
+.dscreen{zoom:.46;filter:drop-shadow(0 22px 48px rgba(0,0,0,.5));border-radius:14px}
+@supports not (zoom:1){.dscreen{transform:scale(.46);transform-origin:top left}}
+/* title */
+.title-mark{font-family:var(--f-mark);font-weight:700;color:var(--pink2);position:relative;
+  display:inline-block;font-size:120px;line-height:.9}
+.title-mark::before{content:"biss";position:absolute;left:-4px;top:2px;color:var(--cyan);z-index:-1;opacity:.85}
+.title-mark.sm{font-size:60px}
+.title-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.title-row .kiss{width:56px;height:30px}
+.baby-disp{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.02em;font-size:30px;color:var(--lime);line-height:1;margin:2px 0 2px}
+.tag-big{font-family:var(--f-body);font-weight:900;font-size:46px;color:#fff;letter-spacing:-.02em;margin:10px 0 8px}
+.tag-big.sm{font-size:32px;margin:0}
+.meta{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;color:var(--lav);line-height:1.85}
+.meta b{color:var(--aqua)}
+/* flywheel */
+.flyw{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.02em;color:var(--aqua);
+  line-height:1.75;border:1px dashed var(--line);border-radius:11px;padding:11px 14px;margin:2px 0 14px}
+/* category map */
+.bo{display:grid;grid-template-columns:1fr 250px 1fr;gap:22px;align-items:center;margin-top:2px;flex:1;min-height:0}
+.bo-col{display:flex;flex-direction:column;gap:11px}
+.clus .ch{font-family:var(--f-mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  padding-bottom:6px;margin-bottom:9px;border-bottom:1.5px solid currentColor}
+.clus.s .ch{color:var(--aqua)}.clus.r .ch{color:var(--tang)}
+.clus.e .ch{color:var(--coral)}.clus.n .ch{color:var(--lav)}
+.clgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.clcell{border:1px solid var(--line);border-left:2.5px solid var(--line);border-radius:8px;padding:7px 10px;background:rgba(255,255,255,.02)}
+.clus.s .clcell{border-left-color:var(--aqua)}.clus.r .clcell{border-left-color:var(--tang)}
+.clus.e .clcell{border-left-color:var(--coral)}.clus.n .clcell{border-left-color:var(--lav)}
+.clcell b{display:block;color:var(--text);font-weight:700;font-size:12px}
+.clcell span{color:var(--muted);font-size:10px;font-family:var(--f-mono)}
+.bo-core{text-align:center}
+.bo-core .ring{width:196px;height:196px;border-radius:50%;margin:0 auto;
+  background:radial-gradient(circle at 50% 40%,#22efd6,#0fb9a8);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 0 0 9px rgba(25,228,208,.10),0 0 50px rgba(25,228,208,.35)}
+.bo-core .ring .m{font-family:var(--f-disp);font-size:46px;color:#08312c;line-height:.9}
+.bo-core .ring small{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;color:#08312c;margin-top:7px}
+.bo-core p{color:var(--muted);font-size:11.5px;line-height:1.5;margin:13px auto 0;max-width:26ch}
+/* HUD / progress / nav */
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--lime);z-index:120;width:0;transition:width .15s}
+.hud{position:fixed;bottom:15px;right:16px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+  color:var(--muted);z-index:110;background:rgba(11,7,16,.72);padding:6px 11px;border:1px solid var(--line);border-radius:8px;backdrop-filter:blur(6px)}
+.hud b{color:var(--lime)}
+.navbtns{position:fixed;bottom:14px;left:16px;display:flex;gap:8px;z-index:110}
+.navbtns button{font-family:var(--f-mono);font-size:13px;width:36px;height:32px;cursor:pointer;
+  background:rgba(11,7,16,.72);color:var(--text);border:1px solid var(--line);border-radius:8px;backdrop-filter:blur(6px)}
+.navbtns button:hover{border-color:var(--aqua);color:var(--aqua)}
+.section-tab{position:fixed;top:12px;left:16px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);z-index:110;background:rgba(11,7,16,.6);padding:5px 10px;border-radius:7px}
+/* mashup / category slide */
+.dh.mash{font-size:30px;line-height:1.16;margin-bottom:12px}
+.mk-inline{font-family:var(--f-mark);font-weight:700;color:var(--pink2)}
+.mash-line{text-align:center;font-family:var(--f-body);font-weight:900;font-size:25px;
+  letter-spacing:-.012em;color:#fff;margin-top:22px;text-wrap:balance}
+.mash-line span{color:var(--lime)}
+/* pink CTA ribbon (final slide) */
+.slide.team .wrap,.slide.title .wrap{padding-bottom:98px}
+.cta-ribbon{position:absolute;left:0;right:0;bottom:0;height:78px;background:var(--pink);
+  display:flex;align-items:center;justify-content:space-between;padding:0 44px;gap:18px;z-index:4}
+.cta-ribbon .rl{display:flex;align-items:baseline;gap:13px}
+.cta-ribbon .rmark{font-family:var(--f-mark);font-weight:700;font-size:29px;color:#160A1C;line-height:1}
+.cta-ribbon .rtag{font-family:var(--f-body);font-weight:900;font-size:19px;color:#160A1C;letter-spacing:-.01em}
+.cta-ribbon .rbtns{display:flex;gap:11px}
+.cta{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.03em;
+  padding:12px 18px;border-radius:999px;white-space:nowrap;text-decoration:none;display:inline-block}
+.cta.lime{background:var(--lime);color:#160A1C;box-shadow:0 6px 18px rgba(20,10,0,.22)}
+.cta.ink{background:#160A1C;color:#fff}
+/* ---- bright skin: ink text on full-strength neon backgrounds ---- */
+.slide.bright::before{display:none}
+.slide.bright .eyebrow,.slide.bright .eyebrow .biso{color:#160A1C}
+.slide.bright .dh{color:#160A1C}
+.slide.bright .dsub{color:#2a0e52}
+.slide.bright .dsub b{color:#160A1C}
+.slide.bright .pt div>b{color:#160A1C}
+.slide.bright .pt div>span{color:rgba(22,10,28,.76)}
+.slide.bright .pt .x{color:#41249A}
+.slide.bright .pt .m{background:#160A1C;box-shadow:2px 2px 0 rgba(255,255,255,.55)}
+.slide.bright .qt{color:#160A1C;border-color:#160A1C}
+.slide.bright .chip{color:#160A1C;border-color:rgba(22,10,28,.32);background:rgba(22,10,28,.06)}
+.slide.bright .chip b{color:#41249A}
+.slide.bright .tbl th{color:#3a1d86;border-color:rgba(22,10,28,.26)}
+.slide.bright .tbl td{color:rgba(22,10,28,.82);border-color:rgba(22,10,28,.15)}
+.slide.bright .tbl td b{color:#160A1C}
+.slide.bright .tbl tr.hi td{background:rgba(22,10,28,.10)}
+.slide.bright .tbl .big{color:#160A1C}
+.slide.bright .tbl .tier{color:#160A1C}
+.slide.bright .card2{background:rgba(22,10,28,.08);border-color:rgba(22,10,28,.20)}
+.slide.bright .card2 .k{color:#41249A}
+.slide.bright .card2 h4{color:#160A1C}
+.slide.bright .card2 p{color:rgba(22,10,28,.8)}
+.slide.bright .card2 p b{color:#160A1C}
+.slide.bright .stat{border-top-color:#160A1C;background:rgba(22,10,28,.06)}
+.slide.bright .stat .n{color:#160A1C}.slide.bright .stat .l{color:rgba(22,10,28,.74)}
+.slide.bright .flyw{color:#160A1C;border-color:rgba(22,10,28,.32)}
+.slide.bright .mash-line{color:#160A1C}.slide.bright .mash-line span{color:#41249A}
+.slide.bright .vf span{border-color:#160A1C;opacity:.42}
+/* ---- Numbers: dark data card on the pink slide ---- */
+.datacard{background:linear-gradient(162deg,#20122f 0%,#160A1C 100%);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:15px 20px 13px;box-shadow:0 18px 44px rgba(22,10,28,.34);margin-top:2px}
+.slide .datacard .tbl th{color:var(--aqua);border-color:rgba(255,255,255,.16)}
+.slide .datacard .tbl td{color:var(--muted);border-color:rgba(255,255,255,.09)}
+.slide .datacard .tbl td b{color:#fff}
+.slide .datacard .tbl .big{color:var(--lime)}
+.slide .datacard .tbl .tier{color:#fff}
+.slide .datacard .tbl tr.hi td{background:rgba(255,61,181,.18)}
+/* ---- Trustpilot (improved layout) ---- */
+.slide.tpx .wrap{padding:32px 50px;justify-content:flex-start}
+.tpx-eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--aqua);display:flex;align-items:center;gap:11px;margin-bottom:8px}
+.tpx-eyebrow::before{content:"";width:28px;height:2px;background:var(--aqua)}
+.tpx-h1{font-family:var(--f-disp);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.004em;font-size:40px;margin:0}
+.tpx-h1 .l1,.tpx-h1 .l2{display:block}
+.tpx-h1 .l1{color:#FF3DB5;text-shadow:0 0 22px rgba(255,101,195,.4)}
+.tpx-h1 .l2{color:var(--lime);text-shadow:0 0 22px rgba(233,255,58,.36)}
+.tpx-sub{font-weight:600;color:#fff;font-size:14.5px;margin-top:10px;line-height:1.4;max-width:76ch}
+.tpx-sub .hl{color:var(--lime)}
+.tpx-body{display:grid;grid-template-columns:.86fr 1fr;gap:20px;margin-top:13px;align-items:start}
+.tpx-rail{display:flex;flex-direction:column;gap:11px}
+.tpx-beat{display:flex;flex-direction:column;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-left:4px solid var(--aqua);border-radius:12px;padding:12px 16px}
+.tpx-beat:nth-child(2){border-left-color:var(--cyan)}
+.tpx-beat:nth-child(3){border-left-color:var(--lime)}
+.tpx-lbl{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua);display:block;margin-bottom:5px;font-weight:700}
+.tpx-beat:nth-child(2) .tpx-lbl{color:var(--cyan)}
+.tpx-beat:nth-child(3) .tpx-lbl{color:var(--lime)}
+.tpx-beat p{font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.85);font-weight:500}
+.tpx-beat p b{color:#fff;font-weight:700}
+.tpx-compare{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.tpx-panel{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;position:relative}
+.tpx-phead{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.2em;padding:10px 17px;display:flex;align-items:center;gap:9px;position:relative;z-index:2}
+.tpx-dot{width:7px;height:7px;border-radius:50%}
+.tpx-pdesc{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em;padding:7px 17px;font-style:italic;position:relative;z-index:2}
+.tpx-rows{display:flex;flex-direction:column;flex:1;position:relative;z-index:2}
+.tpx-row{display:flex;align-items:center;padding:11px 17px;font-size:13.5px;font-weight:600;line-height:1.22}
+.tpx-tp{background:#FBFAFD;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.tpx-tp .tpx-phead{background:#4A4557;color:#E9E6F0}
+.tpx-tp .tpx-dot{background:#A39CB4}
+.tpx-tp .tpx-pdesc{background:#EDEBF2;color:#615C71}
+.tpx-tp .tpx-row{color:#2A2634;border-top:1px solid #E6E2ED;font-weight:500}
+.tpx-tp .tpx-row:first-child{border-top:0}
+.tpx-tp .tpx-money{color:#2A2634;font-weight:600}
+.tpx-bs{background:#fff;box-shadow:0 18px 54px rgba(255,47,168,.32)}
+.tpx-bs::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;z-index:3;background:linear-gradient(#FF65C3,#FF2FA8);box-shadow:0 0 18px rgba(255,101,195,.85)}
+.tpx-bs .tpx-phead{background:linear-gradient(90deg,#FF2FA8,#FF65C3);color:#160A1C}
+.tpx-bs .tpx-dot{background:#160A1C}
+.tpx-bs .tpx-pdesc{background:#FFEAF6;color:#B21C7B}
+.tpx-bs .tpx-row{color:#160A1C;border-top:1px solid #F4DBEB;font-weight:600}
+.tpx-bs .tpx-row:first-child{border-top:0}
+.tpx-bs .tpx-money{background:#FFE1F2;color:#160A1C;font-weight:800}
+.tpx-bs .tpx-money::before{content:"";width:4px;height:56%;background:#FF2FA8;border-radius:3px;margin-right:10px;flex:none;box-shadow:0 0 10px rgba(255,47,168,.7)}
+.tpx-kicker{text-align:center;font-weight:800;font-size:18px;margin-top:14px;line-height:1.3}
+.tpx-kicker .a{color:#fff}.tpx-kicker .b{color:var(--lime)}
+.tpx-refrain{text-align:center;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.3em;color:rgba(255,255,255,.5);margin-top:8px;text-transform:uppercase}
+/* ---- Numbers: floating dark data cards (improved) ---- */
+.nz-sub{font-family:var(--f-mono);font-weight:400;color:rgba(22,10,28,.82);font-size:13px;margin-top:8px;line-height:1.45;max-width:92ch}
+.nz-tables{display:flex;flex-direction:column;gap:13px;margin-top:15px}
+.nz-card{background:linear-gradient(160deg,#1c1026,#100813);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 46px rgba(120,10,70,.4),0 0 0 1px rgba(255,101,195,.14);display:flex;flex-direction:column}
+.nz-grid7{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1.05fr 1fr 1fr}
+.nz-grid6{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1.15fr 1fr}
+.nz-thead{border-bottom:1px solid rgba(255,255,255,.09)}
+.nz-thead>div{font-family:var(--f-mono);font-weight:700;color:var(--aqua);font-size:10px;letter-spacing:.11em;text-transform:uppercase;padding:10px 15px}
+.nz-trow{border-top:1px solid rgba(255,255,255,.06)}
+.nz-trow:first-of-type{border-top:0}
+.nz-trow>div{padding:10px 15px;font-size:14px;color:#EFEAF5;line-height:1.2;display:flex;align-items:center}
+.nz-name{font-weight:700;color:#fff}
+.nz-hero{background:linear-gradient(90deg,rgba(255,101,195,.18),rgba(233,255,58,.07));position:relative}
+.nz-hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);box-shadow:0 0 12px rgba(233,255,58,.8)}
+.nz-win{color:var(--lime);font-weight:800}
+.nz-aqua{color:var(--aqua);font-weight:800}
+.nz-muted>div{color:#B7B0C7}
+.nz-callout{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:12px;padding:12px 18px;border:1px solid rgba(233,255,58,.28);box-shadow:0 14px 34px rgba(120,10,70,.34);margin-top:13px}
+.nz-bar{width:4px;align-self:stretch;background:var(--lime);border-radius:3px;box-shadow:0 0 12px rgba(233,255,58,.7);flex:none}
+.nz-callout p{font-size:15px;color:#fff;font-weight:600;line-height:1.32}
+.nz-callout p b{color:var(--lime);font-weight:800}
+/* ---- A New Species of App ---- */
+.sp-rows{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.sp-row{display:grid;grid-template-columns:198px 1fr;gap:16px;align-items:center;background:rgba(9,4,14,.42);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 20px}
+.sp-name{font-family:var(--f-body);font-weight:800;font-size:15px;color:#fff}
+.sp-desc{font-size:14px;line-height:1.34;color:rgba(255,255,255,.82)}
+.sp-desc .m{color:#FF4D6B;font-weight:800}
+.sp-desc .b{color:var(--aqua);font-weight:800}
+/* ---- Business Model: flywheel band + tier card + a la carte (improved) ---- */
+.bm-fly{display:flex;align-items:center;flex-wrap:wrap;gap:8px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:11px;border:1px solid rgba(25,228,208,.24);box-shadow:0 12px 30px rgba(8,50,90,.34);padding:11px 16px;margin-top:13px}
+.bm-step{font-family:var(--f-body);font-weight:600;color:#EAF6F4;font-size:13px;white-space:nowrap}
+.bm-arw{color:var(--aqua);font-weight:700;font-size:14px;text-shadow:0 0 8px rgba(25,228,208,.5)}
+.bm-loop{font-family:var(--f-mono);font-weight:700;color:#160A1C;background:var(--lime);border-radius:20px;padding:2px 11px;font-size:10.5px;letter-spacing:.08em;white-space:nowrap;box-shadow:0 0 14px rgba(233,255,58,.5);margin-left:4px}
+.bm-card{background:linear-gradient(160deg,#1c1026,#100813);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 46px rgba(8,50,90,.42),0 0 0 1px rgba(80,205,237,.16);display:flex;flex-direction:column;margin-top:13px}
+.bm-grid{display:grid;grid-template-columns:.82fr 1.25fr .95fr 2.5fr}
+.bm-thead{border-bottom:1px solid rgba(255,255,255,.09)}
+.bm-thead>div{font-family:var(--f-mono);font-weight:700;color:var(--aqua);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px}
+.bm-trow{border-top:1px solid rgba(255,255,255,.06)}
+.bm-trow:first-of-type{border-top:0}
+.bm-trow>div{padding:11px 16px;font-size:13.5px;color:#E7E1F0;line-height:1.26;display:flex;align-items:center}
+.bm-name{font-weight:800;color:#fff;gap:7px}
+.bm-price{font-weight:800;color:#fff;letter-spacing:-.01em}
+.bm-star{color:var(--lime)}
+.bm-hero{background:linear-gradient(90deg,rgba(233,255,58,.12),rgba(25,228,208,.06));position:relative}
+.bm-hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);box-shadow:0 0 12px rgba(233,255,58,.8)}
+.bm-hero .bm-price{color:var(--lime);text-shadow:0 0 12px rgba(233,255,58,.3)}
+.bm-tag{font-family:var(--f-mono);font-size:9px;font-weight:700;letter-spacing:.1em;color:#160A1C;background:var(--lime);border-radius:20px;padding:1px 7px;margin-left:6px}
+.bm-muted>div{color:#AEB7C4}
+.bm-ala{display:flex;align-items:center;gap:11px;padding:9px 18px;margin-top:11px;background:rgba(11,7,16,.20);border:1px dashed rgba(10,40,60,.5);border-radius:24px;flex-wrap:wrap}
+.bm-k{font-family:var(--f-mono);font-weight:700;color:#160A1C;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.bm-v{font-family:var(--f-body);font-weight:600;color:#0B3A50;font-size:13px}
+.bm-callout{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:12px;padding:12px 18px;border:1px solid rgba(233,255,58,.3);box-shadow:0 14px 34px rgba(8,50,90,.36);margin-top:12px}
+.bm-bar{width:4px;align-self:stretch;background:var(--lime);border-radius:3px;box-shadow:0 0 12px rgba(233,255,58,.7);flex:none}
+.bm-callout p{font-size:15px;color:#fff;font-weight:700;line-height:1.32}
+.bm-callout p b{color:var(--lime);font-weight:800}
+.bm-callout p .bm-it{font-style:italic;color:var(--aqua)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div class="progress" id="bar"></div>
+<div class="section-tab" id="tab"></div>
+<div class="deck"><div class="stage">
+<section class="slide dark title" style="background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE BLUE OCEAN · CATEGORY CREATION<span class="biso">because i said so</span></div>
+  <div class="title-row"><span class="title-mark">biss</span><svg class="kiss" viewBox="240 90 240 125" xmlns="http://www.w3.org/2000/svg"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF3DB5"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#D60B7C"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#fff" opacity=".4"/></svg></div>
+  <div class="baby-disp">Because I Said So</div>
+  <div class="tag-big">Tell Your Truth.</div>
+  <p style="color:#fff;font-weight:600;font-size:18px;max-width:60ch;line-height:1.4">The first Conversational Customer Intelligence platform — where authentic human experience becomes the most valuable data in the world.</p>
+  <div class="meta" style="margin-top:18px">
+    <b>Marc Sternberg</b> — Co-Founder &amp; CEO &nbsp;·&nbsp; <b>Simge Helvacı</b> — Co-Founder &amp; CTO<br>
+    Oxford Saïd Business School &nbsp;·&nbsp; NVIDIA Inception Program &nbsp;·&nbsp; Wyoming C-Corp<br>
+    <b>yeahisaidthat.com</b> &nbsp;·&nbsp; Live demo: <b>biss-opal.vercel.app</b></div>
+</div><div class="cta-ribbon"><div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div><div class="rbtns"><a class="cta lime" href="https://biss-opal.vercel.app">▸ See the live demo</a><a class="cta ink" href="mailto:marcsternberg13@gmail.com">Book a demo →</a></div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">WHAT IS BISS · THE CATEGORY<span class="biso">because i said so</span></div>
+  <h2 class="dh mash">If <span style="color:var(--tang)">Reddit</span>, <span style="color:var(--coral)">Yelp</span>, <span style="color:var(--cyan)">Meltwater</span>, <span style="color:var(--pink2)">Instagram</span>, <span style="color:var(--aqua)">Rotten Tomatoes</span>, and <span style="color:var(--lav)">a therapist</span> had a baby — that baby is <span class="mk-inline">BISS</span>.</h2>
+  <p class="dsub" style="max-width:82ch;margin-bottom:8px">The category is called <b style="color:#fff">Conversational Customer Intelligence</b>. BISS invented it. <b style="color:#fff">Zero direct competitors.</b></p>
+  <p style="color:var(--muted);font-size:14px;line-height:1.5;max-width:84ch;margin:0 0 16px">Authentic emotional truth — generated through therapeutic AI conversation — becomes the most proprietary business-intelligence dataset in the world. <b style="color:var(--lime)">The first-mover window is 18–24 months.</b></p>
+  <div class="statrow">
+    <div class="stat"><div class="n">30%+</div><div class="l">of online reviews are fake or manipulated</div></div>
+    <div class="stat"><div class="n">$25K</div><div class="l">median legacy intelligence tool, per year</div></div>
+    <div class="stat"><div class="n">70%+</div><div class="l">of customers a survey never hears from</div></div>
+    <div class="stat"><div class="n">36M</div><div class="l">US small businesses locked out of real intelligence</div></div>
   </div>
-  <div class="wrap hero-toggle rv"><span class="ht-label">I&#39;m here as a…</span><div class="toggle big"><button class="tg on" data-view="customer" onclick="setView('customer')">Customer</button><button class="tg" data-view="business" onclick="setView('business')">Business</button></div></div>
-  <div class="wrap hero-grid">
-    <div class="rv">
-      <div class="eyebrow" style="justify-content:flex-start">Coming soon <span class="biso">· because I said so</span></div>
-      <h1>Talk about any experience. We turn it into a story the world reads — and reward you for it.</h1>
-      <p class="baby">If Reddit, Yelp, Instagram, Rotten&nbsp;Tomatoes, and a therapist had a baby — <span class="hl">that baby is BISS.</span></p>
-      <p class="catch">Name names. Spare no one. Say the thing.</p>
-      <div class="capture"><input placeholder="your email"><a class="btn lime" href="#waitlist">Join the Waitlist</a></div>
-      <p class="micro">Be one of the first. Founding-member perks, first shot at the contests, zero spam. Coming soon to iOS, Android &amp; web.</p>
+  <div class="mash-line">Everyone’s a storyteller. <span>We just help you find the words.</span></div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">WHAT IS BISS<span class="biso">because i said so</span></div>
+    <h2 class="dh">You talk to an AI like a friend. It turns your real experiences into the most honest customer data on earth.</h2>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Reviews you can't trust</b> <span>→ authentic, verified, un-gameable truth.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Ratings that say nothing</b> <span>→ the story behind the feeling.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Feedback that vanishes</b> <span>→ a voice, a following, a record that's yours.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Intelligence only giants can afford</b> <span>→ starting at $50/mo.</span></div></div>
     </div>
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr cyan">
-        <div class="sb"><span>9:41</span><span class="tag">AI Journal</span></div>
-        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
-        <div class="body">
-          <div class="faceZone">
-            <span class="lbl">Reading your story…</span>
-            <svg width="88" height="88" viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="#fff" stroke="#160A1C" stroke-width="2.5"/><circle cx="34" cy="42" r="4.4" fill="#160A1C"/><circle cx="62" cy="42" r="4.4" fill="#160A1C"/><path d="M32 40 l9 -5 M64 40 l-9 -5" stroke="#160A1C" stroke-width="2.2" stroke-linecap="round"/><path d="M34 66 Q48 56 62 66" fill="none" stroke="#E71D3C" stroke-width="3.2" stroke-linecap="round"/></svg>
-            <span class="pill p" style="background:#fff">😤 Frustrated · 0.71</span>
-          </div>
-          <div class="bub ai">Tell me about a recent experience with any brand, product, or place.</div>
-          <div class="bub me">My Delta flight to NYC was delayed 3 hrs — nobody explained anything and I missed my mom's birthday dinner.</div>
-          <div class="detect">✈ DELTA DETECTED → 1 truth</div>
-          <div class="bub ai">That's a lot to carry. When you asked the gate staff for updates, how did they handle it?</div>
-          <div class="inbar"><span>Type your truth…</span><span class="s"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
-        </div>
-        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
+    <div class="chips">
+      <span class="chip"><b>Sticky</b> · therapy + game + identity</span>
+      <span class="chip"><b>Sexy</b> · one story → 5 brands at once</span>
+      <span class="chip"><b>Viral</b> · celebrities bring their audience</span></div>
+    <div class="qt">The first place people actually tell the truth — and the only place brands can buy it.</div>
   </div>
-</section>
-
-<div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck.html" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
-<div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;</div></div>
-
-<!-- TEN LINES (whole-thing summary) -->
-<section class="band deep" id="whole">
-  <div class="wrap rv"><div class="eyebrow">The whole thing, fast <span class="biso">· because I said so</span></div>
-    <h2 class="summary" style="max-width:26ch">The entire idea, in ten lines.</h2>
-    <p class="detail" style="margin-top:12px">Get it in three seconds here — then dig into any of it below.</p></div>
-  <div class="wrap"><div class="tiles rv">
-    <div class="tile"><span class="em">🗣️</span><div><h4>Say the thing.</h4><p>Just talk. BISS turns your rant into a real, published story.</p></div></div>
-    <div class="tile"><span class="em">📝</span><div><h4>Your story is the review.</h4><p>No forms, no stars — your chat-guided journal is the most honest review anyone's read.</p></div></div>
-    <div class="tile"><span class="em">🎭</span><div><h4>Two voices, one you.</h4><p>Post anonymously or under your real name. Your call, every time.</p></div></div>
-    <div class="tile"><span class="em">🏆</span><div><h4>Win real prizes.</h4><p>The biggest names on earth run contests here. Cash and prizes for your best ideas.</p></div></div>
-    <div class="tile"><span class="em">⭐</span><div><h4>Make a name.</h4><p>Build a following and become the next big voice.</p></div></div>
-    <div class="tile"><span class="em">📖</span><div><h4>Your own page.</h4><p>Every story collects into your public journal — your body of work.</p></div></div>
-    <div class="tile"><span class="em">🏛️</span><div><h4>Brand pages.</h4><p>A living, honest record of every brand, written by the people who lived it.</p></div></div>
-    <div class="tile"><span class="em">📣</span><div><h4>Actually get heard.</h4><p>Your truth reaches the people who can fix things.</p></div></div>
-    <div class="tile"><span class="em">🎁</span><div><h4>Get rewarded.</h4><p>Coins, badges, and status for every story you tell.</p></div></div>
-    <div class="tile"><span class="em">🔒</span><div><h4>Safe and free.</h4><p>Anonymous but real. No ads. Always free. No stars, ever.</p></div></div>
-  </div>
-  <p class="rv" style="font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(17px,2.3vw,24px);margin-top:28px;color:var(--lime)">✈️🍔 Starting with travel and food — the stuff you've already got loud opinions about.</p></div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="band dark" id="how">
-  <div class="glow" style="width:460px;height:400px;background:var(--pink);top:40px;left:-160px;opacity:.14"></div>
-  <div class="wrap split2 rev">
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr mag">
-        <div class="sb"><span>9:41</span><span class="tag">Generated · never rated</span></div>
-        <div class="top"><span class="mk">biss</span><span class="pill p" style="background:#fff;padding:4px 9px">Published</span></div>
-        <div class="body" style="gap:12px">
-          <div style="display:flex;align-items:center;gap:13px">
-            <div class="score big neg"><span class="n">2.8</span><span class="u">SENTIMENT</span></div>
-            <div><div class="lbl" style="margin-bottom:5px">Your story · scored</div><div class="h-disp" style="font-size:25px">The Three-<br>Hour Gate</div><div class="t-sm" style="margin-top:6px;color:var(--sub)">✈ Delta · PinkWagon77</div></div>
-          </div>
-          <div class="card"><span class="t-sm" style="line-height:1.55">Sat next to <span class="redact" style="width:70px"></span> who was flying to see <span class="redact" style="width:48px"></span> — we swapped delay horror stories for three hours.</span></div>
-          <div class="card">
-            <div class="htag m" style="display:block;margin-bottom:9px">This entry</div>
-            <div class="between" style="margin-bottom:9px"><span class="t-sm">Visible to</span><span class="pill on">Community</span></div>
-            <div class="between" style="margin-bottom:9px"><span class="t-sm">Show my handle</span><span class="pill on">On</span></div>
-            <div class="between"><span class="t-sm">Names & faces</span><span class="pill p">Auto-redacted</span></div>
-          </div>
-          <a class="cta ink" style="margin-top:auto">Save to journal →</a>
-        </div>
-        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Journal</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-    <div class="rv">
-      <div class="eyebrow">How it works <span class="biso">· because I said so</span></div>
-      <h2 class="summary">Just talk. We write your story for you.</h2>
-      <p class="hook">You talk. It writes you into something that sounds smart. Sorcery.</p>
-      <p class="readmore">the detail</p>
-      <p class="detail">No form. No dropdown. Just a face on the screen and one human question: <b>tell me what happened.</b> Your furious, one-thumbed spiral comes back as a polished, titled story you'd screenshot for the group chat. Mention three brands? It quietly splits your rant into three.</p>
-      <div class="callout" style="border-left-color:var(--pink)"><div class="big">Your journal entry <span style="color:var(--lime)">is</span> the review.</div><p>No star slider, no "rate 1 to 5" — a chat-guided journal that's the most honest review anyone could leave. Same act, wildly better result.</p></div>
-    </div>
-  </div>
-  <div class="wrap rv" style="margin-top:64px">
-    <div class="eyebrow">A whole new species of app</div>
-    <h2 class="summary" style="max-width:28ch">One app that does a dozen jobs — minus the junk.</h2>
-    <div class="compare">
-      <div class="cmp"><span class="name">Reddit</span><p>Its brutal honesty — <span class="minus">minus</span> the lurking and the reply-guys crawling out of the walls.</p></div>
-      <div class="cmp"><span class="name">Yelp &amp; Trustpilot</span><p>Brand accountability — <span class="minus">minus</span> the fake reviews and the stars anyone can rig. You can't game a story.</p></div>
-      <div class="cmp"><span class="name">Rotten Tomatoes</span><p>"Give it a score" — <span class="plus">but</span> for your whole life, and the score comes from what you actually felt.</p></div>
-      <div class="cmp"><span class="name">Instagram</span><p>Shareable moments — <span class="minus">minus</span> the filters, the flexing, and the dread of not being pretty enough.</p></div>
-      <div class="cmp"><span class="name">Wikipedia</span><p>A permanent record — <span class="plus">but</span> the receipts on how brands actually treat people, by the people who lived it.</p></div>
-      <div class="cmp"><span class="name">A therapist</span><p>Who actually listens and lets you get it all out — <span class="minus">minus</span> the $200 an hour and the waitlist.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SPLIT + EMOTIONAL FACE -->
-<section class="band magenta">
-  <div class="wrap split2">
-    <div class="rv">
-      <div class="eyebrow">The magic + the face <span class="biso">· because I said so</span></div>
-      <h2 class="summary" style="color:#210419">One rant, split into a story for every brand — and a face that feels you as you type.</h2>
-      <p class="hook">It's staring at you right now. You're going to write it a novel.</p>
-      <p class="detail">Mention Delta, Chick-fil-A and Marriott in one airport story and BISS splits it into three scored entries automatically. Meanwhile a face on screen reacts to you live — get heated, it gets heated; hit the joy, it lights up. Not a mascot, a <b>mirror.</b> People write more, truer, better here — all because of the face.</p>
-    </div>
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr lime">
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr lime">
         <div class="sb"><span>9:41</span><span class="tag">Splitting</span></div>
         <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
         <div class="body" style="gap:11px">
@@ -494,271 +702,73 @@ body.locked{overflow:hidden;height:100vh}
           <div class="card" style="margin-top:auto"><span class="t-mut">One story → three attributed truths. One conversation, N brands.</span></div>
         </div>
         <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Journal</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">A WHOLE NEW SPECIES OF APP<span class="biso">because i said so</span></div>
+  <h2 class="dh">One app that does a dozen<br>jobs — minus the junk.</h2>
+  <div class="sp-rows">
+    <div class="sp-row"><div class="sp-name">Reddit</div><div class="sp-desc">Its brutal honesty — <span class="m">minus</span> the lurking and the reply-guys crawling out of the walls.</div></div>
+    <div class="sp-row"><div class="sp-name">Yelp &amp; Trustpilot</div><div class="sp-desc">Brand accountability — <span class="m">minus</span> the fake reviews and the stars anyone can rig. You can’t game a story.</div></div>
+    <div class="sp-row"><div class="sp-name">Rotten Tomatoes</div><div class="sp-desc">“Give it a score” — <span class="b">but</span> for your whole life, and the score comes from what you actually felt.</div></div>
+    <div class="sp-row"><div class="sp-name">Instagram</div><div class="sp-desc">Shareable moments — <span class="m">minus</span> the filters, the flexing, and the dread of not being pretty enough.</div></div>
+    <div class="sp-row"><div class="sp-name">Wikipedia</div><div class="sp-desc">A permanent record — <span class="b">but</span> the receipts on how brands actually treat people, by the people who lived it.</div></div>
+    <div class="sp-row"><div class="sp-name">A therapist</div><div class="sp-desc">Who actually listens and lets you get it all out — <span class="m">minus</span> the $200 an hour and the waitlist.</div></div>
   </div>
-</section>
-
-<!-- NO STARS + FLIPSIDE -->
-<section class="band dark">
-  <div class="wrap rv">
-    <div class="eyebrow">Two promises <span class="biso">· because I said so</span></div>
-    <h2 class="summary">No stars, ever. And two voices, one you.</h2>
-    <p class="hook">Rating your life out of five is a party trick for people with no feelings.</p>
-    <p class="detail" style="margin-top:12px">You'll never see a star slider on BISS — a blood oath. The AI reads your <b>actual words</b> and the score comes from your story, so you can't get it wrong and nobody can rig it. And when you publish, <b>you</b> pick the voice — story by story. The default is always your secret self. BISS will never out you by accident.</p>
-    <div class="duo rv">
-      <div class="box real"><div class="t">Your real name</div><h3>Plant your flag.</h3><p>Verified, deployed only when you decide to say "yeah, I said it." Max weight, max credit.</p></div>
-      <div class="box alt"><div class="t">Your alter ego</div><h3>PinkWagon77.</h3><p>A pseudonym built from your own stuff, so it feels like you. Where the truest truth lives — say the things you'd only say if nobody knew your face.</p></div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">THE PROBLEM · BUSINESS<span class="biso">because i said so</span></div>
+  <h2 class="dh">Brands are flying blind — and paying a fortune for the privilege.</h2>
+  <p class="dsub">Every tool they buy captures what customers say in public. None captures what they actually think.</p>
+  <div class="grid4">
+    <div class="card2"><div class="k">Unaffordable</div><h4>$15–40K / yr</h4><p>Meltwater &amp; Brandwatch price out the SMBs who need intelligence most.</p></div>
+    <div class="card2"><div class="k">Ignored</div><h4>~20–30% reply</h4><p>70%+ of customers never answer — and surveys run in an artificial setting that kills honesty.</p></div>
+    <div class="card2"><div class="k">Public layer only</div><h4>Says ≠ thinks</h4><p>Social listening never sees the gap between what customers say and feel.</p></div>
+    <div class="card2"><div class="k">Gamed &amp; shallow</div><h4>Up to 30% fake</h4><p>"The food was bad" is nothing a manager can act on Monday.</p></div>
+  </div>
+  <div class="qt">A customer-experience market worth ~$16B today, racing toward ~$85B by 2034 — and none of it captures what customers actually think, because no one built the right system to collect it honestly.</div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(155deg,#6a24c8 0%,#4e169a 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols wide">
+  <div class="copy">
+    <div class="eyebrow ">THE PROBLEM · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">You have opinions. You don't have a voice.</h2>
+    <p class="dsub">The consumer side is just as broken — you're shouting into an anonymous void.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>No identity.</b> <span>You post as "user_8842." No personality, no continuity, no self.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>No one to follow, no one following you.</b> <span>An aggregation of strangers you've no reason to trust.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>No trust.</b> <span>Faceless and gameable — so nobody believes it.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Nowhere to process it.</b> <span>No space to tell the whole story and be heard.</span></div></div>
+    </div>
+    <div class="qt">You did the living. The system gives you one star and a text box — then forgets you.</div>
+  </div>
+  <div class="art" style="display:flex;justify-content:center;align-items:center;height:100%">
+    <div style="font-family:var(--f-mono);border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);max-width:290px">
+      <div style="color:var(--muted);font-size:12px;letter-spacing:.1em">★★★☆☆ &nbsp; user_8842</div>
+      <div style="height:1px;background:var(--line);margin:12px 0"></div>
+      <div style="color:var(--muted);font-size:13px;line-height:1.7">"ok i guess"<br>"food was fine"<br>"wouldn't go back"</div>
+      <div style="height:1px;background:var(--line);margin:12px 0"></div>
+      <div style="color:var(--coral);font-size:11px;letter-spacing:.07em">▸ NO NAME · NO FACE · NO FOLLOWING</div>
     </div>
   </div>
-</section>
-
-<!-- TYT DIVIDER -->
-<section class="tytband"><div class="wrap rv"><div class="big">Tell Your Truth</div><span class="biso">· Because I Said So ·</span></div></section>
-
-<!-- CONTESTS -->
-<section class="band violet" id="contests">
-  <div class="floor"></div>
-  <div class="wrap split2 rev">
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr coral">
-        <div class="sb"><span>9:41</span><span class="tag">Stadium</span></div>
-        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">◆ Live</span></div>
-        <div class="body" style="gap:11px">
-          <div><div class="h-disp" style="font-size:27px">Best travel<br>save</div><div class="t-sm" style="color:var(--sub);margin-top:6px">Sponsored by JetBlue · ⏱ 4d left</div></div>
-          <div class="card"><div class="htag m" style="display:block;margin-bottom:9px">Your entry</div><div class="chips" style="margin-bottom:10px"><span class="pill p">New story</span><span class="pill">Pick from journal</span></div><div class="card flat"><span class="t-mut">Tell the story of the save…</span></div></div>
-          <div class="card">
-            <div class="htag" style="display:block;margin-bottom:10px">Standings · by community signal</div>
-            <div class="between" style="margin-bottom:9px"><div class="row" style="align-items:center;gap:8px"><span class="t-b" style="color:var(--pinkink)">1</span><div class="bar" style="width:116px"><div class="fl p" style="width:88%"></div></div></div><span class="pill">312 ◆</span></div>
-            <div class="between"><div class="row" style="align-items:center;gap:8px"><span class="t-b">2</span><div class="bar" style="width:116px"><div class="fl p" style="width:78%"></div></div></div><span class="pill">288 ◆</span></div>
-          </div>
-          <a class="cta ink" style="margin-top:auto">Submit entry</a>
-        </div>
-        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>Stadium</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-    <div class="rv">
-      <div class="eyebrow">The main event <span class="biso">· because I said so</span></div>
-      <h2 class="summary">Win cash and prizes for your best ideas.</h2>
-      <p class="hook">A poll wants a tap. BISS wants a stroke of genius. Guess which one pays.</p>
-      <p class="readmore">the detail</p>
-      <p class="detail">The biggest names on earth show up and ask you to <b>make</b> something — and they pay to read what you come up with. Name a pop star's album. Invent a chain's next shake. Design an airline's amenity kit. Real prize, real person picking, and the thing they want is your idea.</p>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">THE BLUE OCEAN · CATEGORY CREATION<span class="biso">because i said so</span></div>
+  <h2 class="dh sm" style="margin-bottom:14px">Every platform below does one thing well. BISS does all of it — and generates original private intelligence none of them can touch.</h2>
+  <div class="bo">
+    <div class="bo-col">
+      <div class="clus s"><div class="ch">Social &amp; Community</div><div class="clgrid"><div class="clcell"><b>Reddit</b><span>community & voting</span></div><div class="clcell"><b>Instagram</b><span>social & polls</span></div><div class="clcell"><b>Twitter / X</b><span>public conversation</span></div><div class="clcell"><b>TikTok</b><span>video social</span></div><div class="clcell"><b>Facebook</b><span>social network</span></div><div class="clcell"><b>Wattpad</b><span>creative writing</span></div></div></div>
+      <div class="clus r"><div class="ch">Review &amp; Ratings</div><div class="clgrid"><div class="clcell"><b>Yelp</b><span>gamed local reviews</span></div><div class="clcell"><b>Google Reviews</b><span>star ratings</span></div><div class="clcell"><b>Rotten Tomatoes</b><span>crowd ratings</span></div><div class="clcell"><b>TripAdvisor</b><span>travel reviews</span></div><div class="clcell"><b>Trustpilot</b><span>brand reviews</span></div><div class="clcell"><b>Glassdoor</b><span>employer reviews</span></div></div></div>
+    </div>
+    <div class="bo-core"><div class="ring"><div class="m">BISS</div><small>CONVERSATIONAL<br>CUSTOMER INTELLIGENCE</small></div>
+      <p>The only platform that generates original private intelligence through therapeutic AI — and monetizes it three ways at once.</p></div>
+    <div class="bo-col">
+      <div class="clus e"><div class="ch">Enterprise Intelligence</div><div class="clgrid"><div class="clcell"><b>Meltwater</b><span>social listening · $15K+</span></div><div class="clcell"><b>Brandwatch</b><span>social listening</span></div><div class="clcell"><b>Qualtrics</b><span>surveys · $1.5K+</span></div><div class="clcell"><b>SurveyMonkey</b><span>survey tools</span></div><div class="clcell"><b>Medallia</b><span>enterprise CX · quote-based</span></div><div class="clcell"><b>Sprout Social</b><span>social mgmt</span></div></div></div>
+      <div class="clus n"><div class="ch">Content &amp; Niche</div><div class="clgrid"><div class="clcell"><b>Letterboxd</b><span>film community</span></div><div class="clcell"><b>Goodreads</b><span>book community</span></div><div class="clcell"><b>Amazon Reviews</b><span>commerce reviews</span></div><div class="clcell"><b>Bazaarvoice</b><span>commerce intel</span></div><div class="clcell"><b>Day One</b><span>personal journaling</span></div><div class="clcell"><b>Yelp / G2</b><span>niche platforms</span></div></div></div>
     </div>
   </div>
-  <div class="wrap rv"><p style="text-align:center;font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(20px,3vw,34px);margin:52px 0 0;line-height:1.1">Everyone else is watching culture happen.<br><span style="color:var(--lime)">You get to hand it the script.</span></p>
-    <div class="steps rv">
-      <div class="step"><div class="no">01</div><h4>Someone big asks.</h4><p>A brand or bold-name creator drops a challenge — the prize, the bar, the deadline.</p></div>
-      <div class="step"><div class="no">02</div><h4>You answer — for real.</h4><p>Not a tap. Your idea, your title, your story. You bring the heat.</p></div>
-      <div class="step"><div class="no">03</div><h4>The room reacts.</h4><p>People hit standout entries with one word — Iconic. Same. Oof. You climb.</p></div>
-      <div class="step"><div class="no">04</div><h4>They crown a winner.</h4><p>The creator picks and pays out. BISS runs the arena — never a cut, never judges.</p></div>
-    </div>
-    <div class="callout rv" style="border-left-color:var(--lime);background:rgba(0,0,0,.24)"><div class="big">BISS is the stadium. You're the reason the seats are full.</div><p style="color:#E7DCF4">Win it all, or bank Coins, XP, badges, and status just for swinging.</p></div>
-  </div>
-</section>
-
-<!-- YOUR JOURNAL PAGE (real profile screen) -->
-<section class="band dark" id="voice">
-  <div class="glow" style="width:480px;height:400px;background:var(--tang);top:0;right:-160px;opacity:.1"></div>
-  <div class="wrap split2">
-    <div class="rv">
-      <div class="eyebrow">Your public journal <span class="biso">· because I said so</span></div>
-      <h2 class="summary">Every story you tell collects on your own page.</h2>
-      <p class="hook">Most apps give you a profile. BISS gives you a body of work.</p>
-      <p class="readmore">the detail</p>
-      <p class="detail">Your public diary of experiences, organized by brand and category — your personal Wikipedia. Your loved-vs-let-down tally, your Brand Preferences said out loud (<b>"Coke forever."</b>), your followers, badges and rank. It's your greatest hits, one honest story at a time — and it's what people follow when they follow you.</p>
-    </div>
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr tang">
-        <div class="sb"><span>9:41</span><span class="tag">247 truths told</span></div>
-        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
-        <div class="body" style="gap:11px">
-          <div style="display:flex;align-items:center;gap:12px"><div class="av p" style="width:52px;height:52px"></div><div><div class="h-disp" style="font-size:23px">PinkWagon77</div><div class="t-sm" style="color:var(--sub);margin-top:2px">Lvl 12 · Neighborhood Expert</div></div></div>
-          <div class="row">
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--tealink)">183</div><div class="htag m" style="margin-top:4px">LOVED</div></div>
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--coralink)">64</div><div class="htag m" style="margin-top:4px">LET DOWN</div></div>
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px">38</div><div class="htag m" style="margin-top:4px">FOLLOWING</div></div>
-          </div>
-          <div class="card">
-            <div class="htag" style="display:block;margin-bottom:11px">Your taste · by sentiment</div>
-            <div class="col" style="gap:11px">
-              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🍔 Restaurants</span><span class="t-mut">8.4 avg</span></div><div class="bar"><div class="fl" style="width:84%"></div></div></div>
-              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">✈ Airlines</span><span class="t-mut">4.6 avg</span></div><div class="bar"><div class="fl p" style="width:46%"></div></div></div>
-              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🏨 Hotels</span><span class="t-mut">7.1 avg</span></div><div class="bar"><div class="fl" style="width:71%"></div></div></div>
-            </div>
-          </div>
-          <div class="card"><div class="between"><span class="t-sm"><b>Recommends:</b> Chick-fil-A, Marriott</span><span class="pill on">See all</span></div></div>
-        </div>
-        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-  </div>
-</section>
-
-<!-- BRAND PAGES (real brand page screen) -->
-<section class="band lime">
-  <div class="wrap split2 rev">
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr aqua">
-        <div class="sb"><span>9:41</span><span class="tag">◆ Public page</span></div>
-        <div class="top"><span class="mk">biss</span><span class="pill solid" style="padding:4px 11px">Follow</span></div>
-        <div class="body" style="gap:11px">
-          <div style="display:flex;align-items:center;gap:12px">
-            <div style="width:50px;height:50px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--pinkink);font-family:var(--f-disp);font-size:23px">C</div>
-            <div><div class="h-disp" style="font-size:21px">Chick-fil-A</div><div class="t-sm" style="color:var(--sub)">Fast food · 1,204 truths</div></div>
-          </div>
-          <div class="row">
-            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div class="score sm" style="margin:0 auto 6px"><span class="n">9.0</span></div><div class="htag m">SENTIMENT</div></div>
-            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px;color:var(--pinkink)">#1</div><div class="htag m" style="margin-top:6px">IN QSR</div></div>
-            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px">92%</div><div class="htag m" style="margin-top:6px">RETURN</div></div>
-          </div>
-          <div class="chips"><span class="pill solid">Truths</span><span class="pill" style="background:#fff">Themes</span><span class="pill" style="background:#fff">Nearby</span></div>
-          <div class="card"><div class="between"><div><div class="t-b">Saved Dinner</div><div class="t-mut" style="margin-top:2px">"The one thing that went right all day."</div></div><div class="score sm"><span class="n">9.2</span></div></div></div>
-          <div class="card"><div class="between"><div><div class="t-b">The Line Moved Fast</div><div class="t-mut" style="margin-top:2px">Drive-thru of 20 cars, 4 minutes.</div></div><div class="score sm"><span class="n">8.8</span></div></div></div>
-          <div class="card"><div class="between"><div><div class="t-b">Cold Fries, Warm Staff</div><div class="t-mut" style="margin-top:2px">Lukewarm fries; they remade them.</div></div><div class="score sm neu"><span class="n">5.4</span></div></div></div>
-        </div>
-        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-    <div class="rv">
-      <div class="eyebrow">The living record <span class="biso">· because I said so</span></div>
-      <h2 class="summary" style="color:#160A1C">Every brand gets a page, built from real stories.</h2>
-      <p class="hook">A Wikipedia page for the brand — except it's true, current, and written by the people who lived it.</p>
-      <p class="readmore">the detail</p>
-      <p class="detail">One honest score pulled from thousands of real stories — never a gamed star average. What people love and can't stand, ranked. The full feed of real experiences behind the score. Which way it's trending. <b>Be one of the Founding 50:</b> a page stays hidden until 50 people speak — then it goes live, and the first 50 voices are stamped on it forever.</p>
-    </div>
-  </div>
-</section>
-
-<!-- HEARD + DISCOVER (real discover screen) -->
-<section class="band dark">
-  <div class="wrap rv">
-    <div class="eyebrow">It actually lands <span class="biso">· because I said so</span></div>
-    <h2 class="summary">Your stories reach the people who can actually fix things.</h2>
-    <p class="hook">Every rant you've ever posted died alone. Not this one.</p>
-    <p class="detail" style="margin-top:12px">The people who run the brands are reading their Brand Pages — that's the whole design. Your boarding-chaos story is why a policy changes. <b>You're not leaving a review. You're talking straight into the room where the decisions get made.</b></p>
-  </div>
-  <div class="wrap split2 rev" style="margin-top:52px">
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr lav">
-        <div class="sb"><span>9:41</span><span class="tag">◆ Feed</span></div>
-        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
-        <div class="body" style="gap:11px">
-          <div class="chips"><span class="pill solid">Following</span><span class="pill" style="background:#fff">Near you</span><span class="pill" style="background:#fff">Rising</span></div>
-          <div class="card">
-            <div class="row" style="align-items:center;gap:9px;margin-bottom:9px"><div class="av q" style="width:32px;height:32px"></div><div style="flex:1"><div class="t-b">SkyTraveler22 · 2h</div><div class="t-mut">✈ JetBlue</div></div><div class="score sm"><span class="n">9.1</span></div></div>
-            <div class="t-sm" style="line-height:1.5">"Rebooked me in minutes when the connection died. Actual humans."</div>
-            <div class="chips" style="margin-top:9px"><span class="pill" style="background:#fff">😌 Relief · 28</span></div>
-          </div>
-          <div class="card">
-            <div class="row" style="align-items:center;gap:9px;margin-bottom:9px"><div class="av p" style="width:32px;height:32px"></div><div style="flex:1"><div class="t-b">PinkWagon77 · 5h</div><div class="t-mut">✈ Delta</div></div><div class="score sm neg"><span class="n">2.4</span></div></div>
-            <div class="t-sm" style="line-height:1.5">"Three hours at the gate, zero updates. Missed the dinner."</div>
-            <div class="chips" style="margin-top:9px"><span class="pill" style="background:#fff">😤 Frustrating · 42</span></div>
-          </div>
-          <div class="card" style="text-align:center"><span class="t-mut">Trusted voices first — not an algorithm pushing strangers.</span></div>
-        </div>
-        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-    <div class="rv">
-      <div class="eyebrow">Word of mouth, organized</div>
-      <h2 class="summary" style="font-size:clamp(24px,3.4vw,38px)">See experiences from people you trust — not strangers.</h2>
-      <p class="detail" style="margin-top:12px">The first stories you see come from the people you follow — friends, coworkers, creators whose taste you'd actually copy. Not an algorithm.</p>
-      <div class="fcards g2" style="margin-top:20px">
-        <div class="fcard"><div class="n">Parallel universe</div><h3>The road not taken</h3><p>You flew United — what if you'd flown Southwest? See what the other crowd, same week, actually got.</p></div>
-        <div class="fcard"><div class="n">One word. That's it.</div><h3>No pile-ons</h3><p>React with a single word — Iconic. Same. Oof. No comment wars, no reply-guys.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REWARDS (real gamification screen) -->
-<section class="band deep">
-  <div class="wrap split2">
-    <div class="rv">
-      <div class="eyebrow">Get paid in glory <span class="biso">· because I said so</span></div>
-      <h2 class="summary">Earn coins, badges, and status for every story.</h2>
-      <p class="hook">You were gonna run your mouth anyway. Might as well cash in.</p>
-      <p class="readmore">the detail</p>
-      <p class="detail">Story Coins &amp; XP on everything you post. <b>Authority Gems</b> — the rarest flex, earned not bought. Badges: First Voice, Local Advocate, Neighborhood Expert, Community Champion. Daily streaks, weekly leaderboards by city and category, and your Experience Museum — the map of your whole life in experiences. The realer you are, the more you rake in.</p>
-    </div>
-    <div class="rv"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr mint">
-        <div class="sb"><span>9:41</span><span class="tag">Lvl 12</span></div>
-        <div class="top"><span class="mk">biss</span><span class="pill p" style="background:#fff;padding:4px 9px">Share</span></div>
-        <div class="body" style="gap:11px">
-          <div style="display:flex;align-items:center;gap:12px"><div class="av p" style="width:48px;height:48px"></div><div><div class="t-b" style="font-size:16px">PinkWagon77</div><div class="t-sm" style="color:var(--sub)">Level 12 · Neighborhood Expert</div></div></div>
-          <div class="row">
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:22px">2,340</div><div class="htag m" style="margin-top:4px">COINS</div></div>
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:22px;color:var(--tealink)">14</div><div class="htag m" style="margin-top:4px">GEMS</div></div>
-            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:22px;color:var(--coralink)">🔥28</div><div class="htag m" style="margin-top:4px">STREAK</div></div>
-          </div>
-          <div class="card"><div class="between" style="margin-bottom:7px"><span class="htag">XP to level 13</span><span class="t-mut">3,200 / 5,000</span></div><div class="bar" style="height:10px"><div class="fl p" style="width:64%"></div></div></div>
-          <div class="chips"><span class="pill on">🎙 First Voice</span><span class="pill on">📍 Local Advocate</span><span class="pill on">🏆 Neighborhood Expert</span><span class="pill" style="background:#fff">🔒 Truth Teller</span></div>
-          <div class="card"><div class="between"><div><div class="htag m">NEXT UP</div><div class="t-sm" style="margin-top:3px">Share 3 more travel truths</div></div><span class="pill p">+150 coins</span></div></div>
-        </div>
-        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
-      </div></div></div></div></div>
-  </div>
-</section>
-
-<!-- TRUST + PROMISES -->
-<section class="band dark" id="trust">
-  <div class="wrap rv">
-    <div class="eyebrow">Protected by design <span class="biso">· because I said so</span></div>
-    <h2 class="summary">You're anonymous, protected, and always in control.</h2>
-    <p class="hook">Say it all. Walk away clean.</p>
-    <div class="fcards g3">
-      <div class="fcard"><span class="rail" style="background:var(--aqua)"></span><div class="n">Hidden, but real</div><h3>Verified humans only</h3><p>Every account is a real human — no bots, no fakes — but your real name is never shown unless you flip it. Honesty with zero surveillance.</p></div>
-      <div class="fcard"><span class="rail" style="background:var(--lav)"></span><div class="n">Bystanders protected</div><h3>Names swapped, automatically</h3><p>Drag your nightmare waiter and BISS swaps their name for a stand-in. Public figures — CEOs, politicians — are fair game.</p></div>
-      <div class="fcard"><span class="rail" style="background:var(--pink)"></span><div class="n">Your fury stays</div><h3>Feeling in, address out</h3><p>We never sanitize the feeling — raw is the product. We scrub what could bite you: address, phone, medical. And you'll see it got scrubbed.</p></div>
-      <div class="fcard"><span class="rail" style="background:var(--cyan)"></span><div class="n">Keeping it real</div><h3>Fake-story detection</h3><p>We catch bots, copy-paste, and AI filler as it's typed — and keep it out before anyone reads it.</p></div>
-      <div class="fcard"><span class="rail" style="background:var(--lime)"></span><div class="n">You run everything</div><h3>Your truth, your terms</h3><p>Public or private, per story, reversible whenever. Want one gone? Deleted, anonymized, like it never happened.</p></div>
-      <div class="fcard"><span class="rail" style="background:var(--mint)"></span><div class="n">Curse away</div><h3>Keep the fire</h3><p>You're a human mid-feeling, not a brand writing a press release. A well-placed s**t keeps the fire, loses the fallout.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="marquee pink"><div class="track">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</div></div>
-
-<!-- PROMISES -->
-<section class="band deep">
-  <div class="wrap rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">In writing <span class="biso">· because I said so</span></div>
-    <h2 class="summary" style="margin:0 auto;max-width:24ch">No ads. Always free. No stars. Always anonymous.</h2>
-    <p class="detail" style="margin:14px auto 0">Every other app broke your trust to sell an ad. We're not them.</p></div>
-  <div class="wrap"><div class="promises rv">
-    <div class="promise"><div class="em">🚫</div><h4>No ads</h4><p>You're never the product.</p></div>
-    <div class="promise"><div class="em">💸</div><h4>Always free</h4><p>95% of BISS, forever.</p></div>
-    <div class="promise"><div class="em">⭐</div><h4>No stars</h4><p>Your story sets the score.</p></div>
-    <div class="promise"><div class="em">🎭</div><h4>Anonymous but real</h4><p>Verified human, hidden name.</p></div>
-    <div class="promise"><div class="em">🔒</div><h4>Your privacy, your grip</h4><p>Per story. Reversible. Yours.</p></div>
-  </div></div>
-</section>
-
-<!-- WAITLIST -->
-<section class="band vapor ctaband" id="waitlist">
-  <div class="floor"></div>
-  <div class="wrap rv">
-    <div class="eyebrow" style="justify-content:center;color:var(--lime)">Founding members only <span class="biso" style="color:var(--lime)">· because I said so</span></div>
-    <h2 class="summary" style="margin:0 auto;max-width:20ch">We're not live yet. You can be first.</h2>
-    <p class="detail" style="margin:14px auto 0">The earliest voices become the ones everyone else follows. Get in before the crowd.</p>
-    <div class="capture"><input placeholder="your email"><a class="btn lime" href="#">Join the Waitlist</a></div>
-    <div class="perks">
-      <div class="perk"><div class="em">🎟️</div><h4>First access</h4><p>The moment we launch — before everyone else.</p></div>
-      <div class="perk"><div class="em">👑</div><h4>Founding-member status</h4><p>A permanent badge that says you were here first.</p></div>
-      <div class="perk"><div class="em">🏆</div><h4>First shot at contests</h4><p>And the earliest Founding 50 spots on Brand Pages.</p></div>
-      <div class="perk"><div class="em">🗳️</div><h4>A say in what we build</h4><p>Early voices help shape the platform.</p></div>
-    </div>
-    <p class="micro" style="text-align:center">Coming soon to iOS, Android &amp; web. Zero spam — we'll only email you when it matters.</p>
-  </div>
-</section>
-
-</div>
-<div id="site-business" hidden>
-<!-- ======================= BUSINESS SITE ======================= -->
-<section class="hero band vapor" id="btop" style="text-align:center">
-  <div class="glow" style="width:520px;height:420px;background:var(--cyan);top:-120px;right:0;opacity:.2"></div>
-  <div class="glow" style="width:420px;height:420px;background:var(--violet);bottom:-160px;left:-120px;opacity:.28"></div>
-  <div class="floor"></div>
-  <div class="wrap rv">
-    <div class="eyebrow" style="justify-content:center">Conversational Customer Intelligence <span class="biso">· because I said so</span></div>
-    <h1 class="summary" style="margin:0 auto;max-width:20ch;font-size:clamp(30px,5vw,54px)">Your customers are already talking about you. You just weren't invited to the conversation.</h1>
-    <p class="hook" style="color:var(--lime)">Stop guessing what they think. Start reading what they wrote.</p>
-    <p class="detail" style="margin:16px auto 0">BISS is where real people tell the truth about your brand — in their own words, in public. We hand you the intelligence behind every story. Then we let you talk back.</p>
-    <div class="capture" style="justify-content:center;max-width:none"><a class="btn lime" href="#claim">Claim Your Brand Page — free</a><a class="btn" style="background:transparent;color:#fff;border:1px solid var(--line)" href="#claim">Book a Demo</a></div>
-    <p class="micro">There's a page about your brand whether you show up or not. Might as well own it.</p>
-  </div>
-  <div class="wrap hero-toggle rv"><span class="ht-label">I&#39;m here as a…</span><div class="toggle big"><button class="tg on" data-view="customer" onclick="setView('customer')">Customer</button><button class="tg" data-view="business" onclick="setView('business')">Business</button></div></div>
-  <div class="wrap rv" style="margin-top:44px"><div class="gd"><div class="win">
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#B08CF0 0%,#9268e0 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
         <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/dashboard/<b>southwest</b> · live</span></div>
         <div class="bwin">
           <div class="bside aqua">
@@ -803,56 +813,255 @@ body.locked{overflow:hidden;height:100vh}
               <tr><td>Crew Went Above</td><td class="t-mut">Grateful</td><td class="t-mut">✈ Southwest</td><td class="r"><span class="sc-xs">8.6</span></td><td class="r t-mut">41m</td></tr>
             </table></div>
           </div>
-        </div></div></div>
-</section>
-
-<div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck.html" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
-<div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</div></div>
-
-<!-- WHOLE THING FAST -->
-<section class="band deep">
-  <div class="wrap rv"><div class="eyebrow">The whole pitch, fast <span class="biso">· because I said so</span></div>
-    <h2 class="summary" style="max-width:24ch">Everything you get, in twelve lines.</h2>
-    <p class="detail" style="margin-top:12px">Grasp it in three seconds — then go deep on any of it below.</p></div>
-  <div class="wrap"><div class="tiles rv" style="grid-template-columns:repeat(3,1fr)">
-    <div class="tile"><span class="em">📊</span><div><h4>Real-time sentiment</h4><p>A live pulse of how customers actually feel — scored, never starred.</p></div></div>
-    <div class="tile"><span class="em">📈</span><div><h4>Emotional journey</h4><p>See the exact moment the feeling turned across the whole experience.</p></div></div>
-    <div class="tile"><span class="em">🚨</span><div><h4>Early issue detection</h4><p>We flag the whisper before it's a wildfire on Twitter.</p></div></div>
-    <div class="tile"><span class="em">⚔️</span><div><h4>Competitive benchmarking</h4><p>How you stack up against the brands you actually compete with.</p></div></div>
-    <div class="tile"><span class="em">👥</span><div><h4>Know who's talking</h4><p>The segments and demographics behind the sentiment.</p></div></div>
-    <div class="tile"><span class="em">🧾</span><div><h4>The raw stories</h4><p>Every score traces back to a real human, in their own words.</p></div></div>
-    <div class="tile"><span class="em">🤖</span><div><h4>AI recommendations</h4><p>Told, not asked: what to fix, what to brag about.</p></div></div>
-    <div class="tile"><span class="em">💬</span><div><h4>Reply to the human</h4><p>Reach the person who wrote the story — identity protected.</p></div></div>
-    <div class="tile"><span class="em">🌱</span><div><h4>Seed questions</h4><p>Drop a question into the conversation — answers, not survey grids.</p></div></div>
-    <div class="tile"><span class="em">🏆</span><div><h4>Contests &amp; creators</h4><p>Seed a challenge; real people answer with stories, not poll clicks.</p></div></div>
-    <div class="tile"><span class="em">🏛️</span><div><h4>Your Brand Page</h4><p>A living record of your brand — free to claim.</p></div></div>
-    <div class="tile"><span class="em">🔌</span><div><h4>Export &amp; API</h4><p>Pipe it into your CRM and ops tools (Enterprise).</p></div></div>
-  </div></div>
-</section>
-
-<!-- THE UNCOMFORTABLE TRUTH + PRICE SLAP -->
-<section class="band dark">
-  <div class="wrap rv"><div class="eyebrow">Let's be honest about your current tools <span class="biso">· because I said so</span></div>
-    <h2 class="summary">They sell you the performance. Never the truth.</h2>
-    <p class="hook">There's a gap between what customers say in public and what they actually think. That gap is the whole business.</p>
-    <div class="compare">
-      <div class="cmp"><span class="name">Social listening</span><p>$30K+/yr to show you public posts — <span class="minus">only</span> what people say out loud, never what they actually think.</p></div>
-      <div class="cmp"><span class="name">Yelp / reviews</span><p>Star ratings anyone can rig, 30%+ fake — <span class="minus">zero</span> operational depth a manager can use Monday.</p></div>
-      <div class="cmp"><span class="name">Surveys</span><p>3–5% response inside an artificial room that <span class="minus">makes</span> people lie. Formality kills honesty.</p></div>
+        </div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">THE SOLUTION · BUSINESS<span class="biso">because i said so</span></div>
+    <h2 class="dh">The intelligence they could never buy.</h2>
+    <p class="dsub">BISS reveals what customers actually think — and hands it to the people who can act on it.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>A dashboard CEOs open.</b> <span>Real-time sentiment, journey maps, early issue detection, benchmarking — from stories, not surveys.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Data no one else has.</b> <span>Generated in private conversation and owned by BISS.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Two signal tiers (FlipSide).</b> <span>Verified Identity + Verified Human. Brands never see names.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Priced for everyone.</b> <span>Enterprise-grade intelligence at a small-business price.</span></div></div>
     </div>
-    <div class="callout" style="border-left-color:var(--lime);margin-top:26px"><div class="big"><span style="color:var(--coral)">$30,000+/yr</span> for public posts &nbsp;→&nbsp; <span style="color:var(--lime)">From $50/mo</span> for what they actually think.</div><p>Roughly 85% cheaper — and it's a class of data they structurally cannot collect.</p></div>
+    <div class="qt">Meltwater tells businesses what customers say publicly. BISS reveals what they actually think.</div>
   </div>
-</section>
-
-<!-- THE DASHBOARD (Intelligence) -->
-<section class="band dark" id="intelligence">
-  <div class="glow" style="width:480px;height:400px;background:var(--aqua);top:20px;left:-160px;opacity:.12"></div>
-  <div class="wrap rv"><div class="eyebrow">The dashboard <span class="biso">· because I said so</span></div>
-    <h2 class="summary">The customer intelligence dashboard a CEO will actually open.</h2>
-    <p class="hook">No stars. No surveys. Just the truth, scored.</p>
-    <p class="detail" style="margin-top:12px">Every story your customers tell becomes structured, real-time intelligence about your brand. No forms to send, no panels to buy — it's already happening. You just get to watch, and act. <b>This is the part you pay for.</b></p>
+</div></div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#5AD3F0 0%,#38b8dd 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">THE SOLUTION · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">Finally, a voice that's yours.</h2>
+    <p class="dsub">BISS gives the person behind the review an identity, a following, and a reason to tell the truth.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Just talk — BISS writes it.</b> <span>It turns your rambling into a polished story and infers the score. No forms, no stars.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Two identities, your call.</b> <span>A permanent anonymous persona and your verified real name — story by story.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>A profile that's actually you.</b> <span>Your public diary of experiences and brand loyalties.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>People worth following.</b> <span>Discover the world through people you actually trust.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>It rewards you.</b> <span>Story Coins, XP, badges — plus the Emotional Face that reacts as you type.</span></div></div>
+    </div>
   </div>
-  <div class="wrap rv" style="margin-top:34px"><div class="gd"><div class="win">
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr cyan">
+        <div class="sb"><span>9:41</span><span class="tag">AI Journal</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
+        <div class="body">
+          <div class="faceZone">
+            <span class="lbl">Reading your story…</span>
+            <svg width="88" height="88" viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="#fff" stroke="#160A1C" stroke-width="2.5"/><circle cx="34" cy="42" r="4.4" fill="#160A1C"/><circle cx="62" cy="42" r="4.4" fill="#160A1C"/><path d="M32 40 l9 -5 M64 40 l-9 -5" stroke="#160A1C" stroke-width="2.2" stroke-linecap="round"/><path d="M34 66 Q48 56 62 66" fill="none" stroke="#E71D3C" stroke-width="3.2" stroke-linecap="round"/></svg>
+            <span class="pill p" style="background:#fff">😤 Frustrated · 0.71</span>
+          </div>
+          <div class="bub ai">Tell me about a recent experience with any brand, product, or place.</div>
+          <div class="bub me">My Delta flight to NYC was delayed 3 hrs — nobody explained anything and I missed my mom's birthday dinner.</div>
+          <div class="detect">✈ DELTA DETECTED → 1 truth</div>
+          <div class="bub ai">That's a lot to carry. When you asked the gate staff for updates, how did they handle it?</div>
+          <div class="inbar"><span>Type your truth…</span><span class="s"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+        </div>
+        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide lime"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow lime">THE HOOK · CONTESTS<span class="biso">because i said so</span></div>
+    <h2 class="dh">The biggest names on earth will run their contests here.</h2>
+    <p class="dsub">Seed a creative challenge, and a real audience answers with stories you can use — not poll clicks. Creative sourcing, market research, and your most powerful acquisition channel, in one.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><b>Seed the challenge</b><span>Set the prompt, prize, deadline — "name our next shake."</span></div>
+      <div class="step"><div class="n">02</div><b>Real people answer</b><span>Verified humans reply with ideas &amp; stories — not a tap, not a bot.</span></div>
+      <div class="step"><div class="n">03</div><b>The room ranks it</b><span>One-word signal surfaces standouts by authentic resonance.</span></div>
+      <div class="step"><div class="n">04</div><b>You crown the winner</b><span>You pick and pay out. BISS never takes a cut or owns your idea.</span></div>
+    </div>
+    <div class="qt">Taylor Swift asks her fans a question → Instagram returns 847,000 votes; BISS returns 50,000 narratives — and every fan just made a BISS account. Free acquisition at scale.</div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr coral">
+        <div class="sb"><span>9:41</span><span class="tag">Stadium</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">◆ Live</span></div>
+        <div class="body" style="gap:11px">
+          <div><div class="h-disp" style="font-size:27px">Best travel<br>save</div><div class="t-sm" style="color:var(--sub);margin-top:6px">Sponsored by JetBlue · ⏱ 4d left</div></div>
+          <div class="card"><div class="htag m" style="display:block;margin-bottom:9px">Your entry</div><div class="chips" style="margin-bottom:10px"><span class="pill p">New story</span><span class="pill">Pick from journal</span></div><div class="card flat"><span class="t-mut">Tell the story of the save…</span></div></div>
+          <div class="card">
+            <div class="htag" style="display:block;margin-bottom:10px">Standings · by community signal</div>
+            <div class="between" style="margin-bottom:9px"><div class="row" style="align-items:center;gap:8px"><span class="t-b" style="color:var(--pinkink)">1</span><div class="bar" style="width:116px"><div class="fl p" style="width:88%"></div></div></div><span class="pill">312 ◆</span></div>
+            <div class="between"><div class="row" style="align-items:center;gap:8px"><span class="t-b">2</span><div class="bar" style="width:116px"><div class="fl p" style="width:78%"></div></div></div><span class="pill">288 ◆</span></div>
+          </div>
+          <a class="cta ink" style="margin-top:auto">Submit entry</a>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>Stadium</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(158deg,#2e0e52 0%,#4d1590 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">VALUE PROPOSITION · BUSINESS<span class="biso">because i said so</span></div>
+  <h2 class="dh">The truth your customers won't put in a survey.</h2>
+  <p class="dsub">Authentic intelligence generated in conversation — not coaxed from a survey or scraped from a post. A market full of data, starved of insight.</p>
+  <div class="grid3" style="margin-top:8px">
+    <div class="card2"><div class="k">01 · Own the data</div><p>Proprietary emotional data, generated fresh with every story. Not what customers say publicly — <b style="color:var(--text)">what they actually think.</b> Can't be licensed from anyone.</p></div>
+    <div class="card2"><div class="k">02 · Act on Monday</div><p>Sentiment, journey maps, ranked pain points, AI recs — plus <b style="color:var(--text)">early issue detection before a problem goes viral.</b> A decision, not a report you file.</p></div>
+    <div class="card2"><div class="k">03 · The road not taken</div><p>Benchmark your category and read exactly what customers say about the competitor they <b style="color:var(--text)">chose instead of you</b> — a signal no survey can produce.</p></div>
+  </div>
+  <div class="qt">Enterprise depth at an SMB price — from $50/mo against $15–40K/yr for legacy tools, with a class of data the incumbents structurally cannot collect.</div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">VALUE PROPOSITION · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">Finally, somewhere that listens.</h2>
+    <p class="dsub">Not a review you'd perform for strangers. Not a star you'd forget by lunch. The first place built for how it actually felt — and for making sure it reaches someone who can act on it.</p>
+    <div class="pts">
+      <div class="pt"><span class="x">01</span><div><b>Something that actually listens.</b> <span>An AI that follows the thread — pulling out the moment, the feeling, and the why every other platform throws away.</span></div></div>
+      <div class="pt"><span class="x">02</span><div><b>Every talk becomes your diary.</b> <span>One messy vent → a polished, permanent entry. Yours to keep, edit, hide, or delete.</span></div></div>
+      <div class="pt"><span class="x">03</span><div><b>A score from your story — never a star.</b> <span>The AI reads how it landed from your own words. Nothing to game, nothing to fake.</span></div></div>
+      <div class="pt"><span class="x">04</span><div><b>Your name is your call.</b> <span>Verified human, anonymous by default. FlipSide flips it story by story. No ads; your number is never sold.</span></div></div>
+      <div class="pt"><span class="x">05</span><div><b>Get heard where it counts.</b> <span>Your story lands on the brand's dashboard — the room where decisions get made.</span></div></div>
+    </div>
+    <div class="qt">Stop performing. Start telling the truth. Your opinion doesn't disappear here — it reaches the people with the power to change things.</div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr tang">
+        <div class="sb"><span>9:41</span><span class="tag">247 truths told</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
+        <div class="body" style="gap:11px">
+          <div style="display:flex;align-items:center;gap:12px"><div class="av p" style="width:52px;height:52px"></div><div><div class="h-disp" style="font-size:23px">PinkWagon77</div><div class="t-sm" style="color:var(--sub);margin-top:2px">Lvl 12 · Neighborhood Expert</div></div></div>
+          <div class="row">
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--tealink)">183</div><div class="htag m" style="margin-top:4px">LOVED</div></div>
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--coralink)">64</div><div class="htag m" style="margin-top:4px">LET DOWN</div></div>
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px">38</div><div class="htag m" style="margin-top:4px">FOLLOWING</div></div>
+          </div>
+          <div class="card">
+            <div class="htag" style="display:block;margin-bottom:11px">Your taste · by sentiment</div>
+            <div class="col" style="gap:11px">
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🍔 Restaurants</span><span class="t-mut">8.4 avg</span></div><div class="bar"><div class="fl" style="width:84%"></div></div></div>
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">✈ Airlines</span><span class="t-mut">4.6 avg</span></div><div class="bar"><div class="fl p" style="width:46%"></div></div></div>
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🏨 Hotels</span><span class="t-mut">7.1 avg</span></div><div class="bar"><div class="fl" style="width:71%"></div></div></div>
+            </div>
+          </div>
+          <div class="card"><div class="between"><span class="t-sm"><b>Recommends:</b> Chick-fil-A, Marriott</span><span class="pill on">See all</span></div></div>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr aqua">
+        <div class="sb"><span>9:41</span><span class="tag">◆ Public page</span></div>
+        <div class="top"><span class="mk">biss</span><span class="pill solid" style="padding:4px 11px">Follow</span></div>
+        <div class="body" style="gap:11px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:50px;height:50px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--pinkink);font-family:var(--f-disp);font-size:23px">C</div>
+            <div><div class="h-disp" style="font-size:21px">Chick-fil-A</div><div class="t-sm" style="color:var(--sub)">Fast food · 1,204 truths</div></div>
+          </div>
+          <div class="row">
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div class="score sm" style="margin:0 auto 6px"><span class="n">9.0</span></div><div class="htag m">SENTIMENT</div></div>
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px;color:var(--pinkink)">#1</div><div class="htag m" style="margin-top:6px">IN QSR</div></div>
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px">92%</div><div class="htag m" style="margin-top:6px">RETURN</div></div>
+          </div>
+          <div class="chips"><span class="pill solid">Truths</span><span class="pill" style="background:#fff">Themes</span><span class="pill" style="background:#fff">Nearby</span></div>
+          <div class="card"><div class="between"><div><div class="t-b">Saved Dinner</div><div class="t-mut" style="margin-top:2px">"The one thing that went right all day."</div></div><div class="score sm"><span class="n">9.2</span></div></div></div>
+          <div class="card"><div class="between"><div><div class="t-b">The Line Moved Fast</div><div class="t-mut" style="margin-top:2px">Drive-thru of 20 cars, 4 minutes.</div></div><div class="score sm"><span class="n">8.8</span></div></div></div>
+          <div class="card"><div class="between"><div><div class="t-b">Cold Fries, Warm Staff</div><div class="t-mut" style="margin-top:2px">Lukewarm fries; they remade them.</div></div><div class="score sm neu"><span class="n">5.4</span></div></div></div>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">PROOF · LIVE DEMO<span class="biso">because i said so</span></div>
+    <h2 class="dh">You can click it today.</h2>
+    <p class="dsub">An interactive investor demo — pre-alpha, but real enough to feel.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Walk the full flow.</b> <span>Talk → AI writes your verdict → score inferred → published to a Brand Truth Page.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Real-time moderation &amp; Authenticity Score</b> <span>demonstrated live in the interface.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Founding 50 + Brand Truth Pages</b> <span>in action — the built-in virality and cold-start mechanic.</span></div></div>
+    </div>
+    <div style="margin-top:16px;display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);background:var(--lime);color:#160A1C;font-weight:700;padding:11px 18px;border-radius:10px;letter-spacing:.04em">▸ biss-opal.vercel.app</div>
+    <div class="qt">Built solo by the CTO with AI agents — proof of the concept and the team's capital efficiency.</div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">DEFENSIBILITY · THE MOAT<span class="biso">because i said so</span></div>
+  <h2 class="dh">The moat is trust — engineered, documented, defensible.</h2>
+  <p class="dsub">Original private data + dual identity + a full trust architecture built before scale, not after a scandal.</p>
+  <div class="grid2">
+    <div class="card2"><div class="k">Original data creation</div><p>BISS <b style="color:var(--text)">generates</b> private intelligence; competitors <b style="color:var(--text)">monitor</b> public posts. Our dataset can't be accessed by anyone else.</p></div>
+    <div class="card2"><div class="k">FlipSide — two voices</div><p>Anonymous-but-verified <b style="color:var(--text)">and</b> named-but-private from the same human pool. Can't be bolted on later.</p></div>
+    <div class="card2"><div class="k">Anonymous, authenticated</div><p>Identity verified (device, biometrics) but never revealed. Honest because protected; trusted because verified.</p></div>
+    <div class="card2"><div class="k">Legal-first architecture</div><p>Subjective-experience positioning, auto-redaction of PII, Section 230 host posture, pure-host contests.</p></div>
+  </div>
+  <div class="chips" style="margin-top:14px">
+    <span class="chip">No ads</span><span class="chip">95% always free</span>
+    <span class="chip">AI-inferred ratings only</span><span class="chip">Anonymous but authenticated</span>
+    <span class="chip"><b>18–24 mo</b> category window</span></div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#5AD3F0 0%,#38b8dd 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">THE BUSINESS MODEL<span class="biso">because i said so</span></div>
+  <h2 class="dh">95% create for free. <span style="color:#0B4A63">5% pay for the intelligence.</span></h2>
+  <div class="bm-fly">
+    <span class="bm-step">Free users create stories</span><span class="bm-arw">→</span>
+    <span class="bm-step">businesses pay for intelligence</span><span class="bm-arw">→</span>
+    <span class="bm-step">revenue funds a better product</span><span class="bm-arw">→</span>
+    <span class="bm-step">more users</span><span class="bm-arw">→</span>
+    <span class="bm-step">richer data</span><span class="bm-arw">→</span>
+    <span class="bm-step">higher business value</span><span class="bm-loop">↻ REPEAT</span>
+  </div>
+  <div class="bm-card">
+    <div class="bm-grid bm-thead"><div>Tier</div><div>Target</div><div>Price</div><div>Includes</div></div>
+    <div class="bm-grid bm-trow bm-muted"><div class="bm-name">Enterprise</div><div>Regional chains</div><div class="bm-price">$1,000–3,000/mo</div><div>10 seats · unlimited reports · API + CRM · dedicated CSM · custom deep-dives</div></div>
+    <div class="bm-grid bm-trow bm-hero"><div class="bm-name">Premier <span class="bm-star">★</span><span class="bm-tag">PRIMARY</span></div><div>Growing businesses</div><div class="bm-price">$250–500/mo</div><div>3 seats · 5 reports · seed questions · competitive intel · creator intros</div></div>
+    <div class="bm-grid bm-trow bm-muted"><div class="bm-name">Basic</div><div>Micro businesses <em>(on-ramp)</em></div><div class="bm-price">$50–100/mo</div><div>1 seat · 1 report · Brand Page · real-time sentiment · email support</div></div>
+  </div>
+  <div class="bm-ala"><span class="bm-k">+ À la carte</span><span class="bm-v">seeds · contests · reports · creator activations · placement</span></div>
+  <div class="bm-callout"><span class="bm-bar"></span><p>The page is free. The intelligence is the product. This is what you’ve been paying <b>tens of thousands a year</b> to <span class="bm-it">not</span> get.</p></div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#B08CF0 0%,#9268e0 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
+        <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>seed-campaigns</b>/new</span></div>
+        <div class="bwin">
+          <div class="bside lime">
+            <div class="brandrow"><span class="mk2">biss</span><span class="kw">INTELLIGENCE</span></div>
+            <div class="navi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Sentiment</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Truths</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"/></svg>Benchmarks</div>
+            <div class="navi on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Seed campaigns</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/></svg>Reports</div>
+          </div>
+          <div class="bmain">
+            <div class="toph"><h3>New seed campaign <span>Lodging · contextual intelligence</span></h3><div class="toolbar"><span class="pill">Draft</span><span class="btn">Save draft</span></div></div>
+            <div class="dcols even" style="align-items:stretch">
+              <div class="rail">
+                <div class="dcard"><span class="htag" style="display:block;margin-bottom:11px">YOUR SEED QUESTION</span><div class="dcard" style="background:#F7F5FB"><span class="t-sm" style="line-height:1.6">"What would make your check-in feel more personal?"</span></div></div>
+                <div class="dcard"><span class="htag" style="display:block;margin-bottom:12px">TARGETING</span><div class="chips" style="margin-bottom:13px"><span class="pill on">Lodging</span><span class="pill on">Recent stay</span><span class="pill on">US · 25–45</span></div><div class="between" style="margin-bottom:6px"><span class="t-mut">Matching audience</span><span class="t-sm">~12,400</span></div><div class="bar"><div class="fl" style="width:62%"></div></div></div>
+              </div>
+              <div class="rail">
+                <div class="dcard" style="flex:1;display:flex;flex-direction:column"><span class="htag" style="display:block;margin-bottom:13px">PREVIEW IN FLOW</span><div class="col" style="gap:10px;flex:1"><div class="bub2 ai">Honestly, the room was lovely.</div><div class="bub2 me">…and by the way — what would make your <b style="color:#fff;text-decoration:underline">check-in feel more personal</b>?</div><div class="bub2 ai">Maybe just knowing my name when I walk up…</div></div><div class="htag p" style="margin-top:12px">◆ SEED INSERTED · READS AS THE AI'S OWN CURIOSITY</div></div>
+                <div class="dcard"><div class="row" style="gap:14px"><div class="metric" style="flex:1"><div class="v pos">~$2,400</div><div class="k">Est. cost</div></div><div class="metric" style="flex:1"><div class="v">~1,900</div><div class="k">Est. stories</div></div></div></div>
+                <a class="cta pink">Launch campaign →</a>
+              </div>
+            </div>
+          </div>
+        </div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">PAID INTELLIGENCE · SEED QUESTIONS<span class="biso">because i said so</span></div>
+    <h2 class="dh">Brands pay to ask a question — and it lands as the AI's own curiosity.</h2>
+    <p class="dsub">Story-rich answers, not a 1-to-5 grid nobody means.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>The question.</b> <span>"What would make your check-in feel more personal?"</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>The targeting.</b> <span>Lodging · recent stay · US · 25–45 → matching audience ~12,400.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>In the flow.</b> <span>The seed reads as the AI's own question — so people answer honestly.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>The economics.</b> <span>~$2,400 → ~1,900 authentic stories — ≈$1.25 per narrative answer.</span></div></div>
+    </div>
+    <div class="qt">A high-margin recurring stream on top of subscription: bundles $100–500/campaign; programs $200–5,000/mo.</div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">MARKET · WHY NOW<span class="biso">because i said so</span></div>
+    <h2 class="dh">Travel is the launch. Every experience is the market.</h2>
+    <p class="dsub">A data class the incumbents can't collect at any price.</p>
+    <table class="tbl">
+      <tr><th>Tool</th><th>Annual cost</th><th>Data type</th></tr>
+      <tr><td><b>Meltwater</b></td><td>$15–40K</td><td>Public posts</td></tr>
+      <tr><td><b>Qualtrics</b></td><td>$1.5–15K</td><td>Surveys (~20–30% reply)</td></tr>
+      <tr class="hi"><td class="tier">BISS</td><td class="big">$600–36K</td><td><b>Private conversational truth</b></td></tr>
+    </table>
+    <div class="pts" style="margin-top:14px">
+      <div class="pt"><span class="x">Yr 1–2</span><div><b>SoCal</b> <span>— travel + restaurants</span></div></div>
+      <div class="pt"><span class="x">Yr 3</span><div><b>National</b> <span>— retail + entertainment</span></div></div>
+      <div class="pt"><span class="x">Yr 4–5</span><div><b>Global</b> <span>— health, auto, finance</span></div></div>
+    </div>
+  </div>
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
         <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>benchmarks</b>/airlines</span></div>
         <div class="bwin">
           <div class="bside cyan">
@@ -888,149 +1097,115 @@ body.locked{overflow:hidden;height:100vh}
               <tr><td>On-time reliability</td><td class="r">5.2</td><td class="r t-mut">6.6</td><td class="r" style="color:var(--coralink)">−1.4</td></tr>
             </table></div>
           </div>
-        </div></div></div>
-  <div class="wrap"><div class="fcards g3 rv" style="margin-top:34px">
-    <div class="fcard"><span class="rail" style="background:var(--aqua)"></span><div class="n">Live sentiment</div><h3>A real-time pulse</h3><p>The AI reads the full story and infers a score from what was genuinely said. Two customers who had the same terrible day land on similar scores — consistent, honest, and it moves the moment sentiment moves.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--lav)"></span><div class="n">The journey</div><h3>When the feeling turned</h3><p>A number tells you how they felt; the journey tells you when it turned. Booking was great, check-in fine, then hour three flipped the trip. Find the exact moment you're losing people.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--coral)"></span><div class="n">Before it trends</div><h3>The whisper, not the wildfire</h3><p>When customers start telling the same bad story, that's an operational fire starting. We surface the pattern early — most brands find out on Twitter; you find out here first.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--pink)"></span><div class="n">You vs. them</div><h3>Competitive benchmarking</h3><p>Your sentiment against named competitors, inside real stories, in your vertical. Not a Gartner quadrant — what people who chose your rival are saying about the choice.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--cyan)"></span><div class="n">Who's talking</div><h3>The people behind the sentiment</h3><p>"Customers are unhappy" becomes "first-time weekday travelers under 30 are unhappy about exactly one thing." A briefing you can act on — real audience, not a bought panel.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--lime)"></span><div class="n">Told, not asked</div><h3>AI recommendations</h3><p>We turn intelligence into a to-do list. <b>Fix this</b> — your top pain points, ranked. <b>Brag about this</b> — your top positive themes, campaign-ready. And every score traces back to the raw stories that produced it.</p></div>
-  </div></div>
-</section>
-
-<!-- ENGAGE: CONTESTS + SEED QUESTIONS -->
-<section class="band violet" id="engage">
-  <div class="floor"></div>
-  <div class="wrap rv"><div class="eyebrow">Don't just listen. Answer. <span class="biso">· because I said so</span></div>
-    <h2 class="summary">Reviews you can reply to. Questions you can ask. Customers you can actually reach.</h2>
-    <p class="hook">Every other tool leaves you shouting into your own dashboard. BISS closes the loop.</p>
+        </div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(155deg,#6a24c8 0%,#4e169a 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">GO-TO-MARKET<span class="biso">because i said so</span></div>
+  <h2 class="dh">Ten partners that build everything.</h2>
+  <p class="dsub">Customer-obsessed brands with an intelligence gap BISS fills — no competitive overlap. Strategic targets, not signed deals.</p>
+  <div class="grid2">
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Alpha · Southern California</div><div class="pts" style="margin-top:4px"><div class="pt"><span class="x">01</span><div><b>Airbnb</b> <span>— SMB hosts with zero intelligence from public ratings</span></div></div><div class="pt"><span class="x">02</span><div><b>Southwest</b> <span>— lighthouse partner; surveys capture almost nothing</span></div></div><div class="pt"><span class="x">03</span><div><b>Hampton</b> <span>— franchise owners say yes fast; 100+ SoCal sites</span></div></div><div class="pt"><span class="x">04</span><div><b>JetBlue</b> <span>— Digital Innovation team tests new CX tools</span></div></div><div class="pt"><span class="x">05</span><div><b>AAA</b> <span>— 60M+ members; pays for the dashboard and drives sign-ups</span></div></div></div></div>
+    <div class="card2" style="border-color:var(--lav)"><div class="k" style="color:var(--lav)">Beta · National + strategic</div><div class="pts" style="margin-top:4px"><div class="pt"><span class="x">06</span><div><b>Alaska</b> <span>— oneworld opens a second door to American</span></div></div><div class="pt"><span class="x">07</span><div><b>Enterprise</b> <span>— completes the flight + hotel + car journey</span></div></div><div class="pt"><span class="x">08</span><div><b>Marriott</b> <span>— ROI proof → 30-brand, 9,000-property step-change</span></div></div><div class="pt"><span class="x">09</span><div><b>Uber</b> <span>— the emotional bookend of every trip</span></div></div><div class="pt"><span class="x">10</span><div><b>Expedia / Vrbo</b> <span>— named Year-3 potential acquirer — be inside early</span></div></div></div></div>
   </div>
-  <div class="wrap rv" style="margin-top:34px"><div class="gd"><div class="win">
-        <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>seed-campaigns</b>/new</span></div>
-        <div class="bwin">
-          <div class="bside lime">
-            <div class="brandrow"><span class="mk2">biss</span><span class="kw">INTELLIGENCE</span></div>
-            <div class="navi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Sentiment</div>
-            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Truths</div>
-            <div class="navi"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"/></svg>Benchmarks</div>
-            <div class="navi on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Seed campaigns</div>
-            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/></svg>Reports</div>
-          </div>
-          <div class="bmain">
-            <div class="toph"><h3>New seed campaign <span>Lodging · contextual intelligence</span></h3><div class="toolbar"><span class="pill">Draft</span><span class="btn">Save draft</span></div></div>
-            <div class="dcols even" style="align-items:stretch">
-              <div class="rail">
-                <div class="dcard"><span class="htag" style="display:block;margin-bottom:11px">YOUR SEED QUESTION</span><div class="dcard" style="background:#F7F5FB"><span class="t-sm" style="line-height:1.6">"What would make your check-in feel more personal?"</span></div></div>
-                <div class="dcard"><span class="htag" style="display:block;margin-bottom:12px">TARGETING</span><div class="chips" style="margin-bottom:13px"><span class="pill on">Lodging</span><span class="pill on">Recent stay</span><span class="pill on">US · 25–45</span></div><div class="between" style="margin-bottom:6px"><span class="t-mut">Matching audience</span><span class="t-sm">~12,400</span></div><div class="bar"><div class="fl" style="width:62%"></div></div></div>
-              </div>
-              <div class="rail">
-                <div class="dcard" style="flex:1;display:flex;flex-direction:column"><span class="htag" style="display:block;margin-bottom:13px">PREVIEW IN FLOW</span><div class="col" style="gap:10px;flex:1"><div class="bub2 ai">Honestly, the room was lovely.</div><div class="bub2 me">…and by the way — what would make your <b style="color:#fff;text-decoration:underline">check-in feel more personal</b>?</div><div class="bub2 ai">Maybe just knowing my name when I walk up…</div></div><div class="htag p" style="margin-top:12px">◆ SEED INSERTED · READS AS THE AI'S OWN CURIOSITY</div></div>
-                <div class="dcard"><div class="row" style="gap:14px"><div class="metric" style="flex:1"><div class="v pos">~$2,400</div><div class="k">Est. cost</div></div><div class="metric" style="flex:1"><div class="v">~1,900</div><div class="k">Est. stories</div></div></div></div>
-                <a class="cta pink">Launch campaign →</a>
-              </div>
-            </div>
-          </div>
-        </div></div></div>
-
-  <div class="wrap"><div class="fcards g2 rv" style="margin-top:36px">
-    <div class="fcard"><span class="rail" style="background:var(--aqua)"></span><div class="n">Ask anything · seed questions</div><h3>Drop your question into the conversation.</h3><p>Want to know what would make check-in feel human, or whether anyone would pay for the new thing? Seed a question and it appears naturally in the flow — as if the AI simply thought to ask — so you get honest, story-rich answers instead of a 1-to-5 grid nobody means.</p><p style="font-family:var(--f-mono);font-size:12.5px;color:var(--lime);margin-top:10px">A hotel chain asks: "What would make your check-in feel more personal?" — and gets real answers from real guests, in their own words.</p></div>
-    <div class="fcard"><span class="rail" style="background:var(--pink)"></span><div class="n">Direct contact</div><h3>Someone wrote the story. Now write back.</h3><p>Thank the fan. Make the angry one whole. Follow up on the story that could've gone either way — customer recovery at the exact moment it matters, not a form letter three weeks late. You reach the person; we protect who they are.</p></div>
-  </div></div>
-
-  <div class="wrap rv" style="margin-top:20px">
-    <h2 class="summary" style="font-size:clamp(24px,3.4vw,38px);margin-top:24px">Run a contest — real ideas, not poll clicks.</h2>
-    <p class="detail" style="margin-top:10px">The biggest engagement engine on BISS is yours to run. Seed a creative challenge and a real audience answers with stories you can use — creative sourcing and market research in one, and your most powerful acquisition channel.</p>
-    <div class="steps rv" style="margin-top:26px">
-      <div class="step"><div class="no">01</div><h4>Seed the challenge.</h4><p>You set the prompt, the prize, and the deadline — "name our next shake," "design the amenity kit."</p></div>
-      <div class="step"><div class="no">02</div><h4>Real people answer.</h4><p>Verified humans respond with actual ideas and stories — not a tap, not a bot, not a bought review.</p></div>
-      <div class="step"><div class="no">03</div><h4>The room ranks it.</h4><p>The community reacts with one-word signal, surfacing the standouts by authentic resonance.</p></div>
-      <div class="step"><div class="no">04</div><h4>You crown the winner.</h4><p>You pick and pay out. BISS hosts the arena — never takes a cut, never owns your idea, never judges for you.</p></div>
+  <div class="qt">Cold-start is sequencing, not luck: seed creator content → brand test accounts → paid seed questions → organic growth. The Founding 50 makes early contribution the point.</div>
+</div></section></div><div class="stage">
+<section class="slide bright top" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">THE NUMBERS · UNIT ECONOMICS<span class="biso">because i said so</span></div>
+  <h2 class="dh">Premium-led economics that pay back fast.</h2>
+  <p class="nz-sub">Conservative projections · Gross margin 80% · LTV = 3-year gross profit · Cost per story ≈ $0.05–0.07 · Figures modeled at list price.</p>
+  <div class="nz-tables">
+    <div class="nz-card">
+      <div class="nz-grid7 nz-thead"><div>Tier</div><div>List</div><div>ACV</div><div>CAC</div><div>3-Yr LTV</div><div>LTV / CAC</div><div>Payback</div></div>
+      <div class="nz-grid7 nz-trow nz-hero"><div class="nz-name">Enterprise</div><div>$3,000/mo</div><div>$36K</div><div>$12K</div><div class="nz-win">$86.4K</div><div class="nz-win">7.2×</div><div class="nz-win">5 mo</div></div>
+      <div class="nz-grid7 nz-trow"><div class="nz-name">Premier ★</div><div>$500/mo</div><div>$6K</div><div>$3.5K</div><div>$14.4K</div><div>4.1×</div><div>9 mo</div></div>
+      <div class="nz-grid7 nz-trow nz-muted"><div class="nz-name">Basic</div><div>$100/mo</div><div>$1.2K</div><div>$1.2K</div><div>$2.9K</div><div>2.4×</div><div>15 mo</div></div>
     </div>
-    <div class="callout rv" style="border-left-color:var(--lime);background:rgba(0,0,0,.24);margin-top:22px"><div class="big">From truth to campaign.</div><p style="color:#E7DCF4">Your next campaign is hiding in what customers already told you — the phrase your happiest customers keep using, the angle your rival can't touch. Plus creator activations: real voices, on purpose.</p></div>
+    <div class="nz-card">
+      <div class="nz-grid6 nz-thead"><div>ARR Trajectory</div><div>Month 18</div><div>Month 30</div><div>Month 42</div><div>Series A</div><div>Year 5</div></div>
+      <div class="nz-grid6 nz-trow"><div class="nz-name">ARR</div><div>~$12K</div><div>~$50K</div><div>~$100K</div><div class="nz-win nz-aqua">$150–250K</div><div class="nz-win nz-aqua">$8–12M</div></div>
+      <div class="nz-grid6 nz-trow nz-muted"><div class="nz-name">Customers</div><div>2</div><div>8</div><div>15</div><div>25–40</div><div>1,000–1,500</div></div>
+    </div>
   </div>
-</section>
-
-<!-- BRAND PAGES -->
-<section class="band lime" id="brandpages">
-  <div class="wrap rv"><div class="eyebrow">Your home on BISS <span class="biso">· because I said so</span></div>
-    <h2 class="summary" style="color:#160A1C">Every brand gets a page. Whether you claim it or not.</h2>
-    <p class="hook">The moment customers tell the truth about you, BISS builds you a page. You don't create it — you claim it.</p></div>
-  <div class="wrap"><div class="fcards g3 rv" style="margin-top:30px">
-    <div class="fcard" style="background:rgba(16,10,22,.94);border-color:rgba(255,255,255,.12)"><div class="n" style="color:var(--aqua)">Ghost Pages &amp; Founding 50</div><h3 style="color:#fff">It's filling up right now.</h3><p style="color:#C9BFD9">Your page starts as a private Ghost Page, building in the background. When the 50th customer shares their truth, it goes live — and the first 50 are stamped on it forever. There may already be a countdown running on your brand.</p></div>
-    <div class="fcard" style="background:rgba(16,10,22,.94);border-color:rgba(255,255,255,.12)"><div class="n" style="color:var(--aqua)">Claim &amp; verify</div><h3 style="color:#fff">Minutes to claim. Everything to ignore.</h3><p style="color:#C9BFD9">1 · Claim the page BISS already built. 2 · Verify you're the brand (quick, free). 3 · Unlock the intelligence when you're ready to stop guessing.</p></div>
-    <div class="fcard" style="background:rgba(16,10,22,.94);border-color:rgba(255,255,255,.12)"><div class="n" style="color:var(--aqua)">Free vs. paid</div><h3 style="color:#fff">The page is free. The intelligence is the product.</h3><p style="color:#C9BFD9">Free: your public Brand Truth Page, verified badge, live story feed, headline score. Paid: the <b style="color:#fff">why</b> behind every score — journeys, early detection, benchmarking, demographics, AI recs, seed questions, direct reply, export &amp; API.</p></div>
-  </div></div>
-</section>
-
-<!-- PRICING -->
-<section class="band deep" id="pricing">
-  <div class="wrap rv"><div class="eyebrow">Pricing <span class="biso">· because I said so</span></div>
-    <h2 class="summary">The page is free.<br>The intelligence is the product.</h2>
-    <p class="hook">This is what you've been paying $30K a year to <i>not</i> get.</p></div>
-  <div class="wrap"><div class="fcards g3 rv" style="margin-top:30px">
-    <div class="fcard"><div class="n">Basic</div><h3 style="font-family:var(--f-disp);font-size:30px;text-transform:uppercase;white-space:nowrap">$50–$100<span style="font-size:13px;color:var(--muted)"> /mo</span></h3><p style="color:var(--pink2);font-weight:700">Micro businesses</p><p>1 seat · 1 monthly report · your Brand Page · real-time sentiment · email support.</p></div>
-    <div class="fcard" style="border-color:var(--lime);box-shadow:0 0 0 1px var(--lime)"><div class="n" style="color:var(--lime)">★ Premier</div><h3 style="font-family:var(--f-disp);font-size:30px;text-transform:uppercase;white-space:nowrap">$250–$500<span style="font-size:13px;color:var(--muted)"> /mo</span></h3><p style="color:var(--pink2);font-weight:700">Growing businesses</p><p>3 seats · 5 reports · seed questions · competitive intel · creator introductions.</p></div>
-    <div class="fcard"><div class="n">Enterprise</div><h3 style="font-family:var(--f-disp);font-size:30px;text-transform:uppercase;white-space:nowrap">$1,000–$3,000<span style="font-size:13px;color:var(--muted)"> /mo</span></h3><p style="color:var(--pink2);font-weight:700">Regional chains</p><p>10 seats · unlimited reports · API + CRM · dedicated CSM · custom deep-dives.</p></div>
-  </div></div>
-</section>
-
-<!-- CLAIM CTA -->
-<section class="band vapor ctaband" id="claim">
-  <div class="floor"></div>
-  <div class="wrap rv">
-    <div class="eyebrow" style="justify-content:center;color:var(--lime)">There's already a page about you <span class="biso" style="color:var(--lime)">· because I said so</span></div>
-    <h2 class="summary" style="margin:0 auto;max-width:22ch">Come see it. Free to claim.<br>No card. No catch.</h2>
-    <p class="detail" style="margin:14px auto 0">The intelligence is the part you'll want to pay for.</p>
-    <div class="capture" style="justify-content:center;max-width:none"><a class="btn lime" href="#">Claim Your Brand Page — free</a><a class="btn" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)" href="#">Book a Demo</a></div>
-    <p class="micro" style="text-align:center">Oxford Saïd Business School · NVIDIA Inception Program</p>
+  <div class="nz-callout"><span class="nz-bar"></span><p>Enterprise pays back in <b>~5 months</b> at <b>7.2× LTV/CAC</b>. Every dollar of premium ARPU lowers net burn and pulls breakeven forward.</p></div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE ASK<span class="biso">because i said so</span></div>
+  <h2 class="dh">$300K now. ~$700K to Series A, gated on proof.</h2>
+  <p class="dsub">Pre-seed on the AI-native path — every dollar to product and pilots, not payroll.</p>
+  <div class="grid2">
+    <div class="card2" style="background:rgba(233,255,58,.08);border-color:var(--lime)"><div class="k" style="color:var(--lime)">Raising now</div><h4 style="font-size:26px">$300K pre-seed SAFE</h4><p style="color:#fff">~18 months runway to the Beta gate. Ship Alpha (mo 10), sign 3–5 pilots, first engineer, legal &amp; trust foundation.</p></div>
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Then</div><h4 style="font-size:26px">~$400K seed</h4><p style="color:#fff">At ~month 15–18, unlocked by Alpha proof. Total ≈ $700K to Series A.</p></div>
   </div>
-</section>
+  <div class="pts" style="margin-top:14px">
+    <div class="pt"><span class="x" style="color:var(--lime)">Gate 1</span><div><b style="color:#fff">Unlocks the seed</b> <span style="color:var(--lav)">— Alpha live · 3–5 pilots · first conversions · early unit economics.</span></div></div>
+    <div class="pt"><span class="x" style="color:var(--lime)">Gate 2</span><div><b style="color:#fff">Unlocks Series A</b> <span style="color:var(--lav)">— 8–15 paying customers · LTV/CAC 3×+ · $150–250K ARR.</span></div></div>
+  </div>
+  <div class="qt">Capital-efficient by design: ~$86K spent by end of MVP build, Alpha at month 10 — ~3× cheaper to Alpha than a traditional team.</div>
+</div></section></div><div class="stage">
+<section class="slide dark tpx" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="tpx-eyebrow">But isn’t this just Trustpilot?</div>
+  <h2 class="tpx-h1"><span class="l1">Reviews are for strangers.</span><span class="l2">Truth is for us.</span></h2>
+  <p class="tpx-sub">A review is what people say when they’re being watched. <span class="hl">BISS is what they say when they’re not.</span></p>
+  <div class="tpx-body">
+    <div class="tpx-rail">
+      <div class="tpx-beat"><span class="tpx-lbl">Why it’s truer</span><p>A star rating is a performance — people round up to be nice, or down to punish. <b>A conversation with no audience gets the messy, real, in-between truth.</b></p></div>
+      <div class="tpx-beat"><span class="tpx-lbl">Why people open up</span><p>Every storyteller is verified, but the name is never shown. <b>People tell BISS what they’d never post under their own face.</b></p></div>
+      <div class="tpx-beat"><span class="tpx-lbl">Why it’s a different business</span><p>Trustpilot sells a way to <i>look</i> trustworthy. <b>BISS sells the truth itself</b> — priced against Meltwater and Qualtrics, not Yelp.</p></div>
+    </div>
+    <div class="tpx-compare">
+      <div class="tpx-panel tpx-tp">
+        <div class="tpx-phead"><span class="tpx-dot"></span>TRUSTPILOT</div>
+        <div class="tpx-pdesc">A public review billboard</div>
+        <div class="tpx-rows"><div class="tpx-row">You pick a star rating</div><div class="tpx-row">You post it in public</div><div class="tpx-row">The brand gets a number</div><div class="tpx-row tpx-money">Your name is attached</div></div>
+      </div>
+      <div class="tpx-panel tpx-bs">
+        <div class="tpx-phead"><span class="tpx-dot"></span>BISS</div>
+        <div class="tpx-pdesc">A private intelligence engine</div>
+        <div class="tpx-rows"><div class="tpx-row">You just talk — no stars</div><div class="tpx-row">No audience — only an AI that listens</div><div class="tpx-row">The brand gets the reason why</div><div class="tpx-row tpx-money">Your name is never seen</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="tpx-kicker"><span class="a">This isn’t a better review site. </span><span class="b">It’s a different business entirely.</span></div>
+  <div class="tpx-refrain">Because I Said So.</div>
+</div></section></div><div class="stage">
+<section class="slide dark team" style="background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE TEAM<span class="biso">because i said so</span></div>
+  <h2 class="dh">Two founders, each the half the other needs.</h2>
+  <p class="dsub">A builder who shipped the product alone — and a closer who owns the market.</p>
+  <div class="grid2">
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Co-Founder &amp; CTO</div><h4>Simge Helvacı <span style="font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.04em">MSc</span></h4><p style="color:#fff;font-size:12px;line-height:1.42">Leads AI architecture, product, and full-stack development, and <b style="color:var(--aqua)">personally built BISS's live prototype end-to-end</b>. As a Senior Product Owner at Amadeus, she owns the e-commerce platform for <b style="color:var(--aqua)">Lufthansa Group's airlines</b> — operating at the infrastructure level of the exact industry BISS enters first, which is why travel is no accident. Previously grew Mercedes-Benz online sales 200% on a platform serving millions daily. BSc Computer Engineering, MSc IT; Oxford Strategy &amp; Innovation, Director's Award scholarship.</p></div>
+    <div class="card2" style="border-color:var(--pink)"><div class="k" style="color:var(--pink2)">Co-Founder &amp; CEO</div><h4>Marc Sternberg <span style="font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.04em">MA · MBA · MFA</span></h4><p style="color:#fff;font-size:12px;line-height:1.42">Leads vision, business architecture, go-to-market, and the investor narrative — including the high-touch B2B sales approach and the first travel relationships at the heart of the launch. A <b style="color:#fff">Fulbright Specialist</b> and Oxford Strategy &amp; Innovation candidate, Marc brings 20+ years of global ecommerce and marketing leadership, personally building the operating teams behind <b style="color:#fff">$100M+ in revenue and 100–200% YoY growth</b> across international enterprises. Recipient of Oxford's Director's Award scholarship.</p></div>
+  </div>
 </div>
-<footer><div class="wrap">
-  <div class="fgrid">
-    <div class="fcol fbrand"><span class="mark" data-t="biss">biss</span><p class="tl">Tell Your Truth.<br>Coming soon to iOS, Android &amp; web.</p><div class="bisofoot">Because I Said So</div></div>
-    <div class="fcol"><h5>Explore</h5><a href="#how">How It Works</a><a href="#contests">Contests</a><a href="#voice">Your Voice</a><a href="#trust">Trust &amp; Safety</a></div>
-    <div class="fcol"><h5>Company</h5><a href="#">About</a><a href="#">Our Story</a><a href="#">Careers</a><a href="#">Contact</a></div>
-    <div class="fcol"><h5>The promises (that we won't break)</h5><p>No ads. Always free.</p><p>No stars. Anonymous but real.</p><p>Your privacy, your grip.</p></div>
+  <div class="cta-ribbon">
+    <div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div>
+    <div class="rbtns"><a class="cta lime" href="https://biss-opal.vercel.app">▸ See the live demo</a><a class="cta ink" href="mailto:marcsternberg13@gmail.com">Book a demo →</a></div>
   </div>
-  <div class="fbot"><span>© BISS · Because I Said So</span><span>Terms · Privacy · Community Guidelines · Contest Rules</span></div>
-</div></footer>
+</section></div></div>
+<div class="hud" id="hud"></div>
+<div class="navbtns"><button id="prev">↑</button><button id="next">↓</button></div>
 
 <script>
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+const stages=[...document.querySelectorAll('.stage')];
+const total=stages.length;
+const sections=["TITLE","THE CATEGORY","WHAT IS BISS","PROBLEM · B","PROBLEM · C","BLUE OCEAN","SOLUTION · B","SOLUTION · C","CONTESTS","VALUE · B","VALUE · C","LIVE DEMO","THE MOAT","MODEL","SEED QUESTIONS","MARKET","GO-TO-MARKET","THE NUMBERS","THE ASK","TEAM"];
+const hud=document.getElementById('hud'),tab=document.getElementById('tab'),bar=document.getElementById('bar');
+let cur=0;
+function fit(){const s=Math.min((window.innerWidth-24)/1280,(window.innerHeight-24)/720);
+  document.documentElement.style.setProperty('--s',s);}
+window.addEventListener('resize',fit);fit();
+function setCur(i){cur=Math.max(0,Math.min(total-1,i));
+  hud.innerHTML='<b>'+String(cur+1).padStart(2,'0')+'</b> / '+total;
+  tab.textContent=sections[cur]||'';bar.style.width=((cur+1)/total*100)+'%';}
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setCur(stages.indexOf(e.target));});},{threshold:.55});
+stages.forEach(s=>io.observe(s));
+function go(i){stages[Math.max(0,Math.min(total-1,i))].scrollIntoView({behavior:'smooth'});}
+document.addEventListener('keydown',e=>{
+  if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(cur+1);}
+  if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(cur-1);}
+  if(e.key==='Home')go(0);if(e.key==='End')go(total-1);});
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+setCur(0);
 </script>
-
-<script>
-function setView(v){
-  document.getElementById('site-customer').hidden=(v!=='customer');
-  document.getElementById('site-business').hidden=(v!=='business');
-  document.querySelectorAll('.tg').forEach(function(b){b.classList.toggle('on',b.dataset.view===v)});
-  var cta=document.getElementById('headcta');
-  if(v==='business'){cta.textContent='Claim Your Brand Page →';cta.setAttribute('href','#claim');}
-  else{cta.textContent='Join the Waitlist →';cta.setAttribute('href','#waitlist');}
-  window.scrollTo(0,0);
-  document.querySelectorAll('#site-'+v+' .rv').forEach(function(el){el.classList.add('in')});
-}
-</script>
-
-<script>
-function biUnlock(e){if(e)e.preventDefault();
-  var v=(document.getElementById('gpw').value||'').trim().toLowerCase();
-  if(v===atob('amliamFi')){
-    var g=document.getElementById('gate');g.classList.add('open');
-    document.body.classList.remove('locked');
-    setTimeout(function(){g.style.display='none'},650);
-  }else{
-    var f=document.getElementById('gform');f.classList.remove('g-shake');void f.offsetWidth;f.classList.add('g-shake');
-    document.getElementById('gerr').style.display='block';
-    var i=document.getElementById('gpw');i.select();
-  }
-  return false;
-}
-</script>
-</body>
-</html>
+</body></html>
