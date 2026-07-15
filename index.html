@@ -337,6 +337,15 @@ body.locked{overflow:hidden;height:100vh}
 .g-wordmark .mark{font-family:var(--f-mark);font-weight:700;font-size:32px;color:var(--pink2);position:relative}
 .g-wordmark .mark::before{content:attr(data-t);position:absolute;left:-2.5px;top:1.5px;color:var(--cyan);z-index:-1;opacity:.9}
 @media(prefers-reduced-motion:reduce){.lips,.lips .lower{animation:none}}
+
+.ctastrip{background:var(--pink);padding:22px 0}
+.ctainner{max-width:1180px;margin:0 auto;padding:0 26px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
+.btn-cta{display:inline-flex;align-items:center;font-family:var(--f-mono);font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:15px 30px;border-radius:11px;transition:transform .15s,box-shadow .15s;cursor:pointer}
+.btn-cta.primary{background:#160A1C;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.btn-cta.primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,0,0,.36)}
+.btn-cta.ghost{background:transparent;color:#160A1C;border:2px solid #160A1C}
+.btn-cta.ghost:hover{background:#160A1C;color:#fff}
+@media(max-width:520px){.btn-cta{width:100%;justify-content:center}}
 </style>
 </head>
 <body class="locked">
@@ -388,6 +397,7 @@ body.locked{overflow:hidden;height:100vh}
   </div>
 </section>
 
+<div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
 <div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;</div></div>
 
 <!-- TEN LINES (whole-thing summary) -->
@@ -788,6 +798,7 @@ body.locked{overflow:hidden;height:100vh}
         </div></div></div>
 </section>
 
+<div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
 <div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</div></div>
 
 <!-- WHOLE THING FAST -->
