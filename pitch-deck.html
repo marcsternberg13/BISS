@@ -506,6 +506,145 @@ body{overflow-x:hidden;background:#050308}
   padding:12px 18px;border-radius:999px;white-space:nowrap;text-decoration:none;display:inline-block}
 .cta.lime{background:var(--lime);color:#160A1C;box-shadow:0 6px 18px rgba(20,10,0,.22)}
 .cta.ink{background:#160A1C;color:#fff}
+/* ---- bright skin: ink text on full-strength neon backgrounds ---- */
+.slide.bright::before{display:none}
+.slide.bright .eyebrow,.slide.bright .eyebrow .biso{color:#160A1C}
+.slide.bright .dh{color:#160A1C}
+.slide.bright .dsub{color:#2a0e52}
+.slide.bright .dsub b{color:#160A1C}
+.slide.bright .pt div>b{color:#160A1C}
+.slide.bright .pt div>span{color:rgba(22,10,28,.76)}
+.slide.bright .pt .x{color:#41249A}
+.slide.bright .pt .m{background:#160A1C;box-shadow:2px 2px 0 rgba(255,255,255,.55)}
+.slide.bright .qt{color:#160A1C;border-color:#160A1C}
+.slide.bright .chip{color:#160A1C;border-color:rgba(22,10,28,.32);background:rgba(22,10,28,.06)}
+.slide.bright .chip b{color:#41249A}
+.slide.bright .tbl th{color:#3a1d86;border-color:rgba(22,10,28,.26)}
+.slide.bright .tbl td{color:rgba(22,10,28,.82);border-color:rgba(22,10,28,.15)}
+.slide.bright .tbl td b{color:#160A1C}
+.slide.bright .tbl tr.hi td{background:rgba(22,10,28,.10)}
+.slide.bright .tbl .big{color:#160A1C}
+.slide.bright .tbl .tier{color:#160A1C}
+.slide.bright .card2{background:rgba(22,10,28,.08);border-color:rgba(22,10,28,.20)}
+.slide.bright .card2 .k{color:#41249A}
+.slide.bright .card2 h4{color:#160A1C}
+.slide.bright .card2 p{color:rgba(22,10,28,.8)}
+.slide.bright .card2 p b{color:#160A1C}
+.slide.bright .stat{border-top-color:#160A1C;background:rgba(22,10,28,.06)}
+.slide.bright .stat .n{color:#160A1C}.slide.bright .stat .l{color:rgba(22,10,28,.74)}
+.slide.bright .flyw{color:#160A1C;border-color:rgba(22,10,28,.32)}
+.slide.bright .mash-line{color:#160A1C}.slide.bright .mash-line span{color:#41249A}
+.slide.bright .vf span{border-color:#160A1C;opacity:.42}
+/* ---- Numbers: dark data card on the pink slide ---- */
+.datacard{background:linear-gradient(162deg,#20122f 0%,#160A1C 100%);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:15px 20px 13px;box-shadow:0 18px 44px rgba(22,10,28,.34);margin-top:2px}
+.slide .datacard .tbl th{color:var(--aqua);border-color:rgba(255,255,255,.16)}
+.slide .datacard .tbl td{color:var(--muted);border-color:rgba(255,255,255,.09)}
+.slide .datacard .tbl td b{color:#fff}
+.slide .datacard .tbl .big{color:var(--lime)}
+.slide .datacard .tbl .tier{color:#fff}
+.slide .datacard .tbl tr.hi td{background:rgba(255,61,181,.18)}
+/* ---- Trustpilot (improved layout) ---- */
+.slide.tpx .wrap{padding:32px 50px;justify-content:flex-start}
+.tpx-eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--aqua);display:flex;align-items:center;gap:11px;margin-bottom:8px}
+.tpx-eyebrow::before{content:"";width:28px;height:2px;background:var(--aqua)}
+.tpx-h1{font-family:var(--f-disp);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.004em;font-size:40px;margin:0}
+.tpx-h1 .l1,.tpx-h1 .l2{display:block}
+.tpx-h1 .l1{color:#FF3DB5;text-shadow:0 0 22px rgba(255,101,195,.4)}
+.tpx-h1 .l2{color:var(--lime);text-shadow:0 0 22px rgba(233,255,58,.36)}
+.tpx-sub{font-weight:600;color:#fff;font-size:14.5px;margin-top:10px;line-height:1.4;max-width:76ch}
+.tpx-sub .hl{color:var(--lime)}
+.tpx-body{display:grid;grid-template-columns:.86fr 1fr;gap:20px;margin-top:13px;align-items:start}
+.tpx-rail{display:flex;flex-direction:column;gap:11px}
+.tpx-beat{display:flex;flex-direction:column;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-left:4px solid var(--aqua);border-radius:12px;padding:12px 16px}
+.tpx-beat:nth-child(2){border-left-color:var(--cyan)}
+.tpx-beat:nth-child(3){border-left-color:var(--lime)}
+.tpx-lbl{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua);display:block;margin-bottom:5px;font-weight:700}
+.tpx-beat:nth-child(2) .tpx-lbl{color:var(--cyan)}
+.tpx-beat:nth-child(3) .tpx-lbl{color:var(--lime)}
+.tpx-beat p{font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.85);font-weight:500}
+.tpx-beat p b{color:#fff;font-weight:700}
+.tpx-compare{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.tpx-panel{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;position:relative}
+.tpx-phead{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.2em;padding:10px 17px;display:flex;align-items:center;gap:9px;position:relative;z-index:2}
+.tpx-dot{width:7px;height:7px;border-radius:50%}
+.tpx-pdesc{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em;padding:7px 17px;font-style:italic;position:relative;z-index:2}
+.tpx-rows{display:flex;flex-direction:column;flex:1;position:relative;z-index:2}
+.tpx-row{display:flex;align-items:center;padding:11px 17px;font-size:13.5px;font-weight:600;line-height:1.22}
+.tpx-tp{background:#FBFAFD;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.tpx-tp .tpx-phead{background:#4A4557;color:#E9E6F0}
+.tpx-tp .tpx-dot{background:#A39CB4}
+.tpx-tp .tpx-pdesc{background:#EDEBF2;color:#615C71}
+.tpx-tp .tpx-row{color:#2A2634;border-top:1px solid #E6E2ED;font-weight:500}
+.tpx-tp .tpx-row:first-child{border-top:0}
+.tpx-tp .tpx-money{color:#2A2634;font-weight:600}
+.tpx-bs{background:#fff;box-shadow:0 18px 54px rgba(255,47,168,.32)}
+.tpx-bs::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;z-index:3;background:linear-gradient(#FF65C3,#FF2FA8);box-shadow:0 0 18px rgba(255,101,195,.85)}
+.tpx-bs .tpx-phead{background:linear-gradient(90deg,#FF2FA8,#FF65C3);color:#160A1C}
+.tpx-bs .tpx-dot{background:#160A1C}
+.tpx-bs .tpx-pdesc{background:#FFEAF6;color:#B21C7B}
+.tpx-bs .tpx-row{color:#160A1C;border-top:1px solid #F4DBEB;font-weight:600}
+.tpx-bs .tpx-row:first-child{border-top:0}
+.tpx-bs .tpx-money{background:#FFE1F2;color:#160A1C;font-weight:800}
+.tpx-bs .tpx-money::before{content:"";width:4px;height:56%;background:#FF2FA8;border-radius:3px;margin-right:10px;flex:none;box-shadow:0 0 10px rgba(255,47,168,.7)}
+.tpx-kicker{text-align:center;font-weight:800;font-size:18px;margin-top:14px;line-height:1.3}
+.tpx-kicker .a{color:#fff}.tpx-kicker .b{color:var(--lime)}
+.tpx-refrain{text-align:center;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.3em;color:rgba(255,255,255,.5);margin-top:8px;text-transform:uppercase}
+/* ---- Numbers: floating dark data cards (improved) ---- */
+.nz-sub{font-family:var(--f-mono);font-weight:400;color:rgba(22,10,28,.82);font-size:13px;margin-top:8px;line-height:1.45;max-width:92ch}
+.nz-tables{display:flex;flex-direction:column;gap:13px;margin-top:15px}
+.nz-card{background:linear-gradient(160deg,#1c1026,#100813);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 46px rgba(120,10,70,.4),0 0 0 1px rgba(255,101,195,.14);display:flex;flex-direction:column}
+.nz-grid7{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1.05fr 1fr 1fr}
+.nz-grid6{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1.15fr 1fr}
+.nz-thead{border-bottom:1px solid rgba(255,255,255,.09)}
+.nz-thead>div{font-family:var(--f-mono);font-weight:700;color:var(--aqua);font-size:10px;letter-spacing:.11em;text-transform:uppercase;padding:10px 15px}
+.nz-trow{border-top:1px solid rgba(255,255,255,.06)}
+.nz-trow:first-of-type{border-top:0}
+.nz-trow>div{padding:10px 15px;font-size:14px;color:#EFEAF5;line-height:1.2;display:flex;align-items:center}
+.nz-name{font-weight:700;color:#fff}
+.nz-hero{background:linear-gradient(90deg,rgba(255,101,195,.18),rgba(233,255,58,.07));position:relative}
+.nz-hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);box-shadow:0 0 12px rgba(233,255,58,.8)}
+.nz-win{color:var(--lime);font-weight:800}
+.nz-aqua{color:var(--aqua);font-weight:800}
+.nz-muted>div{color:#B7B0C7}
+.nz-callout{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:12px;padding:12px 18px;border:1px solid rgba(233,255,58,.28);box-shadow:0 14px 34px rgba(120,10,70,.34);margin-top:13px}
+.nz-bar{width:4px;align-self:stretch;background:var(--lime);border-radius:3px;box-shadow:0 0 12px rgba(233,255,58,.7);flex:none}
+.nz-callout p{font-size:15px;color:#fff;font-weight:600;line-height:1.32}
+.nz-callout p b{color:var(--lime);font-weight:800}
+/* ---- A New Species of App ---- */
+.sp-rows{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.sp-row{display:grid;grid-template-columns:198px 1fr;gap:16px;align-items:center;background:rgba(9,4,14,.42);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 20px}
+.sp-name{font-family:var(--f-body);font-weight:800;font-size:15px;color:#fff}
+.sp-desc{font-size:14px;line-height:1.34;color:rgba(255,255,255,.82)}
+.sp-desc .m{color:#FF4D6B;font-weight:800}
+.sp-desc .b{color:var(--aqua);font-weight:800}
+/* ---- Business Model: flywheel band + tier card + a la carte (improved) ---- */
+.bm-fly{display:flex;align-items:center;flex-wrap:wrap;gap:8px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:11px;border:1px solid rgba(25,228,208,.24);box-shadow:0 12px 30px rgba(8,50,90,.34);padding:11px 16px;margin-top:13px}
+.bm-step{font-family:var(--f-body);font-weight:600;color:#EAF6F4;font-size:13px;white-space:nowrap}
+.bm-arw{color:var(--aqua);font-weight:700;font-size:14px;text-shadow:0 0 8px rgba(25,228,208,.5)}
+.bm-loop{font-family:var(--f-mono);font-weight:700;color:#160A1C;background:var(--lime);border-radius:20px;padding:2px 11px;font-size:10.5px;letter-spacing:.08em;white-space:nowrap;box-shadow:0 0 14px rgba(233,255,58,.5);margin-left:4px}
+.bm-card{background:linear-gradient(160deg,#1c1026,#100813);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 46px rgba(8,50,90,.42),0 0 0 1px rgba(80,205,237,.16);display:flex;flex-direction:column;margin-top:13px}
+.bm-grid{display:grid;grid-template-columns:.82fr 1.25fr .95fr 2.5fr}
+.bm-thead{border-bottom:1px solid rgba(255,255,255,.09)}
+.bm-thead>div{font-family:var(--f-mono);font-weight:700;color:var(--aqua);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px}
+.bm-trow{border-top:1px solid rgba(255,255,255,.06)}
+.bm-trow:first-of-type{border-top:0}
+.bm-trow>div{padding:11px 16px;font-size:13.5px;color:#E7E1F0;line-height:1.26;display:flex;align-items:center}
+.bm-name{font-weight:800;color:#fff;gap:7px}
+.bm-price{font-weight:800;color:#fff;letter-spacing:-.01em}
+.bm-star{color:var(--lime)}
+.bm-hero{background:linear-gradient(90deg,rgba(233,255,58,.12),rgba(25,228,208,.06));position:relative}
+.bm-hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);box-shadow:0 0 12px rgba(233,255,58,.8)}
+.bm-hero .bm-price{color:var(--lime);text-shadow:0 0 12px rgba(233,255,58,.3)}
+.bm-tag{font-family:var(--f-mono);font-size:9px;font-weight:700;letter-spacing:.1em;color:#160A1C;background:var(--lime);border-radius:20px;padding:1px 7px;margin-left:6px}
+.bm-muted>div{color:#AEB7C4}
+.bm-ala{display:flex;align-items:center;gap:11px;padding:9px 18px;margin-top:11px;background:rgba(11,7,16,.20);border:1px dashed rgba(10,40,60,.5);border-radius:24px;flex-wrap:wrap}
+.bm-k{font-family:var(--f-mono);font-weight:700;color:#160A1C;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.bm-v{font-family:var(--f-body);font-weight:600;color:#0B3A50;font-size:13px}
+.bm-callout{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,#1c1026,#100813);border-radius:12px;padding:12px 18px;border:1px solid rgba(233,255,58,.3);box-shadow:0 14px 34px rgba(8,50,90,.36);margin-top:12px}
+.bm-bar{width:4px;align-self:stretch;background:var(--lime);border-radius:3px;box-shadow:0 0 12px rgba(233,255,58,.7);flex:none}
+.bm-callout p{font-size:15px;color:#fff;font-weight:700;line-height:1.32}
+.bm-callout p b{color:var(--lime);font-weight:800}
+.bm-callout p .bm-it{font-style:italic;color:var(--aqua)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style></head><body>
 <div class="progress" id="bar"></div>
@@ -522,20 +661,20 @@ body{overflow-x:hidden;background:#050308}
     Oxford Saïd Business School &nbsp;·&nbsp; NVIDIA Inception Program &nbsp;·&nbsp; Wyoming C-Corp<br>
     <b>yeahisaidthat.com</b> &nbsp;·&nbsp; Live demo: <b>biss-opal.vercel.app</b></div>
 </div><div class="cta-ribbon"><div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div><div class="rbtns"><a class="cta lime" href="https://biss-opal.vercel.app">▸ See the live demo</a><a class="cta ink" href="mailto:marcsternberg13@gmail.com">Book a demo →</a></div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide dark" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow ">WHAT IS BISS · THE CATEGORY<span class="biso">because i said so</span></div>
   <h2 class="dh mash">If <span style="color:var(--tang)">Reddit</span>, <span style="color:var(--coral)">Yelp</span>, <span style="color:var(--cyan)">Meltwater</span>, <span style="color:var(--pink2)">Instagram</span>, <span style="color:var(--aqua)">Rotten Tomatoes</span>, and <span style="color:var(--lav)">a therapist</span> had a baby — that baby is <span class="mk-inline">BISS</span>.</h2>
   <p class="dsub" style="max-width:82ch;margin-bottom:8px">The category is called <b style="color:#fff">Conversational Customer Intelligence</b>. BISS invented it. <b style="color:#fff">Zero direct competitors.</b></p>
   <p style="color:var(--muted);font-size:14px;line-height:1.5;max-width:84ch;margin:0 0 16px">Authentic emotional truth — generated through therapeutic AI conversation — becomes the most proprietary business-intelligence dataset in the world. <b style="color:var(--lime)">The first-mover window is 18–24 months.</b></p>
   <div class="statrow">
     <div class="stat"><div class="n">30%+</div><div class="l">of online reviews are fake or manipulated</div></div>
-    <div class="stat"><div class="n">$30K+</div><div class="l">cheapest enterprise intelligence tool, per year</div></div>
-    <div class="stat"><div class="n">3–5%</div><div class="l">average survey response rate</div></div>
-    <div class="stat"><div class="n">28M</div><div class="l">US SMBs locked out of real customer intelligence</div></div>
+    <div class="stat"><div class="n">$25K</div><div class="l">median legacy intelligence tool, per year</div></div>
+    <div class="stat"><div class="n">70%+</div><div class="l">of customers a survey never hears from</div></div>
+    <div class="stat"><div class="n">36M</div><div class="l">US small businesses locked out of real intelligence</div></div>
   </div>
   <div class="mash-line">Everyone’s a storyteller. <span>We just help you find the words.</span></div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+<section class="slide bright" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
   <div class="copy">
     <div class="eyebrow ">WHAT IS BISS<span class="biso">because i said so</span></div>
     <h2 class="dh">You talk to an AI like a friend. It turns your real experiences into the most honest customer data on earth.</h2>
@@ -565,19 +704,31 @@ body{overflow-x:hidden;background:#050308}
         <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Journal</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
       </div></div></div></div></div></div>
 </div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">A WHOLE NEW SPECIES OF APP<span class="biso">because i said so</span></div>
+  <h2 class="dh">One app that does a dozen<br>jobs — minus the junk.</h2>
+  <div class="sp-rows">
+    <div class="sp-row"><div class="sp-name">Reddit</div><div class="sp-desc">Its brutal honesty — <span class="m">minus</span> the lurking and the reply-guys crawling out of the walls.</div></div>
+    <div class="sp-row"><div class="sp-name">Yelp &amp; Trustpilot</div><div class="sp-desc">Brand accountability — <span class="m">minus</span> the fake reviews and the stars anyone can rig. You can’t game a story.</div></div>
+    <div class="sp-row"><div class="sp-name">Rotten Tomatoes</div><div class="sp-desc">“Give it a score” — <span class="b">but</span> for your whole life, and the score comes from what you actually felt.</div></div>
+    <div class="sp-row"><div class="sp-name">Instagram</div><div class="sp-desc">Shareable moments — <span class="m">minus</span> the filters, the flexing, and the dread of not being pretty enough.</div></div>
+    <div class="sp-row"><div class="sp-name">Wikipedia</div><div class="sp-desc">A permanent record — <span class="b">but</span> the receipts on how brands actually treat people, by the people who lived it.</div></div>
+    <div class="sp-row"><div class="sp-name">A therapist</div><div class="sp-desc">Who actually listens and lets you get it all out — <span class="m">minus</span> the $200 an hour and the waitlist.</div></div>
+  </div>
+</div></section></div><div class="stage">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow ">THE PROBLEM · BUSINESS<span class="biso">because i said so</span></div>
   <h2 class="dh">Brands are flying blind — and paying a fortune for the privilege.</h2>
   <p class="dsub">Every tool they buy captures what customers say in public. None captures what they actually think.</p>
   <div class="grid4">
     <div class="card2"><div class="k">Unaffordable</div><h4>$15–40K / yr</h4><p>Meltwater &amp; Brandwatch price out the SMBs who need intelligence most.</p></div>
-    <div class="card2"><div class="k">Ignored</div><h4>3–5% response</h4><p>Surveys run in an artificial setting that kills honesty.</p></div>
+    <div class="card2"><div class="k">Ignored</div><h4>~20–30% reply</h4><p>70%+ of customers never answer — and surveys run in an artificial setting that kills honesty.</p></div>
     <div class="card2"><div class="k">Public layer only</div><h4>Says ≠ thinks</h4><p>Social listening never sees the gap between what customers say and feel.</p></div>
     <div class="card2"><div class="k">Gamed &amp; shallow</div><h4>Up to 30% fake</h4><p>"The food was bad" is nothing a manager can act on Monday.</p></div>
   </div>
-  <div class="qt">An $89B customer-intelligence gap — not because the data isn't there, but because no one built the right system to capture it honestly.</div>
+  <div class="qt">A customer-experience market worth ~$16B today, racing toward ~$85B by 2034 — and none of it captures what customers actually think, because no one built the right system to collect it honestly.</div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols wide">
+<section class="slide dark" style="background:linear-gradient(155deg,#6a24c8 0%,#4e169a 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols wide">
   <div class="copy">
     <div class="eyebrow ">THE PROBLEM · CONSUMER<span class="biso">because i said so</span></div>
     <h2 class="dh">You have opinions. You don't have a voice.</h2>
@@ -600,7 +751,7 @@ body{overflow-x:hidden;background:#050308}
     </div>
   </div>
 </div></div></section></div><div class="stage">
-<section class="slide dark top" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide dark top" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow ">THE BLUE OCEAN · CATEGORY CREATION<span class="biso">because i said so</span></div>
   <h2 class="dh sm" style="margin-bottom:14px">Every platform below does one thing well. BISS does all of it — and generates original private intelligence none of them can touch.</h2>
   <div class="bo">
@@ -611,12 +762,12 @@ body{overflow-x:hidden;background:#050308}
     <div class="bo-core"><div class="ring"><div class="m">BISS</div><small>CONVERSATIONAL<br>CUSTOMER INTELLIGENCE</small></div>
       <p>The only platform that generates original private intelligence through therapeutic AI — and monetizes it three ways at once.</p></div>
     <div class="bo-col">
-      <div class="clus e"><div class="ch">Enterprise Intelligence</div><div class="clgrid"><div class="clcell"><b>Meltwater</b><span>social listening · $30K+</span></div><div class="clcell"><b>Brandwatch</b><span>social listening</span></div><div class="clcell"><b>Qualtrics</b><span>surveys · $15K+</span></div><div class="clcell"><b>SurveyMonkey</b><span>survey tools</span></div><div class="clcell"><b>Medallia</b><span>enterprise CX · $50K+</span></div><div class="clcell"><b>Sprout Social</b><span>social mgmt</span></div></div></div>
+      <div class="clus e"><div class="ch">Enterprise Intelligence</div><div class="clgrid"><div class="clcell"><b>Meltwater</b><span>social listening · $15K+</span></div><div class="clcell"><b>Brandwatch</b><span>social listening</span></div><div class="clcell"><b>Qualtrics</b><span>surveys · $1.5K+</span></div><div class="clcell"><b>SurveyMonkey</b><span>survey tools</span></div><div class="clcell"><b>Medallia</b><span>enterprise CX · quote-based</span></div><div class="clcell"><b>Sprout Social</b><span>social mgmt</span></div></div></div>
       <div class="clus n"><div class="ch">Content &amp; Niche</div><div class="clgrid"><div class="clcell"><b>Letterboxd</b><span>film community</span></div><div class="clcell"><b>Goodreads</b><span>book community</span></div><div class="clcell"><b>Amazon Reviews</b><span>commerce reviews</span></div><div class="clcell"><b>Bazaarvoice</b><span>commerce intel</span></div><div class="clcell"><b>Day One</b><span>personal journaling</span></div><div class="clcell"><b>Yelp / G2</b><span>niche platforms</span></div></div></div>
     </div>
   </div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+<section class="slide bright" style="background:linear-gradient(150deg,#B08CF0 0%,#9268e0 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
   <div class="art"><div class="dscreen"><div class="gd"><div class="win">
         <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/dashboard/<b>southwest</b> · live</span></div>
         <div class="bwin">
@@ -676,7 +827,7 @@ body{overflow-x:hidden;background:#050308}
     <div class="qt">Meltwater tells businesses what customers say publicly. BISS reveals what they actually think.</div>
   </div>
 </div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+<section class="slide bright" style="background:linear-gradient(150deg,#5AD3F0 0%,#38b8dd 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
   <div class="copy">
     <div class="eyebrow ">THE SOLUTION · CONSUMER<span class="biso">because i said so</span></div>
     <h2 class="dh">Finally, a voice that's yours.</h2>
@@ -745,9 +896,9 @@ body{overflow-x:hidden;background:#050308}
     <div class="card2"><div class="k">02 · Act on Monday</div><p>Sentiment, journey maps, ranked pain points, AI recs — plus <b style="color:var(--text)">early issue detection before a problem goes viral.</b> A decision, not a report you file.</p></div>
     <div class="card2"><div class="k">03 · The road not taken</div><p>Benchmark your category and read exactly what customers say about the competitor they <b style="color:var(--text)">chose instead of you</b> — a signal no survey can produce.</p></div>
   </div>
-  <div class="qt">Enterprise depth at an SMB price — from $50/mo against $30K+/yr for legacy tools, with a class of data the incumbents structurally cannot collect.</div>
+  <div class="qt">Enterprise depth at an SMB price — from $50/mo against $15–40K/yr for legacy tools, with a class of data the incumbents structurally cannot collect.</div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+<section class="slide bright" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
   <div class="copy">
     <div class="eyebrow ">VALUE PROPOSITION · CONSUMER<span class="biso">because i said so</span></div>
     <h2 class="dh">Finally, somewhere that listens.</h2>
@@ -784,7 +935,7 @@ body{overflow-x:hidden;background:#050308}
         <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
       </div></div></div></div></div></div>
 </div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
   <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr aqua">
         <div class="sb"><span>9:41</span><span class="tag">◆ Public page</span></div>
         <div class="top"><span class="mk">biss</span><span class="pill solid" style="padding:4px 11px">Follow</span></div>
@@ -818,7 +969,7 @@ body{overflow-x:hidden;background:#050308}
     <div class="qt">Built solo by the CTO with AI agents — proof of the concept and the team's capital efficiency.</div>
   </div>
 </div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow ">DEFENSIBILITY · THE MOAT<span class="biso">because i said so</span></div>
   <h2 class="dh">The moat is trust — engineered, documented, defensible.</h2>
   <p class="dsub">Original private data + dual identity + a full trust architecture built before scale, not after a scandal.</p>
@@ -833,20 +984,27 @@ body{overflow-x:hidden;background:#050308}
     <span class="chip">AI-inferred ratings only</span><span class="chip">Anonymous but authenticated</span>
     <span class="chip"><b>18–24 mo</b> category window</span></div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide bright" style="background:linear-gradient(150deg,#5AD3F0 0%,#38b8dd 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
   <div class="eyebrow ">THE BUSINESS MODEL<span class="biso">because i said so</span></div>
-  <h2 class="dh">95% create for free. 5% pay for the intelligence.</h2>
-  <div class="flyw">Free users create stories → businesses pay for intelligence → revenue funds a better product → more users → richer data → higher business value → (repeat)</div>
-  <table class="tbl">
-    <tr><th>Tier</th><th>Target</th><th>Price</th><th>Includes</th></tr>
-    <tr class="hi"><td class="tier">Enterprise</td><td>Regional chains</td><td class="big">$1,000–3,000/mo</td><td>10 seats · unlimited reports · API + CRM · dedicated CSM · custom deep-dives</td></tr>
-    <tr><td class="tier">Premier ★</td><td>Growing businesses <b>(primary)</b></td><td class="big">$250–500/mo</td><td>3 seats · 5 reports · seed questions · competitive intel · creator intros</td></tr>
-    <tr><td class="tier">Basic</td><td>Micro businesses <b>(on-ramp)</b></td><td class="big">$50–100/mo</td><td>1 seat · 1 report · Brand Page · real-time sentiment · email support</td></tr>
-  </table>
-  <div class="chips" style="margin-top:14px"><span class="chip">+ à la carte: seeds · contests · reports · creator activations · placement</span></div>
-  <div class="qt">The page is free. The intelligence is the product. This is what you've been paying $30K a year to <i>not</i> get.</div>
+  <h2 class="dh">95% create for free. <span style="color:#0B4A63">5% pay for the intelligence.</span></h2>
+  <div class="bm-fly">
+    <span class="bm-step">Free users create stories</span><span class="bm-arw">→</span>
+    <span class="bm-step">businesses pay for intelligence</span><span class="bm-arw">→</span>
+    <span class="bm-step">revenue funds a better product</span><span class="bm-arw">→</span>
+    <span class="bm-step">more users</span><span class="bm-arw">→</span>
+    <span class="bm-step">richer data</span><span class="bm-arw">→</span>
+    <span class="bm-step">higher business value</span><span class="bm-loop">↻ REPEAT</span>
+  </div>
+  <div class="bm-card">
+    <div class="bm-grid bm-thead"><div>Tier</div><div>Target</div><div>Price</div><div>Includes</div></div>
+    <div class="bm-grid bm-trow bm-muted"><div class="bm-name">Enterprise</div><div>Regional chains</div><div class="bm-price">$1,000–3,000/mo</div><div>10 seats · unlimited reports · API + CRM · dedicated CSM · custom deep-dives</div></div>
+    <div class="bm-grid bm-trow bm-hero"><div class="bm-name">Premier <span class="bm-star">★</span><span class="bm-tag">PRIMARY</span></div><div>Growing businesses</div><div class="bm-price">$250–500/mo</div><div>3 seats · 5 reports · seed questions · competitive intel · creator intros</div></div>
+    <div class="bm-grid bm-trow bm-muted"><div class="bm-name">Basic</div><div>Micro businesses <em>(on-ramp)</em></div><div class="bm-price">$50–100/mo</div><div>1 seat · 1 report · Brand Page · real-time sentiment · email support</div></div>
+  </div>
+  <div class="bm-ala"><span class="bm-k">+ À la carte</span><span class="bm-v">seeds · contests · reports · creator activations · placement</span></div>
+  <div class="bm-callout"><span class="bm-bar"></span><p>The page is free. The intelligence is the product. This is what you’ve been paying <b>tens of thousands a year</b> to <span class="bm-it">not</span> get.</p></div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+<section class="slide bright" style="background:linear-gradient(150deg,#B08CF0 0%,#9268e0 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
   <div class="art"><div class="dscreen"><div class="gd"><div class="win">
         <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>seed-campaigns</b>/new</span></div>
         <div class="bwin">
@@ -886,7 +1044,7 @@ body{overflow-x:hidden;background:#050308}
     <div class="qt">A high-margin recurring stream on top of subscription: bundles $100–500/campaign; programs $200–5,000/mo.</div>
   </div>
 </div></div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+<section class="slide bright" style="background:linear-gradient(150deg,#22ECD8 0%,#12c9b8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
   <div class="copy">
     <div class="eyebrow ">MARKET · WHY NOW<span class="biso">because i said so</span></div>
     <h2 class="dh">Travel is the launch. Every experience is the market.</h2>
@@ -894,7 +1052,7 @@ body{overflow-x:hidden;background:#050308}
     <table class="tbl">
       <tr><th>Tool</th><th>Annual cost</th><th>Data type</th></tr>
       <tr><td><b>Meltwater</b></td><td>$15–40K</td><td>Public posts</td></tr>
-      <tr><td><b>Qualtrics</b></td><td>$1.5–15K</td><td>Surveys (3–5%)</td></tr>
+      <tr><td><b>Qualtrics</b></td><td>$1.5–15K</td><td>Surveys (~20–30% reply)</td></tr>
       <tr class="hi"><td class="tier">BISS</td><td class="big">$600–36K</td><td><b>Private conversational truth</b></td></tr>
     </table>
     <div class="pts" style="margin-top:14px">
@@ -941,7 +1099,7 @@ body{overflow-x:hidden;background:#050308}
           </div>
         </div></div></div></div></div>
 </div></div></section></div><div class="stage">
-<section class="slide dark top" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+<section class="slide dark top" style="background:linear-gradient(155deg,#6a24c8 0%,#4e169a 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
   <div class="eyebrow ">GO-TO-MARKET<span class="biso">because i said so</span></div>
   <h2 class="dh">Ten partners that build everything.</h2>
   <p class="dsub">Customer-obsessed brands with an intelligence gap BISS fills — no competitive overlap. Strategic targets, not signed deals.</p>
@@ -951,24 +1109,26 @@ body{overflow-x:hidden;background:#050308}
   </div>
   <div class="qt">Cold-start is sequencing, not luck: seed creator content → brand test accounts → paid seed questions → organic growth. The Founding 50 makes early contribution the point.</div>
 </div></section></div><div class="stage">
-<section class="slide dark top" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+<section class="slide bright top" style="background:linear-gradient(150deg,#FF65C3 0%,#FF3DB5 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
   <div class="eyebrow ">THE NUMBERS · UNIT ECONOMICS<span class="biso">because i said so</span></div>
   <h2 class="dh">Premium-led economics that pay back fast.</h2>
-  <p class="dsub">Conservative projections · Gross margin 80% · LTV = 3-year gross profit · Cost per story ≈ $0.05–0.07.</p>
-  <table class="tbl">
-    <tr><th>Tier</th><th>List</th><th>ACV</th><th>CAC</th><th>3-yr LTV</th><th>LTV/CAC</th><th>Payback</th></tr>
-    <tr class="hi"><td class="tier">Enterprise</td><td>$3,000/mo</td><td>$36K</td><td>$12K</td><td class="big">$86.4K</td><td class="big">7.2×</td><td><b>5 mo</b></td></tr>
-    <tr><td class="tier">Premier ★</td><td>$500/mo</td><td>$6K</td><td>$3.5K</td><td class="big">$14.4K</td><td class="big">4.1×</td><td><b>9 mo</b></td></tr>
-    <tr><td class="tier">Basic</td><td>$100/mo</td><td>$1.2K</td><td>$1.2K</td><td>$2.9K</td><td>2.4×</td><td>15 mo</td></tr>
-  </table>
-  <table class="tbl" style="margin-top:16px">
-    <tr><th>ARR trajectory</th><th>Month 18</th><th>Month 30</th><th>Month 42</th><th>Series A</th><th>Year 5</th></tr>
-    <tr><td><b>ARR</b></td><td class="big">~$12K</td><td class="big">~$50K</td><td class="big">~$100K</td><td class="big">$150–250K</td><td class="big">$8–12M</td></tr>
-    <tr><td>Customers</td><td>2</td><td>8</td><td>15</td><td>25–40</td><td>1,000–1,500</td></tr>
-  </table>
-  <div class="qt">Enterprise pays back in ~5 months at 7.2× LTV/CAC. Every dollar of premium ARPU lowers net burn and pulls breakeven forward.</div>
+  <p class="nz-sub">Conservative projections · Gross margin 80% · LTV = 3-year gross profit · Cost per story ≈ $0.05–0.07 · Figures modeled at list price.</p>
+  <div class="nz-tables">
+    <div class="nz-card">
+      <div class="nz-grid7 nz-thead"><div>Tier</div><div>List</div><div>ACV</div><div>CAC</div><div>3-Yr LTV</div><div>LTV / CAC</div><div>Payback</div></div>
+      <div class="nz-grid7 nz-trow nz-hero"><div class="nz-name">Enterprise</div><div>$3,000/mo</div><div>$36K</div><div>$12K</div><div class="nz-win">$86.4K</div><div class="nz-win">7.2×</div><div class="nz-win">5 mo</div></div>
+      <div class="nz-grid7 nz-trow"><div class="nz-name">Premier ★</div><div>$500/mo</div><div>$6K</div><div>$3.5K</div><div>$14.4K</div><div>4.1×</div><div>9 mo</div></div>
+      <div class="nz-grid7 nz-trow nz-muted"><div class="nz-name">Basic</div><div>$100/mo</div><div>$1.2K</div><div>$1.2K</div><div>$2.9K</div><div>2.4×</div><div>15 mo</div></div>
+    </div>
+    <div class="nz-card">
+      <div class="nz-grid6 nz-thead"><div>ARR Trajectory</div><div>Month 18</div><div>Month 30</div><div>Month 42</div><div>Series A</div><div>Year 5</div></div>
+      <div class="nz-grid6 nz-trow"><div class="nz-name">ARR</div><div>~$12K</div><div>~$50K</div><div>~$100K</div><div class="nz-win nz-aqua">$150–250K</div><div class="nz-win nz-aqua">$8–12M</div></div>
+      <div class="nz-grid6 nz-trow nz-muted"><div class="nz-name">Customers</div><div>2</div><div>8</div><div>15</div><div>25–40</div><div>1,000–1,500</div></div>
+    </div>
+  </div>
+  <div class="nz-callout"><span class="nz-bar"></span><p>Enterprise pays back in <b>~5 months</b> at <b>7.2× LTV/CAC</b>. Every dollar of premium ARPU lowers net burn and pulls breakeven forward.</p></div>
 </div></section></div><div class="stage">
-<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+<section class="slide dark" style="background:linear-gradient(155deg,#41249A 0%,#301b78 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow magenta">THE ASK<span class="biso">because i said so</span></div>
   <h2 class="dh">$300K now. ~$700K to Series A, gated on proof.</h2>
   <p class="dsub">Pre-seed on the AI-native path — every dollar to product and pilots, not payroll.</p>
@@ -982,15 +1142,40 @@ body{overflow-x:hidden;background:#050308}
   </div>
   <div class="qt">Capital-efficient by design: ~$86K spent by end of MVP build, Alpha at month 10 — ~3× cheaper to Alpha than a traditional team.</div>
 </div></section></div><div class="stage">
+<section class="slide dark tpx" style="background:linear-gradient(160deg,#1c0f24 0%,#160A1C 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="tpx-eyebrow">But isn’t this just Trustpilot?</div>
+  <h2 class="tpx-h1"><span class="l1">Reviews are for strangers.</span><span class="l2">Truth is for us.</span></h2>
+  <p class="tpx-sub">A review is what people say when they’re being watched. <span class="hl">BISS is what they say when they’re not.</span></p>
+  <div class="tpx-body">
+    <div class="tpx-rail">
+      <div class="tpx-beat"><span class="tpx-lbl">Why it’s truer</span><p>A star rating is a performance — people round up to be nice, or down to punish. <b>A conversation with no audience gets the messy, real, in-between truth.</b></p></div>
+      <div class="tpx-beat"><span class="tpx-lbl">Why people open up</span><p>Every storyteller is verified, but the name is never shown. <b>People tell BISS what they’d never post under their own face.</b></p></div>
+      <div class="tpx-beat"><span class="tpx-lbl">Why it’s a different business</span><p>Trustpilot sells a way to <i>look</i> trustworthy. <b>BISS sells the truth itself</b> — priced against Meltwater and Qualtrics, not Yelp.</p></div>
+    </div>
+    <div class="tpx-compare">
+      <div class="tpx-panel tpx-tp">
+        <div class="tpx-phead"><span class="tpx-dot"></span>TRUSTPILOT</div>
+        <div class="tpx-pdesc">A public review billboard</div>
+        <div class="tpx-rows"><div class="tpx-row">You pick a star rating</div><div class="tpx-row">You post it in public</div><div class="tpx-row">The brand gets a number</div><div class="tpx-row tpx-money">Your name is attached</div></div>
+      </div>
+      <div class="tpx-panel tpx-bs">
+        <div class="tpx-phead"><span class="tpx-dot"></span>BISS</div>
+        <div class="tpx-pdesc">A private intelligence engine</div>
+        <div class="tpx-rows"><div class="tpx-row">You just talk — no stars</div><div class="tpx-row">No audience — only an AI that listens</div><div class="tpx-row">The brand gets the reason why</div><div class="tpx-row tpx-money">Your name is never seen</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="tpx-kicker"><span class="a">This isn’t a better review site. </span><span class="b">It’s a different business entirely.</span></div>
+  <div class="tpx-refrain">Because I Said So.</div>
+</div></section></div><div class="stage">
 <section class="slide dark team" style="background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
   <div class="eyebrow magenta">THE TEAM<span class="biso">because i said so</span></div>
   <h2 class="dh">Two founders, each the half the other needs.</h2>
   <p class="dsub">A builder who shipped the product alone — and a closer who owns the market.</p>
   <div class="grid2">
-    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Co-Founder &amp; CTO</div><h4>Simge Helvacı</h4><p style="color:#fff">Ran e-commerce for <b style="color:var(--aqua)">Lufthansa Group's airlines at Amadeus</b> — the infrastructure layer of the exact industry BISS launches into. Oxford Saïd. <b style="color:var(--aqua)">Built the entire live BISS prototype herself, end-to-end, with AI-agent workflows.</b></p></div>
-    <div class="card2" style="border-color:var(--pink)"><div class="k" style="color:var(--pink2)">Co-Founder &amp; CEO</div><h4>Marc Sternberg</h4><p style="color:#fff">Architected the business model, the go-to-market, and the full investor and strategy corpus behind BISS. Owns the high-touch B2B relationships that turn the first ten travel partners into revenue.</p></div>
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Co-Founder &amp; CTO</div><h4>Simge Helvacı <span style="font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.04em">MSc</span></h4><p style="color:#fff;font-size:12px;line-height:1.42">Leads AI architecture, product, and full-stack development, and <b style="color:var(--aqua)">personally built BISS's live prototype end-to-end</b>. As a Senior Product Owner at Amadeus, she owns the e-commerce platform for <b style="color:var(--aqua)">Lufthansa Group's airlines</b> — operating at the infrastructure level of the exact industry BISS enters first, which is why travel is no accident. Previously grew Mercedes-Benz online sales 200% on a platform serving millions daily. BSc Computer Engineering, MSc IT; Oxford Strategy &amp; Innovation, Director's Award scholarship.</p></div>
+    <div class="card2" style="border-color:var(--pink)"><div class="k" style="color:var(--pink2)">Co-Founder &amp; CEO</div><h4>Marc Sternberg <span style="font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.04em">MA · MBA · MFA</span></h4><p style="color:#fff;font-size:12px;line-height:1.42">Leads vision, business architecture, go-to-market, and the investor narrative — including the high-touch B2B sales approach and the first travel relationships at the heart of the launch. A <b style="color:#fff">Fulbright Specialist</b> and Oxford Strategy &amp; Innovation candidate, Marc brings 20+ years of global ecommerce and marketing leadership, personally building the operating teams behind <b style="color:#fff">$100M+ in revenue and 100–200% YoY growth</b> across international enterprises. Recipient of Oxford's Director's Award scholarship.</p></div>
   </div>
-  <div class="qt" style="margin-top:14px">The rarest pairing in a two-sided marketplace — the person who builds the product and the person who sells it, both living inside the travel problem.</div>
 </div>
   <div class="cta-ribbon">
     <div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div>
