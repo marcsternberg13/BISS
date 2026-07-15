@@ -1,1 +1,1026 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BISS — Investor Pitch · Tell Your Truth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF3DB5;--pink2:#FF65C3;--lime:#E9FF3A;--aqua:#19E4D0;--cyan:#50CDED;
+  --violet:#7B2FF2;--lav:#A780ED;--coral:#FF5C7A;--tang:#FFB03A;--mint:#3DE6B0;
+  --ink2:#0B0710;--surface:#211433;--line:rgba(255,255,255,.13);--text:#F3EEFA;--muted:#B3A6C9;
+  --vapor:linear-gradient(168deg,#2C2688 0%,#5C1BAB 55%,#2b1150 100%);
+  --f-disp:'Anton',sans-serif;--f-mark:'Fredoka',sans-serif;--f-mono:'Space Mono',monospace;--f-body:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink2);color:var(--text);font-family:var(--f-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px;position:relative;z-index:2}
+.mono{font-family:var(--f-mono)}
+::selection{background:var(--lime);color:#160A1C}
+.mark{font-family:var(--f-mark);font-weight:700;position:relative;display:inline-block;color:var(--pink2);line-height:1}
+.mark::before{content:attr(data-t);position:absolute;left:-2.5px;top:1.5px;color:var(--cyan);z-index:-1;opacity:.9}
 
+/* ── BISO stamp (everywhere) ── */
+.biso{font-family:var(--f-mono);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink2)}
+
+/* ── TOP BAR ── */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(11,7,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:18px}
+.topbar .brand{display:flex;align-items:center;gap:10px}
+.topbar .brand .mark{font-size:30px}
+.topbar .kiss{width:26px;height:14px}
+.tagchip{font-family:var(--f-mono);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#160A1C;background:var(--lime);padding:5px 11px;border-radius:999px}
+.links{display:flex;gap:24px}
+.links a{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);transition:color .15s}
+.links a:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;padding:12px 20px;border-radius:9px;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s}
+.btn.lime{background:var(--lime);color:#181400;box-shadow:0 8px 26px rgba(233,255,58,.28)}
+.btn.lime:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(233,255,58,.4)}
+.hamb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:6px}
+.hamb span{width:24px;height:2px;background:var(--text);display:block}
+
+/* ── SECTIONS ── */
+section{position:relative;padding:92px 0;overflow:hidden}
+.band.dark{background:var(--ink2)}
+.band.deep{background:linear-gradient(180deg,#160C24,#0B0710)}
+.band.lime{background:var(--lime);color:#160A1C}
+.band.magenta{background:var(--pink);color:#210419}
+.band.violet{background:var(--violet);color:#fff}
+.band.vapor{background:var(--vapor);color:#fff}
+.floor{position:absolute;left:-10%;right:-10%;bottom:0;height:280px;pointer-events:none;opacity:.4;z-index:0;
+  background-image:linear-gradient(rgba(80,205,237,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(167,128,237,.45) 1px,transparent 1px);
+  background-size:52px 52px,52px 52px;transform:perspective(400px) rotateX(66deg);transform-origin:bottom;
+  -webkit-mask-image:linear-gradient(to top,#000,transparent);mask-image:linear-gradient(to top,#000,transparent)}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;pointer-events:none;z-index:0}
+
+/* summary-first header */
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua);display:flex;gap:11px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor}
+.eyebrow .biso{color:inherit;opacity:.65}
+.band.lime .eyebrow,.band.magenta .eyebrow{color:#160A1C;opacity:.85}
+.summary{font-family:var(--f-body);font-weight:900;font-size:clamp(30px,4.7vw,52px);line-height:1.06;letter-spacing:-.015em;max-width:20ch}
+.hook{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(18px,2.5vw,26px);color:var(--pink2);margin-top:12px;line-height:1.05}
+.band.lime .hook,.band.magenta .hook,.band.violet .hook,.band.vapor .hook{color:currentColor}
+.detail{font-size:16.5px;line-height:1.65;color:var(--muted);max-width:60ch}
+.band.lime .detail,.band.magenta .detail{color:rgba(0,0,0,.72)}
+.band.violet .detail,.band.vapor .detail{color:rgba(255,255,255,.86)}
+.detail b{color:var(--text);font-weight:700}.band.lime .detail b,.band.magenta .detail b{color:#160A1C}
+.detail+.detail{margin-top:14px}
+.readmore{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin:18px 0 2px;display:flex;gap:9px;align-items:center}
+.readmore::before{content:"↓";}
+.band.lime .readmore,.band.magenta .readmore{color:#160A1C}
+
+/* two-col: summary/detail + real screen */
+.split2{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
+.split2.rev{grid-template-columns:340px 1fr}
+
+/* ── REAL DESIGNED SCREEN (scaled, scoped) ── */
+.gswrap{width:300px;max-width:82vw;aspect-ratio:382/812;position:relative;margin:0 auto;filter:drop-shadow(0 30px 64px rgba(0,0,0,.5))}
+.gs{position:absolute;top:0;left:0;width:382px;transform:scale(.785);transform-origin:top left;font-family:var(--f-body);line-height:1.55;color:#160A1C;
+  --pink:#FF3DB5;--pinkink:#D60B7C;--lime:#E9FF3A;--aqua:#19E4D0;--cyan:#50CDED;--tang:#FFB03A;--lav:#B98CFF;--mint:#3DE6B0;--violet:#6B3FEF;--coralink:#E71D3C;--tealink:#0A8478;--ink:#160A1C;--muted:#6B6480;--line:#E7E2F0;--sub:rgba(22,10,28,.68)}
+.gs .phone{width:382px;border-radius:40px;overflow:hidden;box-shadow:0 0 0 8px #0e0716,0 0 0 9px rgba(255,255,255,.08)}
+.gs .scr{height:812px;display:flex;flex-direction:column;background:var(--neon);color:var(--ink);position:relative}
+.gs .scr.cyan{--neon:#50CDED}.gs .scr.mag{--neon:#FF3DB5}.gs .scr.lime{--neon:#E9FF3A}.gs .scr.aqua{--neon:#19E4D0}.gs .scr.tang{--neon:#FFB03A}.gs .scr.lav{--neon:#B98CFF}.gs .scr.mint{--neon:#3DE6B0}.gs .scr.coral{--neon:#FF7A9C}
+.gs .sb{display:flex;justify-content:space-between;align-items:center;padding:16px 24px 5px;font-family:var(--f-mono);font-size:12px;color:var(--ink);font-weight:700}
+.gs .sb .tag{font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:9px;color:var(--sub)}
+.gs .top{display:flex;align-items:center;justify-content:space-between;padding:6px 20px 12px}
+.gs .mk{font-family:var(--f-mark);font-weight:700;font-size:23px;color:var(--ink)}
+.gs .body{flex:1;overflow:hidden;padding:2px 18px 96px;display:flex;flex-direction:column;gap:11px}
+.gs .nav{position:absolute;left:16px;right:16px;bottom:18px;height:58px;background:#fff;border-radius:19px;box-shadow:0 10px 24px rgba(22,10,28,.2);display:flex;align-items:center;justify-content:space-around}
+.gs .nav .t{display:flex;flex-direction:column;align-items:center;gap:3px;font-family:var(--f-mono);font-size:7.5px;color:var(--muted)}
+.gs .nav .t svg{width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:1.8}
+.gs .nav .t.on{color:var(--pinkink)}.gs .nav .t.on svg{stroke:var(--pink)}
+.gs .nav .fab{width:46px;height:46px;border-radius:50%;background:var(--pinkink);display:grid;place-items:center;margin-top:-20px;box-shadow:0 10px 20px rgba(214,11,124,.45)}
+.gs .nav .fab svg{width:22px;height:22px;stroke:#fff;stroke-width:2.5;fill:none}
+.gs .h-disp{font-family:var(--f-disp);text-transform:uppercase;line-height:.92;color:var(--ink)}
+.gs .lbl{font-family:var(--f-mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--sub)}
+.gs .t-sm{font-size:12.5px}.gs .t-mut{font-size:11.5px;color:var(--muted)}.gs .t-b{font-weight:700;font-size:13.5px}
+.gs .htag{font-family:var(--f-mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--tealink)}.gs .htag.p{color:var(--pinkink)}.gs .htag.m{color:var(--muted)}
+.gs .between{display:flex;justify-content:space-between;align-items:center}.gs .row{display:flex;gap:8px}.gs .col{display:flex;flex-direction:column;gap:8px}
+.gs .card{background:#fff;border-radius:14px;padding:12px;box-shadow:0 5px 14px rgba(22,10,28,.1)}
+.gs .card.flat{box-shadow:none;border:1px solid var(--line)}
+.gs .score{border-radius:12px;display:grid;place-items:center;font-family:var(--f-disp);background:var(--aqua);color:#04302c;line-height:1}
+.gs .score .n{font-size:22px}.gs .score .u{font-family:var(--f-mono);font-size:6px;letter-spacing:.08em;opacity:.75;margin-top:1px}
+.gs .score.neg{background:var(--coralink);color:#fff}.gs .score.neu{background:var(--violet);color:#fff}
+.gs .score.sm{width:40px;height:40px;border-radius:10px}.gs .score.sm .n{font-size:16px}.gs .score.sm .u{display:none}
+.gs .score.big{width:104px;height:104px;border-radius:24px}.gs .score.big .n{font-size:44px}.gs .score.big .u{font-size:8px}
+.gs .pill{display:inline-flex;align-items:center;gap:5px;font-family:var(--f-mono);font-size:10px;letter-spacing:.03em;border:1.4px solid var(--line);border-radius:999px;padding:5px 10px;color:var(--muted);background:#fff}
+.gs .pill.on{border-color:var(--tealink);color:var(--tealink);background:rgba(25,228,208,.12)}
+.gs .pill.p{border-color:var(--pink);color:var(--pinkink);background:rgba(255,61,181,.1)}
+.gs .pill.solid{background:var(--pinkink);border-color:var(--pinkink);color:#fff}
+.gs .chips{display:flex;gap:6px;flex-wrap:wrap}
+.gs .bar{height:8px;border-radius:4px;background:rgba(22,10,28,.12)}.gs .bar .fl{height:100%;border-radius:4px;background:var(--tealink)}.gs .bar .fl.p{background:var(--pinkink)}
+.gs .redact{display:inline-block;height:1em;vertical-align:-2px;background:var(--pinkink);border-radius:3px}
+.gs .cta{display:block;text-align:center;font-family:var(--f-mono);font-weight:700;letter-spacing:.05em;font-size:13px;border-radius:13px;padding:13px}
+.gs .cta.pink{background:var(--pinkink);color:#fff}.gs .cta.ink{background:var(--ink);color:#fff}
+.gs .av{border-radius:50%;flex:none;background:linear-gradient(135deg,var(--violet),var(--aqua));box-shadow:0 0 0 2px #fff}
+.gs .av.p{background:linear-gradient(135deg,var(--pinkink),var(--tang))}.gs .av.q{background:linear-gradient(135deg,var(--aqua),var(--tealink))}
+.gs .bub{max-width:88%;padding:10px 13px;border-radius:16px;font-size:12.5px;line-height:1.5}
+.gs .bub.ai{align-self:flex-start;background:#fff;color:var(--ink);border-bottom-left-radius:5px}
+.gs .bub.me{align-self:flex-end;background:var(--ink);color:#fff;border-bottom-right-radius:5px}
+.gs .detect{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;font-family:var(--f-mono);font-size:10px;color:var(--ink);background:#fff;border-radius:999px;padding:6px 11px}
+.gs .faceZone{display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 0}
+.gs .inbar{display:flex;align-items:center;gap:9px;margin-top:auto;padding:9px 12px;background:#fff;border-radius:999px}
+.gs .inbar span{font-size:12px;color:var(--muted);flex:1}.gs .inbar .s{width:30px;height:30px;border-radius:50%;background:var(--pinkink);display:grid;place-items:center}.gs .inbar .s svg{width:15px;height:15px;stroke:#fff;stroke-width:2.4;fill:none}
+
+/* ── HERO ── */
+.hero{background:radial-gradient(120% 90% at 50% 0%,#3a1866 0%,#1c0f36 46%,#0B0710 100%);padding:56px 0 84px;text-align:center}
+.tyt{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(52px,10vw,120px);line-height:.9;letter-spacing:.01em;color:#fff;text-shadow:-2px 0 rgba(80,205,237,.5),2px 0 rgba(255,61,181,.5)}
+.hero .bisohero{font-family:var(--f-mono);font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--lime);font-size:clamp(12px,1.8vw,16px);margin-top:14px}
+.hero-grid{display:grid;grid-template-columns:1fr 330px;gap:44px;align-items:center;text-align:left;margin-top:52px}
+.hero h1{font-family:var(--f-body);font-weight:900;font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.015em}
+.hero .baby{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(17px,2.1vw,23px);line-height:1.08;margin-top:18px;color:#fff}
+.hero .baby .hl{color:var(--pink2)}
+.hero .catch{font-family:var(--f-disp);text-transform:uppercase;color:var(--lime);font-size:clamp(16px,2vw,21px);margin-top:14px}
+.capture{display:flex;gap:10px;margin-top:24px;max-width:460px;flex-wrap:wrap}
+.capture input{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:9px;padding:13px 16px;color:#fff;font-family:var(--f-mono);font-size:13px}
+.capture input::placeholder{color:#8a7ea3}
+.micro{font-family:var(--f-mono);font-size:11.5px;color:#8f83a8;margin-top:13px;letter-spacing:.02em}
+
+/* ── MARQUEE (BISO everywhere) ── */
+.marquee{background:var(--lime);color:#160A1C;overflow:hidden;white-space:nowrap;padding:13px 0;border-top:2px solid #160A1C;border-bottom:2px solid #160A1C}
+.marquee .track{display:inline-block;animation:scroll 26s linear infinite;font-family:var(--f-disp);text-transform:uppercase;font-size:23px;letter-spacing:.03em}
+.marquee.pink{background:var(--pink);color:#210419}
+.marquee.pink .track{animation-duration:30s}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── TILES (ten lines) ── */
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:32px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:13px;align-items:flex-start;transition:transform .15s,border-color .15s}
+.tile:hover{transform:translateY(-3px);border-color:var(--pink)}
+.tile .em{font-size:23px;line-height:1;flex:none}
+.tile h4{font-weight:800;font-size:15.5px;color:#fff;margin-bottom:2px}
+.tile p{font-size:13px;color:var(--muted);line-height:1.45}
+
+/* ── FEATURE CARDS ── */
+.fcards{display:grid;gap:16px;margin-top:32px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}
+.fcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:23px;position:relative;overflow:hidden;transition:transform .15s}
+.fcard:hover{transform:translateY(-4px)}
+.fcard .rail{position:absolute;top:0;left:0;width:100%;height:4px}
+.fcard .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink2);font-weight:700;margin-bottom:10px}
+.fcard h3{font-weight:800;font-size:19px;color:#fff;line-height:1.15;margin-bottom:8px}
+.fcard p{font-size:14px;color:var(--muted);line-height:1.55}
+.band.violet .fcard{background:rgba(0,0,0,.22);border-color:rgba(255,255,255,.22)}
+.band.violet .fcard h3{color:#fff}.band.violet .fcard p{color:#fff;opacity:.88}
+
+.compare{margin-top:26px;display:grid;gap:11px}
+.cmp{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:13px;align-items:baseline}
+.cmp .name{font-weight:800;color:#fff;font-size:15px}
+.cmp p{font-size:14px;color:var(--muted);line-height:1.5}
+.cmp .plus{color:var(--aqua);font-weight:700}.cmp .minus{color:var(--coral);font-weight:700}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.duo .box{border-radius:18px;padding:24px;background:var(--surface)}
+.duo .real{border:1px solid var(--lime)}.duo .alt{border:1px solid var(--pink)}
+.duo .box .t{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+.duo .real .t{color:var(--lime)}.duo .alt .t{color:var(--pink2)}
+.duo .box h3{font-weight:800;font-size:20px;color:#fff;margin-bottom:8px}
+.duo .box p{font-size:14px;color:var(--muted);line-height:1.55}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:30px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.band.violet .step{background:rgba(0,0,0,.22);border-color:rgba(255,255,255,.22)}
+.step .no{font-family:var(--f-disp);font-size:30px;color:var(--lime);line-height:1}
+.step h4{font-weight:800;font-size:15.5px;color:#fff;margin:9px 0 6px}
+.step p{font-size:13px;color:#D9CEE9;line-height:1.5}
+
+/* TYT divider band */
+.tytband{background:var(--vapor);text-align:center;padding:60px 0}
+.tytband .big{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(40px,8vw,96px);line-height:.9;color:#fff;text-shadow:-2px 0 rgba(80,205,237,.5),2px 0 rgba(255,61,181,.5)}
+.tytband .biso{display:block;margin-top:14px;color:var(--lime);letter-spacing:.4em}
+
+.promises{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin-top:30px}
+.promise{background:rgba(0,0,0,.86);border-radius:16px;padding:20px 16px;text-align:center}
+.promise .em{font-size:24px}.promise h4{color:#fff;font-weight:800;font-size:15px;margin:8px 0 4px}.promise p{color:#B3A6C9;font-size:12px;line-height:1.4}
+
+.callout{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:0 14px 14px 0;padding:20px 24px}
+.callout .big{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(18px,2.3vw,25px);color:#fff;line-height:1.1}
+.callout p{margin-top:8px;font-size:14.5px;color:var(--muted)}
+.band.violet .callout{background:rgba(0,0,0,.24)}.band.violet .callout p{color:#E7DCF4}
+
+.ctaband{text-align:center}.ctaband .capture{margin:24px auto 0;justify-content:center}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;text-align:left}
+.perk{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:18px}
+.perk .em{font-size:21px}.perk h4{color:#fff;font-weight:800;font-size:15px;margin:8px 0 4px}.perk p{color:rgba(255,255,255,.8);font-size:13px;line-height:1.45}
+
+footer{background:#08040D;border-top:1px solid var(--line);padding:54px 0 38px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px}
+.fcol h5{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink2);margin-bottom:13px}
+.fcol a,.fcol p{display:block;color:var(--muted);font-size:13.5px;margin-bottom:8px;line-height:1.4}
+.fcol a:hover{color:var(--lime)}
+.fbrand .mark{font-size:36px}.fbrand .tl{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:8px}
+.fbrand .bisofoot{font-family:var(--f-disp);text-transform:uppercase;font-size:26px;color:var(--lime);margin-top:12px}
+.fbot{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:#6f6486;letter-spacing:.06em;flex-wrap:wrap;gap:10px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero-grid,.split2,.split2.rev{grid-template-columns:1fr;text-align:left}
+  .split2 .gswrap{margin:8px auto 0}
+  .g3,.steps,.promises,.perks,.fgrid{grid-template-columns:1fr 1fr}
+  .links{display:none}.hamb{display:flex}.cmp{grid-template-columns:1fr}
+}
+@media(max-width:620px){.tiles,.g2,.duo,.g3,.steps,.promises,.perks,.fgrid{grid-template-columns:1fr}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marquee .track{animation:none}}
+
+[hidden]{display:none!important}
+.summary,.hero h1,.tyt,.hook,.callout .big,.tytband .big,.pull,.duo .box h3,.fcard h3,.step h4,.tile h4{text-wrap:balance}
+.toggle{display:inline-flex;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px}
+.tg{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:none;border:0;padding:9px 18px;border-radius:999px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.tg.on{background:var(--lime);color:#160A1C}
+.tg:hover:not(.on){color:#fff}
+.gd{--pink:#FF3DB5;--pinkink:#D60B7C;--lime:#E9FF3A;--aqua:#19E4D0;--cyan:#50CDED;--tang:#FFB03A;--lav:#B98CFF;--mint:#3DE6B0;--violet:#6B3FEF;--coralink:#E71D3C;--tealink:#0A8478;--ink:#160A1C;--muted:#6B6480;--line:#E7E2F0;--sub:rgba(22,10,28,.68);--f-disp:'Anton',sans-serif;--f-mark:'Fredoka',sans-serif;--f-mono:'Space Mono',monospace;--f-body:'Inter',sans-serif;font-family:var(--f-body);color:var(--ink);width:100%;margin:0 auto;filter:drop-shadow(0 30px 64px rgba(0,0,0,.5))}
+.gd .win{width:100%;max-width:1120px;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 54px rgba(22,10,28,.16);background:#fff}
+.gd .chrome{height:40px;background:#F2EFF7;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid var(--line)}
+.gd .chrome .d{width:10px;height:10px;border-radius:50%}
+.gd .chrome .d1{background:#FF5F57}
+.gd .chrome .d2{background:#FEBC2E}
+.gd .chrome .d3{background:#28C840}
+.gd .chrome .url{flex:1;height:22px;background:#fff;border:1px solid var(--line);border-radius:6px;margin-left:8px;display:flex;align-items:center;padding:0 10px;font-family:var(--f-mono);font-size:10px;color:var(--muted)}
+.gd .chrome .url b{color:var(--tealink);font-weight:400}
+.gd .bwin{display:flex;min-height:470px}
+.gd .bside{width:216px;flex:none;background:var(--nrail);padding:18px 13px;display:flex;flex-direction:column;gap:3px}
+.gd .bside.aqua{--nrail:#19E4D0}
+.gd .bside.cyan{--nrail:#50CDED}
+.gd .bside.lime{--nrail:#E9FF3A}
+.gd .bside .brandrow{display:flex;align-items:center;gap:8px;padding:4px 8px 14px;border-bottom:1px solid rgba(22,10,28,.18);margin-bottom:8px}
+.gd .bside .brandrow .mk2{font-family:var(--f-mark);font-weight:700;font-size:17px;color:var(--ink)}
+.gd .bside .brandrow .kw{font-family:var(--f-mono);font-size:8px;color:var(--ink);opacity:.7;letter-spacing:.12em}
+.gd .navi{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;font-size:12.5px;color:var(--ink);opacity:.72}
+.gd .navi svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.gd .navi.on{background:rgba(255,255,255,.75);opacity:1;font-weight:700}
+.gd .bmain{flex:1;padding:22px 26px;display:flex;flex-direction:column;gap:16px;min-width:0;background:#fff}
+.gd .toph{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.gd .toph h3{font-family:var(--f-body);font-weight:800;font-size:19px;margin:0}
+.gd .toph h3 span{color:var(--muted);font-weight:500;font-size:12px;font-family:var(--f-mono);margin-left:8px}
+.gd .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.gd .btn{font-family:var(--f-mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:7px 13px;background:#fff}
+.gd .btn.teal{color:var(--tealink);border-color:rgba(10,132,120,.4);background:rgba(25,228,208,.08)}
+.gd .livep{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;color:var(--tealink);border:1px solid rgba(10,132,120,.5);background:rgba(25,228,208,.08);border-radius:999px;padding:6px 11px}
+.gd .dcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}
+.gd .dcard.hi{border-color:var(--pink);box-shadow:0 0 0 1px rgba(255,61,181,.16)}
+.gd .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gd .metric .v{font-family:var(--f-disp);font-size:30px;line-height:1}
+.gd .metric .v.pos{color:var(--tealink)}
+.gd .metric .k{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.gd .metric .delta{font-family:var(--f-mono);font-size:10px;color:var(--tealink);margin-top:2px}
+.gd .dcols{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;align-items:start}
+.gd .dcols.even{grid-template-columns:1fr 1fr}
+.gd .rail{display:flex;flex-direction:column;gap:14px;min-width:0}
+.gd .legend{display:flex;gap:14px;font-family:var(--f-mono);font-size:9px;color:var(--muted)}
+.gd .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.gd .axislbl{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:8.5px;color:var(--muted);margin-top:7px}
+.gd .dtable{width:100%;border-collapse:collapse;font-size:12.5px}
+.gd .dtable th{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:400;padding:0 12px 10px}
+.gd .dtable td{padding:11px 12px;border-top:1px solid var(--line)}
+.gd .dtable tr:first-child td{border-top:0}
+.gd .dtable td.r, .gd .dtable th.r{text-align:right}
+.gd .sc-xs{width:32px;height:32px;border-radius:8px;display:inline-grid;place-items:center;font-family:var(--f-disp);font-size:13px;background:var(--aqua);color:#04302c}
+.gd .sc-xs.neg{background:var(--coralink);color:#fff}
+.gd .sc-xs.neu{background:var(--violet);color:#fff}
+.gd .sc-xs.pink{background:var(--pinkink);color:#fff}
+.gd .bub2{max-width:92%;padding:10px 13px;border-radius:14px;font-size:12.5px;line-height:1.5}
+.gd .bub2.ai{background:#F4F1F9;color:var(--ink);border-bottom-left-radius:5px}
+.gd .bub2.me{align-self:flex-end;background:var(--ink);color:#fff;border-bottom-right-radius:5px}
+
+body.locked{overflow:hidden;height:100vh}
+#gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:var(--vapor);overflow:hidden;text-align:center;transition:opacity .6s ease}
+#gate.open{opacity:0;pointer-events:none}
+#gate .g-floor{position:absolute;left:-10%;right:-10%;bottom:0;height:46%;opacity:.5;pointer-events:none;background-image:linear-gradient(rgba(80,205,237,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(167,128,237,.5) 1px,transparent 1px);background-size:54px 54px,54px 54px;transform:perspective(420px) rotateX(66deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(to top,#000,transparent);mask-image:linear-gradient(to top,#000,transparent);animation:gfloor 6s linear infinite}
+@keyframes gfloor{to{background-position:0 54px,54px 0}}
+#gate .g-glow{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+#gate .g-glow.a{width:520px;height:460px;background:var(--pink);top:-150px;right:-70px;opacity:.5}
+#gate .g-glow.b{width:460px;height:460px;background:var(--cyan);bottom:-190px;left:-120px;opacity:.4}
+#gate .g-brk{position:absolute;width:30px;height:30px;border:2px solid var(--lime);opacity:.75;z-index:4}
+#gate .g-brk.tl{top:26px;left:26px;border-right:0;border-bottom:0}
+#gate .g-brk.tr{top:26px;right:26px;border-left:0;border-bottom:0}
+#gate .g-brk.bl{bottom:26px;left:26px;border-right:0;border-top:0}
+#gate .g-brk.br{bottom:26px;right:26px;border-left:0;border-top:0}
+.g-inner{position:relative;z-index:5;max-width:560px;padding:0 26px}
+.g-logo{width:200px;margin:0 auto 20px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.4))}
+.g-eyebrow{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.g-tyt{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(46px,9vw,84px);line-height:.9;color:#fff;text-shadow:-2px 0 rgba(80,205,237,.6),2px 0 rgba(255,61,181,.6)}
+.g-sub{color:rgba(255,255,255,.85);font-size:15.5px;margin-top:16px;font-family:var(--f-mono);line-height:1.5}
+.g-form{display:flex;gap:10px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.g-field{position:relative;padding:5px}
+.g-field input{width:290px;max-width:72vw;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:16px 18px;color:#fff;font-family:var(--f-mono);font-size:15px;letter-spacing:.06em;text-align:center;transition:.2s}
+.g-field input:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(233,255,58,.22),0 0 34px rgba(233,255,58,.32)}
+.g-field input::placeholder{color:rgba(255,255,255,.5)}
+.g-field .g-brk2{position:absolute;width:11px;height:11px;border:2px solid var(--lime);opacity:.7}
+.g-field .g-brk2.tl{top:0;left:0;border-right:0;border-bottom:0}
+.g-field .g-brk2.tr{top:0;right:0;border-left:0;border-bottom:0}
+.g-field .g-brk2.bl{bottom:0;left:0;border-right:0;border-top:0}
+.g-field .g-brk2.br{bottom:0;right:0;border-left:0;border-top:0}
+.g-btn{font-family:var(--f-mono);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:14px;background:var(--lime);color:#160A1C;border:0;border-radius:12px;padding:16px 26px;cursor:pointer;box-shadow:0 12px 30px rgba(233,255,58,.35);transition:transform .15s}
+.g-btn:hover{transform:translateY(-2px)}
+.g-err{display:none;color:#FFC7D3;font-family:var(--f-mono);font-size:13px;margin-top:14px}
+.g-msg{color:rgba(255,255,255,.82);font-size:14.5px;margin-top:24px;line-height:1.65}
+.g-msg a{color:var(--lime);text-decoration:none;border-bottom:1px solid rgba(233,255,58,.45);font-weight:600}
+.g-msg a:hover{border-color:var(--lime)}
+.g-biso{font-family:var(--f-disp);text-transform:uppercase;color:var(--lime);letter-spacing:.05em;font-size:19px;margin:4px 0 20px;opacity:.95}
+.g-biso-foot{font-family:var(--f-disp);text-transform:uppercase;color:#fff;letter-spacing:.06em;font-size:19px;margin-top:26px;opacity:.94}
+.g-shake{animation:gshk .4s}
+@keyframes gshk{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(4px)}30%,50%,70%{transform:translateX(-9px)}40%,60%{transform:translateX(9px)}}
+.g-lips{width:172px;margin:0 auto 6px;filter:drop-shadow(0 12px 30px rgba(255,45,168,.45))}
+.lips{display:block;width:100%;height:auto;animation:lipbob 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+.lips .lower{transform-box:fill-box;transform-origin:50% 0;animation:talk 1.45s ease-in-out infinite}
+.lips .teeth{opacity:.96}
+@keyframes lipbob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-5px) rotate(-1deg)}}
+@keyframes talk{0%{transform:translateY(0)}9%{transform:translateY(8px)}18%{transform:translateY(2px)}30%{transform:translateY(15px)}42%{transform:translateY(4px)}54%{transform:translateY(16px)}66%{transform:translateY(3px)}78%{transform:translateY(11px)}88%{transform:translateY(1px)}100%{transform:translateY(0)}}
+.g-wordmark{margin:0 0 8px}
+.g-wordmark .mark{font-family:var(--f-mark);font-weight:700;font-size:32px;color:var(--pink2);position:relative}
+.g-wordmark .mark::before{content:attr(data-t);position:absolute;left:-2.5px;top:1.5px;color:var(--cyan);z-index:-1;opacity:.9}
+@media(prefers-reduced-motion:reduce){.lips,.lips .lower{animation:none}}
+
+
+/* ===================== DECK · FIXED 16:9 LANDSCAPE ===================== */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background:#050308}
+.deck{scroll-snap-type:y mandatory}
+.stage{height:100vh;display:flex;align-items:center;justify-content:center;
+  scroll-snap-align:start;overflow:hidden;padding:12px}
+.slide{position:relative;width:1280px;height:720px;flex:none;overflow:hidden;border-radius:8px;
+  transform:scale(var(--s,1));transform-origin:center center;
+  box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.slide .wrap{max-width:none;width:100%;height:100%;margin:0;padding:40px 58px;
+  display:flex;flex-direction:column;justify-content:center}
+.slide.top .wrap{justify-content:flex-start}
+.slide.dark{background:var(--ink2)}
+.slide.lime{background:var(--lime)}
+.slide.pink{background:var(--pink)}
+.slide.vapor{background:var(--vapor)}
+.slide.lime .eyebrow,.slide.lime .eyebrow .biso{color:#160A1C}
+.slide.dark::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(60% 55% at 82% 18%,rgba(123,47,242,.22),transparent 60%),
+             radial-gradient(50% 50% at 6% 94%,rgba(25,228,208,.13),transparent 60%)}
+.slide.vapor::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(70% 60% at 86% 12%,rgba(255,61,181,.24),transparent 62%),
+             radial-gradient(55% 55% at 8% 96%,rgba(25,228,208,.15),transparent 60%)}
+/* viewfinder */
+.vf{position:absolute;inset:24px;pointer-events:none;z-index:3}
+.vf span{position:absolute;width:20px;height:20px;border:2px solid var(--aqua);opacity:.55}
+.vf span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.vf span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.vf span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.vf span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.slide.lime .vf span{border-color:#160A1C;opacity:.4}
+.slide.pink .vf span,.slide.vapor .vf span{border-color:rgba(255,255,255,.5)}
+/* headline system (fixed px for scaled canvas) */
+.eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:9px}
+.dh{font-family:var(--f-body);font-weight:900;font-size:36px;line-height:1.05;
+  letter-spacing:-.022em;text-wrap:balance;margin:2px 0 9px;color:var(--text)}
+.dh.sm{font-size:27px}
+.dsub{font-size:15px;font-weight:600;color:var(--aqua);line-height:1.32;
+  max-width:66ch;text-wrap:balance;margin-bottom:12px}
+.slide.dark .dsub{color:var(--lav)}
+.slide.lime .dh,.slide.lime .dsub{color:#160A1C}
+.slide.vapor .dh{color:#fff}.slide.vapor .dsub{color:var(--lime)}
+.slide.pink .dh{color:#fff}.slide.pink .dsub{color:#160A1C}
+/* columns */
+.cols{display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center;flex:1;min-height:0}
+.cols.wide{grid-template-columns:1.12fr .88fr}
+.cols.rev>.copy{order:2}.cols.rev>.art{order:1}
+.cols>.copy{min-width:0}
+/* point lists */
+.pts{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+.pt{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start;font-size:12.8px;line-height:1.33}
+.pt .m{width:8px;height:8px;margin-top:6px;background:var(--pink);flex:none;box-shadow:2px 2px 0 var(--cyan)}
+.pt .x{font-family:var(--f-mono);font-weight:700;font-size:11px;color:var(--aqua);margin-top:2px;min-width:20px}
+.pt div>b{color:var(--text);font-weight:800}
+.pt div>span{color:var(--muted)}
+.slide.lime .pt div>span{color:rgba(22,10,28,.72)}
+.slide.lime .pt div>b{color:#160A1C}
+.slide.lime .pt .m{background:#160A1C;box-shadow:2px 2px 0 var(--pink)}
+/* callout quote */
+.qt{font-family:var(--f-body);font-weight:800;font-size:15.5px;line-height:1.26;
+  border-left:3px solid var(--lime);padding:2px 0 2px 15px;margin-top:10px;text-wrap:balance;color:#fff}
+.slide.lime .qt{border-color:#160A1C;color:#160A1C}
+.slide.vapor .qt{color:#fff;border-color:var(--lime)}
+/* stat chips */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.chip{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;padding:7px 12px;
+  border:1.4px solid var(--line);border-radius:999px;color:var(--text);background:rgba(255,255,255,.03)}
+.chip b{color:var(--lime)}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:2px}
+.tbl th{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--aqua);text-align:left;padding:8px 12px;border-bottom:1.5px solid var(--line);white-space:nowrap}
+.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:middle}
+.tbl td b{color:var(--text)}
+.tbl tr.hi td{background:rgba(255,61,181,.10)}
+.tbl .big{font-family:var(--f-body);font-weight:900;font-size:14px;color:var(--lime)}
+.tbl .tier{font-family:var(--f-body);font-weight:900;color:var(--text);font-size:13.5px}
+/* mini cards */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:4px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:4px}
+.card2{border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:rgba(255,255,255,.025)}
+.card2 .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--aqua);margin-bottom:6px}
+.card2 h4{font-family:var(--f-body);font-weight:900;font-size:15.5px;margin:0 0 5px;color:var(--text)}
+.card2 p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.45}
+.card2 .big{font-family:var(--f-body);font-weight:900;font-size:24px;color:var(--lime);line-height:1}
+/* big stat cards (VP business) */
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 4px}
+.stat{border:1px solid var(--line);border-top:3px solid var(--pink);border-radius:12px;padding:16px 16px;background:rgba(255,255,255,.025)}
+.stat .n{font-family:var(--f-disp);font-size:38px;color:var(--lime);line-height:.95}
+.stat .l{color:var(--muted);font-size:12px;line-height:1.35;margin-top:8px}
+/* process steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:6px}
+.slide .step{background:transparent;border:0;border-radius:0;border-top:2px solid var(--pink);padding:10px 0 0}
+.step .n{font-family:var(--f-disp);font-size:24px;color:var(--pink);line-height:1}
+.step b{display:block;color:var(--text);font-weight:800;margin:5px 0 3px;font-size:13.5px}
+.step span{color:var(--muted);font-size:12px;line-height:1.4}
+.slide.lime .step{border-color:#160A1C}.slide.lime .step .n{color:#160A1C}
+.slide.lime .step b{color:#160A1C}.slide.lime .step span{color:rgba(22,10,28,.7)}
+/* screens */
+.pscreen{display:flex;justify-content:center;align-items:center;height:100%;zoom:.82}
+.pscreen .gswrap{width:300px;max-width:100%}
+.dscreen{zoom:.46;filter:drop-shadow(0 22px 48px rgba(0,0,0,.5));border-radius:14px}
+@supports not (zoom:1){.dscreen{transform:scale(.46);transform-origin:top left}}
+/* title */
+.title-mark{font-family:var(--f-mark);font-weight:700;color:var(--pink2);position:relative;
+  display:inline-block;font-size:120px;line-height:.9}
+.title-mark::before{content:"biss";position:absolute;left:-4px;top:2px;color:var(--cyan);z-index:-1;opacity:.85}
+.title-mark.sm{font-size:60px}
+.title-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.title-row .kiss{width:56px;height:30px}
+.baby-disp{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.02em;font-size:30px;color:var(--lime);line-height:1;margin:2px 0 2px}
+.tag-big{font-family:var(--f-body);font-weight:900;font-size:46px;color:#fff;letter-spacing:-.02em;margin:10px 0 8px}
+.tag-big.sm{font-size:32px;margin:0}
+.meta{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;color:var(--lav);line-height:1.85}
+.meta b{color:var(--aqua)}
+/* flywheel */
+.flyw{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.02em;color:var(--aqua);
+  line-height:1.75;border:1px dashed var(--line);border-radius:11px;padding:11px 14px;margin:2px 0 14px}
+/* category map */
+.bo{display:grid;grid-template-columns:1fr 250px 1fr;gap:22px;align-items:center;margin-top:2px;flex:1;min-height:0}
+.bo-col{display:flex;flex-direction:column;gap:11px}
+.clus .ch{font-family:var(--f-mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  padding-bottom:6px;margin-bottom:9px;border-bottom:1.5px solid currentColor}
+.clus.s .ch{color:var(--aqua)}.clus.r .ch{color:var(--tang)}
+.clus.e .ch{color:var(--coral)}.clus.n .ch{color:var(--lav)}
+.clgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.clcell{border:1px solid var(--line);border-left:2.5px solid var(--line);border-radius:8px;padding:7px 10px;background:rgba(255,255,255,.02)}
+.clus.s .clcell{border-left-color:var(--aqua)}.clus.r .clcell{border-left-color:var(--tang)}
+.clus.e .clcell{border-left-color:var(--coral)}.clus.n .clcell{border-left-color:var(--lav)}
+.clcell b{display:block;color:var(--text);font-weight:700;font-size:12px}
+.clcell span{color:var(--muted);font-size:10px;font-family:var(--f-mono)}
+.bo-core{text-align:center}
+.bo-core .ring{width:196px;height:196px;border-radius:50%;margin:0 auto;
+  background:radial-gradient(circle at 50% 40%,#22efd6,#0fb9a8);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 0 0 9px rgba(25,228,208,.10),0 0 50px rgba(25,228,208,.35)}
+.bo-core .ring .m{font-family:var(--f-disp);font-size:46px;color:#08312c;line-height:.9}
+.bo-core .ring small{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;color:#08312c;margin-top:7px}
+.bo-core p{color:var(--muted);font-size:11.5px;line-height:1.5;margin:13px auto 0;max-width:26ch}
+/* HUD / progress / nav */
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--lime);z-index:120;width:0;transition:width .15s}
+.hud{position:fixed;bottom:15px;right:16px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+  color:var(--muted);z-index:110;background:rgba(11,7,16,.72);padding:6px 11px;border:1px solid var(--line);border-radius:8px;backdrop-filter:blur(6px)}
+.hud b{color:var(--lime)}
+.navbtns{position:fixed;bottom:14px;left:16px;display:flex;gap:8px;z-index:110}
+.navbtns button{font-family:var(--f-mono);font-size:13px;width:36px;height:32px;cursor:pointer;
+  background:rgba(11,7,16,.72);color:var(--text);border:1px solid var(--line);border-radius:8px;backdrop-filter:blur(6px)}
+.navbtns button:hover{border-color:var(--aqua);color:var(--aqua)}
+.section-tab{position:fixed;top:12px;left:16px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);z-index:110;background:rgba(11,7,16,.6);padding:5px 10px;border-radius:7px}
+/* mashup / category slide */
+.dh.mash{font-size:30px;line-height:1.16;margin-bottom:12px}
+.mk-inline{font-family:var(--f-mark);font-weight:700;color:var(--pink2)}
+.mash-line{text-align:center;font-family:var(--f-body);font-weight:900;font-size:25px;
+  letter-spacing:-.012em;color:#fff;margin-top:22px;text-wrap:balance}
+.mash-line span{color:var(--lime)}
+/* pink CTA ribbon (final slide) */
+.slide.team .wrap,.slide.title .wrap{padding-bottom:98px}
+.cta-ribbon{position:absolute;left:0;right:0;bottom:0;height:78px;background:var(--pink);
+  display:flex;align-items:center;justify-content:space-between;padding:0 44px;gap:18px;z-index:4}
+.cta-ribbon .rl{display:flex;align-items:baseline;gap:13px}
+.cta-ribbon .rmark{font-family:var(--f-mark);font-weight:700;font-size:29px;color:#160A1C;line-height:1}
+.cta-ribbon .rtag{font-family:var(--f-body);font-weight:900;font-size:19px;color:#160A1C;letter-spacing:-.01em}
+.cta-ribbon .rbtns{display:flex;gap:11px}
+.cta{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.03em;
+  padding:12px 18px;border-radius:999px;white-space:nowrap;text-decoration:none;display:inline-block}
+.cta.lime{background:var(--lime);color:#160A1C;box-shadow:0 6px 18px rgba(20,10,0,.22)}
+.cta.ink{background:#160A1C;color:#fff}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div class="progress" id="bar"></div>
+<div class="section-tab" id="tab"></div>
+<div class="deck"><div class="stage">
+<section class="slide dark title" style="background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE BLUE OCEAN · CATEGORY CREATION<span class="biso">because i said so</span></div>
+  <div class="title-row"><span class="title-mark">biss</span><svg class="kiss" viewBox="240 90 240 125" xmlns="http://www.w3.org/2000/svg"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF3DB5"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#D60B7C"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#fff" opacity=".4"/></svg></div>
+  <div class="baby-disp">Because I Said So</div>
+  <div class="tag-big">Tell Your Truth.</div>
+  <p style="color:#fff;font-weight:600;font-size:18px;max-width:60ch;line-height:1.4">The first Conversational Customer Intelligence platform — where authentic human experience becomes the most valuable data in the world.</p>
+  <div class="meta" style="margin-top:18px">
+    <b>Marc Sternberg</b> — Co-Founder &amp; CEO &nbsp;·&nbsp; <b>Simge Helvacı</b> — Co-Founder &amp; CTO<br>
+    Oxford Saïd Business School &nbsp;·&nbsp; NVIDIA Inception Program &nbsp;·&nbsp; Wyoming C-Corp<br>
+    <b>yeahisaidthat.com</b> &nbsp;·&nbsp; Live demo: <b>biss-opal.vercel.app</b></div>
+</div><div class="cta-ribbon"><div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div><div class="rbtns"><a class="cta lime" href="https://biss-opal.vercel.app">▸ See the live demo</a><a class="cta ink" href="mailto:marcsternberg13@gmail.com">Book a demo →</a></div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">WHAT IS BISS · THE CATEGORY<span class="biso">because i said so</span></div>
+  <h2 class="dh mash">If <span style="color:var(--tang)">Reddit</span>, <span style="color:var(--coral)">Yelp</span>, <span style="color:var(--cyan)">Meltwater</span>, <span style="color:var(--pink2)">Instagram</span>, <span style="color:var(--aqua)">Rotten Tomatoes</span>, and <span style="color:var(--lav)">a therapist</span> had a baby — that baby is <span class="mk-inline">BISS</span>.</h2>
+  <p class="dsub" style="max-width:82ch;margin-bottom:8px">The category is called <b style="color:#fff">Conversational Customer Intelligence</b>. BISS invented it. <b style="color:#fff">Zero direct competitors.</b></p>
+  <p style="color:var(--muted);font-size:14px;line-height:1.5;max-width:84ch;margin:0 0 16px">Authentic emotional truth — generated through therapeutic AI conversation — becomes the most proprietary business-intelligence dataset in the world. <b style="color:var(--lime)">The first-mover window is 18–24 months.</b></p>
+  <div class="statrow">
+    <div class="stat"><div class="n">30%+</div><div class="l">of online reviews are fake or manipulated</div></div>
+    <div class="stat"><div class="n">$30K+</div><div class="l">cheapest enterprise intelligence tool, per year</div></div>
+    <div class="stat"><div class="n">3–5%</div><div class="l">average survey response rate</div></div>
+    <div class="stat"><div class="n">28M</div><div class="l">US SMBs locked out of real customer intelligence</div></div>
+  </div>
+  <div class="mash-line">Everyone’s a storyteller. <span>We just help you find the words.</span></div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">WHAT IS BISS<span class="biso">because i said so</span></div>
+    <h2 class="dh">You talk to an AI like a friend. It turns your real experiences into the most honest customer data on earth.</h2>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Reviews you can't trust</b> <span>→ authentic, verified, un-gameable truth.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Ratings that say nothing</b> <span>→ the story behind the feeling.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Feedback that vanishes</b> <span>→ a voice, a following, a record that's yours.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Intelligence only giants can afford</b> <span>→ starting at $50/mo.</span></div></div>
+    </div>
+    <div class="chips">
+      <span class="chip"><b>Sticky</b> · therapy + game + identity</span>
+      <span class="chip"><b>Sexy</b> · one story → 5 brands at once</span>
+      <span class="chip"><b>Viral</b> · celebrities bring their audience</span></div>
+    <div class="qt">The first place people actually tell the truth — and the only place brands can buy it.</div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr lime">
+        <div class="sb"><span>9:41</span><span class="tag">Splitting</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
+        <div class="body" style="gap:11px">
+          <div class="bub me" style="align-self:stretch;max-width:100%">"…Delta lost my bag, but the Marriott front desk fixed my whole night, and Chick-fil-A saved dinner."</div>
+          <div class="detect">3 BRANDS FOUND → SPLITTING INTO 3 TRUTHS</div>
+          <div class="card"><div class="between"><span class="t-b">✈ Delta</span><div class="score sm neg"><span class="n">3.1</span></div></div><div class="bar" style="margin-top:8px"><div class="fl p" style="width:31%"></div></div></div>
+          <div class="card"><div class="between"><span class="t-b">🏨 Marriott</span><div class="score sm"><span class="n">8.7</span></div></div><div class="bar" style="margin-top:8px"><div class="fl" style="width:87%"></div></div></div>
+          <div class="card"><div class="between"><span class="t-b">🍗 Chick-fil-A</span><div class="score sm"><span class="n">9.0</span></div></div><div class="bar" style="margin-top:8px"><div class="fl" style="width:90%"></div></div></div>
+          <div class="card" style="margin-top:auto"><span class="t-mut">One story → three attributed truths. One conversation, N brands.</span></div>
+        </div>
+        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Journal</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">THE PROBLEM · BUSINESS<span class="biso">because i said so</span></div>
+  <h2 class="dh">Brands are flying blind — and paying a fortune for the privilege.</h2>
+  <p class="dsub">Every tool they buy captures what customers say in public. None captures what they actually think.</p>
+  <div class="grid4">
+    <div class="card2"><div class="k">Unaffordable</div><h4>$15–40K / yr</h4><p>Meltwater &amp; Brandwatch price out the SMBs who need intelligence most.</p></div>
+    <div class="card2"><div class="k">Ignored</div><h4>3–5% response</h4><p>Surveys run in an artificial setting that kills honesty.</p></div>
+    <div class="card2"><div class="k">Public layer only</div><h4>Says ≠ thinks</h4><p>Social listening never sees the gap between what customers say and feel.</p></div>
+    <div class="card2"><div class="k">Gamed &amp; shallow</div><h4>Up to 30% fake</h4><p>"The food was bad" is nothing a manager can act on Monday.</p></div>
+  </div>
+  <div class="qt">An $89B customer-intelligence gap — not because the data isn't there, but because no one built the right system to capture it honestly.</div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols wide">
+  <div class="copy">
+    <div class="eyebrow ">THE PROBLEM · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">You have opinions. You don't have a voice.</h2>
+    <p class="dsub">The consumer side is just as broken — you're shouting into an anonymous void.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>No identity.</b> <span>You post as "user_8842." No personality, no continuity, no self.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>No one to follow, no one following you.</b> <span>An aggregation of strangers you've no reason to trust.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>No trust.</b> <span>Faceless and gameable — so nobody believes it.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Nowhere to process it.</b> <span>No space to tell the whole story and be heard.</span></div></div>
+    </div>
+    <div class="qt">You did the living. The system gives you one star and a text box — then forgets you.</div>
+  </div>
+  <div class="art" style="display:flex;justify-content:center;align-items:center;height:100%">
+    <div style="font-family:var(--f-mono);border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);max-width:290px">
+      <div style="color:var(--muted);font-size:12px;letter-spacing:.1em">★★★☆☆ &nbsp; user_8842</div>
+      <div style="height:1px;background:var(--line);margin:12px 0"></div>
+      <div style="color:var(--muted);font-size:13px;line-height:1.7">"ok i guess"<br>"food was fine"<br>"wouldn't go back"</div>
+      <div style="height:1px;background:var(--line);margin:12px 0"></div>
+      <div style="color:var(--coral);font-size:11px;letter-spacing:.07em">▸ NO NAME · NO FACE · NO FOLLOWING</div>
+    </div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">THE BLUE OCEAN · CATEGORY CREATION<span class="biso">because i said so</span></div>
+  <h2 class="dh sm" style="margin-bottom:14px">Every platform below does one thing well. BISS does all of it — and generates original private intelligence none of them can touch.</h2>
+  <div class="bo">
+    <div class="bo-col">
+      <div class="clus s"><div class="ch">Social &amp; Community</div><div class="clgrid"><div class="clcell"><b>Reddit</b><span>community & voting</span></div><div class="clcell"><b>Instagram</b><span>social & polls</span></div><div class="clcell"><b>Twitter / X</b><span>public conversation</span></div><div class="clcell"><b>TikTok</b><span>video social</span></div><div class="clcell"><b>Facebook</b><span>social network</span></div><div class="clcell"><b>Wattpad</b><span>creative writing</span></div></div></div>
+      <div class="clus r"><div class="ch">Review &amp; Ratings</div><div class="clgrid"><div class="clcell"><b>Yelp</b><span>gamed local reviews</span></div><div class="clcell"><b>Google Reviews</b><span>star ratings</span></div><div class="clcell"><b>Rotten Tomatoes</b><span>crowd ratings</span></div><div class="clcell"><b>TripAdvisor</b><span>travel reviews</span></div><div class="clcell"><b>Trustpilot</b><span>brand reviews</span></div><div class="clcell"><b>Glassdoor</b><span>employer reviews</span></div></div></div>
+    </div>
+    <div class="bo-core"><div class="ring"><div class="m">BISS</div><small>CONVERSATIONAL<br>CUSTOMER INTELLIGENCE</small></div>
+      <p>The only platform that generates original private intelligence through therapeutic AI — and monetizes it three ways at once.</p></div>
+    <div class="bo-col">
+      <div class="clus e"><div class="ch">Enterprise Intelligence</div><div class="clgrid"><div class="clcell"><b>Meltwater</b><span>social listening · $30K+</span></div><div class="clcell"><b>Brandwatch</b><span>social listening</span></div><div class="clcell"><b>Qualtrics</b><span>surveys · $15K+</span></div><div class="clcell"><b>SurveyMonkey</b><span>survey tools</span></div><div class="clcell"><b>Medallia</b><span>enterprise CX · $50K+</span></div><div class="clcell"><b>Sprout Social</b><span>social mgmt</span></div></div></div>
+      <div class="clus n"><div class="ch">Content &amp; Niche</div><div class="clgrid"><div class="clcell"><b>Letterboxd</b><span>film community</span></div><div class="clcell"><b>Goodreads</b><span>book community</span></div><div class="clcell"><b>Amazon Reviews</b><span>commerce reviews</span></div><div class="clcell"><b>Bazaarvoice</b><span>commerce intel</span></div><div class="clcell"><b>Day One</b><span>personal journaling</span></div><div class="clcell"><b>Yelp / G2</b><span>niche platforms</span></div></div></div>
+    </div>
+  </div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
+        <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/dashboard/<b>southwest</b> · live</span></div>
+        <div class="bwin">
+          <div class="bside aqua">
+            <div class="brandrow"><span class="mk2">biss</span><span class="kw">INTELLIGENCE</span></div>
+            <div class="navi on"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Sentiment</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Truths</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"/></svg>Benchmarks</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Seed campaigns</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/></svg>Reports</div>
+            <div style="flex:1"></div>
+            <div class="navi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>Account</div>
+          </div>
+          <div class="bmain">
+            <div class="toph"><h3>Sentiment overview <span>Southwest Airlines · last 30 days</span></h3><div class="toolbar"><span class="btn">Last 30 days ▾</span><span class="btn teal">Export</span><span class="livep">LIVE</span></div></div>
+            <div class="kpis">
+              <div class="dcard metric"><div class="v pos">4.2</div><div class="k">Sentiment</div><div class="delta">↑ 0.3</div></div>
+              <div class="dcard metric"><div class="v">847</div><div class="k">Truths · 30d</div><div class="delta">↑ 124</div></div>
+              <div class="dcard metric"><div class="v">73%</div><div class="k">Top pain</div><div class="delta" style="color:var(--coralink)">boarding</div></div>
+              <div class="dcard metric"><div class="v">48</div><div class="k">NPS proxy</div><div class="delta">↑ 2</div></div>
+            </div>
+            <div class="dcols">
+              <div class="dcard">
+                <div class="between" style="margin-bottom:12px"><span class="htag">SENTIMENT OVER TIME</span><span class="legend"><span><i style="background:var(--aqua)"></i>Southwest</span><span><i style="background:var(--violet)"></i>Category avg</span></span></div>
+                <svg viewBox="0 0 640 180" style="width:100%;height:168px" preserveAspectRatio="none"><defs><linearGradient id="g9" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19E4D0" stop-opacity=".22"/><stop offset="1" stop-color="#19E4D0" stop-opacity="0"/></linearGradient></defs><line x1="0" y1="45" x2="640" y2="45" stroke="#EEE9F5"/><line x1="0" y1="90" x2="640" y2="90" stroke="#EEE9F5"/><line x1="0" y1="135" x2="640" y2="135" stroke="#EEE9F5"/><polyline fill="none" stroke="#6B3FEF" stroke-width="2" stroke-dasharray="5 5" opacity=".5" points="0,110 106,106 213,110 320,102 426,104 533,100 640,98"/><polygon fill="url(#g9)" points="0,138 106,128 213,138 320,110 426,116 533,88 640,72 640,180 0,180"/><polyline fill="none" stroke="#0A8478" stroke-width="3" points="0,138 106,128 213,138 320,110 426,116 533,88 640,72"/><circle cx="640" cy="72" r="5" fill="#D60B7C"/></svg>
+                <div class="axislbl"><span>Jun 08</span><span>Jun 14</span><span>Jun 20</span><span>Jun 26</span><span>Jul 02</span><span>Jul 08</span></div>
+              </div>
+              <div class="dcard">
+                <span class="htag" style="display:block;margin-bottom:13px">TOP PAIN POINTS</span>
+                <div class="col" style="gap:13px">
+                  <div><div class="between" style="margin-bottom:5px"><span class="t-sm">Boarding delays</span><span class="t-mut">73%</span></div><div class="bar"><div class="fl p" style="width:73%"></div></div></div>
+                  <div><div class="between" style="margin-bottom:5px"><span class="t-sm">App reliability</span><span class="t-mut">58%</span></div><div class="bar"><div class="fl p" style="width:58%"></div></div></div>
+                  <div><div class="between" style="margin-bottom:5px"><span class="t-sm">Communication</span><span class="t-mut">40%</span></div><div class="bar"><div class="fl p" style="width:40%"></div></div></div>
+                  <div><div class="between" style="margin-bottom:5px"><span class="t-sm">Seat comfort</span><span class="t-mut">21%</span></div><div class="bar"><div class="fl p" style="width:21%"></div></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="dcard hi"><div class="row" style="align-items:center;gap:14px"><span class="htag p" style="white-space:nowrap">⚡ AI RECOMMENDATION</span><p class="t-sm" style="line-height:1.5;margin:0;flex:1">Boarding communication is flagged in <b style="color:var(--pinkink)">73% of delay stories</b> — the single highest-leverage fix this quarter.</p><span class="pill solid" style="white-space:nowrap">Early-warning →</span></div></div>
+            <div class="dcard" style="padding:6px 4px"><table class="dtable">
+              <tr><th style="width:46%">Live truths · streaming</th><th>Emotion</th><th>Attributed</th><th class="r">Score</th><th class="r">Time</th></tr>
+              <tr><td>The Three-Hour Gate</td><td class="t-mut">Frustrated</td><td class="t-mut">✈ Southwest</td><td class="r"><span class="sc-xs neg">2.4</span></td><td class="r t-mut">2m</td></tr>
+              <tr><td>Rebooked in Minutes</td><td class="t-mut">Relieved</td><td class="t-mut">✈ Southwest</td><td class="r"><span class="sc-xs">9.1</span></td><td class="r t-mut">18m</td></tr>
+              <tr><td>Crew Went Above</td><td class="t-mut">Grateful</td><td class="t-mut">✈ Southwest</td><td class="r"><span class="sc-xs">8.6</span></td><td class="r t-mut">41m</td></tr>
+            </table></div>
+          </div>
+        </div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">THE SOLUTION · BUSINESS<span class="biso">because i said so</span></div>
+    <h2 class="dh">The intelligence they could never buy.</h2>
+    <p class="dsub">BISS reveals what customers actually think — and hands it to the people who can act on it.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>A dashboard CEOs open.</b> <span>Real-time sentiment, journey maps, early issue detection, benchmarking — from stories, not surveys.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Data no one else has.</b> <span>Generated in private conversation and owned by BISS.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Two signal tiers (FlipSide).</b> <span>Verified Identity + Verified Human. Brands never see names.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Priced for everyone.</b> <span>Enterprise-grade intelligence at a small-business price.</span></div></div>
+    </div>
+    <div class="qt">Meltwater tells businesses what customers say publicly. BISS reveals what they actually think.</div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">THE SOLUTION · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">Finally, a voice that's yours.</h2>
+    <p class="dsub">BISS gives the person behind the review an identity, a following, and a reason to tell the truth.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Just talk — BISS writes it.</b> <span>It turns your rambling into a polished story and infers the score. No forms, no stars.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Two identities, your call.</b> <span>A permanent anonymous persona and your verified real name — story by story.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>A profile that's actually you.</b> <span>Your public diary of experiences and brand loyalties.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>People worth following.</b> <span>Discover the world through people you actually trust.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>It rewards you.</b> <span>Story Coins, XP, badges — plus the Emotional Face that reacts as you type.</span></div></div>
+    </div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr cyan">
+        <div class="sb"><span>9:41</span><span class="tag">AI Journal</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
+        <div class="body">
+          <div class="faceZone">
+            <span class="lbl">Reading your story…</span>
+            <svg width="88" height="88" viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="#fff" stroke="#160A1C" stroke-width="2.5"/><circle cx="34" cy="42" r="4.4" fill="#160A1C"/><circle cx="62" cy="42" r="4.4" fill="#160A1C"/><path d="M32 40 l9 -5 M64 40 l-9 -5" stroke="#160A1C" stroke-width="2.2" stroke-linecap="round"/><path d="M34 66 Q48 56 62 66" fill="none" stroke="#E71D3C" stroke-width="3.2" stroke-linecap="round"/></svg>
+            <span class="pill p" style="background:#fff">😤 Frustrated · 0.71</span>
+          </div>
+          <div class="bub ai">Tell me about a recent experience with any brand, product, or place.</div>
+          <div class="bub me">My Delta flight to NYC was delayed 3 hrs — nobody explained anything and I missed my mom's birthday dinner.</div>
+          <div class="detect">✈ DELTA DETECTED → 1 truth</div>
+          <div class="bub ai">That's a lot to carry. When you asked the gate staff for updates, how did they handle it?</div>
+          <div class="inbar"><span>Type your truth…</span><span class="s"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+        </div>
+        <div class="nav"><div class="t on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide lime"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow lime">THE HOOK · CONTESTS<span class="biso">because i said so</span></div>
+    <h2 class="dh">The biggest names on earth will run their contests here.</h2>
+    <p class="dsub">Seed a creative challenge, and a real audience answers with stories you can use — not poll clicks. Creative sourcing, market research, and your most powerful acquisition channel, in one.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><b>Seed the challenge</b><span>Set the prompt, prize, deadline — "name our next shake."</span></div>
+      <div class="step"><div class="n">02</div><b>Real people answer</b><span>Verified humans reply with ideas &amp; stories — not a tap, not a bot.</span></div>
+      <div class="step"><div class="n">03</div><b>The room ranks it</b><span>One-word signal surfaces standouts by authentic resonance.</span></div>
+      <div class="step"><div class="n">04</div><b>You crown the winner</b><span>You pick and pay out. BISS never takes a cut or owns your idea.</span></div>
+    </div>
+    <div class="qt">Taylor Swift asks her fans a question → Instagram returns 847,000 votes; BISS returns 50,000 narratives — and every fan just made a BISS account. Free acquisition at scale.</div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr coral">
+        <div class="sb"><span>9:41</span><span class="tag">Stadium</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">◆ Live</span></div>
+        <div class="body" style="gap:11px">
+          <div><div class="h-disp" style="font-size:27px">Best travel<br>save</div><div class="t-sm" style="color:var(--sub);margin-top:6px">Sponsored by JetBlue · ⏱ 4d left</div></div>
+          <div class="card"><div class="htag m" style="display:block;margin-bottom:9px">Your entry</div><div class="chips" style="margin-bottom:10px"><span class="pill p">New story</span><span class="pill">Pick from journal</span></div><div class="card flat"><span class="t-mut">Tell the story of the save…</span></div></div>
+          <div class="card">
+            <div class="htag" style="display:block;margin-bottom:10px">Standings · by community signal</div>
+            <div class="between" style="margin-bottom:9px"><div class="row" style="align-items:center;gap:8px"><span class="t-b" style="color:var(--pinkink)">1</span><div class="bar" style="width:116px"><div class="fl p" style="width:88%"></div></div></div><span class="pill">312 ◆</span></div>
+            <div class="between"><div class="row" style="align-items:center;gap:8px"><span class="t-b">2</span><div class="bar" style="width:116px"><div class="fl p" style="width:78%"></div></div></div><span class="pill">288 ◆</span></div>
+          </div>
+          <a class="cta ink" style="margin-top:auto">Submit entry</a>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>Stadium</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(158deg,#2e0e52 0%,#4d1590 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">VALUE PROPOSITION · BUSINESS<span class="biso">because i said so</span></div>
+  <h2 class="dh">The truth your customers won't put in a survey.</h2>
+  <p class="dsub">Authentic intelligence generated in conversation — not coaxed from a survey or scraped from a post. A market full of data, starved of insight.</p>
+  <div class="grid3" style="margin-top:8px">
+    <div class="card2"><div class="k">01 · Own the data</div><p>Proprietary emotional data, generated fresh with every story. Not what customers say publicly — <b style="color:var(--text)">what they actually think.</b> Can't be licensed from anyone.</p></div>
+    <div class="card2"><div class="k">02 · Act on Monday</div><p>Sentiment, journey maps, ranked pain points, AI recs — plus <b style="color:var(--text)">early issue detection before a problem goes viral.</b> A decision, not a report you file.</p></div>
+    <div class="card2"><div class="k">03 · The road not taken</div><p>Benchmark your category and read exactly what customers say about the competitor they <b style="color:var(--text)">chose instead of you</b> — a signal no survey can produce.</p></div>
+  </div>
+  <div class="qt">Enterprise depth at an SMB price — from $50/mo against $30K+/yr for legacy tools, with a class of data the incumbents structurally cannot collect.</div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">VALUE PROPOSITION · CONSUMER<span class="biso">because i said so</span></div>
+    <h2 class="dh">Finally, somewhere that listens.</h2>
+    <p class="dsub">Not a review you'd perform for strangers. Not a star you'd forget by lunch. The first place built for how it actually felt — and for making sure it reaches someone who can act on it.</p>
+    <div class="pts">
+      <div class="pt"><span class="x">01</span><div><b>Something that actually listens.</b> <span>An AI that follows the thread — pulling out the moment, the feeling, and the why every other platform throws away.</span></div></div>
+      <div class="pt"><span class="x">02</span><div><b>Every talk becomes your diary.</b> <span>One messy vent → a polished, permanent entry. Yours to keep, edit, hide, or delete.</span></div></div>
+      <div class="pt"><span class="x">03</span><div><b>A score from your story — never a star.</b> <span>The AI reads how it landed from your own words. Nothing to game, nothing to fake.</span></div></div>
+      <div class="pt"><span class="x">04</span><div><b>Your name is your call.</b> <span>Verified human, anonymous by default. FlipSide flips it story by story. No ads; your number is never sold.</span></div></div>
+      <div class="pt"><span class="x">05</span><div><b>Get heard where it counts.</b> <span>Your story lands on the brand's dashboard — the room where decisions get made.</span></div></div>
+    </div>
+    <div class="qt">Stop performing. Start telling the truth. Your opinion doesn't disappear here — it reaches the people with the power to change things.</div>
+  </div>
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr tang">
+        <div class="sb"><span>9:41</span><span class="tag">247 truths told</span></div>
+        <div class="top"><span class="mk">biss</span><span class="t-sm" style="color:var(--ink)">•••</span></div>
+        <div class="body" style="gap:11px">
+          <div style="display:flex;align-items:center;gap:12px"><div class="av p" style="width:52px;height:52px"></div><div><div class="h-disp" style="font-size:23px">PinkWagon77</div><div class="t-sm" style="color:var(--sub);margin-top:2px">Lvl 12 · Neighborhood Expert</div></div></div>
+          <div class="row">
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--tealink)">183</div><div class="htag m" style="margin-top:4px">LOVED</div></div>
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px;color:var(--coralink)">64</div><div class="htag m" style="margin-top:4px">LET DOWN</div></div>
+            <div class="card" style="flex:1;text-align:center"><div style="font-family:var(--f-disp);font-size:23px">38</div><div class="htag m" style="margin-top:4px">FOLLOWING</div></div>
+          </div>
+          <div class="card">
+            <div class="htag" style="display:block;margin-bottom:11px">Your taste · by sentiment</div>
+            <div class="col" style="gap:11px">
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🍔 Restaurants</span><span class="t-mut">8.4 avg</span></div><div class="bar"><div class="fl" style="width:84%"></div></div></div>
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">✈ Airlines</span><span class="t-mut">4.6 avg</span></div><div class="bar"><div class="fl p" style="width:46%"></div></div></div>
+              <div><div class="between" style="margin-bottom:4px"><span class="t-sm">🏨 Hotels</span><span class="t-mut">7.1 avg</span></div><div class="bar"><div class="fl" style="width:71%"></div></div></div>
+            </div>
+          </div>
+          <div class="card"><div class="between"><span class="t-sm"><b>Recommends:</b> Chick-fil-A, Marriott</span><span class="pill on">See all</span></div></div>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="pscreen"><div class="gswrap"><div class="gs"><div class="phone"><div class="scr aqua">
+        <div class="sb"><span>9:41</span><span class="tag">◆ Public page</span></div>
+        <div class="top"><span class="mk">biss</span><span class="pill solid" style="padding:4px 11px">Follow</span></div>
+        <div class="body" style="gap:11px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:50px;height:50px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--pinkink);font-family:var(--f-disp);font-size:23px">C</div>
+            <div><div class="h-disp" style="font-size:21px">Chick-fil-A</div><div class="t-sm" style="color:var(--sub)">Fast food · 1,204 truths</div></div>
+          </div>
+          <div class="row">
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div class="score sm" style="margin:0 auto 6px"><span class="n">9.0</span></div><div class="htag m">SENTIMENT</div></div>
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px;color:var(--pinkink)">#1</div><div class="htag m" style="margin-top:6px">IN QSR</div></div>
+            <div class="card" style="flex:1;text-align:center;padding:11px 5px"><div style="font-family:var(--f-disp);font-size:25px">92%</div><div class="htag m" style="margin-top:6px">RETURN</div></div>
+          </div>
+          <div class="chips"><span class="pill solid">Truths</span><span class="pill" style="background:#fff">Themes</span><span class="pill" style="background:#fff">Nearby</span></div>
+          <div class="card"><div class="between"><div><div class="t-b">Saved Dinner</div><div class="t-mut" style="margin-top:2px">"The one thing that went right all day."</div></div><div class="score sm"><span class="n">9.2</span></div></div></div>
+          <div class="card"><div class="between"><div><div class="t-b">The Line Moved Fast</div><div class="t-mut" style="margin-top:2px">Drive-thru of 20 cars, 4 minutes.</div></div><div class="score sm"><span class="n">8.8</span></div></div></div>
+          <div class="card"><div class="between"><div><div class="t-b">Cold Fries, Warm Staff</div><div class="t-mut" style="margin-top:2px">Lukewarm fries; they remade them.</div></div><div class="score sm neu"><span class="n">5.4</span></div></div></div>
+        </div>
+        <div class="nav"><div class="t"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Explore</div><div class="fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><div class="t on"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Brands</div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>You</div></div>
+      </div></div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">PROOF · LIVE DEMO<span class="biso">because i said so</span></div>
+    <h2 class="dh">You can click it today.</h2>
+    <p class="dsub">An interactive investor demo — pre-alpha, but real enough to feel.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>Walk the full flow.</b> <span>Talk → AI writes your verdict → score inferred → published to a Brand Truth Page.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Real-time moderation &amp; Authenticity Score</b> <span>demonstrated live in the interface.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>Founding 50 + Brand Truth Pages</b> <span>in action — the built-in virality and cold-start mechanic.</span></div></div>
+    </div>
+    <div style="margin-top:16px;display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);background:var(--lime);color:#160A1C;font-weight:700;padding:11px 18px;border-radius:10px;letter-spacing:.04em">▸ biss-opal.vercel.app</div>
+    <div class="qt">Built solo by the CTO with AI agents — proof of the concept and the team's capital efficiency.</div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">DEFENSIBILITY · THE MOAT<span class="biso">because i said so</span></div>
+  <h2 class="dh">The moat is trust — engineered, documented, defensible.</h2>
+  <p class="dsub">Original private data + dual identity + a full trust architecture built before scale, not after a scandal.</p>
+  <div class="grid2">
+    <div class="card2"><div class="k">Original data creation</div><p>BISS <b style="color:var(--text)">generates</b> private intelligence; competitors <b style="color:var(--text)">monitor</b> public posts. Our dataset can't be accessed by anyone else.</p></div>
+    <div class="card2"><div class="k">FlipSide — two voices</div><p>Anonymous-but-verified <b style="color:var(--text)">and</b> named-but-private from the same human pool. Can't be bolted on later.</p></div>
+    <div class="card2"><div class="k">Anonymous, authenticated</div><p>Identity verified (device, biometrics) but never revealed. Honest because protected; trusted because verified.</p></div>
+    <div class="card2"><div class="k">Legal-first architecture</div><p>Subjective-experience positioning, auto-redaction of PII, Section 230 host posture, pure-host contests.</p></div>
+  </div>
+  <div class="chips" style="margin-top:14px">
+    <span class="chip">No ads</span><span class="chip">95% always free</span>
+    <span class="chip">AI-inferred ratings only</span><span class="chip">Anonymous but authenticated</span>
+    <span class="chip"><b>18–24 mo</b> category window</span></div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow ">THE BUSINESS MODEL<span class="biso">because i said so</span></div>
+  <h2 class="dh">95% create for free. 5% pay for the intelligence.</h2>
+  <div class="flyw">Free users create stories → businesses pay for intelligence → revenue funds a better product → more users → richer data → higher business value → (repeat)</div>
+  <table class="tbl">
+    <tr><th>Tier</th><th>Target</th><th>Price</th><th>Includes</th></tr>
+    <tr class="hi"><td class="tier">Enterprise</td><td>Regional chains</td><td class="big">$1,000–3,000/mo</td><td>10 seats · unlimited reports · API + CRM · dedicated CSM · custom deep-dives</td></tr>
+    <tr><td class="tier">Premier ★</td><td>Growing businesses <b>(primary)</b></td><td class="big">$250–500/mo</td><td>3 seats · 5 reports · seed questions · competitive intel · creator intros</td></tr>
+    <tr><td class="tier">Basic</td><td>Micro businesses <b>(on-ramp)</b></td><td class="big">$50–100/mo</td><td>1 seat · 1 report · Brand Page · real-time sentiment · email support</td></tr>
+  </table>
+  <div class="chips" style="margin-top:14px"><span class="chip">+ à la carte: seeds · contests · reports · creator activations · placement</span></div>
+  <div class="qt">The page is free. The intelligence is the product. This is what you've been paying $30K a year to <i>not</i> get.</div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#0e1560 0%,#2a40d8 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols rev">
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
+        <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>seed-campaigns</b>/new</span></div>
+        <div class="bwin">
+          <div class="bside lime">
+            <div class="brandrow"><span class="mk2">biss</span><span class="kw">INTELLIGENCE</span></div>
+            <div class="navi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Sentiment</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Truths</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"/></svg>Benchmarks</div>
+            <div class="navi on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Seed campaigns</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/></svg>Reports</div>
+          </div>
+          <div class="bmain">
+            <div class="toph"><h3>New seed campaign <span>Lodging · contextual intelligence</span></h3><div class="toolbar"><span class="pill">Draft</span><span class="btn">Save draft</span></div></div>
+            <div class="dcols even" style="align-items:stretch">
+              <div class="rail">
+                <div class="dcard"><span class="htag" style="display:block;margin-bottom:11px">YOUR SEED QUESTION</span><div class="dcard" style="background:#F7F5FB"><span class="t-sm" style="line-height:1.6">"What would make your check-in feel more personal?"</span></div></div>
+                <div class="dcard"><span class="htag" style="display:block;margin-bottom:12px">TARGETING</span><div class="chips" style="margin-bottom:13px"><span class="pill on">Lodging</span><span class="pill on">Recent stay</span><span class="pill on">US · 25–45</span></div><div class="between" style="margin-bottom:6px"><span class="t-mut">Matching audience</span><span class="t-sm">~12,400</span></div><div class="bar"><div class="fl" style="width:62%"></div></div></div>
+              </div>
+              <div class="rail">
+                <div class="dcard" style="flex:1;display:flex;flex-direction:column"><span class="htag" style="display:block;margin-bottom:13px">PREVIEW IN FLOW</span><div class="col" style="gap:10px;flex:1"><div class="bub2 ai">Honestly, the room was lovely.</div><div class="bub2 me">…and by the way — what would make your <b style="color:#fff;text-decoration:underline">check-in feel more personal</b>?</div><div class="bub2 ai">Maybe just knowing my name when I walk up…</div></div><div class="htag p" style="margin-top:12px">◆ SEED INSERTED · READS AS THE AI'S OWN CURIOSITY</div></div>
+                <div class="dcard"><div class="row" style="gap:14px"><div class="metric" style="flex:1"><div class="v pos">~$2,400</div><div class="k">Est. cost</div></div><div class="metric" style="flex:1"><div class="v">~1,900</div><div class="k">Est. stories</div></div></div></div>
+                <a class="cta pink">Launch campaign →</a>
+              </div>
+            </div>
+          </div>
+        </div></div></div></div></div>
+  <div class="copy">
+    <div class="eyebrow ">PAID INTELLIGENCE · SEED QUESTIONS<span class="biso">because i said so</span></div>
+    <h2 class="dh">Brands pay to ask a question — and it lands as the AI's own curiosity.</h2>
+    <p class="dsub">Story-rich answers, not a 1-to-5 grid nobody means.</p>
+    <div class="pts">
+      <div class="pt"><span class="m"></span><div><b>The question.</b> <span>"What would make your check-in feel more personal?"</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>The targeting.</b> <span>Lodging · recent stay · US · 25–45 → matching audience ~12,400.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>In the flow.</b> <span>The seed reads as the AI's own question — so people answer honestly.</span></div></div>
+      <div class="pt"><span class="m"></span><div><b>The economics.</b> <span>~$2,400 → ~1,900 authentic stories — ≈$1.25 per narrative answer.</span></div></div>
+    </div>
+    <div class="qt">A high-margin recurring stream on top of subscription: bundles $100–500/campaign; programs $200–5,000/mo.</div>
+  </div>
+</div></div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap"><div class="cols">
+  <div class="copy">
+    <div class="eyebrow ">MARKET · WHY NOW<span class="biso">because i said so</span></div>
+    <h2 class="dh">Travel is the launch. Every experience is the market.</h2>
+    <p class="dsub">A data class the incumbents can't collect at any price.</p>
+    <table class="tbl">
+      <tr><th>Tool</th><th>Annual cost</th><th>Data type</th></tr>
+      <tr><td><b>Meltwater</b></td><td>$15–40K</td><td>Public posts</td></tr>
+      <tr><td><b>Qualtrics</b></td><td>$1.5–15K</td><td>Surveys (3–5%)</td></tr>
+      <tr class="hi"><td class="tier">BISS</td><td class="big">$600–36K</td><td><b>Private conversational truth</b></td></tr>
+    </table>
+    <div class="pts" style="margin-top:14px">
+      <div class="pt"><span class="x">Yr 1–2</span><div><b>SoCal</b> <span>— travel + restaurants</span></div></div>
+      <div class="pt"><span class="x">Yr 3</span><div><b>National</b> <span>— retail + entertainment</span></div></div>
+      <div class="pt"><span class="x">Yr 4–5</span><div><b>Global</b> <span>— health, auto, finance</span></div></div>
+    </div>
+  </div>
+  <div class="art"><div class="dscreen"><div class="gd"><div class="win">
+        <div class="chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.biss.co/<b>benchmarks</b>/airlines</span></div>
+        <div class="bwin">
+          <div class="bside cyan">
+            <div class="brandrow"><span class="mk2">biss</span><span class="kw">INTELLIGENCE</span></div>
+            <div class="navi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Sentiment</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Truths</div>
+            <div class="navi on"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"/></svg>Benchmarks</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>Seed campaigns</div>
+            <div class="navi"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/></svg>Reports</div>
+          </div>
+          <div class="bmain">
+            <div class="toph"><h3>Sentiment vs. competitors <span>Airlines vertical · 30d</span></h3><div class="toolbar"><span class="btn">Airlines ▾</span><span class="btn teal">Export PDF</span></div></div>
+            <div class="dcols">
+              <div class="dcard">
+                <span class="htag" style="display:block;margin-bottom:15px">RANKED BY AUTHENTIC-STORY SENTIMENT</span>
+                <div class="col" style="gap:14px">
+                  <div class="row" style="align-items:center;gap:12px"><span class="t-sm" style="width:100px">Competitor A</span><div class="bar" style="flex:1;height:11px"><div class="fl" style="width:81%"></div></div><span class="sc-xs">8.1</span></div>
+                  <div class="row" style="align-items:center;gap:12px"><span class="t-b" style="width:100px;color:var(--pinkink)">You</span><div class="bar" style="flex:1;height:11px"><div class="fl p" style="width:74%"></div></div><span class="sc-xs pink">7.4</span></div>
+                  <div class="row" style="align-items:center;gap:12px"><span class="t-sm" style="width:100px">Competitor C</span><div class="bar" style="flex:1;height:11px"><div class="fl" style="width:68%"></div></div><span class="sc-xs neu">6.8</span></div>
+                  <div class="row" style="align-items:center;gap:12px"><span class="t-sm" style="width:100px">Competitor B</span><div class="bar" style="flex:1;height:11px"><div class="fl" style="width:59%"></div></div><span class="sc-xs neu">5.9</span></div>
+                </div>
+              </div>
+              <div class="rail">
+                <div class="dcard"><span class="htag" style="display:block;margin-bottom:10px">✓ YOU WIN ON</span><div class="chips"><span class="pill on">Crew</span><span class="pill on">Value</span></div></div>
+                <div class="dcard"><span class="htag p" style="display:block;margin-bottom:10px">✕ YOU LOSE ON</span><div class="chips"><span class="pill p">On-time</span><span class="pill p">App</span></div></div>
+              </div>
+            </div>
+            <div class="dcard" style="padding:6px 4px"><table class="dtable">
+              <tr><th style="width:40%">Theme breakdown</th><th class="r">Your sentiment</th><th class="r">Category avg</th><th class="r">Δ</th></tr>
+              <tr><td>Crew &amp; service</td><td class="r">8.9</td><td class="r t-mut">7.1</td><td class="r" style="color:var(--tealink)">+1.8</td></tr>
+              <tr><td>Value for money</td><td class="r">7.8</td><td class="r t-mut">6.9</td><td class="r" style="color:var(--tealink)">+0.9</td></tr>
+              <tr><td>App &amp; digital</td><td class="r">5.6</td><td class="r t-mut">6.4</td><td class="r" style="color:var(--coralink)">−0.8</td></tr>
+              <tr><td>On-time reliability</td><td class="r">5.2</td><td class="r t-mut">6.6</td><td class="r" style="color:var(--coralink)">−1.4</td></tr>
+            </table></div>
+          </div>
+        </div></div></div></div></div>
+</div></div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(150deg,#052a24 0%,#0c7566 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">GO-TO-MARKET<span class="biso">because i said so</span></div>
+  <h2 class="dh">Ten partners that build everything.</h2>
+  <p class="dsub">Customer-obsessed brands with an intelligence gap BISS fills — no competitive overlap. Strategic targets, not signed deals.</p>
+  <div class="grid2">
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Alpha · Southern California</div><div class="pts" style="margin-top:4px"><div class="pt"><span class="x">01</span><div><b>Airbnb</b> <span>— SMB hosts with zero intelligence from public ratings</span></div></div><div class="pt"><span class="x">02</span><div><b>Southwest</b> <span>— lighthouse partner; surveys capture almost nothing</span></div></div><div class="pt"><span class="x">03</span><div><b>Hampton</b> <span>— franchise owners say yes fast; 100+ SoCal sites</span></div></div><div class="pt"><span class="x">04</span><div><b>JetBlue</b> <span>— Digital Innovation team tests new CX tools</span></div></div><div class="pt"><span class="x">05</span><div><b>AAA</b> <span>— 60M+ members; pays for the dashboard and drives sign-ups</span></div></div></div></div>
+    <div class="card2" style="border-color:var(--lav)"><div class="k" style="color:var(--lav)">Beta · National + strategic</div><div class="pts" style="margin-top:4px"><div class="pt"><span class="x">06</span><div><b>Alaska</b> <span>— oneworld opens a second door to American</span></div></div><div class="pt"><span class="x">07</span><div><b>Enterprise</b> <span>— completes the flight + hotel + car journey</span></div></div><div class="pt"><span class="x">08</span><div><b>Marriott</b> <span>— ROI proof → 30-brand, 9,000-property step-change</span></div></div><div class="pt"><span class="x">09</span><div><b>Uber</b> <span>— the emotional bookend of every trip</span></div></div><div class="pt"><span class="x">10</span><div><b>Expedia / Vrbo</b> <span>— named Year-3 potential acquirer — be inside early</span></div></div></div></div>
+  </div>
+  <div class="qt">Cold-start is sequencing, not luck: seed creator content → brand test accounts → paid seed questions → organic growth. The Founding 50 makes early contribution the point.</div>
+</div></section></div><div class="stage">
+<section class="slide dark top" style="background:linear-gradient(150deg,#20105e 0%,#5a22d6 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap" style="justify-content:center">
+  <div class="eyebrow ">THE NUMBERS · UNIT ECONOMICS<span class="biso">because i said so</span></div>
+  <h2 class="dh">Premium-led economics that pay back fast.</h2>
+  <p class="dsub">Conservative projections · Gross margin 80% · LTV = 3-year gross profit · Cost per story ≈ $0.05–0.07.</p>
+  <table class="tbl">
+    <tr><th>Tier</th><th>List</th><th>ACV</th><th>CAC</th><th>3-yr LTV</th><th>LTV/CAC</th><th>Payback</th></tr>
+    <tr class="hi"><td class="tier">Enterprise</td><td>$3,000/mo</td><td>$36K</td><td>$12K</td><td class="big">$86.4K</td><td class="big">7.2×</td><td><b>5 mo</b></td></tr>
+    <tr><td class="tier">Premier ★</td><td>$500/mo</td><td>$6K</td><td>$3.5K</td><td class="big">$14.4K</td><td class="big">4.1×</td><td><b>9 mo</b></td></tr>
+    <tr><td class="tier">Basic</td><td>$100/mo</td><td>$1.2K</td><td>$1.2K</td><td>$2.9K</td><td>2.4×</td><td>15 mo</td></tr>
+  </table>
+  <table class="tbl" style="margin-top:16px">
+    <tr><th>ARR trajectory</th><th>Month 18</th><th>Month 30</th><th>Month 42</th><th>Series A</th><th>Year 5</th></tr>
+    <tr><td><b>ARR</b></td><td class="big">~$12K</td><td class="big">~$50K</td><td class="big">~$100K</td><td class="big">$150–250K</td><td class="big">$8–12M</td></tr>
+    <tr><td>Customers</td><td>2</td><td>8</td><td>15</td><td>25–40</td><td>1,000–1,500</td></tr>
+  </table>
+  <div class="qt">Enterprise pays back in ~5 months at 7.2× LTV/CAC. Every dollar of premium ARPU lowers net burn and pulls breakeven forward.</div>
+</div></section></div><div class="stage">
+<section class="slide dark" style="background:linear-gradient(150deg,#2c0a34 0%,#ad1874 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE ASK<span class="biso">because i said so</span></div>
+  <h2 class="dh">$300K now. ~$700K to Series A, gated on proof.</h2>
+  <p class="dsub">Pre-seed on the AI-native path — every dollar to product and pilots, not payroll.</p>
+  <div class="grid2">
+    <div class="card2" style="background:rgba(233,255,58,.08);border-color:var(--lime)"><div class="k" style="color:var(--lime)">Raising now</div><h4 style="font-size:26px">$300K pre-seed SAFE</h4><p style="color:#fff">~18 months runway to the Beta gate. Ship Alpha (mo 10), sign 3–5 pilots, first engineer, legal &amp; trust foundation.</p></div>
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Then</div><h4 style="font-size:26px">~$400K seed</h4><p style="color:#fff">At ~month 15–18, unlocked by Alpha proof. Total ≈ $700K to Series A.</p></div>
+  </div>
+  <div class="pts" style="margin-top:14px">
+    <div class="pt"><span class="x" style="color:var(--lime)">Gate 1</span><div><b style="color:#fff">Unlocks the seed</b> <span style="color:var(--lav)">— Alpha live · 3–5 pilots · first conversions · early unit economics.</span></div></div>
+    <div class="pt"><span class="x" style="color:var(--lime)">Gate 2</span><div><b style="color:#fff">Unlocks Series A</b> <span style="color:var(--lav)">— 8–15 paying customers · LTV/CAC 3×+ · $150–250K ARR.</span></div></div>
+  </div>
+  <div class="qt">Capital-efficient by design: ~$86K spent by end of MVP build, Alpha at month 10 — ~3× cheaper to Alpha than a traditional team.</div>
+</div></section></div><div class="stage">
+<section class="slide dark team" style="background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%)"><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="eyebrow magenta">THE TEAM<span class="biso">because i said so</span></div>
+  <h2 class="dh">Two founders, each the half the other needs.</h2>
+  <p class="dsub">A builder who shipped the product alone — and a closer who owns the market.</p>
+  <div class="grid2">
+    <div class="card2" style="border-color:var(--aqua)"><div class="k" style="color:var(--aqua)">Co-Founder &amp; CTO</div><h4>Simge Helvacı</h4><p style="color:#fff">Ran e-commerce for <b style="color:var(--aqua)">Lufthansa Group's airlines at Amadeus</b> — the infrastructure layer of the exact industry BISS launches into. Oxford Saïd. <b style="color:var(--aqua)">Built the entire live BISS prototype herself, end-to-end, with AI-agent workflows.</b></p></div>
+    <div class="card2" style="border-color:var(--pink)"><div class="k" style="color:var(--pink2)">Co-Founder &amp; CEO</div><h4>Marc Sternberg</h4><p style="color:#fff">Architected the business model, the go-to-market, and the full investor and strategy corpus behind BISS. Owns the high-touch B2B relationships that turn the first ten travel partners into revenue.</p></div>
+  </div>
+  <div class="qt" style="margin-top:14px">The rarest pairing in a two-sided marketplace — the person who builds the product and the person who sells it, both living inside the travel problem.</div>
+</div>
+  <div class="cta-ribbon">
+    <div class="rl"><span class="rmark">biss</span><span class="rtag">Tell Your Truth.</span></div>
+    <div class="rbtns"><a class="cta lime" href="https://biss-opal.vercel.app">▸ See the live demo</a><a class="cta ink" href="mailto:marcsternberg13@gmail.com">Book a demo →</a></div>
+  </div>
+</section></div></div>
+<div class="hud" id="hud"></div>
+<div class="navbtns"><button id="prev">↑</button><button id="next">↓</button></div>
+
+<script>
+const stages=[...document.querySelectorAll('.stage')];
+const total=stages.length;
+const sections=["TITLE","THE CATEGORY","WHAT IS BISS","PROBLEM · B","PROBLEM · C","BLUE OCEAN","SOLUTION · B","SOLUTION · C","CONTESTS","VALUE · B","VALUE · C","LIVE DEMO","THE MOAT","MODEL","SEED QUESTIONS","MARKET","GO-TO-MARKET","THE NUMBERS","THE ASK","TEAM"];
+const hud=document.getElementById('hud'),tab=document.getElementById('tab'),bar=document.getElementById('bar');
+let cur=0;
+function fit(){const s=Math.min((window.innerWidth-24)/1280,(window.innerHeight-24)/720);
+  document.documentElement.style.setProperty('--s',s);}
+window.addEventListener('resize',fit);fit();
+function setCur(i){cur=Math.max(0,Math.min(total-1,i));
+  hud.innerHTML='<b>'+String(cur+1).padStart(2,'0')+'</b> / '+total;
+  tab.textContent=sections[cur]||'';bar.style.width=((cur+1)/total*100)+'%';}
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setCur(stages.indexOf(e.target));});},{threshold:.55});
+stages.forEach(s=>io.observe(s));
+function go(i){stages[Math.max(0,Math.min(total-1,i))].scrollIntoView({behavior:'smooth'});}
+document.addEventListener('keydown',e=>{
+  if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(cur+1);}
+  if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(cur-1);}
+  if(e.key==='Home')go(0);if(e.key==='End')go(total-1);});
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+setCur(0);
+</script>
+</body></html>
