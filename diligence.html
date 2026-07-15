@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BISS — Source Appendix · Every Number, Verified</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF3DB5;--pink2:#FF65C3;--lime:#E9FF3A;--aqua:#19E4D0;--cyan:#50CDED;
+  --violet:#7B2FF2;--lav:#A780ED;--coral:#FF5C7A;--tang:#FFB03A;
+  --ink2:#0B0710;--surface:#1b1029;--surface2:#211433;--line:rgba(255,255,255,.13);
+  --text:#F3EEFA;--muted:#B3A6C9;
+  --f-disp:'Anton',sans-serif;--f-mark:'Fredoka',sans-serif;--f-mono:'Space Mono',monospace;--f-body:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink2);color:var(--text);font-family:var(--f-body);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--cyan);text-decoration:none;word-break:break-word}
+a:hover{color:var(--lime)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+::selection{background:var(--lime);color:#160A1C}
+.mark{font-family:var(--f-mark);font-weight:700;position:relative;display:inline-block;color:var(--pink2);line-height:1}
+.mark::before{content:"biss";position:absolute;left:-2.5px;top:1.5px;color:var(--cyan);z-index:-1;opacity:.9}
+.biso{font-family:var(--f-mono);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink2)}
+
+/* header */
+header{background:linear-gradient(168deg,#2C2688 0%,#5C1BAB 60%,#2b1150 100%);padding:40px 0 34px;position:relative;overflow:hidden}
+header .vf{position:absolute;inset:18px;pointer-events:none}
+header .vf span{position:absolute;width:18px;height:18px;border:2px solid var(--aqua);opacity:.5}
+header .vf span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+header .vf span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+header .vf span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+header .vf span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.brandrow{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.brandrow .mark{font-size:34px}
+.kiss{width:34px;height:18px}
+.eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
+h1{font-family:var(--f-body);font-weight:900;font-size:clamp(28px,4.4vw,44px);line-height:1.04;letter-spacing:-.02em;margin:12px 0 8px;color:#fff;text-wrap:balance}
+h1 .hl{color:var(--lime)}
+.lede{font-size:15.5px;color:#E7DCF4;max-width:74ch;line-height:1.6}
+.metabar{margin-top:16px;font-family:var(--f-mono);font-size:11px;color:var(--lav);letter-spacing:.03em;line-height:1.9}
+.metabar b{color:var(--aqua)}
+
+/* method note */
+.method{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:0 12px 12px 0;padding:18px 22px;margin:28px 0 8px}
+.method h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
+.method p{font-size:14px;color:var(--muted);line-height:1.6}
+.method p+p{margin-top:8px}
+.method b{color:var(--text)}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 4px}
+.tag{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em;padding:6px 11px;border-radius:999px;border:1.4px solid;display:inline-flex;align-items:center;gap:7px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%}
+.tag.ext{color:var(--aqua);border-color:rgba(25,228,208,.45)}.tag.ext::before{background:var(--aqua)}
+.tag.mod{color:var(--lime);border-color:rgba(233,255,58,.45)}.tag.mod::before{background:var(--lime)}
+.tag.proj{color:var(--tang);border-color:rgba(255,176,58,.5)}.tag.proj::before{background:var(--tang)}
+
+/* sections */
+section{padding:30px 0 6px}
+.sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:4px;flex-wrap:wrap}
+.sec-h .no{font-family:var(--f-disp);font-size:30px;color:var(--pink);line-height:1}
+.sec-h h2{font-family:var(--f-body);font-weight:900;font-size:22px;letter-spacing:-.015em;color:#fff}
+.sec-sub{font-size:13.5px;color:var(--muted);margin:2px 0 16px;max-width:80ch}
+
+/* table */
+.tblwrap{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface2)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--aqua);text-align:left;padding:12px 15px;background:rgba(255,255,255,.03);border-bottom:1.5px solid var(--line);vertical-align:bottom}
+tbody td{padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.5}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:rgba(255,61,181,.045)}
+td .claim{color:var(--text);font-weight:600;display:block;margin-bottom:3px}
+td .fig{font-family:var(--f-body);font-weight:900;color:var(--lime);font-size:14px}
+td .fig.mod{color:var(--aqua)}
+td.src{font-size:12px}
+td.src .s{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
+td.src a{font-size:11px;font-family:var(--f-mono)}
+td .dt{font-family:var(--f-mono);font-size:11px;color:var(--lav);white-space:nowrap}
+td .note{font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:9px;letter-spacing:.05em;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.pill.ext{color:#04302c;background:var(--aqua)}
+.pill.mod{color:#181400;background:var(--lime)}
+.pill.proj{color:#3a2400;background:var(--tang)}
+.was{font-family:var(--f-mono);font-size:11px;color:var(--coral)}
+.now{font-family:var(--f-mono);font-size:11px;color:var(--aqua)}
+col.c-claim{width:24%}col.c-fig{width:13%}col.c-src{width:31%}col.c-dt{width:9%}col.c-note{width:23%}
+
+/* the three website edits callout */
+.editbox{background:var(--surface);border:1px solid var(--pink);border-radius:14px;padding:22px;margin-top:8px}
+.editbox h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink2);margin-bottom:14px}
+.edit{border-left:3px solid var(--line);padding:2px 0 2px 15px;margin-bottom:16px}
+.edit:last-child{margin-bottom:0}
+.edit .lbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
+.edit .line{font-size:13px;line-height:1.5;margin:3px 0}
+.edit .del{color:var(--coral)}.edit .del b{text-decoration:line-through;color:var(--coral)}
+.edit .add{color:var(--text)}.edit .add b{color:var(--lime)}
+
+footer{margin-top:40px;padding:34px 0;border-top:1px solid var(--line);background:#08040D}
+.fmark .mark{font-size:30px}
+.frefrain{font-family:var(--f-disp);text-transform:uppercase;font-size:22px;color:var(--lime);margin-top:10px}
+.fbot{margin-top:20px;font-family:var(--f-mono);font-size:11px;color:#6f6486;letter-spacing:.05em;line-height:1.9}
+.fbot b{color:var(--aqua)}
+
+@media print{
+  body{background:#fff;color:#160A1C}
+  header{background:#2b1150!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .tblwrap,section,.method,.editbox{break-inside:avoid}
+  a{color:#3a1d86}
+}
+@media(max-width:820px){
+  table{font-size:12px}
+  thead{display:none}
+  tbody td{display:block;border-bottom:0;padding:6px 15px}
+  tbody tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+  td::before{content:attr(data-l);font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);display:block;margin-bottom:2px}
+}
+</style></head><body>
+
+<header><div class="vf"><span></span><span></span><span></span><span></span></div><div class="wrap">
+  <div class="brandrow">
+    <span class="mark">biss</span>
+    <svg class="kiss" viewBox="240 90 240 125" xmlns="http://www.w3.org/2000/svg"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF3DB5"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#D60B7C"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#fff" opacity=".4"/></svg>
+  </div>
+  <div class="eyebrow">SOURCE APPENDIX · DILIGENCE HANDOUT<span class="biso">because i said so</span></div>
+  <h1>Every number in the deck, <span class="hl">verified and sourced.</span></h1>
+  <p class="lede">This appendix backs each external figure used in the BISS pitch materials with a named source, a date, and a confidence label — and shows the internal unit-economics math in full. Where a claim is a founder projection rather than a third-party fact, it is labeled as such. Nothing here is estimated silently.</p>
+  <div class="metabar">
+    Compiled <b>July 2026</b> &nbsp;·&nbsp; Covers <b>pitch deck v5</b> + <b>website (business view)</b> &nbsp;·&nbsp; All external stats current as of retrieval date<br>
+    <b>yeahisaidthat.com</b> &nbsp;·&nbsp; Live demo <b>biss-opal.vercel.app</b> &nbsp;·&nbsp; marcsternberg13@gmail.com
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<div class="method">
+  <h4>How to read this</h4>
+  <p>Three confidence levels. <b>Verified — external source</b> means a third party published the figure; the exact number, publisher, and link are given. <b>Verified — internal model</b> means BISS's own arithmetic, recomputed and shown so it can be re-derived. <b>Founder projection</b> means a forward-looking judgment BISS stands behind but that no external source can confirm — presented as a bet, not a fact.</p>
+  <p>Market-research pricing (Meltwater, Qualtrics) is custom and quote-based, so it is stated as a <b>reported range</b> with the median where available, never as a single hard floor.</p>
+</div>
+
+<div class="legend">
+  <span class="tag ext">Verified — external source</span>
+  <span class="tag mod">Verified — internal model</span>
+  <span class="tag proj">Founder projection</span>
+</div>
+
+<!-- A · MARKET & CONTEXT -->
+<section>
+  <div class="sec-h"><span class="no">A</span><h2>Market &amp; context statistics</h2></div>
+  <p class="sec-sub">The borrowed, market-level numbers that set up the problem. These are the figures a diligence-minded reader will Google first.</p>
+  <div class="tblwrap"><table>
+    <colgroup><col class="c-claim"><col class="c-fig"><col class="c-src"><col class="c-dt"><col class="c-note"></colgroup>
+    <thead><tr><th>Claim as it appears</th><th>Figure used</th><th>Source</th><th>Date</th><th>Confidence &amp; note</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Claim"><span class="claim">~30% of online reviews are estimated fake or manipulated</span></td>
+        <td data-l="Figure"><span class="fig">~30%</span></td>
+        <td data-l="Source" class="src"><span class="s">Transparency Company / Uberall 2025 study</span>corroborated by Capital One Shopping (2026) &amp; Review42 (2026)<br><a href="https://capitaloneshopping.com/research/fake-review-statistics/">capitaloneshopping.com/research/fake-review-statistics</a></td>
+        <td data-l="Date"><span class="dt">2025–26</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note">Convergent figure across multiple aggregators. Some platforms report up to 43% suspicious. "~30%" is the conservative, widely-cited midpoint.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">70%+ of customers a survey never hears from</span></td>
+        <td data-l="Figure"><span class="fig">70%+</span></td>
+        <td data-l="Source" class="src"><span class="s">Clootrack 2025; SurveySparrow 2025; Kantar 2025</span>External online/email surveys run 20–30% response → 70–80% never reply<br><a href="https://www.clootrack.com/knowledge/survey-response-rate/what-is-the-industry-standard-for-survey-response-rate">clootrack.com — industry standard survey response</a></td>
+        <td data-l="Date"><span class="dt">2025</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note"><span class="was">Was: "3–5% average response"</span> — that band is true only for passive always-on feedback widgets, not surveys. <span class="now">Now: the inverse of the verified 20–30% reply rate.</span></span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">36M US small businesses priced out of real intelligence</span></td>
+        <td data-l="Figure"><span class="fig">36M</span></td>
+        <td data-l="Source" class="src"><span class="s">SBA Office of Advocacy — 2025 Small Business Profile</span>36.2M total (≈6.3M employer firms)<br><a href="https://advocacy.sba.gov/2025/06/30/new-advocacy-report-shows-the-number-of-small-businesses-in-the-u-s-exceeds-36-million/">advocacy.sba.gov — 2025 profile</a></td>
+        <td data-l="Date"><span class="dt">Jun 2025</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note"><span class="was">Was: "28M"</span> (unsourced). <span class="now">Now: SBA's published 36.2M.</span> Use 6.3M employer firms if the realistic-buyer count is needed.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">A customer-experience market ~$16B today, racing toward ~$85B by 2034</span></td>
+        <td data-l="Figure"><span class="fig">~$16B → ~$85B</span></td>
+        <td data-l="Source" class="src"><span class="s">Grand View Research 2025 ($15.5B, 2025); Fortune Business Insights 2025 ($84.22B by 2034)</span>VoC-platform sub-segment ~$9.5B (Custom Market Insights 2025)<br><a href="https://www.grandviewresearch.com/industry-analysis/customer-experience-management-market">grandviewresearch.com — CEM market</a></td>
+        <td data-l="Date"><span class="dt">2025</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note"><span class="was">Was: "$89B customer-intelligence gap"</span> (unsourced, and "gap" mislabels a market size). <span class="now">Now: real CEM market size, labeled correctly.</span></span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- B · COMPETITOR PRICING -->
+<section>
+  <div class="sec-h"><span class="no">B</span><h2>Competitor pricing anchors</h2></div>
+  <p class="sec-sub">Legacy-tool pricing is custom and quote-based. Stated as reported ranges with medians — never as a single hard floor — so the numbers survive scrutiny.</p>
+  <div class="tblwrap"><table>
+    <colgroup><col class="c-claim"><col class="c-fig"><col class="c-src"><col class="c-dt"><col class="c-note"></colgroup>
+    <thead><tr><th>Claim as it appears</th><th>Figure used</th><th>Source</th><th>Date</th><th>Confidence &amp; note</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Claim"><span class="claim">Meltwater — legacy intelligence tool, median ~$25K/yr; $15–40K range</span></td>
+        <td data-l="Figure"><span class="fig">$15–40K<br>(median ~$25K)</span></td>
+        <td data-l="Source" class="src"><span class="s">Vendr marketplace; SocialRails 2026; Press Featured 2026; SpendHound 2026</span>Median ~$25K; range $6K–$100K+; SMB avg ~$16.2K; enterprise ~$69.6K<br><a href="https://www.vendr.com/marketplace/meltwater">vendr.com/marketplace/meltwater</a></td>
+        <td data-l="Date"><span class="dt">2025–26</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note"><span class="was">Was: "$30K+ = cheapest tool"</span> (contradicted your own slides &amp; the data). <span class="now">Now: $15–40K, median ~$25K.</span></span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">Qualtrics — surveys, ~$1.5–15K entry/SMB range</span></td>
+        <td data-l="Figure"><span class="fig">$1.5–15K</span></td>
+        <td data-l="Source" class="src"><span class="s">ITQlick (entry $1,500/yr); Vendr (median ~$28.5K); UXtweak/iDevie 2026</span>Full range $6,525–$126,000; enterprise CX can start ~$100K<br><a href="https://www.itqlick.com/qualtrics/pricing">itqlick.com/qualtrics/pricing</a></td>
+        <td data-l="Date"><span class="dt">2025–26</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note">Honest as the entry/SMB band (starts $1,500). Median buyer pays far more (~$28.5K); enterprise is six figures. Shown as the low tier only.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">"Legacy tools charge tens of thousands a year to not get [this]"</span></td>
+        <td data-l="Figure"><span class="fig">tens of thousands</span></td>
+        <td data-l="Source" class="src"><span class="s">Same as Meltwater/Qualtrics rows above</span>Median $25–28.5K across both incumbents</td>
+        <td data-l="Date"><span class="dt">2025–26</span></td>
+        <td data-l="Note"><span class="pill ext">EXTERNAL</span><br><span class="note"><span class="was">Was: "$30K a year"</span> as a hard figure. <span class="now">Now: "tens of thousands"</span> — rhetorical but squarely inside the verified range.</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- C · BISS UNIT ECONOMICS -->
+<section>
+  <div class="sec-h"><span class="no">C</span><h2>BISS unit economics — the math, shown</h2></div>
+  <p class="sec-sub">Internal model, recomputed line by line so any reader can re-derive it. Gross margin 80% · LTV = 3-year gross profit · <b style="color:var(--text)">figures modeled at list price</b> (top of each band).</p>
+  <div class="tblwrap"><table>
+    <colgroup><col class="c-claim"><col class="c-fig"><col class="c-src"><col class="c-dt"><col class="c-note"></colgroup>
+    <thead><tr><th>Metric</th><th>Result</th><th>Derivation (shown)</th><th></th><th>Confidence &amp; note</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Metric"><span class="claim">Enterprise — LTV / CAC &amp; payback</span></td>
+        <td data-l="Result"><span class="fig mod">7.2× · 5 mo</span></td>
+        <td data-l="Math" class="src"><span class="s">$3,000/mo → $36K ACV</span>3-yr revenue $108K → ×80% GM = <b style="color:#fff">$86.4K LTV</b> → ÷ $12K CAC = 7.2× · payback $12K ÷ ($3,000×0.8=$2,400/mo) = 5 mo</td>
+        <td data-l=""><span class="dt">Model</span></td>
+        <td data-l="Note"><span class="pill mod">INTERNAL</span><br><span class="note">Recomputes exactly. Modeled at $3,000 list; at mid-band $2,000 it becomes ~4.8× / ~7.5 mo — still strong.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Metric"><span class="claim">Premier — LTV / CAC &amp; payback</span></td>
+        <td data-l="Result"><span class="fig mod">4.1× · 9 mo</span></td>
+        <td data-l="Math" class="src"><span class="s">$500/mo → $6K ACV</span>3-yr revenue $18K → ×80% = $14.4K LTV → ÷ $3.5K CAC = 4.1× · payback $3.5K ÷ $400/mo = ~9 mo</td>
+        <td data-l=""><span class="dt">Model</span></td>
+        <td data-l="Note"><span class="pill mod">INTERNAL</span><br><span class="note">Recomputes correctly. Primary tier.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Metric"><span class="claim">Basic — LTV / CAC &amp; payback</span></td>
+        <td data-l="Result"><span class="fig mod">2.4× · 15 mo</span></td>
+        <td data-l="Math" class="src"><span class="s">$100/mo → $1.2K ACV</span>3-yr revenue $3.6K → ×80% = $2.88K LTV → ÷ $1.2K CAC = 2.4× · payback $1.2K ÷ $80/mo = 15 mo</td>
+        <td data-l=""><span class="dt">Model</span></td>
+        <td data-l="Note"><span class="pill mod">INTERNAL</span><br><span class="note">Recomputes correctly. On-ramp tier; thin by design.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Metric"><span class="claim">Seed-question campaign economics</span></td>
+        <td data-l="Result"><span class="fig mod">≈$1.25 / story</span></td>
+        <td data-l="Math" class="src"><span class="s">~$2,400 spend → ~1,900 stories</span>$2,400 ÷ 1,900 = $1.26/story to the brand; internal production cost $0.05–0.07 → &gt;95% gross margin</td>
+        <td data-l=""><span class="dt">Model</span></td>
+        <td data-l="Note"><span class="pill mod">INTERNAL</span><br><span class="note">Math checks out. Cost-per-story is an infra estimate (see Section D).</span></td>
+      </tr>
+      <tr>
+        <td data-l="Metric"><span class="claim">The ask — $300K + $400K</span></td>
+        <td data-l="Result"><span class="fig mod">= $700K</span></td>
+        <td data-l="Math" class="src"><span class="s">$300K pre-seed SAFE (now) + $400K seed (mo ~15–18)</span>Total to Series A = $700K</td>
+        <td data-l=""><span class="dt">Model</span></td>
+        <td data-l="Note"><span class="pill mod">INTERNAL</span><br><span class="note">Adds up. Two tranches, gated on Alpha proof.</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- D · FOUNDER PROJECTIONS -->
+<section>
+  <div class="sec-h"><span class="no">D</span><h2>Founder projections &amp; strategic estimates</h2></div>
+  <p class="sec-sub">Forward-looking judgments BISS stands behind — but which no third party can confirm. Labeled honestly as bets, not facts.</p>
+  <div class="tblwrap"><table>
+    <colgroup><col class="c-claim"><col class="c-fig"><col class="c-src"><col class="c-dt"><col class="c-note"></colgroup>
+    <thead><tr><th>Claim as it appears</th><th>Figure</th><th>Basis</th><th></th><th>Confidence &amp; note</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Claim"><span class="claim">18–24 month first-mover / category window</span></td>
+        <td data-l="Figure"><span class="fig" style="color:var(--tang)">18–24 mo</span></td>
+        <td data-l="Basis" class="src"><span class="s">Founder estimate</span>Time before a well-capitalized incumbent could stand up a comparable conversational-intelligence dataset</td>
+        <td data-l=""><span class="dt">Est.</span></td>
+        <td data-l="Note"><span class="pill proj">PROJECTION</span><br><span class="note">Judgment call. Present as strategic urgency, not a measured fact.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">ARR trajectory: ~$12K → ~$50K → ~$100K → $8–12M (Yr 5)</span></td>
+        <td data-l="Figure"><span class="fig" style="color:var(--tang)">$8–12M Yr5</span></td>
+        <td data-l="Basis" class="src"><span class="s">Internal projection</span>Yr-5 blended ACV ~$8K implies a mix shift toward Enterprise; consistent with tier pricing</td>
+        <td data-l=""><span class="dt">Proj.</span></td>
+        <td data-l="Note"><span class="pill proj">PROJECTION</span><br><span class="note">Internally coherent. Flag the implied Enterprise-mix assumption if pressed.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">Cost per story ≈ $0.05–0.07</span></td>
+        <td data-l="Figure"><span class="fig" style="color:var(--tang)">$0.05–0.07</span></td>
+        <td data-l="Basis" class="src"><span class="s">Internal infrastructure estimate</span>Inference + storage per generated story at expected token cost</td>
+        <td data-l=""><span class="dt">Est.</span></td>
+        <td data-l="Note"><span class="pill proj">PROJECTION</span><br><span class="note">Pre-alpha estimate; will firm up with real usage.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Claim"><span class="claim">Alpha at ~month 10 for ~$86K spent</span></td>
+        <td data-l="Figure"><span class="fig" style="color:var(--tang)">~$86K</span></td>
+        <td data-l="Basis" class="src"><span class="s">Internal build plan</span>AI-native, founder-built path; ~3× cheaper to Alpha than a traditional team</td>
+        <td data-l=""><span class="dt">Plan</span></td>
+        <td data-l="Note"><span class="pill proj">PROJECTION</span><br><span class="note">Supported by the CTO having already built the live prototype solo.</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- WEBSITE EDITS -->
+<section>
+  <div class="sec-h"><span class="no">✎</span><h2>Website (business view) — the three drop-in fixes</h2></div>
+  <p class="sec-sub">The same anchors appear on the site. These are the exact find-and-replace edits to bring it in line with the verified deck.</p>
+  <div class="editbox">
+    <h4>Apply verbatim to the website file</h4>
+    <div class="edit">
+      <div class="lbl">1 · Social-listening compare row</div>
+      <div class="line del">— <b>$30K+/yr</b> to show you public posts…</div>
+      <div class="line add">+ <b>$15–40K/yr</b> to show you public posts…</div>
+    </div>
+    <div class="edit">
+      <div class="lbl">2 · Surveys compare row</div>
+      <div class="line del">— <b>3–5% response inside an artificial room that makes people lie</b>…</div>
+      <div class="line add">+ <b>Only 20–30% ever reply — inside an artificial setting that kills candor</b>…</div>
+    </div>
+    <div class="edit">
+      <div class="lbl">3 · Price-slap callout</div>
+      <div class="line del">— $30,000+/yr for public posts → From $50/mo … <b>Roughly 85% cheaper</b></div>
+      <div class="line add">+ $30,000+/yr for public posts → From $50/mo … <b>Up to ~98% cheaper at entry</b></div>
+      <div class="line" style="color:var(--muted);font-size:12px;margin-top:5px">($600/yr vs. $30K = ~98%. The 85% figure implied ~$4,500/yr, which is the Premier tier — so either use 98% at entry, or attach 85% to Premier.)</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">
+  <div class="fmark"><span class="mark">biss</span></div>
+  <div class="frefrain">Tell Your Truth.</div>
+  <div class="fbot">
+    Source appendix · compiled July 2026 · figures current as of retrieval · <b>Because I Said So.</b><br>
+    Strategic partners named in the deck (Southwest, JetBlue, Airbnb, Hampton, AAA, Marriott, and others) are <b>targets, not signed deals</b>.<br>
+    yeahisaidthat.com &nbsp;·&nbsp; biss-opal.vercel.app &nbsp;·&nbsp; marcsternberg13@gmail.com
+  </div>
+</div></footer>
+
+</body></html>
