@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BISS — Source Appendix · Every Number, Verified</title>
+<title>BISS — Investor Diligence · The Case &amp; Every Number, Verified</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -41,8 +41,70 @@ h1 .hl{color:var(--lime)}
 .metabar{margin-top:16px;font-family:var(--f-mono);font-size:11px;color:var(--lav);letter-spacing:.03em;line-height:1.9}
 .metabar b{color:var(--aqua)}
 
+/* ===== INVESTMENT CASE (added) ===== */
+.case{padding:38px 0 4px}
+.case .kick{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink2);display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.case .kick::before{content:"";width:24px;height:2px;background:currentColor}
+.thesis{font-family:var(--f-body);font-weight:900;font-size:clamp(23px,3.4vw,36px);line-height:1.13;letter-spacing:-.02em;color:#fff;text-wrap:balance;margin:2px 0 12px}
+.thesis .hp{color:var(--pink2)}.thesis .hl{color:var(--lime)}.thesis .ha{color:var(--aqua)}
+.thesis-sub{font-size:16px;color:#E7DCF4;max-width:80ch;line-height:1.62}
+.thesis-sub b{color:#fff}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 6px}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:transform .15s,border-color .15s}
+.pillar::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px}
+.pillar.p1::before{background:var(--aqua)}.pillar.p2::before{background:var(--pink)}
+.pillar.p3::before{background:var(--lime)}.pillar.p4::before{background:var(--tang)}
+.pillar:hover{transform:translateY(-3px);border-color:var(--pink)}
+.pillar .pn{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:9px}
+.pillar h3{font-weight:800;font-size:18.5px;color:#fff;margin-bottom:7px;line-height:1.18;text-wrap:balance}
+.pillar p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.pillar p b{color:var(--lime)}
+.pillar p .c{color:var(--cyan)}
+
+/* the one bet */
+.bet{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:26px 0 6px}
+.bet-top{background:linear-gradient(150deg,#2C2688,#5C1BAB);padding:22px 26px}
+.bet-top .lbl{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);margin-bottom:8px}
+.bet-top h3{font-family:var(--f-body);font-weight:900;font-size:clamp(19px,2.6vw,27px);color:#fff;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+.bet-cols{display:grid;grid-template-columns:1fr 1fr}
+.bet-col{padding:22px 26px}
+.bet-col.up{background:rgba(25,228,208,.055)}
+.bet-col.down{background:rgba(255,92,122,.05);border-left:1px solid var(--line)}
+.bet-col .h{font-family:var(--f-disp);text-transform:uppercase;font-size:23px;line-height:1;letter-spacing:.01em}
+.bet-col.up .h{color:var(--aqua)}.bet-col.down .h{color:var(--coral)}
+.bet-col .h small{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;display:block;margin-top:6px;color:var(--muted)}
+.bet-col p{font-size:13.5px;color:var(--muted);margin-top:11px;line-height:1.58}
+.bet-col p b{color:var(--text)}
+.bet-foot{padding:20px 26px;border-top:1px solid var(--line);background:var(--surface)}
+.bet-foot p{font-size:14.5px;color:var(--text);line-height:1.62}
+.bet-foot p b{color:var(--lime)}
+.bet-foot p .a{color:var(--aqua)}
+
+/* trust band */
+.trust{background:var(--lime);color:#160A1C;border-radius:18px;padding:26px 28px;margin:26px 0 6px}
+.trust .lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#160A1C;opacity:.62;margin-bottom:9px}
+.trust h3{font-weight:900;font-size:clamp(19px,2.5vw,26px);letter-spacing:-.015em;line-height:1.14;margin-bottom:9px;text-wrap:balance}
+.trust p{font-size:14.5px;color:rgba(22,10,28,.82);line-height:1.62;max-width:82ch}
+.trust p b{color:#160A1C}
+
+/* ask band */
+.ask{background:linear-gradient(150deg,#FF65C3,#FF2AA8);border-radius:18px;padding:26px 28px;margin:26px 0 10px;color:#210419}
+.ask .lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#160A1C;opacity:.66;margin-bottom:8px}
+.ask h3{font-weight:900;font-size:clamp(20px,2.7vw,29px);color:#160A1C;letter-spacing:-.015em;line-height:1.1;text-wrap:balance}
+.ask .cols{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:16px}
+.ask .box{background:rgba(0,0,0,.15);border-radius:13px;padding:17px 19px}
+.ask .box .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#160A1C;opacity:.62;margin-bottom:6px}
+.ask .box h4{font-weight:900;font-size:18px;color:#160A1C;margin-bottom:6px;line-height:1.1}
+.ask .box p{font-size:13px;color:rgba(22,10,28,.85);line-height:1.55}
+.ask .actions{display:flex;gap:11px;margin-top:18px;flex-wrap:wrap}
+.ask .cta{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.03em;padding:13px 20px;border-radius:10px;white-space:nowrap;display:inline-block}
+.ask .cta.ink{background:#160A1C;color:#fff}
+.ask .cta.line{background:transparent;border:1.6px solid #160A1C;color:#160A1C}
+
+.proof-intro{margin:36px 0 0;padding-top:30px;border-top:1px solid var(--line)}
+
 /* method note */
-.method{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:0 12px 12px 0;padding:18px 22px;margin:28px 0 8px}
+.method{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:0 12px 12px 0;padding:18px 22px;margin:20px 0 8px}
 .method h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
 .method p{font-size:14px;color:var(--muted);line-height:1.6}
 .method p+p{margin-top:8px}
@@ -105,10 +167,12 @@ footer{margin-top:40px;padding:34px 0;border-top:1px solid var(--line);backgroun
 @media print{
   body{background:#fff;color:#160A1C}
   header{background:#2b1150!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .tblwrap,section,.method,.editbox{break-inside:avoid}
+  .tblwrap,section,.method,.editbox,.bet,.trust,.ask,.pillar{break-inside:avoid}
   a{color:#3a1d86}
 }
 @media(max-width:820px){
+  .pillars,.bet-cols,.ask .cols{grid-template-columns:1fr}
+  .bet-col.down{border-left:0;border-top:1px solid var(--line)}
   table{font-size:12px}
   thead{display:none}
   tbody td{display:block;border-bottom:0;padding:6px 15px}
@@ -122,16 +186,101 @@ footer{margin-top:40px;padding:34px 0;border-top:1px solid var(--line);backgroun
     <span class="mark">biss</span>
     <svg class="kiss" viewBox="240 90 240 125" xmlns="http://www.w3.org/2000/svg"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF3DB5"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#D60B7C"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#fff" opacity=".4"/></svg>
   </div>
-  <div class="eyebrow">SOURCE APPENDIX · DILIGENCE HANDOUT<span class="biso">because i said so</span></div>
-  <h1>Every number in the deck, <span class="hl">verified and sourced.</span></h1>
-  <p class="lede">This appendix backs each external figure used in the BISS pitch materials with a named source, a date, and a confidence label — and shows the internal unit-economics math in full. Where a claim is a founder projection rather than a third-party fact, it is labeled as such. Nothing here is estimated silently.</p>
+  <div class="eyebrow">INVESTOR DILIGENCE · CONFIDENTIAL<span class="biso">because i said so</span></div>
+  <h1>The honest case for BISS — <span class="hl">and every number behind it.</span></h1>
+  <p class="lede">This page does two things most decks won't do together: it makes the real case for why BISS could be a category-defining company, and it hands you the receipts — every external figure sourced and dated, every model recomputed, every projection labeled as a bet. The upside and the risk, told straight.</p>
   <div class="metabar">
-    Compiled <b>July 2026</b> &nbsp;·&nbsp; Covers <b>pitch deck v5</b> + <b>website (business view)</b> &nbsp;·&nbsp; All external stats current as of retrieval date<br>
+    Compiled <b>July 2026</b> &nbsp;·&nbsp; Pre-alpha · working product live &nbsp;·&nbsp; Raising <b>$300K pre-seed</b><br>
     <b>yeahisaidthat.com</b> &nbsp;·&nbsp; Live demo <b>biss-opal.vercel.app</b> &nbsp;·&nbsp; marcsternberg13@gmail.com
   </div>
 </div></header>
 
 <div class="wrap">
+
+<!-- ===================== INVESTMENT CASE ===================== -->
+<div class="case">
+  <div class="kick">THE CASE<span class="biso">why this could be huge</span></div>
+  <h2 class="thesis">BISS is a bet on one simple idea: <span class="hp">people will tell the truth to something that actually listens.</span></h2>
+  <p class="thesis-sub">If that's right, BISS owns a class of data no competitor can buy at any price — and a category with no direct rival. If it's wrong, we'll know quickly and cheaply. <b>We're not going to hide which one it is.</b> Here's the honest case for the upside, and the one bet the whole thing rides on.</p>
+
+  <div class="pillars">
+    <div class="pillar p1">
+      <div class="pn">01 · The wedge</div>
+      <h3>A data class no one can buy</h3>
+      <p>Reviews are <b>~30% fake</b>. Surveys never hear from <b>70%+</b> of customers. Social listening sees what people <span class="c">say</span>, never what they <span class="c">think</span>. BISS generates the missing layer — private, conversational, emotional truth — and owns it outright. Incumbents monitor the public web; they cannot manufacture this.</p>
+    </div>
+    <div class="pillar p2">
+      <div class="pn">02 · The market</div>
+      <h3>36M businesses that were locked out</h3>
+      <p>Legacy intelligence runs <b>$15–40K/yr</b> — out of reach for the <b>36M US small businesses</b> who need it most. BISS starts <b>~98% below</b> that at entry. We're not fighting for the enterprise budget; we're opening a market that couldn't afford to play, in a CX space already worth <span class="c">~$16B and heading toward ~$85B by 2034</span>.</p>
+    </div>
+    <div class="pillar p3">
+      <div class="pn">03 · The economics</div>
+      <h3>Margins that compound</h3>
+      <p>A story costs <b>cents</b> to generate; the model runs at <b>80% gross margin</b> and <b>7.2× LTV/CAC</b> at the enterprise tier (math shown below). And every story enriches a proprietary corpus that gets <span class="c">harder to replicate the bigger it grows</span> — the flywheel is the moat.</p>
+    </div>
+    <div class="pillar p4">
+      <div class="pn">04 · The timing</div>
+      <h3>Only buildable now</h3>
+      <p>Fluid, empathetic AI interviews at scale — for pennies — became possible about <b>18 months ago</b>. This company could not have existed before. The category is open and the <span class="c">first-mover window is ~18–24 months</span>, which is exactly why the plan is to move fast and prove the behavior early.</p>
+    </div>
+  </div>
+
+  <!-- the one bet -->
+  <div class="bet">
+    <div class="bet-top">
+      <div class="lbl">◆ THE ONE BET THIS COMPANY RIDES ON</div>
+      <h3>Will ordinary people have these conversations — honestly, and again next week?</h3>
+    </div>
+    <div class="bet-cols">
+      <div class="bet-col up">
+        <div class="h">If yes<small>THE HUGE OUTCOME</small></div>
+        <p>The data compounds into a moat competitors can't copy, the B2B product sells into a multi-billion-dollar budget that already exists, and BISS defines a category with no direct rival. <b>This is a category-scale company</b> — the kind of asymmetric outcome pre-seed exists to fund.</p>
+      </div>
+      <div class="bet-col down">
+        <div class="h">If no<small>THE FLOP RISK</small></div>
+        <p>If people won't converse repeatedly, the thesis fails — and we find out inside the alpha, not after years and millions. <b>The downside is capped, fast, and cheap to learn.</b> We would rather kill a wrong idea in months than nurse it for years.</p>
+      </div>
+    </div>
+    <div class="bet-foot">
+      <p>That asymmetry is the investment. A small pre-seed check against a category-creating upside — and the <b>entire raise is engineered to test the one thing that matters before spending a dollar on scale.</b> The alpha gate isn't a demo; it's <span class="a">~200 authentic member stories per focus brand</span> — proof of real, repeated behavior. We are underwriting a bet, and we're telling you exactly what it is.</p>
+    </div>
+  </div>
+
+  <!-- trust -->
+  <div class="trust">
+    <div class="lbl">WHY YOU CAN TRUST THESE NUMBERS</div>
+    <h3>We're a truth company. We hold our own numbers to the standard we sell.</h3>
+    <p>When we found figures in our own materials that were inflated or unsourced, we corrected them — and we've published the log below. Everything on this page is sorted into three honest buckets: <b>a verified external fact</b>, <b>an internal model with the math shown</b>, or <b>a labeled founder bet</b>. Nothing is estimated silently. The point is simple: you should be able to trust the numbers we <i>didn't</i> have to correct.</p>
+  </div>
+
+  <!-- ask -->
+  <div class="ask">
+    <div class="lbl">THE ASK</div>
+    <h3>$300K pre-seed now. ~$700K to Series A, gated on proof.</h3>
+    <div class="cols">
+      <div class="box">
+        <div class="k">Raising now</div>
+        <h4>$300K pre-seed SAFE</h4>
+        <p>~18 months of runway to the Beta gate: ship Alpha (~month 10), sign 3–5 pilots, first engineering hire, and stand up the trust &amp; legal foundation.</p>
+      </div>
+      <div class="box">
+        <div class="k">Capital efficiency</div>
+        <h4>Alpha for ~$86K</h4>
+        <p>Roughly 3× cheaper to Alpha than a traditional team — the CTO already built the live prototype solo. Every dollar goes to product and pilots, not payroll.</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="cta ink" href="https://biss-opal.vercel.app">▸ See the live demo</a>
+      <a class="cta line" href="mailto:marcsternberg13@gmail.com">Request the full model &amp; data room →</a>
+    </div>
+  </div>
+
+  <div class="proof-intro">
+    <div class="sec-h"><span class="no">◆</span><h2>The proof — every number, verified</h2></div>
+    <p class="sec-sub">Everything above is only worth as much as the numbers under it. Below is the receipt for each one, sorted by confidence, with sources, dates, and the internal math shown in full.</p>
+  </div>
+</div>
 
 <div class="method">
   <h4>How to read this</h4>
@@ -305,12 +454,59 @@ footer{margin-top:40px;padding:34px 0;border-top:1px solid var(--line);backgroun
   </table></div>
 </section>
 
+<!-- E · THE RISKS, NAMED -->
+<section>
+  <div class="sec-h"><span class="no">E</span><h2>The risks, named</h2></div>
+  <p class="sec-sub">A savvy investor trusts the upside more when the downside is stated plainly. These are the bets this round underwrites — each with its mitigation.</p>
+  <div class="tblwrap"><table>
+    <colgroup><col class="c-claim"><col class="c-fig"><col class="c-src"><col class="c-dt"><col class="c-note"></colgroup>
+    <thead><tr><th>The risk</th><th>Severity</th><th>How BISS de-risks it</th><th></th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Risk"><span class="claim">The core consumer behavior is unproven</span>Will people converse repeatedly, unprompted?</td>
+        <td data-l="Severity"><span class="fig" style="color:var(--coral)">Existential</span></td>
+        <td data-l="Mitigation" class="src"><span class="s">The raise is built to test exactly this — first.</span>Alpha gate = ~200 authentic member stories per focus brand: real engagement, not a demo. Cheap, fast falsification.</td>
+        <td data-l=""><span class="dt">Open</span></td>
+        <td data-l="Status"><span class="pill proj">THE BET</span><br><span class="note">This is the company. Everything downstream depends on it — and we say so.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Risk"><span class="claim">Two-sided cold start</span>Brands want data; users create data.</td>
+        <td data-l="Severity"><span class="fig" style="color:var(--tang)">High</span></td>
+        <td data-l="Mitigation" class="src"><span class="s">Named plan, not luck.</span>Seed licensed/creator content → brand test accounts → paid seed questions → organic. Sourced vs. Member content tracked separately; only Member stories are sold.</td>
+        <td data-l=""><span class="dt">Planned</span></td>
+        <td data-l="Status"><span class="pill proj">MANAGED</span><br><span class="note">Contests double as the acquisition engine.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Risk"><span class="claim">The mechanism is copyable</span>An incumbent could build a lookalike.</td>
+        <td data-l="Severity"><span class="fig" style="color:var(--tang)">Medium</span></td>
+        <td data-l="Mitigation" class="src"><span class="s">The moat is the corpus &amp; habit, not the pattern.</span>Proprietary dataset + dual-identity (FlipSide) trust architecture + accumulated consumer behavior — none of which exist until the core bet pays off, and all of which compound.</td>
+        <td data-l=""><span class="dt">Ongoing</span></td>
+        <td data-l="Status"><span class="pill proj">MANAGED</span><br><span class="note">Speed matters; first-mover window ~18–24 mo.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Risk"><span class="claim">Brand-buyer tension</span>Selling brands unflattering truth about themselves.</td>
+        <td data-l="Severity"><span class="fig" style="color:var(--tang)">Medium</span></td>
+        <td data-l="Mitigation" class="src"><span class="s">Structural, by design.</span>Two-tier signal model (Verified Identity vs. Verified Human); brands never see names. Truth is framed as early-warning advantage, not exposure.</td>
+        <td data-l=""><span class="dt">Ongoing</span></td>
+        <td data-l="Status"><span class="pill proj">MANAGED</span><br><span class="note">Requires deliberate narrative management.</span></td>
+      </tr>
+      <tr>
+        <td data-l="Risk"><span class="claim">Commercial &amp; legal posture</span>Pre-revenue; no counsel engaged yet.</td>
+        <td data-l="Severity"><span class="fig" style="color:var(--muted)">Disclosed</span></td>
+        <td data-l="Mitigation" class="src"><span class="s">Stated plainly, not dressed up.</span>No contracted revenue and no engaged legal counsel yet. All named partners (Southwest, JetBlue, Airbnb, Hampton, AAA, Marriott, others) are <b style="color:#fff">targets, not signed deals</b>.</td>
+        <td data-l=""><span class="dt">Current</span></td>
+        <td data-l="Status"><span class="pill ext">HONEST</span><br><span class="note">Materials do not overstate certainty — including this one.</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
 <!-- WEBSITE EDITS -->
 <section>
-  <div class="sec-h"><span class="no">✎</span><h2>Website (business view) — the three drop-in fixes</h2></div>
-  <p class="sec-sub">The same anchors appear on the site. These are the exact find-and-replace edits to bring it in line with the verified deck.</p>
+  <div class="sec-h"><span class="no">✎</span><h2>Corrections applied to the public site</h2></div>
+  <p class="sec-sub">Full transparency: the same anchors appeared on our public site. Here are the exact edits we made to bring it in line with the verified figures above.</p>
   <div class="editbox">
-    <h4>Apply verbatim to the website file</h4>
+    <h4>What changed on the website</h4>
     <div class="edit">
       <div class="lbl">1 · Social-listening compare row</div>
       <div class="line del">— <b>$30K+/yr</b> to show you public posts…</div>
@@ -336,8 +532,9 @@ footer{margin-top:40px;padding:34px 0;border-top:1px solid var(--line);backgroun
   <div class="fmark"><span class="mark">biss</span></div>
   <div class="frefrain">Tell Your Truth.</div>
   <div class="fbot">
-    Source appendix · compiled July 2026 · figures current as of retrieval · <b>Because I Said So.</b><br>
+    Investor diligence · compiled July 2026 · figures current as of retrieval · <b>Because I Said So.</b><br>
     Strategic partners named in the deck (Southwest, JetBlue, Airbnb, Hampton, AAA, Marriott, and others) are <b>targets, not signed deals</b>.<br>
+    Pre-alpha · no contracted revenue yet · projections are founder estimates, labeled throughout.<br>
     yeahisaidthat.com &nbsp;·&nbsp; biss-opal.vercel.app &nbsp;·&nbsp; marcsternberg13@gmail.com
   </div>
 </div></footer>
