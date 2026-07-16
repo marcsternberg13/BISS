@@ -22,6 +22,7 @@
   --f-mark:"Fredoka",sans-serif;--f-disp:"Anton",sans-serif;--f-mono:"Space Mono",monospace;--f-body:"Inter",sans-serif;
   --maxw:1080px;
 }
+.hp{position:absolute!important;left:-9999px!important;top:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--ink);color:var(--text);font-family:var(--f-body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -381,7 +382,7 @@ a{color:inherit}
   <p class="eyebrow">Founding members only</p>
   <h2>We're not live yet. You can be first.</h2>
   <p>The earliest voices become the ones everyone else follows. Get in before the crowd.</p>
-  <form class="form"><input type="email" placeholder="your email" aria-label="Email"><button type="submit">Join the Waitlist</button></form>
+  <form class="form"><input type="email" placeholder="your email" aria-label="Email"><span class="hp" aria-hidden="true"><label>Website (leave blank)<input type="text" class="wl_hp" tabindex="-1" autocomplete="off"></label></span><button type="submit">Join the Waitlist</button></form>
   <p class="micro">Coming soon to iOS, Android &amp; web · Zero spam — we'll only email you when it matters.</p>
 </div></section>
 <footer class="foot"><div class="wrap">
@@ -442,7 +443,29 @@ a{color:inherit}
     l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  document.querySelectorAll('.form,.cform').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();});});
+  // ---- Waitlist form ----
+  var WAITLIST_ENDPOINT = "https://script.google.com/macros/s/AKfycbxSDXTsOsWuJsPeQzi70k2B5FUqkM8edLWF8qWBCsf3-3dONuuQDpHN5IPU3nU-VVBpFg/exec";
+  document.querySelectorAll('.form').forEach(function(f){
+    var input=f.querySelector('input[type=email]'), wbtn=f.querySelector('button');
+    var note=document.createElement('p');
+    note.setAttribute('role','status');
+    note.style.cssText='flex-basis:100%;font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;line-height:1.5;margin-top:6px;min-height:1em;text-align:center';
+    f.appendChild(note);
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email=(input.value||'').trim();
+      var hpEl=f.querySelector('.wl_hp'), hp=hpEl?hpEl.value.trim():'';
+      if(hp){note.style.color='var(--aqua)';note.textContent="You're on the list \u2014 we'll be in touch.";input.value='';return;}
+      if(!email||email.indexOf('@')<1||email.indexOf('.')<0){note.style.color='var(--sent-neg)';note.textContent='Enter a valid email.';return;}
+      if(!WAITLIST_ENDPOINT){note.style.color='var(--aqua)';note.textContent="You're on the list. (Connect your sheet to store signups.)";input.value='';return;}
+      note.style.color='var(--muted)';note.textContent='Adding you\u2026';
+      if(wbtn){wbtn.disabled=true;}
+      fetch(WAITLIST_ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams({email:email,source:'waitlist',hp:hp})})
+      .then(function(){note.style.color='var(--aqua)';note.textContent="You're on the list \u2014 we'll be in touch.";input.value='';})
+      .catch(function(){note.style.color='var(--sent-neg)';note.textContent='Something jammed. Try again or email marcsternberg13@gmail.com.';})
+      .finally(function(){if(wbtn){wbtn.disabled=false;}});
+    });
+  });
 })();
 </script>
 </body>
