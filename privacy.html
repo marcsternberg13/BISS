@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BISS — Privacy Policy</title>
+<meta name="description" content="What BISS collects, why, and the controls you have — with no ads and no selling your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF65C3;--cyan:#50CDED;--aqua:#19E4D0;--lime:#E9FF3A;--purple:#5C1BAB;
+  --indigo:#41249A;--lavender:#A780ED;--sent-neg:#FF4560;--blue:#2450E6;
+  --ink:#160A1C;--surface:#201528;--surface-2:#2C1F38;--line:rgba(255,255,255,.12);
+  --text:#F5F1FA;--muted:#9E93B8;
+  --holo:linear-gradient(115deg,#FF9AD9 0%,#C9A8F0 26%,#8FD8F0 52%,#B9F0D8 74%,#EDFF9A 100%);
+  --vapor:linear-gradient(180deg,#2C2688 0%,#5C1BAB 60%,#6722B0 100%);
+  --f-mark:"Fredoka",sans-serif;--f-disp:"Anton",sans-serif;--f-mono:"Space Mono",monospace;--f-body:"Inter",sans-serif;
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:var(--f-body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+.mono{font-family:var(--f-mono)}
+a{color:inherit}
+
+/* HUD strip */
+.hud{border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;background:var(--ink)}
+.hud .wrap{display:flex;justify-content:space-between;gap:12px;padding:10px clamp(20px,5vw,40px);flex-wrap:wrap}
+.hud .l{color:var(--pink)}.hud .m{color:var(--aqua)}.hud .r{color:var(--cyan)}
+.rec{animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(22,10,28,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;padding:11px clamp(20px,5vw,40px)}
+.nav .brand{display:flex;align-items:center;flex:none}
+.nav .brand svg{height:38px;width:auto;display:block}
+.nav .links{display:flex;gap:22px;margin-left:12px;flex-wrap:wrap}
+.nav .links a{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 0;position:relative;transition:color .15s ease}
+.nav .links a:hover{color:var(--text)}
+.nav .links a.active{color:var(--pink)}
+.nav .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--pink)}
+.nav .spacer{flex:1}
+.nav .cta{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+  padding:11px 18px;border-radius:8px;text-decoration:none;background:var(--lime);color:#181400;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease}
+.nav .cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(233,255,58,.32)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:9px 11px;cursor:pointer;flex:none}
+.burger span{display:block;width:20px;height:2px;background:var(--text);margin:4px 0;transition:.2s}
+@media(max-width:900px){
+  .nav .links{position:fixed;inset:0 0 0 auto;width:min(320px,84vw);flex-direction:column;gap:4px;background:var(--surface);
+    padding:80px 26px 26px;transform:translateX(100%);transition:transform .28s ease;box-shadow:-20px 0 60px rgba(0,0,0,.5);margin-left:0}
+  .nav .links.open{transform:none}
+  .nav .links a{font-size:15px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .nav .links a.active::after{display:none}
+  .burger{display:block;order:3}
+  .nav .cta{order:2}
+  .nav .spacer{display:none}
+  .nav .wrap{gap:10px}
+}
+
+/* HERO (compact page cover) */
+.cover{position:relative;overflow:hidden;background:var(--vapor);padding:clamp(46px,7vw,78px) 0 clamp(52px,7vw,82px);text-align:center}
+.cover.lime{background:linear-gradient(180deg,#111 0%,#160A1C 100%)}
+.cover::after{content:"";position:absolute;left:0;right:0;bottom:-30px;height:150px;pointer-events:none;
+  background:repeating-linear-gradient(90deg,rgba(80,205,237,.24) 0 1px,transparent 1px 42px),repeating-linear-gradient(0deg,rgba(80,205,237,.24) 0 1px,transparent 1px 28px);
+  transform:perspective(220px) rotateX(64deg);transform-origin:bottom;opacity:.6}
+.bracket{position:absolute;width:30px;height:30px;border:2px solid var(--lime);z-index:3;opacity:.85}
+.bracket.tl{top:14px;left:14px;border-right:0;border-bottom:0}
+.bracket.tr{top:14px;right:14px;border-left:0;border-bottom:0}
+.bracket.bl{bottom:14px;left:14px;border-right:0;border-top:0}
+.bracket.br{bottom:14px;right:14px;border-left:0;border-top:0}
+.kickers{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.72);flex-wrap:wrap;gap:8px}
+.eyebrow-hero{font-family:var(--f-mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--lime);margin:clamp(20px,3vw,30px) 0 14px}
+.h1{font-family:var(--f-body);font-weight:800;font-size:clamp(34px,6.4vw,68px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance;color:#fff;max-width:20ch;margin:0 auto}
+.h1 .em{color:var(--lime)}
+.h1 .pk{color:var(--pink)}
+.herosub{font-family:var(--f-mono);color:rgba(255,255,255,.86);max-width:56ch;margin:18px auto 0;font-size:clamp(13px,1.6vw,15px);letter-spacing:.01em}
+.herosub .hl{color:var(--lime)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(24px,3.4vw,32px)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-weight:700;font-size:13.5px;letter-spacing:.04em;
+  text-transform:uppercase;padding:14px 24px;border-radius:8px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:var(--lime);color:#181400}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(233,255,58,.32)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+.btn-pink{background:var(--pink);color:#2a0a1e}
+.btn-pink:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,101,195,.32)}
+
+/* neon display statement */
+.neon{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.02em;line-height:.92;--nc:#FF65C3;
+  color:transparent;-webkit-text-stroke:2px #fff;
+  filter:drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 5px var(--nc)) drop-shadow(0 0 12px var(--nc));
+  animation:neon-blink 6s infinite}
+.neon.pink{--nc:#FF65C3}.neon.cyan{--nc:#50CDED}.neon.lime{--nc:#E9FF3A}
+@keyframes neon-blink{0%,42%,100%{opacity:1}43%{opacity:.5}44%{opacity:1}69%{opacity:1}70%{opacity:.28}71%{opacity:1}72%{opacity:.55}73%{opacity:1}93%{opacity:1}94%{opacity:.08}96%{opacity:.08}97%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.neon{animation:none;opacity:1}}
+
+/* BANDS */
+.band{padding:clamp(56px,9vw,104px) 0;position:relative;--fg:#fff}
+.band.ink{background:var(--ink);--fg:#F5F1FA}
+.band.lime{background:var(--lime);--fg:#160A1C}
+.band.blue{background:#2450E6;--fg:#fff}
+.band.violet{background:#7B2FF2;--fg:#fff}
+.band.magenta{background:#FF3DB5;--fg:#210419}
+.band.aqua{background:#0FBFAE;--fg:#04241f}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--fg);opacity:.85;display:flex;gap:10px;align-items:center;margin-bottom:16px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+.h2{font-family:var(--f-body);font-weight:800;font-size:clamp(28px,4.6vw,50px);line-height:1.04;letter-spacing:-.01em;color:var(--fg);text-wrap:balance;margin-bottom:16px;max-width:20ch}
+.hook{font-family:var(--f-mono);font-size:clamp(14px,1.8vw,17px);color:var(--fg);opacity:.9;max-width:60ch;margin-bottom:18px}
+.lead{color:var(--fg);opacity:.94;max-width:64ch;font-size:clamp(15px,1.75vw,17px);line-height:1.6;margin-bottom:14px}
+.lead b{font-weight:700}
+.lead+.lead{margin-top:2px}
+.disp{font-family:var(--f-disp);font-size:clamp(26px,4.4vw,52px);line-height:.98;text-transform:uppercase;color:var(--fg);letter-spacing:.01em;text-wrap:balance;margin:8px 0 4px}
+
+/* dark panels on neon fields */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;color:var(--text)}
+.rows{display:grid;gap:14px;margin-top:clamp(30px,4.5vw,46px)}
+.rrow{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.rrow h4{font-family:var(--f-body);font-weight:800;font-size:clamp(17px,2vw,21px);color:#fff;margin-bottom:6px;line-height:1.15}
+.rrow p{color:var(--muted);font-size:14.5px;line-height:1.55}
+.rrow p b{color:var(--text);font-weight:700}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:clamp(30px,4.5vw,46px)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(30px,4.5vw,46px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:9px}
+.card .ic{font-size:22px;line-height:1}
+.card h4{font-family:var(--f-body);font-weight:800;font-size:17px;color:#fff;line-height:1.2}
+.card p{color:var(--muted);font-size:14px;line-height:1.5}
+.card .tag{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* callout on band */
+.callout{margin-top:clamp(28px,4vw,44px);background:rgba(22,10,28,.28);border:1.5px solid var(--fg);border-radius:16px;padding:22px 24px;color:var(--fg)}
+.callout.ink{background:var(--surface);border-color:var(--pink);color:var(--text)}
+.callout .cl-k{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;opacity:.85}
+.callout p{font-size:clamp(15px,1.8vw,17px);line-height:1.55}
+.callout b{font-weight:800}
+
+/* pull quote */
+.pull{font-family:var(--f-disp);text-transform:uppercase;font-size:clamp(22px,3.6vw,40px);line-height:1.02;color:var(--fg);max-width:22ch;margin:clamp(34px,5vw,54px) auto;text-align:center;text-wrap:balance}
+.pull.pk{color:var(--pink)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:clamp(30px,4.5vw,46px)}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;position:relative;padding-left:74px}
+.step::before{counter-increment:s;content:"0" counter(s);position:absolute;left:22px;top:20px;font-family:var(--f-disp);font-size:30px;color:var(--pink);line-height:1}
+.step h4{font-family:var(--f-body);font-weight:800;font-size:18px;color:#fff;margin-bottom:5px}
+.step p{color:var(--muted);font-size:14.5px;line-height:1.55}
+
+/* score chip demo */
+.demo{background:#1b1422;border:1px solid var(--line);border-radius:16px;padding:18px;max-width:400px;margin-top:24px;text-align:left;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.demo .row{display:flex;gap:14px;align-items:flex-start}
+.score{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-family:var(--f-disp);font-size:22px;color:#062b28;background:var(--aqua);flex:none}
+.demo .meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.demo .venue{font-weight:700;font-size:16px;margin-top:3px;line-height:1.15;color:var(--text)}
+.demo .kiss{width:26px;height:14px}
+.demo .q{background:#120d18;border-radius:10px;padding:12px;margin-top:14px;font-family:var(--f-mono);font-size:13.5px;color:rgba(245,241,250,.92)}
+.redact{background:var(--pink);color:transparent;border-radius:4px;padding:0 4px;user-select:none}
+.demo .foot{margin-top:12px;font-family:var(--f-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+/* FAQ */
+.faq{margin-top:clamp(30px,4.5vw,46px);display:grid;gap:10px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-family:var(--f-body);font-weight:700;font-size:16px;color:#fff;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--f-mono);color:var(--pink);font-size:22px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 20px 20px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+/* founder cards */
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(30px,4.5vw,46px)}
+.founder{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.founder .av{width:56px;height:56px;border-radius:14px;background:conic-gradient(#FF65C3,#E9FF3A,#19E4D0,#50CDED,#A780ED,#FF65C3);margin-bottom:14px}
+.founder .nm{font-family:var(--f-body);font-weight:800;font-size:20px;color:#fff}
+.founder .rl{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua);margin:4px 0 12px}
+.founder p{color:var(--muted);font-size:14px;line-height:1.6}
+
+/* waitlist band */
+.wait{background:#FF3DB5;text-align:center;padding:clamp(64px,10vw,120px) 0}
+.wait .eyebrow{justify-content:center;color:#210419}
+.wait .eyebrow::before,.wait .eyebrow::after{display:none}
+.wait h2{font-family:var(--f-body);font-weight:800;font-size:clamp(26px,4.4vw,46px);color:#210419;text-wrap:balance;max-width:20ch;margin:0 auto 14px;line-height:1.05}
+.wait p{font-family:var(--f-mono);font-size:13px;color:#210419;opacity:.85;max-width:52ch;margin:0 auto 24px}
+.form{display:flex;gap:10px;justify-content:center;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.form input{flex:1;min-width:220px;font-family:var(--f-mono);font-size:14px;padding:14px 16px;border-radius:8px;border:1px solid rgba(33,4,25,.3);background:rgba(255,255,255,.92);color:#210419}
+.form input::placeholder{color:#8a5a75}
+.form button{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;padding:14px 22px;border-radius:8px;border:0;background:#160A1C;color:#fff;cursor:pointer;transition:transform .15s ease}
+.form button:hover{transform:translateY(-2px)}
+.micro{font-family:var(--f-mono);font-size:11px;color:#210419;opacity:.7;margin-top:14px}
+
+/* contact form */
+.cform{margin-top:clamp(30px,4.5vw,46px);background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,32px);max-width:640px}
+.cform label{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 7px}
+.cform label:first-child{margin-top:0}
+.cform input,.cform select,.cform textarea{width:100%;font-family:var(--f-body);font-size:15px;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#120d18;color:var(--text)}
+.cform textarea{min-height:130px;resize:vertical}
+.cform .send{margin-top:22px;background:var(--lime);color:#181400;border:0;width:auto;font-family:var(--f-mono);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:13px;padding:14px 26px;cursor:pointer;border-radius:8px;transition:transform .15s ease}
+.cform .send:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(233,255,58,.3)}
+.directline{margin-top:26px;display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.directline a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.directline a:hover{transform:translateY(-3px);border-color:var(--pink)}
+.directline .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.directline .v{color:#fff;font-weight:700;margin-top:6px;font-size:14.5px;word-break:break-word}
+
+/* roles list (careers) */
+.roles{margin-top:clamp(30px,4.5vw,46px);display:grid;gap:12px}
+.role{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+.role h4{font-family:var(--f-body);font-weight:800;font-size:19px;color:#fff}
+.role p{color:var(--muted);font-size:14px;margin-top:5px;max-width:52ch}
+.role .meta{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);margin-top:8px}
+.role a{flex:none;font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:11px 18px;border-radius:8px;background:var(--pink);color:#2a0a1e;text-decoration:none;transition:transform .15s ease}
+.role a:hover{transform:translateY(-2px)}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(30px,4.5vw,46px)}
+.affil{margin-top:clamp(26px,4vw,40px);display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.affil .chip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;color:var(--text)}
+
+/* FOOTER */
+.foot{background:var(--ink);border-top:1px solid var(--line);padding:clamp(48px,7vw,72px) 0 clamp(30px,4vw,40px)}
+.foot .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:30px}
+.foot .brandcol .flogo{max-width:170px}
+.foot .brandcol .flogo svg{width:100%;height:auto}
+.foot .brandcol .tt{font-family:var(--f-disp);font-size:22px;text-transform:uppercase;color:var(--pink);margin-top:6px;letter-spacing:.02em}
+.foot .brandcol .cs{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.foot h5{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:11px}
+.foot ul a{font-size:14.5px;color:var(--muted);text-decoration:none;transition:color .15s ease}
+.foot ul a:hover{color:var(--text)}
+.foot .promise a{color:var(--aqua);opacity:.88}
+.foot .promise a:hover{opacity:1}
+.foot .bot{border-top:1px solid var(--line);margin-top:clamp(34px,5vw,50px);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.foot .bot .r{display:flex;gap:18px;flex-wrap:wrap}
+.foot .bot a{color:var(--muted);text-decoration:none}
+.foot .bot a:hover{color:var(--text)}
+@media(max-width:900px){.foot .top{grid-template-columns:1fr 1fr}.foot .brandcol{grid-column:1/-1}}
+@media(max-width:520px){.foot .top{grid-template-columns:1fr}.grid3,.grid2,.founders,.vals,.directline{grid-template-columns:1fr}.role{flex-direction:column;align-items:flex-start}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:4px}
+@media(max-width:760px){.grid3{grid-template-columns:1fr 1fr}}
+
+/* PROMISES page */
+.promise-list{display:grid;gap:16px;margin-top:clamp(30px,4.5vw,48px)}
+.promise-item{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,30px);border-left:4px solid var(--pink);scroll-margin-top:90px}
+.promise-item .pn{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);margin-bottom:8px}
+.promise-item h3{font-family:var(--f-body);font-weight:800;font-size:clamp(22px,3vw,30px);color:#fff;line-height:1.05;margin-bottom:10px}
+.promise-item p{color:var(--muted);font-size:15px;line-height:1.6;max-width:70ch}
+.promise-item p b{color:var(--text);font-weight:700}
+
+/* LEGAL pages */
+.legal-hero{background:linear-gradient(180deg,#1c1030 0%,#160A1C 100%);border-bottom:1px solid var(--line);padding:clamp(40px,6vw,64px) 0 clamp(30px,4vw,42px)}
+.legal-hero .eyebrow-hero{color:var(--pink);margin:0 0 12px}
+.legal-hero h1{font-family:var(--f-body);font-weight:800;font-size:clamp(30px,5vw,52px);color:#fff;line-height:1.03;letter-spacing:-.01em;margin:0;text-align:left;max-width:24ch}
+.legal-meta{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin-top:16px;display:flex;gap:8px 20px;flex-wrap:wrap}
+.legal-note{margin-top:16px;background:rgba(255,101,195,.08);border:1px solid rgba(255,101,195,.3);border-radius:12px;padding:14px 16px;font-family:var(--f-mono);font-size:12.5px;line-height:1.5;color:var(--lavender);max-width:74ch}
+.legal-body{padding:clamp(40px,6vw,64px) 0 clamp(50px,7vw,80px)}
+.legal-grid{display:grid;grid-template-columns:220px 1fr;gap:clamp(30px,5vw,60px);align-items:start}
+.toc{position:sticky;top:82px;border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--surface)}
+.toc h4{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;counter-reset:t;display:grid;gap:2px}
+.toc li{counter-increment:t}
+.toc a{display:block;font-size:13px;color:var(--muted);text-decoration:none;padding:6px 0;line-height:1.35;border-bottom:1px solid transparent;transition:color .15s ease}
+.toc a::before{content:counter(t,decimal-leading-zero) "  ";font-family:var(--f-mono);color:var(--pink);opacity:.7}
+.toc a:hover{color:var(--text)}
+.leg{max-width:74ch}
+.leg section{scroll-margin-top:90px;margin-bottom:clamp(28px,4vw,40px)}
+.leg h2{font-family:var(--f-body);font-weight:800;font-size:clamp(20px,2.6vw,26px);color:#fff;line-height:1.15;margin-bottom:12px;display:flex;gap:12px;align-items:baseline}
+.leg h2 .num{font-family:var(--f-mono);font-size:14px;color:var(--pink);flex:none}
+.leg h3{font-family:var(--f-body);font-weight:700;font-size:16px;color:var(--text);margin:18px 0 8px}
+.leg p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:12px}
+.leg p b{color:var(--text);font-weight:700}
+.leg a{color:var(--cyan)}
+.leg ul{list-style:none;display:grid;gap:9px;margin:0 0 14px}
+.leg ul li{position:relative;padding-left:20px;color:var(--muted);font-size:15px;line-height:1.6}
+.leg ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:2px;background:var(--pink)}
+.leg ul li b{color:var(--text)}
+.leg .lbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:6px 0 16px}
+.leg .lbox p:last-child{margin-bottom:0}
+.leg .plain{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua);margin-bottom:8px}
+@media(max-width:820px){.legal-grid{grid-template-columns:1fr}.toc{position:static;order:-1}.toc ol{grid-template-columns:1fr 1fr;gap:2px 18px}}
+</style>
+</head>
+<body>
+<div class="hud"><div class="wrap">
+  <span class="l">BISS.SYS · v1.0</span>
+  <span class="m">TRUTH_MODE: ON</span>
+  <span class="r">COMING SOON · REC <span class="rec">●</span></span>
+</div></div>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="BISS home"><svg viewBox="0 0 210 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BISS"><g transform="translate(6,4) scale(0.115) translate(-250,-95)"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF65C3"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#E1327F"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#ffffff" opacity="0.4"/></g><g font-family="Fredoka,sans-serif" font-weight="700" font-size="42" letter-spacing="1"><text x="58" y="46" fill="#19E4D0" opacity="0.85">biss</text><text x="62" y="46" fill="#FF2FA8" opacity="0.85">biss</text><text x="60" y="46" fill="#FFFFFF">biss</text></g></svg></a>
+  <div class="spacer"></div>
+  <div class="links" id="navlinks"><a href="index.html">Home</a><a href="contests.html">Contests</a><a href="how-it-works.html">How It Works</a><a href="your-voice.html">Your Voice</a><a href="trust.html">Trust &amp; Safety</a><a href="about.html" class="active">About</a></div>
+  <a class="cta" href="#waitlist">Join the Waitlist →</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></nav>
+<header class="legal-hero"><div class="wrap">
+  <p class="eyebrow-hero">Legal</p>
+  <h1>Privacy Policy</h1>
+  <div class="legal-meta"><span>Effective at launch · Last reviewed July 2026</span><span>Because I Said So · Tell Your Truth.</span></div>
+  <div class="legal-note">BISS is not yet live. This document takes effect when the service launches and may be updated before then. It's written in plain language on purpose — if anything reads as vague, that's a bug, and <a href="contact.html" style="color:var(--lavender);text-decoration:underline">you can tell us</a>.</div>
+</div></header>
+<div class="legal-body"><div class="wrap"><div class="legal-grid">
+  <nav class="toc" aria-label="On this page"><h4>On this page</h4><ol><li><a href="#collect">What we collect</a></li><li><a href="#why">Why we use it</a></li><li><a href="#names">Names, anonymization, and redaction</a></li><li><a href="#business">What businesses can see</a></li><li><a href="#no-ads">No ads, never sold to advertisers</a></li><li><a href="#sharing">When we share data</a></li><li><a href="#controls">Your controls</a></li><li><a href="#security">Security</a></li><li><a href="#retention">How long we keep it</a></li><li><a href="#children">Children</a></li><li><a href="#international">Where your data lives</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact us</a></li></ol></nav>
+  <div class="leg">
+    <p>Your privacy is the whole point. BISS only works if you can be honest without being surveilled — so we collect as little as we can, hide your name by default, and never sell you to advertisers. Here's exactly what happens with your data.</p>
+    <section id="collect"><h2><span class="num">01</span>What we collect</h2><ul><li><b>Account &amp; verification</b> — enough to confirm you're one real human (for example, an email and a verification signal). We store your real identity securely and keep it hidden by default.</li><li><b>Your stories &amp; content</b> — what you write, the brands you mention, your reactions and follows.</li><li><b>Usage &amp; device</b> — how you use BISS and basic device/log data, used to run and improve the service and keep it secure. See our <a href="cookies.html">Cookie Policy</a>.</li></ul></section><section id="why"><h2><span class="num">02</span>Why we use it</h2><ul><li>To run BISS: turn your words into a story, generate a score, build your Journal Page and Brand Pages.</li><li>To keep it real: verify humans and detect bots, fakes, and machine-written filler.</li><li>To produce <b>aggregated, anonymized</b> brand intelligence for businesses.</li><li>To run contests and deliver prizes and rewards.</li><li>To keep the platform safe, secure, and lawful.</li></ul></section><section id="names"><h2><span class="num">03</span>Names, anonymization, and redaction</h2><p>Protecting people is built into the product, automatically:</p><ul><li><b>Your real name is never shown</b> unless you choose to publish a story under it.</li><li><b>Private people you mention are swapped for a stand-in</b> before a story goes live. Public figures — executives, politicians, celebrities — stay named; accountability is the point.</li><li><b>Personal details get scrubbed</b> — home address, phone number, medical specifics — and you'll always see that it happened. We never sanitize the feeling, only what could bite you or someone else.</li></ul></section><section id="business"><h2><span class="num">04</span>What businesses can see</h2><p>Subscribing businesses see the aggregated, anonymized truth about their own brand — top praises, top complaints, sentiment, and trends drawn from many stories. Signal is labeled as <b>Verified Identity</b> (from real-name stories) or <b>Verified Human</b> (from pseudonymous stories). <b>In neither case do brands see your name.</b> Only in-app member stories become sellable intelligence, and always in aggregate.</p></section><section id="no-ads"><h2><span class="num">05</span>No ads, never sold to advertisers</h2><div class="lbox"><p>We do not run ads and we do not sell your personal information to advertisers or data brokers. Businesses pay for aggregated, anonymized insight about themselves — that's the entire business model.</p></div></section><section id="sharing"><h2><span class="num">06</span>When we share data</h2><ul><li><b>Service providers</b> who help us run BISS (e.g. hosting, verification), under strict confidentiality.</li><li><b>Legal reasons</b> — if required by law or to protect people's safety.</li><li><b>Business transfer</b> — if BISS is ever involved in a merger or acquisition, with notice to you. Your promises travel with your data.</li></ul></section><section id="controls"><h2><span class="num">07</span>Your controls</h2><ul><li><b>Edit or delete anything, anytime</b> — per story or your whole account. Deletion means removal and back-end anonymization.</li><li><b>Per-story visibility</b> — public or private, and which identity, your call every time.</li><li><b>Access &amp; portability</b> — request a copy of your data, or ask us to correct it.</li></ul></section><section id="security"><h2><span class="num">08</span>Security</h2><p>We use technical and organizational measures to protect your data, and we keep verification details separate from your public presence. No system is perfectly secure, but keeping your truth safe is core to the product.</p></section><section id="retention"><h2><span class="num">09</span>How long we keep it</h2><p>We keep your content while your account is active and you keep it published. When you delete content or your account, we remove and anonymize it, except where we must keep limited records to meet legal obligations or prevent abuse.</p></section><section id="children"><h2><span class="num">10</span>Children</h2><p>BISS isn't for children under 16 (or the minimum age in your country). We don't knowingly collect data from anyone below that age.</p></section><section id="international"><h2><span class="num">11</span>Where your data lives</h2><p>BISS is operated from the United States and your data may be processed there. Where the law requires it, we put appropriate safeguards in place for international transfers.</p></section><section id="changes"><h2><span class="num">12</span>Changes to this policy</h2><p>If we make material changes, we'll tell you in the app or by email. The privacy promises on our <a href="promises.html">Promises</a> page are the foundation and aren't going anywhere.</p></section><section id="contact"><h2><span class="num">13</span>Contact us</h2><p>Questions about your data? Reach a real person through the <a href="contact.html">Contact page</a>.</p></section>
+  </div>
+</div></div></div>
+<footer class="foot"><div class="wrap">
+  <div class="top">
+    <div class="brandcol">
+      <div class="flogo"><svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="biss logo"><g transform="translate(600,82) scale(0.3) translate(-360,-150)"><path d="M250,150 C268,118 300,104 322,100 C338,97 350,108 360,118 C370,108 382,97 398,100 C420,104 452,118 470,150 C440,146 400,150 360,148 C320,150 280,146 250,150 Z" fill="#FF65C3"/><path d="M250,150 C280,157 320,160 360,160 C400,160 440,157 470,150 C452,183 420,203 360,209 C300,203 268,183 250,150 Z" fill="#E1327F"/><path d="M250,150 C290,146 330,152 360,150 C390,152 430,146 470,150" fill="none" stroke="#A01560" stroke-width="3"/><ellipse cx="326" cy="176" rx="30" ry="12" fill="#ffffff" opacity="0.4"/></g><g text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="150" letter-spacing="2"><text x="332" y="258" fill="#19E4D0" opacity="0.9">biss</text><text x="348" y="258" fill="#FF2FA8" opacity="0.9">biss</text><text x="340" y="258" fill="#FFFFFF">biss</text></g><text x="340" y="322" font-family="Space Mono,monospace" font-weight="700" font-size="17" fill="#19E4D0" text-anchor="middle" letter-spacing="6">BECAUSE I SAID SO</text></svg></div>
+      <div class="tt">Tell Your Truth.</div>
+      <div class="cs">Coming soon to iOS, Android &amp; web.</div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="contests.html">Contests</a></li>
+        <li><a href="your-voice.html">Your Voice</a></li>
+        <li><a href="trust.html">Trust &amp; Safety</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>The Promises</h5>
+      <ul class="promise">
+        <li><a href="promises.html#no-ads">No ads.</a></li>
+        <li><a href="promises.html#always-free">Always free.</a></li>
+        <li><a href="promises.html#no-stars">No stars.</a></li>
+        <li><a href="promises.html#anonymous">Anonymous but real.</a></li>
+        <li><a href="promises.html#privacy">Your privacy, your grip.</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="guidelines.html">Community Guidelines</a></li>
+        <li><a href="contest-rules.html">Contest Rules</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bot">
+    <span>© 2026 BISS · Because I Said So · Tell Your Truth.</span>
+    <span class="r"><a href="contact.html">Contact</a><a href="careers.html">Careers</a><a href="trust.html">Trust &amp; Safety</a></span>
+  </div>
+</div></footer>
+<script>
+(function(){
+  var b=document.getElementById('burger'),l=document.getElementById('navlinks');
+  if(b){b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.form,.cform').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();});});
+})();
+</script>
+</body>
+</html>
