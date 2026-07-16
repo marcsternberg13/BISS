@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BISS · Product & Milestone Roadmap — Pre-Seed → Series A</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF65C3; --cyan:#50CDED; --aqua:#19E4D0; --lime:#E9FF3A;
+  --purple:#5C1BAB; --indigo:#41249A; --lavender:#A780ED;
+  --sent-neg:#FF4560;
+  --ink:#160A1C; --surface:#201528; --surface-2:#2C1F38;
+  --line:rgba(255,255,255,.12); --text:#F5F1FA; --muted:#9E93B8;
+  --holo:linear-gradient(115deg,#FF9AD9 0%,#C9A8F0 26%,#8FD8F0 52%,#B9F0D8 74%,#EDFF9A 100%);
+  --vapor:linear-gradient(180deg,#2C2688 0%,#5C1BAB 60%,#6722B0 100%);
+  --f-mark:"Fredoka",sans-serif; --f-disp:"Anton",sans-serif;
+  --f-mono:"Space Mono",monospace; --f-body:"Inter",sans-serif;
+  --maxw:1160px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--f-body);line-height:1.55;
+  background-image:radial-gradient(1200px 600px at 80% -10%,rgba(92,27,171,.35),transparent 60%),
+  radial-gradient(900px 500px at -10% 20%,rgba(65,36,154,.25),transparent 55%);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--cyan)}
+/* HUD */
+.hud{display:flex;justify-content:space-between;align-items:center;padding:10px 24px;
+  border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:11px;letter-spacing:.14em}
+.hud .l{color:var(--pink)} .hud .m{color:var(--aqua)} .hud .r{color:var(--cyan)}
+/* HEADER */
+header{padding:52px 0 30px;position:relative}
+.mark{font-family:var(--f-mark);font-weight:700;letter-spacing:-.01em;position:relative;display:inline-block;
+  color:var(--pink);line-height:1;font-size:40px}
+.mark::before{content:attr(data-t);position:absolute;left:-3px;top:2px;color:var(--cyan);z-index:-1;opacity:.9}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--aqua);margin:0 0 14px;display:flex;gap:10px;align-items:center}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--aqua)}
+h1{font-family:var(--f-body);font-weight:900;font-size:clamp(30px,4.6vw,50px);line-height:1.04;
+  margin:6px 0 14px;text-wrap:balance;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:70ch;font-size:16px;margin:0}
+.kiss{color:var(--pink)}
+/* SECTION */
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--f-disp);font-size:clamp(24px,3.4vw,38px);letter-spacing:.01em;margin:0 0 6px;
+  text-transform:uppercase}
+.sublead{color:var(--muted);max-width:72ch;margin:0 0 26px;font-size:15px}
+.mono{font-family:var(--f-mono)}
+/* ============ GANTT ============ */
+.gantt{overflow-x:auto;padding-bottom:6px}
+.gantt-inner{min-width:920px}
+.grid-head{display:grid;grid-template-columns:150px repeat(24,1fr);align-items:center;
+  font-family:var(--f-mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;margin-bottom:8px}
+.grid-head .lab{color:var(--cyan)}
+.tick{grid-column:span 3;text-align:left;border-left:1px solid var(--line);padding-left:6px}
+.grow{display:grid;grid-template-columns:150px repeat(24,1fr);align-items:center;margin:7px 0;min-height:34px}
+.rlab{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;color:var(--text);padding-right:10px}
+.bar{height:30px;border-radius:7px;display:flex;align-items:center;padding:0 12px;
+  font-family:var(--f-mono);font-size:11px;font-weight:700;color:var(--ink);
+  box-shadow:0 4px 14px rgba(0,0,0,.35);white-space:nowrap;overflow:hidden}
+.bar.build{background:linear-gradient(90deg,#FF65C3,#FF9AD9)}
+.bar.alpha{background:linear-gradient(90deg,#19E4D0,#8FD8F0)}
+.bar.beta{background:linear-gradient(90deg,#50CDED,#7fd8ee)}
+.bar.launch{background:linear-gradient(90deg,#A780ED,#C9A8F0);color:#160A1C}
+.bar.raise{background:linear-gradient(90deg,#5C1BAB,#8a4fd0);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.bar.v2{background:repeating-linear-gradient(45deg,#2C1F38,#2C1F38 8px,#231a2e 8px,#231a2e 16px);
+  color:var(--lavender);border:1px dashed rgba(167,128,237,.55)}
+.gates{display:grid;grid-template-columns:150px repeat(24,1fr);align-items:center;margin-top:10px;min-height:60px}
+.gate{align-self:start;position:relative;text-align:center}
+.gate .dot{width:14px;height:14px;background:var(--lime);transform:rotate(45deg);margin:0 auto 6px;
+  box-shadow:0 0 0 3px rgba(233,255,58,.2)}
+.gate .gt{font-family:var(--f-mono);font-size:9.5px;line-height:1.25;color:var(--lime);letter-spacing:.02em}
+.gate.mile .dot{background:var(--pink);box-shadow:0 0 0 3px rgba(255,101,195,.2)}
+.gate.mile .gt{color:var(--pink)}
+.legend{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:22px;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+/* ============ MONTH CARDS ============ */
+.phase-band{font-family:var(--f-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  padding:9px 14px;border-radius:6px;margin:26px 0 14px;display:inline-block}
+.pb-build{background:rgba(255,101,195,.14);color:var(--pink);border:1px solid rgba(255,101,195,.4)}
+.pb-alpha{background:rgba(25,228,208,.13);color:var(--aqua);border:1px solid rgba(25,228,208,.4)}
+.pb-beta{background:rgba(80,205,237,.13);color:var(--cyan);border:1px solid rgba(80,205,237,.4)}
+.pb-launch{background:rgba(167,128,237,.15);color:var(--lavender);border:1px solid rgba(167,128,237,.45)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 17px;position:relative;overflow:hidden}
+.mcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--pink)}
+.mcard.a::before{background:var(--aqua)} .mcard.b::before{background:var(--cyan)}
+.mcard.l::before{background:var(--lavender)}
+.mtop{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:4px}
+.mno{font-family:var(--f-disp);font-size:22px;color:var(--text);line-height:1}
+.mtitle{font-weight:800;font-size:15px;letter-spacing:-.01em;flex:1;text-wrap:balance}
+.sprint{font-family:var(--f-mono);font-size:10px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:9px}
+.mcard ul{margin:0;padding-left:16px}
+.mcard li{font-size:13px;color:#e6dff0;margin-bottom:5px;line-height:1.45}
+.mcard li b{color:#fff;font-weight:700}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.06em;
+  padding:2px 7px;border-radius:4px;margin-top:9px;margin-right:5px}
+.tag.gate{background:var(--lime);color:var(--ink);font-weight:700}
+.tag.mile{background:var(--pink);color:var(--ink);font-weight:700}
+.tag.gtm{background:rgba(80,205,237,.16);color:var(--cyan);border:1px solid rgba(80,205,237,.4)}
+.tag.flag{background:rgba(255,69,96,.16);color:var(--sent-neg);border:1px solid rgba(255,69,96,.45)}
+/* ============ MATRIX ============ */
+.matrix-scroll{overflow-x:auto}
+table.matrix{border-collapse:collapse;width:100%;min-width:760px;font-size:13px}
+table.matrix th,table.matrix td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+table.matrix thead th{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--surface-2);color:var(--text)}
+table.matrix td:first-child{font-weight:700;color:#fff}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px}
+.p-alpha{background:var(--aqua);color:var(--ink)}
+.p-beta{background:var(--cyan);color:var(--ink)}
+.p-launch{background:var(--lavender);color:var(--ink)}
+.p-v2{background:var(--surface-2);color:var(--lavender);border:1px dashed rgba(167,128,237,.6)}
+.matrix tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+/* ============ NOTE BOXES ============ */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:8px}
+.note{border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.5}
+.note h4{margin:0 0 6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.note.flag{background:rgba(255,69,96,.08);border:1px solid rgba(255,69,96,.4)}
+.note.flag h4{color:var(--sent-neg)}
+.note.assume{background:rgba(80,205,237,.07);border:1px solid rgba(80,205,237,.35)}
+.note.assume h4{color:var(--cyan)}
+.note b{color:#fff}
+/* FOOTER */
+footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
+.tyt{font-family:var(--f-body);font-weight:900;font-size:26px;color:var(--pink);margin:0}
+.foot-mono{font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.1em;margin-top:8px}
+.refrain{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;color:var(--lime);text-transform:uppercase}
+@media(max-width:640px){ .mno{font-size:18px} h1{font-size:28px} }
+</style>
+</head>
+<body>
+
+<div class="hud">
+  <span class="l">BISS // ROADMAP.v1</span>
+  <span class="m">PRE-SEED → SERIES A · 24-MONTH ARC</span>
+  <span class="r">BECAUSE I SAID SO</span>
+</div>
+
+<header class="wrap">
+  <p class="eyebrow">Feature &amp; Build Plan · Month-by-Month</p>
+  <span class="mark" data-t="BISS">BISS</span>
+  <h1>From <span class="kiss">$700K SAFE</span> to Series&nbsp;A —<br>every month, every feature, every gate.</h1>
+  <p class="lead">One 24-month arc, four overlapping phases. Alpha proves the thesis, Beta proves paid conversion, Launch opens the doors, and the Series&nbsp;A raise runs across the back half — unlocked the moment we can show 3–5 confirmed B2B customers and documented unit economics. Timelines are targets measured from pre-seed close.</p>
+</header>
+
+<!-- ================= GANTT ================= -->
+<section class="wrap">
+  <h2>The Overlap</h2>
+  <p class="sublead">Phases don't hand off cleanly — they overlap. Beta opens while the last Alpha pilots convert; the Series&nbsp;A raise opens the moment the Alpha proof is documented and runs straight through GA.</p>
+  <div class="gantt">
+    <div class="gantt-inner">
+      <div class="grid-head">
+        <span class="lab">MONTH →</span>
+        <span class="tick" style="grid-column:2/5">M0–3</span>
+        <span class="tick" style="grid-column:5/8">M3–6</span>
+        <span class="tick" style="grid-column:8/11">M6–9</span>
+        <span class="tick" style="grid-column:11/14">M9–12</span>
+        <span class="tick" style="grid-column:14/17">M12–15</span>
+        <span class="tick" style="grid-column:17/20">M15–18</span>
+        <span class="tick" style="grid-column:20/23">M18–21</span>
+        <span class="tick" style="grid-column:23/26">M21–24</span>
+      </div>
+
+      <div class="grow"><span class="rlab">Pre-Seed &amp; Build</span>
+        <div class="bar build" style="grid-column:2/11">18-SPRINT ALPHA BUILD (WEB-FIRST)</div></div>
+      <div class="grow"><span class="rlab">Alpha</span>
+        <div class="bar alpha" style="grid-column:11/18">INVITE-ONLY · 3–5 PILOTS · 90-DAY</div></div>
+      <div class="grow"><span class="rlab">Beta</span>
+        <div class="bar beta" style="grid-column:17/24">NATIONAL · PAID · +RESTAURANTS/CARS</div></div>
+      <div class="grow"><span class="rlab">Public Launch (GA)</span>
+        <div class="bar launch" style="grid-column:23/26">OPEN + APPS</div></div>
+      <div class="grow"><span class="rlab">Series A Raise</span>
+        <div class="bar raise" style="grid-column:21/26">RAISE · DILIGENCE · CLOSE</div></div>
+      <div class="grow"><span class="rlab">Post-Launch v2+</span>
+        <div class="bar v2" style="grid-column:23/26">FLIPSIDE · AR · API · LICENSING →</div></div>
+
+      <div class="gates">
+        <span></span>
+        <div class="gate mile" style="grid-column:2/4"><div class="dot"></div><div class="gt">M0<br>SAFE close</div></div>
+        <div class="gate mile" style="grid-column:11/13"><div class="dot"></div><div class="gt">M10<br>Alpha ships</div></div>
+        <div class="gate" style="grid-column:14/16"><div class="dot"></div><div class="gt">M13<br>200 stories<br>/ brand</div></div>
+        <div class="gate mile" style="grid-column:16/18"><div class="dot"></div><div class="gt">M15<br>1st paid<br>B2B</div></div>
+        <div class="gate" style="grid-column:19/21"><div class="dot"></div><div class="gt">M18<br>~$3.5K ARR<br>3–5 custs</div></div>
+        <div class="gate mile" style="grid-column:23/25"><div class="dot"></div><div class="gt">M22<br>GA<br>launch</div></div>
+        <div class="gate mile" style="grid-column:25/27"><div class="dot"></div><div class="gt">M24<br>Series A<br>close</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i class="sw" style="background:linear-gradient(90deg,#FF65C3,#FF9AD9)"></i>Build</span>
+    <span><i class="sw" style="background:linear-gradient(90deg,#19E4D0,#8FD8F0)"></i>Alpha</span>
+    <span><i class="sw" style="background:linear-gradient(90deg,#50CDED,#7fd8ee)"></i>Beta</span>
+    <span><i class="sw" style="background:linear-gradient(90deg,#A780ED,#C9A8F0)"></i>Launch/GA</span>
+    <span><i class="sw" style="background:linear-gradient(90deg,#5C1BAB,#8a4fd0)"></i>Series A</span>
+    <span><i class="sw" style="background:var(--lime);transform:rotate(45deg);width:11px;height:11px"></i>Gate</span>
+    <span><i class="sw" style="background:var(--pink);transform:rotate(45deg);width:11px;height:11px"></i>Milestone</span>
+  </div>
+</section>
+
+<!-- ================= MONTH BY MONTH ================= -->
+<section class="wrap">
+  <h2>Month by Month</h2>
+  <p class="sublead">The web-first build, then the go-to-market and feature work through Alpha, Beta and Launch. Each card carries the build work, the features shipped, the go-to-market moves, and the milestones that gate each phase.</p>
+
+  <span class="phase-band pb-build">Pre-Seed &amp; Build · M0–M9 · 18 sprints, web-first</span>
+  <div class="mgrid">
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M0</span><span class="mtitle">Close &amp; Stand Up</span></div>
+      <div class="sprint">Sprint 1 · Foundations</div>
+      <ul>
+        <li>Close the <b>$700K pre-seed SAFE</b>; company operations stood up.</li>
+        <li>Engineering foundation: cloud infrastructure (NVIDIA Inception / AWS Activate credits), data model, auth, phone + email verification.</li>
+        <li>Establish the <b>legal &amp; trust foundation</b> — Terms, privacy, Section 230 posture, identity-verification stack.</li>
+      </ul>
+      <span class="tag mile">SAFE CLOSE</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M1</span><span class="mtitle">The Conversation</span></div>
+      <div class="sprint">Sprints 2–3 · Core chat + journal</div>
+      <ul>
+        <li><b>Therapeutic AI Conversation</b> — web-first UI, LLM loop, open-question prompt design.</li>
+        <li>Journal engine begins: conversation → entry, brand-entity detection.</li>
+      </ul>
+      <span class="tag gtm">Scout 3–5 travel creators</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M2</span><span class="mtitle">Score, Not Stars</span></div>
+      <div class="sprint">Sprints 3–4 · Journal + identity</div>
+      <ul>
+        <li><b>AI-Inferred Ratings</b> (score-not-stars) + <b>Real-Time Emotional Face</b> v1.</li>
+        <li>Multi-brand detection &amp; story splitting.</li>
+        <li>Pseudonymous profiles + generator (Genre→Sub-genre→Color→## , 69 excluded); per-entry privacy; PII redaction.</li>
+      </ul>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M3</span><span class="mtitle">Brand Pages + Safety</span></div>
+      <div class="sprint">Sprints 5–6 · Brand pages + safety v1</div>
+      <ul>
+        <li><b>Brand Pages</b> — auto-created, sentiment rollup, pain-point extraction; <b>Founding&nbsp;50 / Ghost Pages</b> hidden until density threshold.</li>
+        <li>Content safety v1 (mean / scary / spam filters, profanity clean).</li>
+      </ul>
+      <span class="tag gtm">Open Sourced-corpus licensing talks</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M4</span><span class="mtitle">Authenticity &amp; Trust</span></div>
+      <div class="sprint">Sprints 7–8 · Detection + moderation</div>
+      <ul>
+        <li><b>Authenticity &amp; Trust System</b>: typing biometrics, paste detection, soft nudge; Authenticity Score 1–100.</li>
+        <li>Review queue, 5-strike system, appeals v1.</li>
+      </ul>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M5</span><span class="mtitle">Feed + Dashboard v1</span></div>
+      <div class="sprint">Sprints 9–10 · Feed + B2B dashboard</div>
+      <ul>
+        <li>Discover feed (friends-first ranking, one-word responses).</li>
+        <li><b>B2B Dashboard v1</b> — brand claim flow, sentiment chart, pain points, tier gating, business legal-entity verification.</li>
+        <li><b>Sourced vs Member provenance</b> tagging — tracked separately, never blended.</li>
+      </ul>
+      <span class="tag gtm">B2B alpha-partner outreach (travel)</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M6</span><span class="mtitle">Seed + Contest v1</span></div>
+      <div class="sprint">Contest engine + seed campaigns</div>
+      <ul>
+        <li><b>Contest Platform v1</b> — the primary acquisition engine. Brand-sponsored story competitions, cash prizes; "BISS is the stadium" (no cut, no IP, no judging).</li>
+        <li><b>Seed Question Campaigns v1</b> — brands post targeted questions (top supporting revenue stream).</li>
+      </ul>
+      <span class="tag gtm">Sign first content creators</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M7</span><span class="mtitle">Harden + Sourced Pipe</span></div>
+      <div class="sprint">Sprint 11 · Hardening</div>
+      <ul>
+        <li>Rate limits by reputation tier, device fingerprinting, IP monitoring, load testing.</li>
+        <li><b>Sourced ingestion pipeline</b> — licensed travel-blog corpus loaded for focus brands (the launch triangle's Sourced leg).</li>
+      </ul>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M8</span><span class="mtitle">Alpha Polish</span></div>
+      <div class="sprint">Sprint 12 · Polish + evals</div>
+      <ul>
+        <li>Onboarding education; XP / Story Coins v1 (light gamification).</li>
+        <li>Automated quality &amp; evaluation pipelines; partner-pilot setup.</li>
+      </ul>
+      <span class="tag gtm">Phase 2: brand test accounts live</span>
+    </div>
+
+    <div class="mcard">
+      <div class="mtop"><span class="mno">M9</span><span class="mtitle">Readiness Gate</span></div>
+      <div class="sprint">Hardening &amp; readiness</div>
+      <ul>
+        <li>Load-tested, real-time moderation verified, anchor partner confirmed.</li>
+        <li>Content seeding live — the first B2B prospect sees real stories, not a blank page.</li>
+      </ul>
+      <span class="tag gate">GATE: Alpha-ready</span>
+    </div>
+  </div>
+
+  <span class="phase-band pb-alpha">Alpha · M10–M16 · invite-only, prove the thesis</span>
+  <div class="mgrid">
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M10</span><span class="mtitle">Alpha Ships</span></div>
+      <div class="sprint">Web-first · invite-only</div>
+      <ul>
+        <li>3–5 B2B alpha partners begin <b>90-day free pilots</b>; 20–50 invited creators.</li>
+        <li>First contest live to drive Member story acquisition.</li>
+        <li>Real-time moderation and incident protocols active from day one.</li>
+      </ul>
+      <span class="tag mile">ALPHA LIVE</span>
+    </div>
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M11</span><span class="mtitle">Density Build</span></div>
+      <div class="sprint">Iterate on live signal</div>
+      <ul>
+        <li>Contest-driven Member stories ramp; conversation-quality + authenticity tuning.</li>
+        <li>Seed Question Campaigns live with partners (Phase 3).</li>
+      </ul>
+    </div>
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M12</span><span class="mtitle">Intelligence Proof</span></div>
+      <div class="sprint">Dashboard v1.5</div>
+      <ul>
+        <li><b>Competitive Reports, Custom Reports, emotional journey maps</b>.</li>
+        <li>Case-study documentation begins; push toward 200 stories/brand.</li>
+      </ul>
+    </div>
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M13</span><span class="mtitle">Density Gate</span></div>
+      <div class="sprint">Alpha gate</div>
+      <ul>
+        <li><b>~200 Member stories per focus brand</b> — the density gate that makes the B2B signal real.</li>
+        <li>Target the proof line: a partner who says "this told us something our surveys never could."</li>
+      </ul>
+      <span class="tag gate">GATE: 200 stories/brand</span>
+    </div>
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M14</span><span class="mtitle">Signal → ROI</span></div>
+      <div class="sprint">Case studies</div>
+      <ul>
+        <li>Publish alpha case studies; present ROI as 90-day pilots mature.</li>
+        <li><b>FlipSide v2</b> dual-identity spec + design begins (post-alpha build).</li>
+      </ul>
+    </div>
+    <div class="mcard a">
+      <div class="mtop"><span class="mno">M15</span><span class="mtitle">Paid Transition</span></div>
+      <div class="sprint">Convert pilots</div>
+      <ul>
+        <li>First pilots convert to <b>paid B2B subscriptions</b> ($50–800/mo tiers).</li>
+        <li>Document unit economics (target LTV/CAC 3–6×); begin Series A data room.</li>
+      </ul>
+      <span class="tag mile">1st PAID B2B</span>
+    </div>
+  </div>
+
+  <span class="phase-band pb-beta">Beta · M16–M22 · national, paid, +Restaurants/Cars</span>
+  <div class="mgrid">
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M16</span><span class="mtitle">Beta Opens</span></div>
+      <div class="sprint">Expand the funnel</div>
+      <ul>
+        <li>Broader invite, national expansion; <b>Restaurants (QSR / Fast Casual)</b> + <b>Car Rentals</b> verticals added.</li>
+        <li>Beta partner outreach (Alaska, Enterprise, Marriott/Courtyard, Uber — targets).</li>
+        <li>Native mobile build begins off the web-first base.</li>
+      </ul>
+    </div>
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M17</span><span class="mtitle">Content Engine Scale</span></div>
+      <div class="sprint">Contest + creator network</div>
+      <ul>
+        <li>Contest platform scales; <b>Creator Network</b> (sponsored activations); <b>Premiere Placement</b>.</li>
+        <li>FlipSide v2 build in progress.</li>
+      </ul>
+    </div>
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M18</span><span class="mtitle">Traction Anchor</span></div>
+      <div class="sprint">Consumer platform features</div>
+      <ul>
+        <li><b>~$3.5K ARR</b> modeled anchor; 3–5 confirmed B2B customers documented.</li>
+        <li><b>Trend Alerts, Advanced Search</b> ship.</li>
+      </ul>
+      <span class="tag gate">ANCHOR: 3–5 custs · $3.5K ARR</span>
+    </div>
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M19</span><span class="mtitle">Full Journey</span></div>
+      <div class="sprint">Multi-touchpoint</div>
+      <ul>
+        <li>Car Rentals live → full <b>flight → hotel → car</b> journey mapping.</li>
+        <li>Native apps in TestFlight / beta channel; data room complete.</li>
+      </ul>
+    </div>
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M20</span><span class="mtitle">Raise Opens</span></div>
+      <div class="sprint">Series A process live</div>
+      <ul>
+        <li><b>Series A raise opens</b> on the proof: 3–5 confirmed B2B customers + documented unit economics.</li>
+        <li>Beta metrics + case studies packaged; FlipSide v2 → internal QA.</li>
+      </ul>
+      <span class="tag mile">SERIES A OPENS</span>
+    </div>
+    <div class="mcard b">
+      <div class="mtop"><span class="mno">M21</span><span class="mtitle">GA Hardening</span></div>
+      <div class="sprint">Scale for open signups</div>
+      <ul>
+        <li>Infra scale + load test for open signups.</li>
+        <li>Full <b>gamification</b> (XP, Story Coins, badges) + <b>Face Customization</b>; app-store submission.</li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="phase-band pb-launch">Public Launch (GA) + Series A Close · M22–M24</span>
+  <div class="mgrid">
+    <div class="mcard l">
+      <div class="mtop"><span class="mno">M22</span><span class="mtitle">Public Launch</span></div>
+      <div class="sprint">Open · iOS / Android / web</div>
+      <ul>
+        <li>Open signups; native apps live. Phase 4 <b>Community Growth</b> (creator networks, referrals, word-of-mouth).</li>
+        <li><b>FlipSide dual identity ships (v2)</b> — toggled at publish, default always pseudonym.</li>
+      </ul>
+      <span class="tag mile">GA LAUNCH</span>
+    </div>
+    <div class="mcard l">
+      <div class="mtop"><span class="mno">M23</span><span class="mtitle">Scale &amp; Diligence</span></div>
+      <div class="sprint">National scale</div>
+      <ul>
+        <li>Contests + seed campaigns scale nationally; Additional Seats, expanded B2B tiers.</li>
+        <li>Series A term sheet / diligence.</li>
+      </ul>
+    </div>
+    <div class="mcard l">
+      <div class="mtop"><span class="mno">M24</span><span class="mtitle">Series A Close</span></div>
+      <div class="sprint">Runway extended</div>
+      <ul>
+        <li><b>Series A closed.</b> Scale hiring (engineering, BD); transition into Growth phase.</li>
+      </ul>
+      <span class="tag mile">SERIES A CLOSE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURE MATRIX ================= -->
+<section class="wrap">
+  <h2>Feature Sequencing</h2>
+  <p class="sublead">What lands when. Core features are built in the Alpha window; platform features layer through Beta and Launch; the deliberately-deferred set is fenced into post-launch v2+ so it never bloats the MVP.</p>
+  <div class="matrix-scroll">
+  <table class="matrix">
+    <thead><tr><th>Feature</th><th>Type</th><th>Phase</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Therapeutic AI Conversation</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>The product. Ships M1.</td></tr>
+      <tr><td>AI-Inferred Ratings (score-not-stars)</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>No numeric rating ever selected.</td></tr>
+      <tr><td>Real-Time Emotional Face</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>v1 at M2; customization deferred.</td></tr>
+      <tr><td>Journal Entries + Privacy Controls</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>Pseudonym default; PII redaction.</td></tr>
+      <tr><td>Multi-Brand Detection &amp; Story Splitting</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>One story, many brands.</td></tr>
+      <tr><td>Brand Pages + Founding 50</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>Hidden until density threshold.</td></tr>
+      <tr><td>Authenticity &amp; Trust System</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>Biometrics + 1–100 score.</td></tr>
+      <tr><td>Sourced vs Member Provenance</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>Tagged separately, never blended.</td></tr>
+      <tr><td>B2B Intelligence Dashboard</td><td>Core</td><td><span class="pill p-alpha">Alpha build</span></td><td>v1 M5 → v1.5 M12 (reports, journey maps).</td></tr>
+      <tr><td>Contest Platform</td><td>Platform</td><td><span class="pill p-alpha">Alpha build</span></td><td>Primary acquisition engine + 3rd model. Scales in Beta.</td></tr>
+      <tr><td>Seed Question Campaigns</td><td>Platform · B2B</td><td><span class="pill p-alpha">Alpha build</span></td><td>Top supporting revenue stream.</td></tr>
+      <tr><td>Competitive &amp; Custom Reports</td><td>Platform · B2B</td><td><span class="pill p-alpha">Alpha</span></td><td>Dashboard v1.5, M12.</td></tr>
+      <tr><td>Creator Network · Premiere Placement</td><td>Platform · B2B</td><td><span class="pill p-beta">Beta</span></td><td>Sponsored activations; featured placement.</td></tr>
+      <tr><td>Trend Alerts · Advanced Search</td><td>Platform · Consumer</td><td><span class="pill p-beta">Beta</span></td><td>M18.</td></tr>
+      <tr><td>Restaurants + Car Rentals verticals</td><td>Category</td><td><span class="pill p-beta">Beta</span></td><td>Travel-first; added at Beta.</td></tr>
+      <tr><td>Native iOS / Android apps</td><td>Platform</td><td><span class="pill p-launch">Launch</span></td><td>Built off web-first base in Beta.</td></tr>
+      <tr><td>Full Gamification + Face Customization</td><td>Platform · Consumer</td><td><span class="pill p-launch">Launch</span></td><td>XP/Coins v1 in Alpha; full set at GA.</td></tr>
+      <tr><td>FlipSide dual identity (full)</td><td>Platform · Consumer</td><td><span class="pill p-launch">Launch (v2)</span></td><td>Designed in Alpha, ships at GA.</td></tr>
+      <tr><td>Additional Seats · expanded tiers</td><td>Platform · B2B</td><td><span class="pill p-launch">Launch</span></td><td>M23.</td></tr>
+      <tr><td>Parallel Universe</td><td>Platform · Consumer</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Deferred.</td></tr>
+      <tr><td>Location / AR stories</td><td>Platform · Consumer</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Deferred.</td></tr>
+      <tr><td>API access (Enterprise)</td><td>Platform · B2B</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Enterprise tier.</td></tr>
+      <tr><td>Data Licensing · External Publishing APIs</td><td>Platform · B2B</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Year-3 revenue stream.</td></tr>
+      <tr><td>Sampling Program</td><td>Platform · B2B</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Bazaarvoice-style.</td></tr>
+      <tr><td>Retail · Entertainment categories</td><td>Category</td><td><span class="pill p-v2">Post-launch v2+</span></td><td>Growth phase, Yr 3.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= WHAT EACH PHASE PROVES ================= -->
+<section class="wrap">
+  <h2>What Each Phase Proves</h2>
+  <p class="sublead">Every phase retires a specific risk and produces the evidence the next stage — and the next investor conversation — depends on. The roadmap is sequenced so that de-risking, not spending, drives the timeline.</p>
+  <div class="notes">
+    <div class="note assume"><h4>Build · M0–M9 — "the product exists"</h4>
+      A working, moderated, web-first platform — therapeutic AI conversation, brand pages, the authenticity system, and the B2B intelligence dashboard — ready for real users and real partners.</div>
+    <div class="note assume"><h4>Alpha · M10–M16 — "the thesis is real"</h4>
+      Invite-only pilots with strategic partners reach <b>~200 Member stories per focus brand</b> and surface intelligence a survey never could. The first pilots convert to paid.</div>
+    <div class="note assume"><h4>Beta · M16–M22 — "the economics work"</h4>
+      National expansion into restaurants and car rentals, documented unit economics (target LTV/CAC 3–6×), and <b>3–5 confirmed B2B customers</b> — the milestone that opens the Series&nbsp;A conversation.</div>
+    <div class="note assume"><h4>Launch · M22–M24 — "it scales"</h4>
+      Open signups, native apps, the full community-growth engine, and the deferred product surface (FlipSide and the v2+ roadmap) coming online as the Series&nbsp;A closes.</div>
+  </div>
+  <div class="notes" style="margin-top:14px">
+    <div class="note assume"><h4>The launch triangle powers every phase</h4>
+      Each stage runs on the same three legs — an <b>anchor partner</b>, a licensed <b>Sourced corpus</b>, and <b>contest-driven Member stories</b>. Only Member stories become sellable intelligence; Sourced and Member content are always tracked separately, never blended.</div>
+    <div class="note assume"><h4>On the partners named here</h4>
+      The brands referenced across this roadmap are <b>strategic targets selected for fit — not signed or confirmed relationships</b>. They illustrate the go-to-market logic and the ideal partner profile: customer-obsessed brands with an intelligence gap BISS fills, and no competitive overlap.</div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p class="refrain">Because I Said So</p>
+  <p class="tyt">Tell Your Truth.</p>
+  <p class="foot-mono">NVIDIA Inception Program · Oxford Saïd Business School</p>
+  <p class="foot-mono">BISS · Product &amp; Milestone Roadmap · Pre-Seed → Series A</p>
+</footer>
+
+</body>
+</html>
