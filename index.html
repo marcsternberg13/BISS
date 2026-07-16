@@ -147,7 +147,8 @@ section{position:relative;padding:92px 0;overflow:hidden}
 
 /* ── MARQUEE (BISO everywhere) ── */
 .marquee{background:var(--lime);color:#160A1C;overflow:hidden;white-space:nowrap;padding:13px 0;border-top:2px solid #160A1C;border-bottom:2px solid #160A1C}
-.marquee .track{display:inline-block;animation:scroll 26s linear infinite;font-family:var(--f-disp);text-transform:uppercase;font-size:23px;letter-spacing:.03em}
+.marquee .track{display:inline-flex;flex-wrap:nowrap;animation:scroll 26s linear infinite;font-family:var(--f-disp);text-transform:uppercase;font-size:23px;letter-spacing:.03em;will-change:transform}
+.marquee .seg{display:inline-block;white-space:nowrap;flex:none}
 .marquee.pink{background:var(--pink);color:#210419}
 .marquee.pink .track{animation-duration:30s}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -343,6 +344,7 @@ body.locked{overflow:hidden;height:100vh}
 @media(prefers-reduced-motion:reduce){.lips,.lips .lower{animation:none}}
 
 .ctastrip{background:var(--pink);padding:22px 0}
+.ctagap{height:14px;background:var(--ink2)}
 .ctainner{max-width:1180px;margin:0 auto;padding:0 26px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
 .btn-cta{display:inline-flex;align-items:center;font-family:var(--f-mono);font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:15px 30px;border-radius:11px;transition:transform .15s,box-shadow .15s;cursor:pointer}
 .btn-cta.primary{background:#160A1C;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.28)}
@@ -529,7 +531,8 @@ html{overflow-x:hidden}
 </section>
 
 <div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
-<div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;</div></div>
+<div class="ctagap"></div>
+<div class="marquee"><div class="track" style="animation-duration:44s"><span class="seg">If Reddit, Yelp, Instagram, Rotten&nbsp;Tomatoes, and a therapist had a baby — that baby is BISS.&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Say The Thing&nbsp;·&nbsp;BISS&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">If Reddit, Yelp, Instagram, Rotten&nbsp;Tomatoes, and a therapist had a baby — that baby is BISS.&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Say The Thing&nbsp;·&nbsp;BISS&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">If Reddit, Yelp, Instagram, Rotten&nbsp;Tomatoes, and a therapist had a baby — that baby is BISS.&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Say The Thing&nbsp;·&nbsp;BISS&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">If Reddit, Yelp, Instagram, Rotten&nbsp;Tomatoes, and a therapist had a baby — that baby is BISS.&nbsp;·&nbsp;Tell Your Truth&nbsp;·&nbsp;Name Names&nbsp;·&nbsp;Spare No One&nbsp;·&nbsp;Say The Thing&nbsp;·&nbsp;BISS&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span></div></div>
 
 <!-- TEN LINES (whole-thing summary) -->
 <section class="band violet" id="whole">
@@ -892,7 +895,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<div class="marquee pink"><div class="track">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</div></div>
+<div class="marquee pink"><div class="track" style="animation-duration:45s"><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span><span class="seg">No Ads&nbsp;·&nbsp;Always Free&nbsp;·&nbsp;No Stars&nbsp;·&nbsp;Anonymous But Real&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;</span></div></div>
 
 <!-- PROMISES -->
 <section class="band lime">
@@ -1006,7 +1009,8 @@ html{overflow-x:hidden}
 </section>
 
 <div class="ctastrip"><div class="ctainner"><a class="btn-cta primary" href="https://biss-opal.vercel.app" target="_blank" rel="noopener">▶&nbsp;&nbsp;Try the Demo</a><a class="btn-cta ghost" href="https://www.yeahisaidthat.com/pitch-deck" target="_blank" rel="noopener">View the Pitch Deck&nbsp;&nbsp;→</a></div></div>
-<div class="marquee"><div class="track">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</div></div>
+<div class="ctagap"></div>
+<div class="marquee"><div class="track" style="animation-duration:40s"><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span><span class="seg">Because I Said So&nbsp;·&nbsp;Conversational Customer Intelligence&nbsp;·&nbsp;For The Brands They're Already Talking About&nbsp;·&nbsp;</span></div></div>
 
 <!-- WHOLE THING FAST -->
 <section class="band deep">
