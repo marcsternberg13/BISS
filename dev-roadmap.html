@@ -122,6 +122,16 @@ table.matrix td:first-child{font-weight:700;color:#fff}
 .note.assume{background:rgba(80,205,237,.07);border:1px solid rgba(80,205,237,.35)}
 .note.assume h4{color:var(--cyan)}
 .note b{color:#fff}
+/* CTA */
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.cta{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-mono);font-weight:700;font-size:14px;
+  letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:9px;
+  transition:transform .15s ease, box-shadow .15s ease}
+.cta.primary{background:var(--lime);color:#181400;box-shadow:0 6px 24px rgba(233,255,58,.28)}
+.cta.primary:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(233,255,58,.42)}
+.foot-link{display:inline-block;margin-top:16px;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(80,205,237,.4);padding-bottom:2px}
+.foot-link:hover{color:#fff;border-color:#fff}
 /* FOOTER */
 footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
 .tyt{font-family:var(--f-body);font-weight:900;font-size:26px;color:var(--pink);margin:0}
@@ -141,14 +151,17 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
 <header class="wrap">
   <p class="eyebrow">Feature &amp; Build Plan · Month-by-Month</p>
   <span class="mark" data-t="BISS">BISS</span>
-  <h1>From <span class="kiss">$700K SAFE</span> to Series&nbsp;A —<br>every month, every feature, every gate.</h1>
-  <p class="lead">One 24-month arc, four overlapping phases. Alpha proves the thesis, Beta proves paid conversion, Launch opens the doors, and the Series&nbsp;A raise runs across the back half — unlocked the moment we can show 3–5 confirmed B2B customers and documented unit economics. Timelines are targets measured from pre-seed close.</p>
+  <h1><span class="kiss">$300K now.</span> ~$700K to Series&nbsp;A —<br>every month, every feature, every gate.</h1>
+  <p class="lead">One 24-month arc, four overlapping phases. Alpha proves the thesis, Beta proves paid conversion, Launch opens the doors. The raise is staged and gated on proof: $300K pre-seed now funds the build to Alpha, then a ~$400K seed follows at month&nbsp;15–18 once Alpha is proven — ~$700K total to the Series&nbsp;A gate. Timelines are targets measured from pre-seed close.</p>
+  <div class="cta-row">
+    <a href="roadmap-deck.html" target="_blank" rel="noopener" class="cta primary">View the presentation →</a>
+  </div>
 </header>
 
 <!-- ================= GANTT ================= -->
 <section class="wrap">
   <h2>The Overlap</h2>
-  <p class="sublead">Phases don't hand off cleanly — they overlap. Beta opens while the last Alpha pilots convert; the Series&nbsp;A raise opens the moment the Alpha proof is documented and runs straight through GA.</p>
+  <p class="sublead">Phases don't hand off cleanly — they overlap. Beta opens while the last Alpha pilots convert; the ~$400K seed opens the moment Alpha is proven (Gate&nbsp;1) and runs into GA. The Series&nbsp;A gate (Gate&nbsp;2) comes later, at $150–250K ARR.</p>
   <div class="gantt">
     <div class="gantt-inner">
       <div class="grid-head">
@@ -171,20 +184,20 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
         <div class="bar beta" style="grid-column:17/24">NATIONAL · PAID · +RESTAURANTS/CARS</div></div>
       <div class="grow"><span class="rlab">Public Launch (GA)</span>
         <div class="bar launch" style="grid-column:23/26">OPEN + APPS</div></div>
-      <div class="grow"><span class="rlab">Series A Raise</span>
-        <div class="bar raise" style="grid-column:21/26">RAISE · DILIGENCE · CLOSE</div></div>
+      <div class="grow"><span class="rlab">Seed Raise (~$400K)</span>
+        <div class="bar raise" style="grid-column:17/24">GATE 1 · ALPHA PROOF → SEED</div></div>
       <div class="grow"><span class="rlab">Post-Launch v2+</span>
         <div class="bar v2" style="grid-column:23/26">FLIPSIDE · AR · API · LICENSING →</div></div>
 
       <div class="gates">
         <span></span>
-        <div class="gate mile" style="grid-column:2/4"><div class="dot"></div><div class="gt">M0<br>SAFE close</div></div>
+        <div class="gate mile" style="grid-column:2/4"><div class="dot"></div><div class="gt">M0<br>$300K<br>pre-seed</div></div>
         <div class="gate mile" style="grid-column:11/13"><div class="dot"></div><div class="gt">M10<br>Alpha ships</div></div>
         <div class="gate" style="grid-column:14/16"><div class="dot"></div><div class="gt">M13<br>200 stories<br>/ brand</div></div>
-        <div class="gate mile" style="grid-column:16/18"><div class="dot"></div><div class="gt">M15<br>1st paid<br>B2B</div></div>
-        <div class="gate" style="grid-column:19/21"><div class="dot"></div><div class="gt">M18<br>~$3.5K ARR<br>3–5 custs</div></div>
+        <div class="gate mile" style="grid-column:16/18"><div class="dot"></div><div class="gt">M16<br>Gate 1<br>→ seed</div></div>
+        <div class="gate" style="grid-column:19/21"><div class="dot"></div><div class="gt">M18<br>~$12K ARR<br>2 custs</div></div>
         <div class="gate mile" style="grid-column:23/25"><div class="dot"></div><div class="gt">M22<br>GA<br>launch</div></div>
-        <div class="gate mile" style="grid-column:25/27"><div class="dot"></div><div class="gt">M24<br>Series A<br>close</div></div>
+        <div class="gate mile" style="grid-column:25/27"><div class="dot"></div><div class="gt">→ Series A<br>Gate 2<br>Yr 3</div></div>
       </div>
     </div>
   </div>
@@ -193,7 +206,7 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
     <span><i class="sw" style="background:linear-gradient(90deg,#19E4D0,#8FD8F0)"></i>Alpha</span>
     <span><i class="sw" style="background:linear-gradient(90deg,#50CDED,#7fd8ee)"></i>Beta</span>
     <span><i class="sw" style="background:linear-gradient(90deg,#A780ED,#C9A8F0)"></i>Launch/GA</span>
-    <span><i class="sw" style="background:linear-gradient(90deg,#5C1BAB,#8a4fd0)"></i>Series A</span>
+    <span><i class="sw" style="background:linear-gradient(90deg,#5C1BAB,#8a4fd0)"></i>Seed raise</span>
     <span><i class="sw" style="background:var(--lime);transform:rotate(45deg);width:11px;height:11px"></i>Gate</span>
     <span><i class="sw" style="background:var(--pink);transform:rotate(45deg);width:11px;height:11px"></i>Milestone</span>
   </div>
@@ -211,11 +224,11 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
       <div class="mtop"><span class="mno">M0</span><span class="mtitle">Close &amp; Stand Up</span></div>
       <div class="sprint">Sprint 1 · Foundations</div>
       <ul>
-        <li>Close the <b>$700K pre-seed SAFE</b>; company operations stood up.</li>
+        <li>Close the <b>$300K pre-seed SAFE</b>; company operations stood up.</li>
         <li>Engineering foundation: cloud infrastructure (NVIDIA Inception / AWS Activate credits), data model, auth, phone + email verification.</li>
         <li>Establish the <b>legal &amp; trust foundation</b> — Terms, privacy, Section 230 posture, identity-verification stack.</li>
       </ul>
-      <span class="tag mile">SAFE CLOSE</span>
+      <span class="tag mile">$300K CLOSE</span>
     </div>
 
     <div class="mcard">
@@ -357,8 +370,8 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
       <div class="mtop"><span class="mno">M15</span><span class="mtitle">Paid Transition</span></div>
       <div class="sprint">Convert pilots</div>
       <ul>
-        <li>First pilots convert to <b>paid B2B subscriptions</b> ($50–800/mo tiers).</li>
-        <li>Document unit economics (target LTV/CAC 3–6×); begin Series A data room.</li>
+        <li>First pilots convert to <b>paid B2B subscriptions</b> ($50–3,000/mo tiers).</li>
+        <li>Document unit economics (LTV/CAC up to 7.2×); begin the seed raise data room.</li>
       </ul>
       <span class="tag mile">1st PAID B2B</span>
     </div>
@@ -387,10 +400,10 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
       <div class="mtop"><span class="mno">M18</span><span class="mtitle">Traction Anchor</span></div>
       <div class="sprint">Consumer platform features</div>
       <ul>
-        <li><b>~$3.5K ARR</b> modeled anchor; 3–5 confirmed B2B customers documented.</li>
+        <li><b>~$12K ARR</b> modeled anchor (2 customers); Gate 1 proof (3–5 pilots, first conversions) unlocks the ~$400K seed.</li>
         <li><b>Trend Alerts, Advanced Search</b> ship.</li>
       </ul>
-      <span class="tag gate">ANCHOR: 3–5 custs · $3.5K ARR</span>
+      <span class="tag gate">GATE 1 · ~$12K ARR → SEED</span>
     </div>
     <div class="mcard b">
       <div class="mtop"><span class="mno">M19</span><span class="mtitle">Full Journey</span></div>
@@ -401,13 +414,13 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
       </ul>
     </div>
     <div class="mcard b">
-      <div class="mtop"><span class="mno">M20</span><span class="mtitle">Raise Opens</span></div>
-      <div class="sprint">Series A process live</div>
+      <div class="mtop"><span class="mno">M20</span><span class="mtitle">Seed Raise</span></div>
+      <div class="sprint">~$400K seed process</div>
       <ul>
-        <li><b>Series A raise opens</b> on the proof: 3–5 confirmed B2B customers + documented unit economics.</li>
+        <li><b>~$400K seed raise</b> — opened on Alpha proof (Gate 1: 3–5 pilots, first conversions, early unit economics).</li>
         <li>Beta metrics + case studies packaged; FlipSide v2 → internal QA.</li>
       </ul>
-      <span class="tag mile">SERIES A OPENS</span>
+      <span class="tag mile">SEED OPENS</span>
     </div>
     <div class="mcard b">
       <div class="mtop"><span class="mno">M21</span><span class="mtitle">GA Hardening</span></div>
@@ -419,7 +432,7 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
     </div>
   </div>
 
-  <span class="phase-band pb-launch">Public Launch (GA) + Series A Close · M22–M24</span>
+  <span class="phase-band pb-launch">Public Launch (GA) + Seed Close · M22–M24</span>
   <div class="mgrid">
     <div class="mcard l">
       <div class="mtop"><span class="mno">M22</span><span class="mtitle">Public Launch</span></div>
@@ -435,16 +448,16 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
       <div class="sprint">National scale</div>
       <ul>
         <li>Contests + seed campaigns scale nationally; Additional Seats, expanded B2B tiers.</li>
-        <li>Series A term sheet / diligence.</li>
+        <li>Seed term sheet / diligence &amp; close.</li>
       </ul>
     </div>
     <div class="mcard l">
-      <div class="mtop"><span class="mno">M24</span><span class="mtitle">Series A Close</span></div>
-      <div class="sprint">Runway extended</div>
+      <div class="mtop"><span class="mno">M24</span><span class="mtitle">Seed Close</span></div>
+      <div class="sprint">Runway to Gate 2</div>
       <ul>
-        <li><b>Series A closed.</b> Scale hiring (engineering, BD); transition into Growth phase.</li>
+        <li><b>~$400K seed closed.</b> Runway extended toward the Series A gate (Gate 2 · 8–15 customers · $150–250K ARR · ~Yr 3); scale hiring in engineering &amp; BD.</li>
       </ul>
-      <span class="tag mile">SERIES A CLOSE</span>
+      <span class="tag mile">SEED CLOSE</span>
     </div>
   </div>
 </section>
@@ -497,9 +510,9 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
     <div class="note assume"><h4>Alpha · M10–M16 — "the thesis is real"</h4>
       Invite-only pilots with strategic partners reach <b>~200 Member stories per focus brand</b> and surface intelligence a survey never could. The first pilots convert to paid.</div>
     <div class="note assume"><h4>Beta · M16–M22 — "the economics work"</h4>
-      National expansion into restaurants and car rentals, documented unit economics (target LTV/CAC 3–6×), and <b>3–5 confirmed B2B customers</b> — the milestone that opens the Series&nbsp;A conversation.</div>
+      National expansion into restaurants and car rentals, documented unit economics (LTV/CAC up to 7.2×), and the <b>~$400K seed</b> — unlocked by Alpha proof (Gate 1). The Series&nbsp;A gate (Gate 2) comes at 8–15 paying customers and $150–250K ARR.</div>
     <div class="note assume"><h4>Launch · M22–M24 — "it scales"</h4>
-      Open signups, native apps, the full community-growth engine, and the deferred product surface (FlipSide and the v2+ roadmap) coming online as the Series&nbsp;A closes.</div>
+      Open signups, native apps, the full community-growth engine, and the deferred product surface (FlipSide and the v2+ roadmap) coming online as the seed closes and the company drives toward the Series&nbsp;A gate.</div>
   </div>
   <div class="notes" style="margin-top:14px">
     <div class="note assume"><h4>The launch triangle powers every phase</h4>
@@ -514,6 +527,7 @@ footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
   <p class="tyt">Tell Your Truth.</p>
   <p class="foot-mono">NVIDIA Inception Program · Oxford Saïd Business School</p>
   <p class="foot-mono">BISS · Product &amp; Milestone Roadmap · Pre-Seed → Series A</p>
+  <a href="roadmap-deck.html" target="_blank" rel="noopener" class="foot-link">View the slide presentation →</a>
 </footer>
 
 </body>
