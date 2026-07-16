@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BISS · Roadmap Deck — Pre-Seed → Series A</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF65C3; --cyan:#50CDED; --aqua:#19E4D0; --lime:#E9FF3A;
+  --purple:#5C1BAB; --indigo:#41249A; --lavender:#A780ED; --neg:#FF4560;
+  --ink:#160A1C; --surface:#201528; --surface-2:#2C1F38;
+  --line:rgba(255,255,255,.14); --text:#F5F1FA; --muted:#9E93B8;
+  --holo:linear-gradient(115deg,#FF9AD9 0%,#C9A8F0 26%,#8FD8F0 52%,#B9F0D8 74%,#EDFF9A 100%);
+  --vapor:linear-gradient(160deg,#2C2688 0%,#5C1BAB 62%,#6722B0 100%);
+  --f-mark:"Fredoka",sans-serif; --f-disp:"Anton",sans-serif;
+  --f-mono:"Space Mono",monospace; --f-body:"Inter",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#0b0610;font-family:var(--f-body);color:var(--text);overflow:hidden}
+.viewport{position:fixed;inset:0;display:grid;place-items:center;overflow:hidden}
+.stage{width:1280px;height:720px;position:relative;transform-origin:center center;
+  background:var(--ink);border-radius:14px;overflow:hidden;
+  box-shadow:0 30px 90px rgba(0,0,0,.6);}
+/* slides */
+.slide{position:absolute;inset:0;padding:56px 68px;opacity:0;visibility:hidden;
+  transition:opacity .45s ease, transform .45s ease;transform:translateY(14px);
+  background-image:radial-gradient(1000px 520px at 82% -12%,rgba(92,27,171,.35),transparent 60%),
+  radial-gradient(760px 440px at -8% 18%,rgba(65,36,154,.22),transparent 55%);}
+.slide.active{opacity:1;visibility:visible;transform:translateY(0)}
+/* viewfinder brackets */
+.br{position:absolute;width:30px;height:30px;border:2px solid var(--lime);opacity:.8;z-index:5}
+.br.tl{left:24px;top:24px;border-right:none;border-bottom:none}
+.br.tr{right:24px;top:24px;border-left:none;border-bottom:none}
+.br.bl{left:24px;bottom:24px;border-right:none;border-top:none}
+.br.brr{right:24px;bottom:24px;border-left:none;border-top:none}
+/* hud */
+.shud{position:absolute;left:68px;right:68px;top:26px;display:flex;justify-content:space-between;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.16em}
+.shud .a{color:var(--pink)} .shud .b{color:var(--aqua)} .shud .c{color:var(--cyan)}
+/* shared type */
+.eyebrow{font-family:var(--f-mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--aqua);display:flex;align-items:center;gap:11px;margin-bottom:20px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--aqua)}
+.mark{font-family:var(--f-mark);font-weight:700;position:relative;display:inline-block;color:var(--pink);line-height:1}
+.mark::before{content:attr(data-t);position:absolute;left:-3px;top:2px;color:var(--cyan);z-index:-1;opacity:.92}
+h1{font-family:var(--f-body);font-weight:900;letter-spacing:-.025em;line-height:1.02;text-wrap:balance}
+.big{font-family:var(--f-body);font-weight:900;letter-spacing:-.03em;line-height:.98}
+.mono{font-family:var(--f-mono)}
+.pink{color:var(--pink)} .aqua{color:var(--aqua)} .cyan{color:var(--cyan)}
+.lav{color:var(--lavender)} .lime{color:var(--lime)}
+
+/* ===== COVER ===== */
+.cover{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.cover .mark{font-size:70px;margin-bottom:6px}
+.cover .tag{font-family:var(--f-mono);color:var(--cyan);letter-spacing:.5em;font-size:14px;padding-left:.5em;margin-bottom:40px}
+.cover .rule{width:150px;height:2px;background:linear-gradient(90deg,transparent,var(--lime),transparent);margin:0 auto 34px}
+.cover h1{font-size:60px;margin-bottom:18px}
+.cover .sub{font-family:var(--f-mono);color:rgba(255,255,255,.82);font-size:16px;max-width:60ch;line-height:1.6}
+.cover .chip{margin-top:30px;font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;
+  background:rgba(0,0,0,.4);color:var(--lime);padding:9px 18px;border-radius:999px;border:1px solid rgba(233,255,58,.4)}
+
+/* ===== GANTT ===== */
+.gwrap{margin-top:8px}
+.ghead{display:grid;grid-template-columns:150px repeat(24,1fr);font-family:var(--f-mono);font-size:10px;
+  color:var(--muted);letter-spacing:.04em;margin-bottom:6px}
+.gtick{border-left:1px solid var(--line);padding-left:5px}
+.grow{display:grid;grid-template-columns:150px repeat(24,1fr);align-items:center;margin:6px 0;min-height:28px}
+.rlab{font-family:var(--f-mono);font-size:11px;color:var(--text);padding-right:8px}
+.bar{height:26px;border-radius:6px;display:flex;align-items:center;padding:0 11px;font-family:var(--f-mono);
+  font-size:10.5px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.35)}
+.bar.build{background:linear-gradient(90deg,#FF65C3,#FF9AD9)}
+.bar.alpha{background:linear-gradient(90deg,#19E4D0,#8FD8F0)}
+.bar.beta{background:linear-gradient(90deg,#50CDED,#7fd8ee)}
+.bar.launch{background:linear-gradient(90deg,#A780ED,#C9A8F0)}
+.bar.raise{background:linear-gradient(90deg,#5C1BAB,#8a4fd0);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.bar.v2{background:repeating-linear-gradient(45deg,#2C1F38,#2C1F38 7px,#231a2e 7px,#231a2e 14px);
+  color:var(--lavender);border:1px dashed rgba(167,128,237,.55)}
+.ggates{display:grid;grid-template-columns:150px repeat(24,1fr);margin-top:8px}
+.gate{text-align:center}
+.gate .dot{width:12px;height:12px;background:var(--lime);transform:rotate(45deg);margin:0 auto 5px;box-shadow:0 0 0 3px rgba(233,255,58,.18)}
+.gate.mile .dot{background:var(--pink);box-shadow:0 0 0 3px rgba(255,101,195,.18)}
+.gate .gt{font-family:var(--f-mono);font-size:9px;line-height:1.25;color:var(--lime)}
+.gate.mile .gt{color:var(--pink)}
+.glegend{display:flex;gap:18px;margin-top:20px;font-family:var(--f-mono);font-size:10.5px;color:var(--muted);flex-wrap:wrap}
+.glegend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:13px;height:13px;border-radius:3px;display:inline-block}
+
+/* ===== PHASE SLIDE ===== */
+.phase{display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;height:100%;align-items:center}
+.phase .rail{padding-right:20px}
+.ptag{font-family:var(--f-mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;
+  display:inline-block;padding:7px 14px;border-radius:6px}
+.phase .statement{font-size:58px;font-weight:900;letter-spacing:-.03em;line-height:.98;margin-bottom:20px}
+.phase .oneliner{color:var(--muted);font-size:17px;line-height:1.5;max-width:34ch}
+.mlist{display:flex;flex-direction:column;gap:13px}
+.mrow{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);
+  border-radius:11px;padding:13px 16px}
+.mrow .mm{font-family:var(--f-mono);font-size:11px;color:var(--muted);min-width:44px;padding-top:2px;letter-spacing:.03em}
+.mrow .mt{font-size:14.5px;line-height:1.4}
+.mrow .mt b{font-weight:800;color:#fff}
+.gatechip{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:var(--f-mono);
+  font-size:12px;font-weight:700;padding:9px 16px;border-radius:999px;letter-spacing:.04em}
+.gatechip.g{background:var(--lime);color:var(--ink)}
+.gatechip.m{background:var(--pink);color:var(--ink)}
+.gatechip .d{width:11px;height:11px;transform:rotate(45deg);background:currentColor;opacity:.9}
+.railrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+
+/* ===== FEATURE COLUMNS ===== */
+.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+.fcol{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 15px;position:relative;overflow:hidden}
+.fcol::before{content:"";position:absolute;left:0;top:0;right:0;height:4px}
+.fcol.a::before{background:var(--aqua)} .fcol.b::before{background:var(--cyan)}
+.fcol.l::before{background:var(--lavender)} .fcol.v::before{background:repeating-linear-gradient(90deg,var(--lavender),var(--lavender) 6px,transparent 6px,transparent 12px)}
+.fcol h3{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:6px 0 4px}
+.fcol .fm{font-family:var(--f-mono);font-size:10px;color:var(--muted);margin-bottom:12px}
+.fcol.a h3{color:var(--aqua)} .fcol.b h3{color:var(--cyan)} .fcol.l h3{color:var(--lavender)} .fcol.v h3{color:var(--lavender)}
+.fcol ul{list-style:none}
+.fcol li{font-size:13px;line-height:1.35;color:#e6dff0;padding:6px 0;border-top:1px solid rgba(255,255,255,.07)}
+.fcol li:first-child{border-top:none}
+
+/* ===== PROVES / CLOSER ===== */
+.proves{height:100%;display:flex;flex-direction:column;justify-content:center}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.pcard{border-radius:12px;padding:18px 16px;border:1px solid var(--line);background:var(--surface)}
+.pcard .pph{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;margin-bottom:9px}
+.pcard.a{border-color:rgba(25,228,208,.4)} .pcard.a .pph{color:var(--aqua)}
+.pcard.b{border-color:rgba(80,205,237,.4)} .pcard.b .pph{color:var(--cyan)}
+.pcard.c{border-color:rgba(255,101,195,.4)} .pcard.c .pph{color:var(--pink)}
+.pcard.d{border-color:rgba(167,128,237,.45)} .pcard.d .pph{color:var(--lavender)}
+.pcard .pw{font-size:20px;font-weight:900;letter-spacing:-.02em;line-height:1.05;margin-bottom:8px}
+.pcard .pd{font-size:12.5px;line-height:1.45;color:var(--muted)}
+.closer-foot{margin-top:30px;display:flex;justify-content:space-between;align-items:flex-end}
+.tyt{font-family:var(--f-body);font-weight:900;font-size:30px;color:var(--pink)}
+.disc{font-family:var(--f-mono);font-size:10.5px;color:var(--muted);max-width:44ch;line-height:1.5;text-align:right}
+
+/* ===== NAV UI (outside stage) ===== */
+.nav{position:fixed;z-index:50;bottom:22px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:16px}
+.dots{display:flex;gap:9px}
+.dot-n{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:.2s;border:none}
+.dot-n.on{background:var(--pink);transform:scale(1.25)}
+.arrow{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(20,10,28,.8);
+  color:var(--text);font-size:16px;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.arrow:hover{border-color:var(--pink);color:var(--pink)}
+/* ===== CONTENT TAG SYSTEM ===== */
+.cts{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;height:100%;align-items:center}
+.cts-rail{padding-right:14px}
+.cts-title{font-size:46px;font-weight:900;letter-spacing:-.03em;line-height:.98;margin:18px 0 12px;color:#fff}
+.cts-principle{font-family:var(--f-mono);font-size:14px;letter-spacing:.08em;color:var(--pink);text-transform:uppercase;margin-bottom:15px}
+.cts-why{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:40ch}
+.cts-why b{color:#fff;font-weight:700}
+.cts-demo{display:flex;flex-direction:column;gap:15px}
+.story{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.story-h{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.story-score{font-family:var(--f-body);font-weight:900;font-size:24px;color:var(--aqua)}
+.story-meta{font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.story-body{font-size:15px;line-height:1.65;color:#e6dff0}
+.tg{font-family:var(--f-mono);font-size:12px;font-weight:700;padding:1px 6px;border-radius:5px;
+  background:rgba(80,205,237,.16);color:var(--cyan);border:1px solid rgba(80,205,237,.4);white-space:nowrap}
+.tg.red{background:rgba(255,69,96,.16);color:var(--neg);border-color:rgba(255,69,96,.45)}
+.mask{font-family:var(--f-mono);font-weight:700;color:var(--lavender)}
+.fam{display:flex;flex-direction:column;gap:9px}
+.famrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.famlab{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;min-width:92px}
+.famlab.red{color:var(--neg)} .famlab.cy{color:var(--cyan)} .famlab.lav{color:var(--lavender)}
+.chip{font-family:var(--f-mono);font-size:11.5px;padding:4px 10px;border-radius:20px;border:1px solid var(--line);background:var(--surface-2)}
+.chip.red{color:var(--neg);border-color:rgba(255,69,96,.4)}
+.chip.cy{color:var(--cyan);border-color:rgba(80,205,237,.4)}
+.chip.lav{color:var(--lavender);border-color:rgba(167,128,237,.4)}
+.mask-note{font-size:13px;color:var(--muted);line-height:1.5}
+.mask-note b{color:#fff}
+.counter{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.1em;min-width:66px;text-align:right}
+.hint{font-family:var(--f-mono);font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.1em;min-width:66px}
+@media print{.nav{display:none}}
+</style>
+</head>
+<body>
+
+<div class="viewport">
+  <div class="stage" id="stage">
+
+    <!-- 1 · COVER -->
+    <section class="slide cover active">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">BISS // ROADMAP</span><span class="b">PRE-SEED → SERIES A</span><span class="c">BECAUSE I SAID SO</span></div>
+      <span class="mark" data-t="BISS">BISS</span>
+      <div class="tag">TELL YOUR TRUTH</div>
+      <div class="rule"></div>
+      <h1>Product &amp; Milestone<br>Roadmap</h1>
+      <p class="sub">Four phases. One 24-month arc. Series&nbsp;A unlocked by proof — not time.</p>
+      <div class="chip">$300K PRE-SEED · ~$700K TO SERIES A</div>
+    </section>
+
+    <!-- 2 · THE OVERLAP (GANTT) -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">THE 24-MONTH ARC</span><span class="b">OVERLAP</span><span class="c">02</span></div>
+      <div style="margin-top:44px">
+        <p class="eyebrow">The Overlap</p>
+        <h1 style="font-size:38px;margin-bottom:6px">Phases overlap. <span class="aqua">De-risking</span> drives the timeline.</h1>
+      </div>
+      <div class="gwrap">
+        <div class="ghead">
+          <span class="cyan" style="align-self:center">MONTH →</span>
+          <span class="gtick" style="grid-column:2/5">M0–3</span>
+          <span class="gtick" style="grid-column:5/8">M3–6</span>
+          <span class="gtick" style="grid-column:8/11">M6–9</span>
+          <span class="gtick" style="grid-column:11/14">M9–12</span>
+          <span class="gtick" style="grid-column:14/17">M12–15</span>
+          <span class="gtick" style="grid-column:17/20">M15–18</span>
+          <span class="gtick" style="grid-column:20/23">M18–21</span>
+          <span class="gtick" style="grid-column:23/26">M21–24</span>
+        </div>
+        <div class="grow"><span class="rlab">Build</span><div class="bar build" style="grid-column:2/11">ALPHA BUILD · WEB-FIRST</div></div>
+        <div class="grow"><span class="rlab">Alpha</span><div class="bar alpha" style="grid-column:11/18">3–5 PILOTS · 90-DAY</div></div>
+        <div class="grow"><span class="rlab">Beta</span><div class="bar beta" style="grid-column:17/24">NATIONAL · PAID · +RESTAURANTS/CARS</div></div>
+        <div class="grow"><span class="rlab">Public Launch</span><div class="bar launch" style="grid-column:23/26">OPEN + APPS</div></div>
+        <div class="grow"><span class="rlab">Seed Raise (~$400K)</span><div class="bar raise" style="grid-column:17/24">GATE 1 · ALPHA PROOF → SEED</div></div>
+        <div class="grow"><span class="rlab">Post-Launch v2+</span><div class="bar v2" style="grid-column:23/26">FLIPSIDE →</div></div>
+        <div class="ggates">
+          <span></span>
+          <div class="gate mile" style="grid-column:2/4"><div class="dot"></div><div class="gt">M0<br>$300K</div></div>
+          <div class="gate mile" style="grid-column:11/13"><div class="dot"></div><div class="gt">M10<br>Alpha</div></div>
+          <div class="gate" style="grid-column:14/16"><div class="dot"></div><div class="gt">M13<br>200/brand</div></div>
+          <div class="gate mile" style="grid-column:16/18"><div class="dot"></div><div class="gt">M16<br>Gate 1</div></div>
+          <div class="gate" style="grid-column:19/21"><div class="dot"></div><div class="gt">M18<br>~$12K</div></div>
+          <div class="gate mile" style="grid-column:23/25"><div class="dot"></div><div class="gt">M22<br>GA</div></div>
+          <div class="gate mile" style="grid-column:25/27"><div class="dot"></div><div class="gt">Series A<br>Yr 3</div></div>
+        </div>
+      </div>
+      <div class="glegend">
+        <span><i class="sw" style="background:linear-gradient(90deg,#FF65C3,#FF9AD9)"></i>Build</span>
+        <span><i class="sw" style="background:linear-gradient(90deg,#19E4D0,#8FD8F0)"></i>Alpha</span>
+        <span><i class="sw" style="background:linear-gradient(90deg,#50CDED,#7fd8ee)"></i>Beta</span>
+        <span><i class="sw" style="background:linear-gradient(90deg,#A780ED,#C9A8F0)"></i>Launch</span>
+        <span><i class="sw" style="background:linear-gradient(90deg,#5C1BAB,#8a4fd0)"></i>Seed raise</span>
+        <span><i class="sw" style="background:var(--lime);transform:rotate(45deg);width:10px;height:10px"></i>Gate</span>
+        <span><i class="sw" style="background:var(--pink);transform:rotate(45deg);width:10px;height:10px"></i>Milestone</span>
+      </div>
+    </section>
+
+    <!-- 3 · BUILD -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">PHASE 01</span><span class="b">BUILD · M0–M9</span><span class="c">03</span></div>
+      <div class="phase">
+        <div class="rail">
+          <span class="ptag" style="background:rgba(255,101,195,.14);color:var(--pink);border:1px solid rgba(255,101,195,.4)">Build · M0–M9 · web-first</span>
+          <div class="statement">The product<br><span class="pink">exists.</span></div>
+          <p class="oneliner">A working, moderated, web-first platform — ready for real users and real partners.</p>
+          <div class="railrow"><span class="gatechip g"><span class="d"></span>GATE: ALPHA-READY</span></div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><span class="mm">M0</span><span class="mt"><b>$300K pre-seed SAFE</b> · engineering + legal &amp; trust foundation</span></div>
+          <div class="mrow"><span class="mm">M1–2</span><span class="mt"><b>Therapeutic AI conversation</b>, score-not-stars, pseudonymous identity</span></div>
+          <div class="mrow"><span class="mm">M3–4</span><span class="mt"><b>Brand Pages</b> + Founding 50 · <b>Content Tag System</b> · Authenticity &amp; Trust</span></div>
+          <div class="mrow"><span class="mm">M5</span><span class="mt"><b>B2B dashboard v1</b> · Sourced vs Member provenance</span></div>
+          <div class="mrow"><span class="mm">M6</span><span class="mt"><b>Contest engine</b> + Seed Question Campaigns</span></div>
+          <div class="mrow"><span class="mm">M7–9</span><span class="mt">Hardening · Sourced corpus loaded · content seeding live</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ALPHA -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">PHASE 02</span><span class="b">ALPHA · M10–M16</span><span class="c">04</span></div>
+      <div class="phase">
+        <div class="rail">
+          <span class="ptag" style="background:rgba(25,228,208,.13);color:var(--aqua);border:1px solid rgba(25,228,208,.4)">Alpha · M10–M16 · invite-only</span>
+          <div class="statement">The thesis<br><span class="aqua">is real.</span></div>
+          <p class="oneliner">Invite-only pilots surface intelligence a survey never could — and the first pilots convert to paid.</p>
+          <div class="railrow">
+            <span class="gatechip g"><span class="d"></span>200 STORIES / BRAND</span>
+            <span class="gatechip m"><span class="d"></span>1ST PAID B2B</span>
+          </div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><span class="mm">M10</span><span class="mt"><b>Alpha ships</b> · 3–5 partners begin 90-day pilots · first contest live</span></div>
+          <div class="mrow"><span class="mm">M12</span><span class="mt">Dashboard v1.5 · <b>competitive reports, journey maps</b></span></div>
+          <div class="mrow"><span class="mm">M13</span><span class="mt"><b>~200 Member stories per focus brand</b> — the density gate</span></div>
+          <div class="mrow"><span class="mm">M14</span><span class="mt">Case studies published · the "surveys never could" proof line</span></div>
+          <div class="mrow"><span class="mm">M15</span><span class="mt"><b>First pilots convert to paid</b> · unit-economics documentation begins</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · BETA -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">PHASE 03</span><span class="b">BETA · M16–M22</span><span class="c">05</span></div>
+      <div class="phase">
+        <div class="rail">
+          <span class="ptag" style="background:rgba(80,205,237,.13);color:var(--cyan);border:1px solid rgba(80,205,237,.4)">Beta · M16–M22 · national</span>
+          <div class="statement">The economics<br><span class="cyan">work.</span></div>
+          <p class="oneliner">National expansion and documented unit economics — the ~$400K seed, unlocked by Alpha proof (Gate&nbsp;1).</p>
+          <div class="railrow"><span class="gatechip m"><span class="d"></span>GATE 1 → ~$400K SEED</span></div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><span class="mm">M16</span><span class="mt">National expansion · <b>+Restaurants +Car Rentals</b> · native mobile begins</span></div>
+          <div class="mrow"><span class="mm">M17</span><span class="mt">Contest platform scales · <b>Creator Network</b> · Premiere Placement</span></div>
+          <div class="mrow"><span class="mm">M18</span><span class="mt"><b>~$12K ARR anchor</b> · Trend Alerts · Advanced Search</span></div>
+          <div class="mrow"><span class="mm">M19</span><span class="mt">Full <b>flight → hotel → car</b> journey mapping</span></div>
+          <div class="mrow"><span class="mm">M20</span><span class="mt"><b>~$400K seed raise opens</b> on Alpha proof (LTV/CAC up to 7.2×)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · LAUNCH -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">PHASE 04</span><span class="b">LAUNCH · M22–M24</span><span class="c">06</span></div>
+      <div class="phase">
+        <div class="rail">
+          <span class="ptag" style="background:rgba(167,128,237,.15);color:var(--lavender);border:1px solid rgba(167,128,237,.45)">Public Launch + Seed Close · M22–M24</span>
+          <div class="statement">It <span class="lav">scales.</span></div>
+          <p class="oneliner">Open signups, native apps, and the deferred product surface coming online as the seed closes and the company drives to the Series&nbsp;A gate.</p>
+          <div class="railrow"><span class="gatechip m"><span class="d"></span>SEED CLOSE</span></div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><span class="mm">M22</span><span class="mt"><b>Public GA launch</b> · open signups · native iOS / Android / web</span></div>
+          <div class="mrow"><span class="mm">M22</span><span class="mt"><b>FlipSide dual identity ships (v2)</b> · community-growth engine</span></div>
+          <div class="mrow"><span class="mm">M23</span><span class="mt">National contest + seed scale · additional seats · expanded tiers</span></div>
+          <div class="mrow"><span class="mm">M24</span><span class="mt"><b>~$400K seed closes</b> · runway to the Series A gate (Gate 2)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · CONTENT TAG SYSTEM -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">SIGNATURE FEATURE</span><span class="b">TRUST ARCHITECTURE</span><span class="c">07</span></div>
+      <div class="cts">
+        <div class="cts-rail">
+          <span class="ptag" style="background:rgba(255,101,195,.14);color:var(--pink);border:1px solid rgba(255,101,195,.4)">Ships M2–M3 · Alpha build</span>
+          <div class="cts-title">The Content<br>Tag System</div>
+          <p class="cts-principle">Protect people. Preserve truth.</p>
+          <p class="cts-why">BISS never silently deletes. When something has to come out, a <b>visible tag</b> takes its place — the story still reads, and every moderation is transparent. It's the trust layer, a brand signature, and the backbone of the defamation &amp; Section&nbsp;230 posture.</p>
+        </div>
+        <div class="cts-demo">
+          <div class="story">
+            <div class="story-h"><span class="story-score">8.8</span><span class="story-meta">Generated · Never rated</span></div>
+            <p class="story-body">"the gate agent — <span class="tg">[personal stuff]</span> — was a <span class="mask">d**n</span> hero. when the flight got cancelled she rebooked me herself. the guy behind me lost it and <span class="tg red">[scary stuff]</span>, but she stayed calm. i'll fly this airline forever."</p>
+          </div>
+          <div class="fam">
+            <div class="famrow"><span class="famlab red">Harm &amp; safety</span><span class="chip red">[mean stuff]</span><span class="chip red">[scary stuff]</span><span class="chip red">[harmful stuff]</span></div>
+            <div class="famrow"><span class="famlab cy">Privacy</span><span class="chip cy">[personal stuff]</span><span class="chip cy">[too specific]</span><span class="chip cy">[private stuff]</span></div>
+            <div class="famrow"><span class="famlab lav">Quality</span><span class="chip lav">[fake stuff]</span><span class="chip lav">[spam stuff]</span><span class="chip lav">[bot stuff]</span></div>
+          </div>
+          <p class="mask-note"><b>Curse words:</b> full vowel-masking (<span class="mask">d**n</span>) — cleaned, never deleted. The emotion stays; the raw word is softened.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · FEATURE SEQUENCING -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">PRODUCT ROADMAP</span><span class="b">SEQUENCING</span><span class="c">08</span></div>
+      <div style="margin-top:40px">
+        <p class="eyebrow">Feature Sequencing</p>
+        <h1 style="font-size:38px;margin-bottom:2px">What lands <span class="pink">when.</span></h1>
+        <p style="color:var(--muted);font-size:14px;margin-top:8px">All eight core features are built in Alpha. The deferred set is fenced into v2+ so it never bloats the MVP.</p>
+      </div>
+      <div class="fcols">
+        <div class="fcol a"><h3>Alpha Build</h3><div class="fm">M0–M13 · core product</div>
+          <ul><li>Therapeutic AI conversation</li><li>Score-not-stars ratings</li><li>Brand Pages + Founding 50</li><li>Content Tag System</li><li>Authenticity &amp; Trust</li><li>B2B dashboard v1 → v1.5</li><li>Contest engine + Seed Q's</li><li>Sourced/Member provenance</li></ul>
+        </div>
+        <div class="fcol b"><h3>Beta</h3><div class="fm">M16–M22 · expand</div>
+          <ul><li>Restaurants + Car Rentals</li><li>Creator Network</li><li>Premiere Placement</li><li>Trend Alerts</li><li>Advanced Search</li><li>Native mobile build</li></ul>
+        </div>
+        <div class="fcol l"><h3>Launch (GA)</h3><div class="fm">M22–M24 · scale</div>
+          <ul><li>Native iOS / Android apps</li><li>FlipSide dual identity (v2)</li><li>Full gamification</li><li>Face Customization</li><li>Additional seats + tiers</li></ul>
+        </div>
+        <div class="fcol v"><h3>Post-Launch v2+</h3><div class="fm">M24+ · deferred</div>
+          <ul><li>Parallel Universe</li><li>Location / AR stories</li><li>API access (Enterprise)</li><li>Data Licensing</li><li>Retail · Entertainment</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · PROVES / CLOSER -->
+    <section class="slide">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+      <div class="shud"><span class="a">THE TAKEAWAY</span><span class="b">DE-RISKING</span><span class="c">09</span></div>
+      <div class="proves">
+        <p class="eyebrow">What Each Phase Proves</p>
+        <h1 style="font-size:42px">Every phase retires a <span class="pink">risk.</span></h1>
+        <div class="pgrid">
+          <div class="pcard c"><div class="pph">BUILD · M0–M9</div><div class="pw">The product exists</div><div class="pd">A working, moderated platform ready for real users and partners.</div></div>
+          <div class="pcard a"><div class="pph">ALPHA · M10–M16</div><div class="pw">The thesis is real</div><div class="pd">~200 stories/brand and the proof line surveys never deliver.</div></div>
+          <div class="pcard b"><div class="pph">BETA · M16–M22</div><div class="pw">The economics work</div><div class="pd">~$400K seed, unlocked by Alpha proof (Gate 1).</div></div>
+          <div class="pcard d"><div class="pph">LAUNCH · M22–M24</div><div class="pw">It scales</div><div class="pd">Open signups, native apps, and the seed close.</div></div>
+        </div>
+        <div class="closer-foot">
+          <div><div class="mono lime" style="font-size:11px;letter-spacing:.24em;margin-bottom:6px">BECAUSE I SAID SO</div><div class="tyt">Tell Your Truth.</div></div>
+          <p class="disc">Partners referenced across this roadmap are strategic targets selected for fit — not signed or confirmed relationships. · NVIDIA Inception · Oxford Saïd Business School</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div class="nav">
+  <span class="counter" id="counter">01 / 08</span>
+  <button class="arrow" id="prev" aria-label="Previous">‹</button>
+  <div class="dots" id="dots"></div>
+  <button class="arrow" id="next" aria-label="Next">›</button>
+  <span class="hint">← → / SPACE</span>
+</div>
+
+<script>
+const stage = document.getElementById('stage');
+const slides = [...document.querySelectorAll('.slide')];
+const dotsWrap = document.getElementById('dots');
+const counter = document.getElementById('counter');
+let i = 0;
+
+slides.forEach((_, n) => {
+  const b = document.createElement('button');
+  b.className = 'dot-n' + (n===0 ? ' on' : '');
+  b.addEventListener('click', () => go(n));
+  dotsWrap.appendChild(b);
+});
+const dots = [...dotsWrap.children];
+
+function pad(n){ return String(n+1).padStart(2,'0'); }
+function go(n){
+  i = Math.max(0, Math.min(slides.length-1, n));
+  slides.forEach((s,k)=>s.classList.toggle('active', k===i));
+  dots.forEach((d,k)=>d.classList.toggle('on', k===i));
+  counter.textContent = pad(i) + ' / ' + pad(slides.length-1);
+}
+document.getElementById('next').addEventListener('click', ()=>go(i+1));
+document.getElementById('prev').addEventListener('click', ()=>go(i-1));
+document.addEventListener('keydown', e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); go(i+1); }
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(i-1); }
+  else if(e.key==='Home'){ go(0); } else if(e.key==='End'){ go(slides.length-1); }
+});
+
+function fit(){
+  const s = Math.min(window.innerWidth/1280, window.innerHeight/720);
+  stage.style.transform = 'scale(' + s + ')';
+}
+window.addEventListener('resize', fit);
+fit();
+</script>
+</body>
+</html>
